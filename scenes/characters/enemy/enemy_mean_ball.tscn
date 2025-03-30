@@ -1,0 +1,179 @@
+[gd_scene load_steps=17 format=3 uid="uid://xxaxy7m1f3w"]
+
+[ext_resource type="Texture2D" uid="uid://coj4bkyh3hgqb" path="res://sprites/characters/enemy/meanball/meanball0001.png" id="1_o8ywk"]
+[ext_resource type="Script" uid="uid://f2tsbwdny8nh" path="res://scenes/characters/enemy/enemy_mean_ball.gd" id="1_rn5l8"]
+[ext_resource type="Texture2D" uid="uid://bk53e4vrychx0" path="res://sprites/characters/enemy/meanball/meanball0002.png" id="2_cvfq1"]
+[ext_resource type="Texture2D" uid="uid://cp5scw4sljpy" path="res://sprites/characters/enemy/meanball/meanball0003.png" id="3_7lj12"]
+[ext_resource type="Texture2D" uid="uid://dc1yki6mc0v0v" path="res://sprites/characters/enemy/meanball/meanball0004.png" id="4_nwffe"]
+[ext_resource type="Texture2D" uid="uid://coqb7tfu1xl4i" path="res://sprites/characters/enemy/meanball/meanball_dead.png" id="5_6r05o"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_p0ay5"]
+[ext_resource type="AudioStream" uid="uid://c3rbccj24a1j0" path="res://sfx/characters/enemy/sfx_enemy_defeat.ogg" id="8_4r4g7"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="9_eky1y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s3udv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o8ywk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_cvfq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7lj12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nwffe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6r05o")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v70te"]
+size = Vector2(55.8223, 55.8223)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwb3a"]
+size = Vector2(79, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofgdn"]
+size = Vector2(82, 82)
+
+[sub_resource type="Animation" id="Animation_klajh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeanBall:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeanBall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeanBall:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnweq"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeanBall:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(0.420448, 1.93187),
+"update": 0,
+"values": [0.0, 3.14159]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeanBall:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.307786, 3.73213, 4.43828),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(100, -100), Vector2(300, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeanBall:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 0.375), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fu0dk"]
+_data = {
+&"RESET": SubResource("Animation_klajh"),
+&"death": SubResource("Animation_dnweq")
+}
+
+[node name="Enemy_MeanBall" type="RigidBody2D" groups=["Enemies"]]
+script = ExtResource("1_rn5l8")
+
+[node name="MeanBall" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_s3udv")
+autoplay = "default"
+
+[node name="EnemyShape" type="CollisionShape2D" parent="."]
+position = Vector2(1, 25)
+scale = Vector2(1.39729, 1.39729)
+shape = SubResource("RectangleShape2D_v70te")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="EnemyHitBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 25)
+shape = SubResource("RectangleShape2D_xwb3a")
+
+[node name="EnemyDeadBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 25)
+shape = SubResource("RectangleShape2D_ofgdn")
+disabled = true
+
+[node name="Mean_AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fu0dk")
+}
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_p0ay5")
+bus = &"sfx"
+
+[node name="EnemyDefeated" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4r4g7")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_eky1y")
+bus = &"sfx"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="EnemyDeathTimer" to="." method="_on_enemy_death_timer_timeout"]

@@ -1,0 +1,143 @@
+[gd_scene load_steps=14 format=3 uid="uid://bacvwxt044brq"]
+
+[ext_resource type="Texture2D" uid="uid://c5nomxy4cawdq" path="res://sprites/collectable/1up/1-upText0001.png" id="1_2uhxm"]
+[ext_resource type="Script" uid="uid://ioerqr743ho4" path="res://scenes/collectable/1_up.gd" id="1_4x284"]
+[ext_resource type="Texture2D" uid="uid://dkqjatxnxeyip" path="res://sprites/collectable/1up/1-upText0002.png" id="2_8x1tv"]
+[ext_resource type="Texture2D" uid="uid://74q4mn0mbvix" path="res://sprites/collectable/1up/1-upText0003.png" id="3_ch66k"]
+[ext_resource type="Texture2D" uid="uid://bk1av1oq8nco8" path="res://sprites/collectable/1up/1-up0001.png" id="4_jgdl0"]
+[ext_resource type="Texture2D" uid="uid://denf105nfajct" path="res://sprites/collectable/1up/1-up0002.png" id="5_bk1vj"]
+[ext_resource type="Texture2D" uid="uid://7lbuy2slcieq" path="res://sprites/collectable/1up/1-up0003.png" id="6_q3h0c"]
+[ext_resource type="AudioStream" uid="uid://bp3xsguumjaej" path="res://sfx/gameplay/collectables/sfx_1-up.ogg" id="8_pmrn5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l4jwn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_2uhxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8x1tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ch66k")
+}],
+"loop": true,
+"name": &"collecttext",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_jgdl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bk1vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_q3h0c")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dpamc"]
+size = Vector2(31, 17)
+
+[sub_resource type="Animation" id="Animation_lo1d5"]
+resource_name = "1uptext"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1upSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(0.233258, 0.31864),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -46)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1upSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"anim_end"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_wfloe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1upSprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("1upSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8xho1"]
+_data = {
+&"1uptext": SubResource("Animation_lo1d5"),
+&"RESET": SubResource("Animation_wfloe")
+}
+
+[node name="1up" type="Area2D"]
+script = ExtResource("1_4x284")
+
+[node name="1upSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_l4jwn")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_dpamc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8xho1")
+}
+
+[node name="1upSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_pmrn5")
+bus = &"sfx"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,8 @@
+friend: Yo! Did you just spotted that flag popping in after you walk through it?
+[signal arg="talking"]
+friend: Those are checkpoints. They become really nifty once activated.
+[signal arg="talking"]
+friend: So, if you lose a life by an enemy, a dangerous obstacle, or even falling off the map, you'll respawn on where you last activated the checkpoint. Helping you to get right back on where you left. (unless you like starting from the beginning, then you can just simply hop over it.)
+[signal arg="greatest"]
+friend: Right, let's move on and head to the final step.
+[signal arg="end_cutscene"]

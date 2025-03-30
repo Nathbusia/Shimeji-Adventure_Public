@@ -1,0 +1,31 @@
+friend: Aww sizzle sazzle dang it! It looks like you took a beating out of them...
+[signal arg="talking"]
+friend: But no need to worry, you can touch these white floating circles here.
+[signal arg="normaltalk"]
+[signal arg="signhealth"]
+friend: These are health. They regenerate your heath obviously.
+[signal arg="pointing"]
+[signal arg="signhealthbar"]
+friend: And your health over there on the top left is pretty important...
+[signal arg="talking"]
+[signal arg="signhealthbar_empty"]
+friend: You only have 5 healths throughout this game, and if that health goes all the way down to 0, then you're toast! You'll lose a life.
+[signal arg="greatest"]
+[signal arg="signlives"]
+friend: You start with 3 lives in every level (though your live amount will be saved during Story Mode).
+[signal arg="talking"]
+friend: If you ran out of lives, then you should probably know what happened next by now... Right?
+[signal arg="talking"]
+[signal arg="sign1up"]
+friend: There are those 1-up around the place. It has a resemblance of you. Like so.
+[signal arg="greatest"]
+friend: If you do spot one, be sure to grab it. These are very useful. Especially when things get tough!
+[signal arg="normaltalk"]
+[signal arg="signsquare"]
+friend: And for those funny squares, they're just... funny squares.
+[signal arg="talking"]
+friend: You can collect as much as you can. Or ignore them. Yeah.
+[signal arg="talking"]
+[signal arg="signempty"]
+friend: Right. Collect each of those collectable, and we'll move on. This lesson's almost done now.
+[signal arg="end_cutscene"]

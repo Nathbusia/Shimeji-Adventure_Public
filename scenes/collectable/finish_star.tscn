@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://ci71eganx0h6f"]
+
+[ext_resource type="Script" uid="uid://raguut47y8a7" path="res://scenes/collectable/finish_star.gd" id="1_6qtep"]
+[ext_resource type="Texture2D" uid="uid://c06pflcnd253j" path="res://sprites/collectable/star/FinishStar0001.png" id="1_krspv"]
+[ext_resource type="Texture2D" uid="uid://ca7gawmw15sck" path="res://sprites/collectable/star/FinishStar0002.png" id="2_qahbo"]
+[ext_resource type="Texture2D" uid="uid://c1kwo5021hr1t" path="res://sprites/collectable/star/FinishStar0003.png" id="3_kaikx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7wnt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_krspv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qahbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kaikx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blwu7"]
+size = Vector2(54, 38)
+
+[node name="FinishStar" type="Area2D"]
+script = ExtResource("1_6qtep")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_t7wnt")
+autoplay = "default"
+frame_progress = 0.806037
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_blwu7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,84 @@
+[gd_scene load_steps=8 format=3 uid="uid://cmn20yk1w7125"]
+
+[ext_resource type="Script" uid="uid://c07ht5ug3says" path="res://scenes/characters/bosses/monstequare/greensquare_projectile.gd" id="1_mklps"]
+[ext_resource type="Texture2D" uid="uid://b03osii0f747a" path="res://sprites/levels/testlevels/testlevel_throwable.png" id="2_werny"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45vs1"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwcpo"]
+size = Vector2(96, 96)
+
+[sub_resource type="Animation" id="Animation_3lnnh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d1fb6"]
+resource_name = "default"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5q0f8"]
+_data = {
+&"RESET": SubResource("Animation_3lnnh"),
+&"default": SubResource("Animation_d1fb6")
+}
+
+[node name="GreenBox" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 5
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_mklps")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_werny")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 4
+shape = SubResource("RectangleShape2D_45vs1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+light_mask = 4
+shape = SubResource("RectangleShape2D_vwcpo")
+
+[node name="ThrownTimeOut" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="BoxLife" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5q0f8")
+}
+autoplay = "default"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]

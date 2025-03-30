@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp0j8smaqhjuq"]
+
+[ext_resource type="Script" uid="uid://ct46fd7i2yjic" path="res://scenes/gameplaymechanics/moving_platform.gd" id="1_5nho0"]
+[ext_resource type="Texture2D" uid="uid://c6t4g2358ono4" path="res://sprites/gameplay/testlevel/moving_platforms.png" id="1_hwdt4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldcjp"]
+size = Vector2(274, 32)
+
+[node name="MovingPlatform" type="Node2D"]
+script = ExtResource("1_5nho0")
+
+[node name="PlatformMove" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="PlatformMove"]
+texture_filter = 1
+texture = ExtResource("1_hwdt4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformMove"]
+shape = SubResource("RectangleShape2D_ldcjp")

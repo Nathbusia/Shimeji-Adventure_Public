@@ -1,0 +1,196 @@
+[gd_scene load_steps=15 format=3 uid="uid://6tujnr71e8kt"]
+
+[ext_resource type="Script" uid="uid://bmmghyvyprssr" path="res://scenes/characters/enemy/enemy_voltslam_electroeffect.gd" id="1_xfirl"]
+[ext_resource type="Texture2D" uid="uid://cjm5nqfjuegw8" path="res://sprites/characters/enemy/voltslam/voltslam_slameffect0001.png" id="2_g6syl"]
+[ext_resource type="Texture2D" uid="uid://c8pvfcve0b3y" path="res://sprites/characters/enemy/voltslam/voltslam_slameffect0002.png" id="3_x7aj5"]
+[ext_resource type="Texture2D" uid="uid://cbtka1bw7u2se" path="res://sprites/characters/enemy/voltslam/voltslam_slameffect0003.png" id="4_sqqev"]
+[ext_resource type="Texture2D" uid="uid://dpxw2ca4kffkv" path="res://sprites/characters/enemy/voltslam/voltslam_slameffect0004.png" id="5_ohmgt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_04kd6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g6syl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x7aj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sqqev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ohmgt")
+}],
+"loop": true,
+"name": &"electro",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2kaw"]
+size = Vector2(35.7836, 15.7448)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwb3a"]
+size = Vector2(54, 26)
+
+[sub_resource type="Animation" id="Animation_klajh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ElectroEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("ElectroEffect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ElectroEffect:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnweq"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ElectroEffect:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.43333),
+"transitions": PackedFloat32Array(0.420448, 1.93187, 1.93187),
+"update": 0,
+"values": [0.0, 6.28319, 12.5664]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("ElectroEffect:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.307786, 3.73213, 4.43828),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(100, -100), Vector2(300, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ElectroEffect:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 0.375), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fu0dk"]
+_data = {
+&"RESET": SubResource("Animation_klajh"),
+&"death": SubResource("Animation_dnweq")
+}
+
+[sub_resource type="Animation" id="Animation_qlua7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ElectroEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4mtaw"]
+resource_name = "default"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ElectroEffect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vr3sy"]
+_data = {
+&"RESET": SubResource("Animation_qlua7"),
+&"default": SubResource("Animation_4mtaw")
+}
+
+[node name="SlamEffect" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_xfirl")
+
+[node name="ElectroEffect" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_04kd6")
+animation = &"electro"
+autoplay = "electro"
+frame_progress = 0.892693
+
+[node name="EnemyShape" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -4)
+scale = Vector2(1.39729, 1.39729)
+shape = SubResource("RectangleShape2D_p2kaw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="EnemyHitBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -4)
+shape = SubResource("RectangleShape2D_xwb3a")
+
+[node name="Mean_AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fu0dk")
+}
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+wait_time = 3.5
+autostart = true
+
+[node name="FadeOut" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vr3sy")
+}
+autoplay = "default"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="EnemyDeathTimer" to="." method="_on_enemy_death_timer_timeout"]

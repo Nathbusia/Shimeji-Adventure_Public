@@ -1,0 +1,727 @@
+[gd_scene load_steps=118 format=3 uid="uid://cesfk1tmep1sm"]
+
+[ext_resource type="Script" uid="uid://oyx4flhm73y4" path="res://scenes/characters/enemy/enemy_voltslam.gd" id="1_m1vn7"]
+[ext_resource type="Texture2D" uid="uid://bgquo3sk2jqe7" path="res://sprites/characters/enemy/voltslam/voltslam_attack0001.png" id="1_x4pds"]
+[ext_resource type="Texture2D" uid="uid://cgidctccr5r1d" path="res://sprites/characters/enemy/voltslam/voltslam_attack0002.png" id="2_xamg5"]
+[ext_resource type="Texture2D" uid="uid://d1fosq5li0ano" path="res://sprites/characters/enemy/voltslam/voltslam_attack0003.png" id="3_5my0v"]
+[ext_resource type="Texture2D" uid="uid://cwjjw4g8uw7m5" path="res://sprites/characters/enemy/voltslam/voltslam_attack0004.png" id="4_y6ov5"]
+[ext_resource type="Texture2D" uid="uid://bjdj1kdqwbapo" path="res://sprites/characters/enemy/voltslam/voltslam_attack0005.png" id="5_ubd62"]
+[ext_resource type="Texture2D" uid="uid://cwcd2bdpvg60y" path="res://sprites/characters/enemy/voltslam/voltslam_attack0006.png" id="6_77gk3"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_18e2k"]
+[ext_resource type="Texture2D" uid="uid://bp488nbfvhpdk" path="res://sprites/characters/enemy/voltslam/voltslam_attack0007.png" id="7_pfwvc"]
+[ext_resource type="AudioStream" uid="uid://c3rbccj24a1j0" path="res://sfx/characters/enemy/sfx_enemy_defeat.ogg" id="8_iip3e"]
+[ext_resource type="Texture2D" uid="uid://b0m4e6thqwlwk" path="res://sprites/characters/enemy/voltslam/voltslam_attack0008.png" id="8_w0knw"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="9_0m5de"]
+[ext_resource type="Texture2D" uid="uid://byr0a7i81kq8v" path="res://sprites/characters/enemy/voltslam/voltslam_attack0009.png" id="9_fh31d"]
+[ext_resource type="Texture2D" uid="uid://dfajahulo4tvo" path="res://sprites/characters/enemy/voltslam/voltslam_attack0010.png" id="10_wf4dh"]
+[ext_resource type="Texture2D" uid="uid://o738hvy113dh" path="res://sprites/characters/enemy/voltslam/voltslam_attack0011.png" id="11_3c0b2"]
+[ext_resource type="Texture2D" uid="uid://bnybdaj4fam7r" path="res://sprites/characters/enemy/voltslam/voltslam_attack0012.png" id="12_f5rcp"]
+[ext_resource type="Texture2D" uid="uid://cum17lwynnp2" path="res://sprites/characters/enemy/voltslam/voltslam_attack0021.png" id="13_oonek"]
+[ext_resource type="Texture2D" uid="uid://cbxrhlp3t8rqb" path="res://sprites/characters/enemy/voltslam/voltslam_attack0022.png" id="14_jw87d"]
+[ext_resource type="Texture2D" uid="uid://0hk3qalvxe68" path="res://sprites/characters/enemy/voltslam/voltslam_attack0023.png" id="15_p1ikm"]
+[ext_resource type="Texture2D" uid="uid://c167s7yeaursk" path="res://sprites/characters/enemy/voltslam/voltslam_attack0024.png" id="16_84rx2"]
+[ext_resource type="Texture2D" uid="uid://ce67kafcdy7rc" path="res://sprites/characters/enemy/voltslam/voltslam_attack0025.png" id="17_irnpe"]
+[ext_resource type="Texture2D" uid="uid://58cnciw8kjlb" path="res://sprites/characters/enemy/voltslam/voltslam_attack0026.png" id="18_rqpwd"]
+[ext_resource type="Texture2D" uid="uid://wsisrbes7vtr" path="res://sprites/characters/enemy/voltslam/voltslam_attack0027.png" id="19_voj7p"]
+[ext_resource type="Texture2D" uid="uid://bpgdgj27mp1j4" path="res://sprites/characters/enemy/voltslam/voltslam_attack0028.png" id="20_ywtk5"]
+[ext_resource type="Texture2D" uid="uid://dclys6uxwi7km" path="res://sprites/characters/enemy/voltslam/voltslam_attack0013.png" id="21_c0x02"]
+[ext_resource type="Texture2D" uid="uid://bkpsd387asovh" path="res://sprites/characters/enemy/voltslam/voltslam_attack0014.png" id="22_1n4pv"]
+[ext_resource type="Texture2D" uid="uid://g6njbdjr51i8" path="res://sprites/characters/enemy/voltslam/voltslam_attack0015.png" id="23_3at4a"]
+[ext_resource type="Texture2D" uid="uid://fipr0gop4ebc" path="res://sprites/characters/enemy/voltslam/voltslam_attack0016.png" id="24_v0iqm"]
+[ext_resource type="Texture2D" uid="uid://brswnxx5561t6" path="res://sprites/characters/enemy/voltslam/voltslam_attack0017.png" id="25_6p01s"]
+[ext_resource type="Texture2D" uid="uid://cuq3h8k2638w4" path="res://sprites/characters/enemy/voltslam/voltslam_attack0018.png" id="26_u2q16"]
+[ext_resource type="Texture2D" uid="uid://blx6xdke4qsxi" path="res://sprites/characters/enemy/voltslam/voltslam_attack0019.png" id="27_wjmj3"]
+[ext_resource type="Texture2D" uid="uid://m565on0kvk6h" path="res://sprites/characters/enemy/voltslam/voltslam_attack0020.png" id="28_3t8al"]
+[ext_resource type="Texture2D" uid="uid://2qnbqvyynl7d" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0001.png" id="29_fleed"]
+[ext_resource type="Texture2D" uid="uid://ubdi6e5emdps" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0002.png" id="30_csckc"]
+[ext_resource type="Texture2D" uid="uid://plxwwrqfyxv0" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0003.png" id="31_er23l"]
+[ext_resource type="Texture2D" uid="uid://pd7lnf75aib" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0004.png" id="32_qikrx"]
+[ext_resource type="Texture2D" uid="uid://cyhjq771s7hqr" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0005.png" id="33_grgtd"]
+[ext_resource type="Texture2D" uid="uid://b0d3t4q6vt8yp" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0006.png" id="34_mafg0"]
+[ext_resource type="Texture2D" uid="uid://bos824ltvwwiv" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0007.png" id="35_5oo8d"]
+[ext_resource type="Texture2D" uid="uid://dhh2tic8ddad0" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0008.png" id="36_2whbh"]
+[ext_resource type="Texture2D" uid="uid://b0043tv62v51s" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0009.png" id="37_bqf8u"]
+[ext_resource type="Texture2D" uid="uid://ow8831ss0f45" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0010.png" id="38_xdgp4"]
+[ext_resource type="Texture2D" uid="uid://bfoywd1sdik20" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0011.png" id="39_w6yq7"]
+[ext_resource type="Texture2D" uid="uid://cn0o0asuemqa6" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0012.png" id="40_xd8p3"]
+[ext_resource type="Texture2D" uid="uid://bx23xupdn8cw1" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0013.png" id="41_8adup"]
+[ext_resource type="Texture2D" uid="uid://dnxnldsqbpjyb" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0014.png" id="42_n7uf1"]
+[ext_resource type="Texture2D" uid="uid://ct68i1n1yd8ws" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0015.png" id="43_dn6v1"]
+[ext_resource type="Texture2D" uid="uid://bbmgh301hwc0b" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0016.png" id="44_uxntr"]
+[ext_resource type="Texture2D" uid="uid://fbuj0aot1oh2" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0017.png" id="45_kxwvx"]
+[ext_resource type="Texture2D" uid="uid://bhg0n1eg065c1" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0018.png" id="46_es2tk"]
+[ext_resource type="Texture2D" uid="uid://dm1qtwjwminuh" path="res://sprites/characters/enemy/voltslam/voltslam_damaged0019.png" id="47_21rhw"]
+[ext_resource type="Texture2D" uid="uid://ni0ipqunfhu4" path="res://sprites/characters/enemy/voltslam/voltslam_death0001.png" id="48_0djo2"]
+[ext_resource type="Texture2D" uid="uid://un6k0jde6k86" path="res://sprites/characters/enemy/voltslam/voltslam_death0002.png" id="49_rptfw"]
+[ext_resource type="Texture2D" uid="uid://4lsn1tmwx06s" path="res://sprites/characters/enemy/voltslam/voltslam_death0003.png" id="50_2kvym"]
+[ext_resource type="Texture2D" uid="uid://fv8u1koelsyh" path="res://sprites/characters/enemy/voltslam/voltslam_death0004.png" id="51_lhjbt"]
+[ext_resource type="Texture2D" uid="uid://b8ajqxm1xs33k" path="res://sprites/characters/enemy/voltslam/voltslam_death0005.png" id="52_gtrhb"]
+[ext_resource type="Texture2D" uid="uid://c244mnumu7owa" path="res://sprites/characters/enemy/voltslam/voltslam_death0006.png" id="53_44ngq"]
+[ext_resource type="Texture2D" uid="uid://cq8i8d7ftnolr" path="res://sprites/characters/enemy/voltslam/voltslam_death0007.png" id="54_0mi3u"]
+[ext_resource type="Texture2D" uid="uid://soh4fkus0osm" path="res://sprites/characters/enemy/voltslam/voltslam_death0008.png" id="55_5di82"]
+[ext_resource type="Texture2D" uid="uid://cox5p7fxgnhjh" path="res://sprites/characters/enemy/voltslam/voltslam_death0009.png" id="56_egbnp"]
+[ext_resource type="Texture2D" uid="uid://b5amavl731xde" path="res://sprites/characters/enemy/voltslam/voltslam_death0010.png" id="57_6hux7"]
+[ext_resource type="Texture2D" uid="uid://dfu7b1eb3xcyu" path="res://sprites/characters/enemy/voltslam/voltslam_death0011.png" id="58_mqw1h"]
+[ext_resource type="Texture2D" uid="uid://bvos7llih0mne" path="res://sprites/characters/enemy/voltslam/voltslam_death0012.png" id="59_yj7kx"]
+[ext_resource type="Texture2D" uid="uid://blrn0y2wpmhxb" path="res://sprites/characters/enemy/voltslam/voltslam_idle0001.png" id="60_0mwxi"]
+[ext_resource type="Texture2D" uid="uid://dy7ktk4wp12w6" path="res://sprites/characters/enemy/voltslam/voltslam_idle0002.png" id="61_hh4rk"]
+[ext_resource type="Texture2D" uid="uid://s75fayoecxio" path="res://sprites/characters/enemy/voltslam/voltslam_idle0003.png" id="62_cdhhb"]
+[ext_resource type="Texture2D" uid="uid://beto5ccu0ev6n" path="res://sprites/characters/enemy/voltslam/voltslam_idle0004.png" id="63_x6lwu"]
+[ext_resource type="Texture2D" uid="uid://cmm8jevqdkvtu" path="res://sprites/characters/enemy/voltslam/voltslam_idle0005.png" id="64_ru48c"]
+[ext_resource type="Texture2D" uid="uid://deocxeh21hx1s" path="res://sprites/characters/enemy/voltslam/voltslam_idle0006.png" id="65_3cxgq"]
+[ext_resource type="Texture2D" uid="uid://bpy63n62txefl" path="res://sprites/characters/enemy/voltslam/voltslam_idle0007.png" id="66_k6km6"]
+[ext_resource type="Texture2D" uid="uid://dp50c1c18q7pa" path="res://sprites/characters/enemy/voltslam/voltslam_idle0008.png" id="67_qhjgi"]
+[ext_resource type="Texture2D" uid="uid://betlt3qqb7o2u" path="res://sprites/characters/enemy/voltslam/voltslam_idle0009.png" id="68_7e0li"]
+[ext_resource type="Texture2D" uid="uid://faxa3kkbawu5" path="res://sprites/characters/enemy/voltslam/voltslam_idle0010.png" id="69_g8srf"]
+[ext_resource type="Texture2D" uid="uid://serdwuq6xv3w" path="res://sprites/characters/enemy/voltslam/voltslam_idle0011.png" id="70_l0cnb"]
+[ext_resource type="Texture2D" uid="uid://c6hjbpt4s0tm4" path="res://sprites/characters/enemy/voltslam/voltslam_idle0012.png" id="71_w0ip0"]
+[ext_resource type="Texture2D" uid="uid://ns5qehj5wsl4" path="res://sprites/characters/enemy/voltslam/voltslam_idle0013.png" id="72_8bnmg"]
+[ext_resource type="Texture2D" uid="uid://cy4e7d7d6qxg7" path="res://sprites/characters/enemy/voltslam/voltslam_idle0014.png" id="73_ni8jn"]
+[ext_resource type="Texture2D" uid="uid://c74lmic2japyn" path="res://sprites/characters/enemy/voltslam/voltslam_idle0015.png" id="74_xx4tv"]
+[ext_resource type="Texture2D" uid="uid://c12ao0owsp5a4" path="res://sprites/characters/enemy/voltslam/voltslam_idle0016.png" id="75_l53ja"]
+[ext_resource type="Texture2D" uid="uid://crsjxb2xw22su" path="res://sprites/characters/enemy/voltslam/voltslam_idle0017.png" id="76_njv3r"]
+[ext_resource type="AudioStream" uid="uid://dr1oyh2sqwupi" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackA.ogg" id="80_byr6s"]
+[ext_resource type="AudioStream" uid="uid://b6rpqu7tpmq2k" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackB.ogg" id="81_3dt8x"]
+[ext_resource type="AudioStream" uid="uid://q6byv6mbvaam" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackC.ogg" id="82_080tp"]
+[ext_resource type="AudioStream" uid="uid://bl88lst1ry1gu" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_damagedA.ogg" id="83_r5h3r"]
+[ext_resource type="AudioStream" uid="uid://bu2ofg0w8x6ek" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_damagedB.ogg" id="84_rg64r"]
+[ext_resource type="AudioStream" uid="uid://bsmpsw8rsbvwl" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_damagedC.ogg" id="85_cb8kf"]
+[ext_resource type="AudioStream" uid="uid://c278f8s04xn4n" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_defeatA.ogg" id="86_qnx3n"]
+[ext_resource type="AudioStream" uid="uid://bqkklt31fefgw" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_defeatB.ogg" id="87_o0a03"]
+[ext_resource type="AudioStream" uid="uid://bw43m07xii8ke" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_damagefx_A.ogg" id="88_ys5ri"]
+[ext_resource type="AudioStream" uid="uid://cpn2dxcg0awc8" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_damagefx_B.ogg" id="89_hs4gd"]
+[ext_resource type="AudioStream" uid="uid://sektfp3aggcx" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_defeatfx_A.ogg" id="90_xkhij"]
+[ext_resource type="AudioStream" uid="uid://bymbdsr4iakel" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_defeatfx_B.ogg" id="91_liebf"]
+[ext_resource type="AudioStream" uid="uid://bqc06ot321a4y" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_defeatfx_C.ogg" id="92_tm24j"]
+[ext_resource type="AudioStream" uid="uid://c37r11hl1pgnu" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_defeatfx_D.ogg" id="93_qv32p"]
+[ext_resource type="AudioStream" uid="uid://brb20euwbw3c7" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_jump.ogg" id="94_t45e7"]
+[ext_resource type="AudioStream" uid="uid://qut702j5wogn" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_slam.ogg" id="95_j5u0r"]
+[ext_resource type="AudioStream" uid="uid://du7m214s4uum3" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_slam_electricstart.ogg" id="96_0v378"]
+[ext_resource type="AudioStream" uid="uid://crhn5exv3bb5l" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_slameffect.ogg" id="98_abeec"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wofar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x4pds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xamg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5my0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_y6ov5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ubd62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ubd62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ubd62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ubd62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_77gk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_pfwvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w0knw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w0knw")
+}],
+"loop": false,
+"name": &"attack_intro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fh31d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wf4dh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3c0b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f5rcp")
+}],
+"loop": false,
+"name": &"attack_jump",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_oonek")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jw87d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_p1ikm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_84rx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_irnpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_rqpwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_voj7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ywtk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ywtk5")
+}],
+"loop": false,
+"name": &"attack_outro",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_c0x02")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1n4pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3at4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_v0iqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_6p01s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u2q16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_wjmj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_3t8al")
+}],
+"loop": false,
+"name": &"attack_slam",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_fleed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_csckc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_er23l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_qikrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_grgtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_mafg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_5oo8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2whbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_bqf8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_xdgp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_w6yq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xd8p3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_8adup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_n7uf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dn6v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_uxntr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_kxwvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_es2tk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_21rhw")
+}],
+"loop": false,
+"name": &"damaged",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_0djo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_rptfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_2kvym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_lhjbt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gtrhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_44ngq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_0mi3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5di82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_egbnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_6hux7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_mqw1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_yj7kx")
+}],
+"loop": false,
+"name": &"death",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("60_0mwxi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_hh4rk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_cdhhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_x6lwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_ru48c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_3cxgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_k6km6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_qhjgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_7e0li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_g8srf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_l0cnb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_w0ip0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_8bnmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ni8jn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_xx4tv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_l53ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_njv3r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2kaw"]
+size = Vector2(47.2343, 52.244)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwb3a"]
+size = Vector2(70, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofgdn"]
+size = Vector2(70, 78)
+
+[sub_resource type="Animation" id="Animation_klajh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("VoltSlam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VoltSlam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnweq"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.43333),
+"transitions": PackedFloat32Array(0.420448, 1.93187, 1.93187),
+"update": 0,
+"values": [0.0, 6.28319, 12.5664]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("VoltSlam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.307786, 3.73213, 4.43828),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(100, -100), Vector2(300, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("VoltSlam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 0.375), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fu0dk"]
+_data = {
+&"RESET": SubResource("Animation_klajh"),
+&"death": SubResource("Animation_dnweq")
+}
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hslc4"]
+streams_count = 3
+stream_0/stream = ExtResource("80_byr6s")
+stream_1/stream = ExtResource("81_3dt8x")
+stream_2/stream = ExtResource("82_080tp")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_2ebnx"]
+streams_count = 3
+stream_0/stream = ExtResource("83_r5h3r")
+stream_1/stream = ExtResource("84_rg64r")
+stream_2/stream = ExtResource("85_cb8kf")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_6hdl5"]
+streams_count = 2
+stream_0/stream = ExtResource("86_qnx3n")
+stream_1/stream = ExtResource("87_o0a03")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_k3hve"]
+streams_count = 2
+stream_0/stream = ExtResource("88_ys5ri")
+stream_1/stream = ExtResource("89_hs4gd")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_emx2a"]
+streams_count = 4
+stream_0/stream = ExtResource("90_xkhij")
+stream_1/stream = ExtResource("91_liebf")
+stream_2/stream = ExtResource("92_tm24j")
+stream_3/stream = ExtResource("93_qv32p")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hs8s1"]
+size = Vector2(75, 72)
+
+[sub_resource type="Animation" id="Animation_66i1a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.866667, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s7dvs"]
+resource_name = "electro"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.516667, 1, 0, 1), Color(0.138, 0.6, 0.1534, 1), Color(0.516667, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_evi4m"]
+resource_name = "electro_intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.516667, 1, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ycn44"]
+resource_name = "electro_outro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.516667, 1, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_e4qpc"]
+resource_name = "low_health"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VoltSlam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.44, 0.44, 0.44, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ugqi"]
+_data = {
+&"RESET": SubResource("Animation_66i1a"),
+&"electro": SubResource("Animation_s7dvs"),
+&"electro_intro": SubResource("Animation_evi4m"),
+&"electro_outro": SubResource("Animation_ycn44"),
+&"low_health": SubResource("Animation_e4qpc")
+}
+
+[node name="Enemy_VoltSlam" type="CharacterBody2D" groups=["Enemies"]]
+script = ExtResource("1_m1vn7")
+
+[node name="VoltSlam" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.866667, 1, 0, 1)
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wofar")
+animation = &"attack_jump"
+autoplay = "idle"
+
+[node name="EnemyShape" type="CollisionShape2D" parent="."]
+position = Vector2(-9.53674e-07, 1.5)
+scale = Vector2(1.39729, 1.39729)
+shape = SubResource("RectangleShape2D_p2kaw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="EnemyHitBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_xwb3a")
+
+[node name="EnemyDeadBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_ofgdn")
+disabled = true
+
+[node name="Mean_AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fu0dk")
+}
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_18e2k")
+bus = &"sfx"
+
+[node name="EnemyDefeated" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_iip3e")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_0m5de")
+bus = &"sfx"
+
+[node name="VoltVoice" type="Node2D" parent="."]
+
+[node name="AttackVoice" type="AudioStreamPlayer2D" parent="VoltVoice"]
+stream = SubResource("AudioStreamRandomizer_hslc4")
+bus = &"voices"
+
+[node name="DamagedVoice" type="AudioStreamPlayer2D" parent="VoltVoice"]
+stream = SubResource("AudioStreamRandomizer_2ebnx")
+bus = &"voices"
+
+[node name="DeathVoice" type="AudioStreamPlayer2D" parent="VoltVoice"]
+stream = SubResource("AudioStreamRandomizer_6hdl5")
+bus = &"voices"
+
+[node name="VoltSFX" type="Node2D" parent="."]
+
+[node name="DamagedSFX" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = SubResource("AudioStreamRandomizer_k3hve")
+bus = &"sfx"
+
+[node name="DefeatedSFX" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = SubResource("AudioStreamRandomizer_emx2a")
+bus = &"sfx"
+
+[node name="JumpSFX" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = ExtResource("94_t45e7")
+bus = &"sfx"
+
+[node name="SlamSFX" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = ExtResource("95_j5u0r")
+bus = &"sfx"
+
+[node name="ElectroOnSFX" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = ExtResource("96_0v378")
+bus = &"sfx"
+
+[node name="ElectroSFXLoop" type="AudioStreamPlayer2D" parent="VoltSFX"]
+stream = ExtResource("98_abeec")
+bus = &"sfx"
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+
+[node name="DetectCollisionL" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(-72.5, 2)
+shape = SubResource("RectangleShape2D_hs8s1")
+
+[node name="DetectCollisionR" type="CollisionShape2D" parent="PlayerDetector"]
+position = Vector2(72, 0)
+shape = SubResource("RectangleShape2D_hs8s1")
+
+[node name="ElectroEffectSpawner_Left" type="Marker2D" parent="."]
+position = Vector2(-56, 24)
+
+[node name="ElectroEffectSpawner_Right" type="Marker2D" parent="."]
+position = Vector2(57, 24)
+
+[node name="VoltSlam_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_2ugqi")
+}
+
+[node name="AirTime" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="SlamTime" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="frame_changed" from="VoltSlam" to="." method="_on_volt_slam_frame_changed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="EnemyDeathTimer" to="." method="_on_enemy_death_timer_timeout"]
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]
+[connection signal="timeout" from="AirTime" to="." method="_on_air_time_timeout"]
+[connection signal="timeout" from="SlamTime" to="." method="_on_slam_time_timeout"]

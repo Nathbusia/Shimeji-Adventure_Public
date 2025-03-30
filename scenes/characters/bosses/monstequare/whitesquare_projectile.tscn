@@ -1,0 +1,182 @@
+[gd_scene load_steps=14 format=3 uid="uid://dea03qnbkdf3y"]
+
+[ext_resource type="Script" uid="uid://bnili08ojqgv2" path="res://scenes/characters/bosses/monstequare/whitesquare_projectile.gd" id="1_irbdi"]
+[ext_resource type="Texture2D" uid="uid://cwaaisyehpb3x" path="res://sprites/levels/world1/tutorial/tutorial_whitebox.png" id="2_1j4kl"]
+[ext_resource type="AudioStream" uid="uid://bbmb8tiw5qi6x" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_defeat.ogg" id="6_4g0v3"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_e6ici"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="8_jcogs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kjdx7"]
+size = Vector2(64, 65)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlj5t"]
+size = Vector2(69, 70)
+
+[sub_resource type="Animation" id="Animation_w7dvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Box:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Box:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1iihc"]
+resource_name = "defeat"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.353554, 2.63902),
+"update": 0,
+"values": [-1.5708, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Box:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Box:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.307786, 3.36358),
+"update": 0,
+"values": [Vector2(0.44, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fb3yh"]
+_data = {
+&"RESET": SubResource("Animation_w7dvw"),
+&"defeat": SubResource("Animation_1iihc")
+}
+
+[sub_resource type="Animation" id="Animation_kicg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wthvk"]
+resource_name = "default"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Box:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3yw0k"]
+_data = {
+&"RESET": SubResource("Animation_kicg0"),
+&"default": SubResource("Animation_wthvk")
+}
+
+[node name="Box" type="CharacterBody2D"]
+script = ExtResource("1_irbdi")
+
+[node name="Box" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_1j4kl")
+
+[node name="MainHitBox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_kjdx7")
+
+[node name="ProjectileBox" type="Area2D" parent="."]
+
+[node name="ProjectileHitBox" type="CollisionShape2D" parent="ProjectileBox"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_wlj5t")
+
+[node name="ArrowAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fb3yh")
+}
+
+[node name="DefeatSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_4g0v3")
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_e6ici")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jcogs")
+bus = &"sfx"
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="ArrowLife" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3yw0k")
+}
+autoplay = "default"
+
+[connection signal="body_entered" from="ProjectileBox" to="." method="_on_projectile_box_body_entered"]
+[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]

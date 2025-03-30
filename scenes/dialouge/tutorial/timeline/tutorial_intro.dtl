@@ -1,0 +1,22 @@
+friend: Well, hello there! I'm glad you made it here.
+[signal arg="pointing"]
+friend: I am Stickbuddy! Your little helper, and your master!
+[signal arg="normaltalk"]
+friend: Just kidding!
+[signal arg="talking"]
+friend: But anyways, I heard you're new to this whole "Shimeji Adventure" thing.
+[signal arg="talking"]
+friend: Well then. Before we start, I'll like the say this...
+[signal arg="welcome"]
+friend: WELCOME TO SHIMEJI ADVENTURE!!
+[signal arg="normaltalk"]
+friend: There we go. Much better...
+[signal arg="talking"]
+friend: Now anyways, let's get to the basic.
+[signal arg="talking"]
+friend: You should probably know how to move. Right? You know, use the Left or Right arrow keys to move your Shimeji.
+[signal arg="talking"]
+friend: Or any keys that you have set up on the Keybinding at the Menu will do the trick!
+[signal arg="pointing"]
+friend: Now come over here, and I'll explain more on what to do.
+[signal arg="end_cutscene"]

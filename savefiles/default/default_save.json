@@ -1,0 +1,46 @@
+{
+	"currentworld": "world1",
+	"currentlives": 3,
+	"trianglestotal": 0,
+	"savefile1made": false,
+	"savefile2made": false,
+	"savefile3made": false,
+	"is_newsave": false,
+	"worldmap":
+	{
+		"world1":
+			{
+				"tutorial":
+					{
+						"trianglecollected1": false,
+						"trianglecollected2": false,
+						"trianglecollected3": false,
+						"trianglecollected4": false,
+						"hasbeencompleted": false
+					},
+				"level1":
+					{
+						"level1is_unlocked": false,
+						"trianglecollected1": false,
+						"trianglecollected2": false,
+						"trianglecollected3": false,
+						"trianglecollected4": false,
+						"hasbeencompleted": false
+					},
+				"level2":
+					{
+						"level2is_unlocked": false,
+						"trianglecollected1": false,
+						"trianglecollected2": false,
+						"trianglecollected3": false,
+						"trianglecollected4": false,
+						"hasbeencompleted": false
+					},
+				"boss":
+					{
+						"bossis_unlocked": false,
+						"hasbeencompleted": false
+					},
+			},
+	},
+}

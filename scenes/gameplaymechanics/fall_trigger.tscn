@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddqjmc7td4olw"]
+
+[ext_resource type="Script" uid="uid://bp2r6gcqumtpw" path="res://scenes/gameplaymechanics/fall_trigger.gd" id="1_kmvys"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qacrp"]
+distance = 49.0
+
+[node name="FallTrigger" type="Area2D"]
+position = Vector2(4090, 1300)
+script = ExtResource("1_kmvys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-421.5, -52)
+shape = SubResource("WorldBoundaryShape2D_qacrp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

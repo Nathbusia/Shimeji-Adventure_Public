@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6jvu013w6pfu"]
+
+[ext_resource type="Texture2D" uid="uid://dbbdlx7wuwe8q" path="res://sprites/levels/testlevels/testlevel_climbable_horizontal.png" id="1_g58my"]
+[ext_resource type="Script" uid="uid://crxmgbbwnnhxv" path="res://scenes/gameplaymechanics/climbable_horizontal.gd" id="1_ieiip"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6g50a"]
+size = Vector2(64, 69)
+
+[node name="Climbable_Horizontal" type="Area2D"]
+script = ExtResource("1_ieiip")
+
+[node name="ClimbBlockBelow" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_g58my")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_6g50a")
+
+[node name="ClimbBlockTimeout" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

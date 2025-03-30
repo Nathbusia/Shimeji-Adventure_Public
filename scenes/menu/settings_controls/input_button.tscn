@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://civeefdbnrfi1"]
+
+[ext_resource type="FontFile" uid="uid://du43hv6y8bbqs" path="res://fonts/DK Garden Gnome.otf" id="1_lrxfm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nb8fc"]
+bg_color = Color(1, 1, 1, 0.529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8dr2"]
+bg_color = Color(0.6, 0.6, 0.6, 0.529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2mrts"]
+bg_color = Color(0, 0, 0, 0.529412)
+
+[node name="InputButton" type="Button"]
+custom_minimum_size = Vector2(0, 36)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_nb8fc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_t8dr2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_2mrts")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="LabelAction" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_lrxfm")
+theme_override_font_sizes/font_size = 29
+text = "Action Name"
+vertical_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="LabelInput" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_fonts/font = ExtResource("1_lrxfm")
+theme_override_font_sizes/font_size = 29
+text = "[Input Key]"
+vertical_alignment = 1

@@ -1,0 +1,764 @@
+[gd_scene load_steps=98 format=3 uid="uid://f6ttpn2i4w7u"]
+
+[ext_resource type="Script" uid="uid://pm17qv5ta7hk" path="res://scenes/menu/settings.gd" id="1_m2fo2"]
+[ext_resource type="Shader" uid="uid://dqr0gxgowot00" path="res://scenes/menu/main_menu_bgmove.gdshader" id="1_uyi0v"]
+[ext_resource type="Texture2D" uid="uid://by2gvpcpso762" path="res://sprites/loading/loading_background.png" id="2_j0vhe"]
+[ext_resource type="Texture2D" uid="uid://dnio0xbrb2bj" path="res://sprites/menu/settings/settings_background_shading.png" id="3_oqwm7"]
+[ext_resource type="AudioStream" uid="uid://dkp4qos62jky4" path="res://bgm/menu/bgm_settingsmenu.ogg" id="4_s08c2"]
+[ext_resource type="FontFile" uid="uid://hini7n6ijhp3" path="res://fonts/DK Leftover Crayon.otf" id="6_6aqfp"]
+[ext_resource type="AudioStream" uid="uid://covs3dxgqketi" path="res://sfx/characters/shimeji/sfx_player_jump.ogg" id="6_vktco"]
+[ext_resource type="AudioStream" uid="uid://dlt0lx7ordxhh" path="res://sfx/characters/shimeji/sfx_player_pickup.ogg" id="7_hs6o2"]
+[ext_resource type="FontFile" uid="uid://bxhpix5tod03j" path="res://fonts/DK Harimau Dua.otf" id="7_qrb7m"]
+[ext_resource type="AudioStream" uid="uid://dpqxdiauuupqk" path="res://sfx/characters/shimeji/sfx_player_throw.ogg" id="8_esv7b"]
+[ext_resource type="AudioStream" uid="uid://c5t2tqplxk71p" path="res://sfx/gameplay/button/sfx_button_on.ogg" id="8_y3u5o"]
+[ext_resource type="AudioStream" uid="uid://br61hsjskh0wh" path="res://sfx/characters/shimeji/sfx_player_damage.ogg" id="9_cbi6l"]
+[ext_resource type="AudioStream" uid="uid://clpvk5fdeqtyx" path="res://sfx/gameplay/button/sfx_button_off.ogg" id="9_scwvv"]
+[ext_resource type="AudioStream" uid="uid://5dji64tffqf4" path="res://sfx/gameplay/spring/sfx_spring_bounce_big.ogg" id="10_oegu8"]
+[ext_resource type="AudioStream" uid="uid://b7uyv0dlds01w" path="res://sfx/characters/shimeji/sfx_player_slamdash_land.ogg" id="10_y3qi1"]
+[ext_resource type="AudioStream" uid="uid://2js8df1n1jso" path="res://sfx/gameplay/spring/sfx_spring_bounce_small.ogg" id="11_5w5rl"]
+[ext_resource type="AudioStream" uid="uid://ca0yj3c5nyep" path="res://sfx/characters/npc/sfx_npc_friend_speech01.ogg" id="11_b0wip"]
+[ext_resource type="PackedScene" uid="uid://dcv8eybb6wujs" path="res://scenes/menu/settings_volume/volume_master.tscn" id="11_x0wwn"]
+[ext_resource type="AudioStream" uid="uid://dagmbageuwy4v" path="res://sfx/characters/npc/sfx_npc_friend_speech02.ogg" id="12_36sxp"]
+[ext_resource type="Texture2D" uid="uid://cfkd6qae43oo6" path="res://sprites/menu/main/buttons/MainMenu_Buttons0001.png" id="12_ps8vt"]
+[ext_resource type="Texture2D" uid="uid://bq8adqht3ltw0" path="res://sprites/menu/main/buttons/MainMenu_Buttons0002.png" id="13_47tle"]
+[ext_resource type="AudioStream" uid="uid://ct1r16mggg1" path="res://sfx/characters/npc/sfx_npc_friend_speech03.ogg" id="13_lduwc"]
+[ext_resource type="Texture2D" uid="uid://77l7vjxdp8l7" path="res://sprites/menu/main/buttons/MainMenu_Buttons0003.png" id="14_032fe"]
+[ext_resource type="AudioStream" uid="uid://8p8vvsdfgxfp" path="res://sfx/characters/npc/sfx_npc_friend_speech04.ogg" id="14_gmuhs"]
+[ext_resource type="Texture2D" uid="uid://bkrscrw3wtl7n" path="res://sprites/menu/main/buttons/MainMenu_Buttons0007.png" id="15_1wy8m"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="15_ykcc1"]
+[ext_resource type="Texture2D" uid="uid://cifdiwdekfg1s" path="res://sprites/menu/main/buttons/MainMenu_Buttons0008.png" id="16_axcg3"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="16_p0s2a"]
+[ext_resource type="Texture2D" uid="uid://cbff3iewlom0y" path="res://sprites/menu/main/buttons/MainMenu_Buttons0009.png" id="17_4f3x2"]
+[ext_resource type="AudioStream" uid="uid://c3rbccj24a1j0" path="res://sfx/characters/enemy/sfx_enemy_defeat.ogg" id="17_qu7qf"]
+[ext_resource type="Texture2D" uid="uid://ckt1jwpmbnw5e" path="res://sprites/menu/main/buttons/MainMenu_Buttons0004.png" id="18_1ggj8"]
+[ext_resource type="AudioStream" uid="uid://cnw2n26nqyrxo" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_throw.ogg" id="18_r8r4n"]
+[ext_resource type="AudioStream" uid="uid://bbmb8tiw5qi6x" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_defeat.ogg" id="19_tnxk4"]
+[ext_resource type="Texture2D" uid="uid://ci4pjitv327n8" path="res://sprites/menu/main/buttons/MainMenu_Buttons0005.png" id="19_xt6o8"]
+[ext_resource type="Texture2D" uid="uid://cc44trvsa81dr" path="res://sprites/menu/main/buttons/MainMenu_Buttons0006.png" id="20_gmpto"]
+[ext_resource type="AudioStream" uid="uid://cf36m7topxou7" path="res://sfx/characters/enemy/shooter/sfx_shooter_vox_defeated.ogg" id="22_sx2rp"]
+[ext_resource type="AudioStream" uid="uid://dr1oyh2sqwupi" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackA.ogg" id="25_pvuwn"]
+[ext_resource type="Texture2D" uid="uid://di6x5dt3du6yx" path="res://sprites/menu/charselect/button/CharSelect_Back0001.png" id="25_rxth2"]
+[ext_resource type="Texture2D" uid="uid://bx786hbhhwsof" path="res://sprites/menu/charselect/button/CharSelect_Back0002.png" id="26_hysxa"]
+[ext_resource type="AudioStream" uid="uid://b6rpqu7tpmq2k" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackB.ogg" id="26_xj8bq"]
+[ext_resource type="Texture2D" uid="uid://bp26cwhocex8r" path="res://sprites/menu/charselect/button/CharSelect_Back0003.png" id="27_0f8gt"]
+[ext_resource type="AudioStream" uid="uid://q6byv6mbvaam" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_attackC.ogg" id="27_hfsr3"]
+[ext_resource type="Texture2D" uid="uid://cu2kdox82vgxa" path="res://sprites/menu/charselect/button/CharSelect_Back_Select0001.png" id="28_6jxc7"]
+[ext_resource type="AudioStream" uid="uid://bqkklt31fefgw" path="res://sfx/characters/enemy/voltslam/sfx_voltslam_vox_defeatB.ogg" id="28_e5hjk"]
+[ext_resource type="AudioStream" uid="uid://dng53wkvhlr02" path="res://sfx/characters/enemy/shooter/sfx_shooter_vox_throwA.ogg" id="29_n2qdg"]
+[ext_resource type="Texture2D" uid="uid://ddl546e3cowyo" path="res://sprites/menu/charselect/button/CharSelect_Back_Select0002.png" id="29_pym6r"]
+[ext_resource type="Texture2D" uid="uid://dxg4w51qngvbj" path="res://sprites/menu/charselect/button/CharSelect_Back_Select0003.png" id="30_5ldha"]
+[ext_resource type="AudioStream" uid="uid://bhby465y7vosx" path="res://sfx/characters/enemy/shooter/sfx_shooter_vox_throwB.ogg" id="30_xtm7t"]
+[ext_resource type="Texture2D" uid="uid://dnn2sacq75n02" path="res://sprites/menu/charselect/button/CharSelect_Back_Hover0001.png" id="31_dejym"]
+[ext_resource type="Texture2D" uid="uid://bnlyxuy2xm362" path="res://sprites/menu/charselect/button/CharSelect_Back_Hover0002.png" id="32_g20xg"]
+[ext_resource type="Texture2D" uid="uid://bqrjxjjvq0qku" path="res://sprites/menu/charselect/button/CharSelect_Back_Hover0003.png" id="33_sgnqr"]
+[ext_resource type="AudioStream" uid="uid://f3bgnu5jalut" path="res://sfx/menu/sfx_menu_select.ogg" id="34_5fodg"]
+[ext_resource type="AudioStream" uid="uid://c34txxvwhy20f" path="res://sfx/menu/sfx_menu_deselect.ogg" id="35_6qflr"]
+[ext_resource type="AudioStream" uid="uid://dlf2bwrdvr4wi" path="res://sfx/menu/sfx_menu_hover.ogg" id="36_40047"]
+[ext_resource type="AudioStream" uid="uid://e7ue8h4p0qdo" path="res://sfx/menu/settings/sfx_settings_toggleon.ogg" id="37_p1fj7"]
+[ext_resource type="AudioStream" uid="uid://bsrfuwgp3c0fu" path="res://sfx/menu/settings/sfx_settings_toggleoff.ogg" id="38_8dbke"]
+[ext_resource type="FontFile" uid="uid://du43hv6y8bbqs" path="res://fonts/DK Garden Gnome.otf" id="43_2f58s"]
+[ext_resource type="Texture2D" uid="uid://de2j1dvi7laj5" path="res://sprites/menu/settings/SettingsTabButtons0001.png" id="58_6baq3"]
+[ext_resource type="Script" uid="uid://8yp8v5xgmoh5" path="res://scenes/menu/settings_controls/InputSettings.gd" id="58_x5dep"]
+[ext_resource type="Texture2D" uid="uid://r2vag3wbctkm" path="res://sprites/menu/settings/SettingsTabButtons0002.png" id="59_jj0uj"]
+[ext_resource type="PackedScene" uid="uid://civeefdbnrfi1" path="res://scenes/menu/settings_controls/input_button.tscn" id="59_thfh4"]
+[ext_resource type="Texture2D" uid="uid://cr377ry77e06e" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0001.png" id="60_78s0r"]
+[ext_resource type="Texture2D" uid="uid://8o8twxh51yhy" path="res://sprites/menu/settings/SettingsTabButtons0003.png" id="60_x5dep"]
+[ext_resource type="Texture2D" uid="uid://qn0jh6e7lram" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0002.png" id="61_aml81"]
+[ext_resource type="Texture2D" uid="uid://cmoasrrf251g3" path="res://sprites/menu/settings/SettingsTabButtons0007.png" id="61_thfh4"]
+[ext_resource type="Texture2D" uid="uid://d2wbp8or1nv1r" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0003.png" id="62_lfjlu"]
+[ext_resource type="Texture2D" uid="uid://dl4nhhnqmenhh" path="res://sprites/menu/settings/SettingsTabButtons0008.png" id="62_s8sca"]
+[ext_resource type="Texture2D" uid="uid://ds80754l2ajia" path="res://sprites/menu/settings/SettingsTabButtons0009.png" id="63_78s0r"]
+[ext_resource type="Texture2D" uid="uid://bfgtakuccout7" path="res://sprites/menu/settings/SettingsTabButtons0004.png" id="64_aml81"]
+[ext_resource type="Texture2D" uid="uid://dkrj8wt3fplrc" path="res://sprites/menu/settings/SettingsTabButtons0005.png" id="65_lfjlu"]
+[ext_resource type="Texture2D" uid="uid://c7t1itwqd2dxw" path="res://sprites/menu/settings/SettingsTabButtons0006.png" id="66_plg3i"]
+[ext_resource type="Texture2D" uid="uid://caj5xtcemhdh4" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0001.png" id="67_cvgx3"]
+[ext_resource type="Texture2D" uid="uid://bk1b2wnv3yl4h" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0002.png" id="68_r1a2u"]
+[ext_resource type="Texture2D" uid="uid://4vmpqau0w0la" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0003.png" id="69_wcymd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lomwx"]
+shader = ExtResource("1_uyi0v")
+
+[sub_resource type="Animation" id="Animation_uygf0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SettingsShade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_mmtpu"]
+resource_name = "ready"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SettingsShade:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.733333)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y5vks"]
+_data = {
+&"RESET": SubResource("Animation_uygf0"),
+&"ready": SubResource("Animation_mmtpu")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vxqde"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("25_rxth2")
+frame_1/texture = ExtResource("26_hysxa")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("27_0f8gt")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5h2mb"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("28_6jxc7")
+frame_1/texture = ExtResource("29_pym6r")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("30_5ldha")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_uq8ob"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("31_dejym")
+frame_1/texture = ExtResource("32_g20xg")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("33_sgnqr")
+frame_2/duration = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kn06x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_twu4t"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_kbrje"]
+streams_count = 14
+stream_0/stream = ExtResource("6_vktco")
+stream_1/stream = ExtResource("7_hs6o2")
+stream_2/stream = ExtResource("8_esv7b")
+stream_3/stream = ExtResource("9_cbi6l")
+stream_4/stream = ExtResource("10_y3qi1")
+stream_5/stream = ExtResource("15_ykcc1")
+stream_6/stream = ExtResource("16_p0s2a")
+stream_7/stream = ExtResource("17_qu7qf")
+stream_8/stream = ExtResource("18_r8r4n")
+stream_9/stream = ExtResource("19_tnxk4")
+stream_10/stream = ExtResource("8_y3u5o")
+stream_11/stream = ExtResource("9_scwvv")
+stream_12/stream = ExtResource("10_oegu8")
+stream_13/stream = ExtResource("11_5w5rl")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_q7u6k"]
+streams_count = 11
+stream_0/stream = ExtResource("11_b0wip")
+stream_1/stream = ExtResource("12_36sxp")
+stream_2/stream = ExtResource("13_lduwc")
+stream_3/stream = ExtResource("14_gmuhs")
+stream_4/stream = ExtResource("25_pvuwn")
+stream_5/stream = ExtResource("26_xj8bq")
+stream_6/stream = ExtResource("27_hfsr3")
+stream_7/stream = ExtResource("28_e5hjk")
+stream_8/stream = ExtResource("29_n2qdg")
+stream_9/stream = ExtResource("30_xtm7t")
+stream_10/stream = ExtResource("22_sx2rp")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_837s8"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("12_ps8vt")
+frame_1/texture = ExtResource("13_47tle")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("14_032fe")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7gge4"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("15_1wy8m")
+frame_1/texture = ExtResource("16_axcg3")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("17_4f3x2")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_uwbk4"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("18_1ggj8")
+frame_1/texture = ExtResource("19_xt6o8")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("20_gmpto")
+frame_2/duration = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u7woe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6baq3"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_plg3i"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("60_78s0r")
+frame_1/texture = ExtResource("61_aml81")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("62_lfjlu")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_w0w7y"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("58_6baq3")
+frame_1/texture = ExtResource("59_jj0uj")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("60_x5dep")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fgu0h"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("61_thfh4")
+frame_1/texture = ExtResource("62_s8sca")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("63_78s0r")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_e2f8l"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("64_aml81")
+frame_1/texture = ExtResource("65_lfjlu")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("66_plg3i")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2sdgn"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("67_cvgx3")
+frame_1/texture = ExtResource("68_r1a2u")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("69_wcymd")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_phxbc"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("67_cvgx3")
+frame_1/texture = ExtResource("68_r1a2u")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("69_wcymd")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3ond5"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("67_cvgx3")
+frame_1/texture = ExtResource("68_r1a2u")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("69_wcymd")
+frame_2/duration = 1.0
+
+[node name="Settings" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m2fo2")
+
+[node name="MenuBG" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lomwx")
+layout_mode = 0
+offset_right = 1166.0
+offset_bottom = 656.0
+texture = ExtResource("2_j0vhe")
+expand_mode = 1
+
+[node name="SettingsShade" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1166.0
+offset_bottom = 656.0
+texture = ExtResource("3_oqwm7")
+expand_mode = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_s08c2")
+autoplay = true
+bus = &"bgm"
+
+[node name="SettingsText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 434.0
+offset_top = 32.0
+offset_right = 697.0
+offset_bottom = 95.0
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("6_6aqfp")
+theme_override_font_sizes/font_size = 56
+text = "SETTINGS"
+horizontal_alignment = 1
+
+[node name="BlendThin" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_y5vks")
+}
+autoplay = "ready"
+
+[node name="BACK_Button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_top = 576.0
+offset_right = 173.0
+offset_bottom = 656.0
+texture_normal = SubResource("AnimatedTexture_vxqde")
+texture_pressed = SubResource("AnimatedTexture_5h2mb")
+texture_hover = SubResource("AnimatedTexture_uq8ob")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ButtonSounds" type="Node2D" parent="."]
+
+[node name="Select" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("34_5fodg")
+bus = &"sfx"
+
+[node name="Deselect" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("35_6qflr")
+bus = &"sfx"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("36_40047")
+bus = &"sfx"
+
+[node name="Volume_Resolution" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kn06x")
+
+[node name="VolumeSetting" type="Panel" parent="Volume_Resolution"]
+layout_mode = 0
+offset_left = 62.0
+offset_right = 102.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_twu4t")
+
+[node name="VolumeTextMaster" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 184.0
+offset_right = 470.0
+offset_bottom = 216.0
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "Master:"
+
+[node name="VolumeTextBGM" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 240.0
+offset_right = 470.0
+offset_bottom = 272.0
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "BGM:"
+
+[node name="VolumeTextSFX" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 301.0
+offset_right = 470.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "SFX:"
+
+[node name="VolumeTextVoices" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 352.0
+offset_right = 470.0
+offset_bottom = 384.0
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "Voices:"
+
+[node name="VolumeTextVoices2" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 400.0
+offset_right = 476.0
+offset_bottom = 432.0
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "Ambience:"
+
+[node name="VolumeText" type="Label" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 128.0
+offset_right = 566.0
+offset_bottom = 160.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "Volume"
+
+[node name="SFXTest" type="AudioStreamPlayer2D" parent="Volume_Resolution/VolumeSetting"]
+position = Vector2(32, -48)
+stream = SubResource("AudioStreamRandomizer_kbrje")
+bus = &"sfx"
+
+[node name="VoiceTest" type="AudioStreamPlayer2D" parent="Volume_Resolution/VolumeSetting"]
+stream = SubResource("AudioStreamRandomizer_q7u6k")
+bus = &"voices"
+
+[node name="VolumeMaster" parent="Volume_Resolution/VolumeSetting" instance=ExtResource("11_x0wwn")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 192.0
+offset_right = 720.0
+offset_bottom = 208.0
+bus_name = "Master"
+
+[node name="VolumeMaster_BGM" parent="Volume_Resolution/VolumeSetting" instance=ExtResource("11_x0wwn")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 248.0
+offset_right = 720.0
+offset_bottom = 264.0
+bus_name = "bgm"
+
+[node name="VolumeMaster_SFX" parent="Volume_Resolution/VolumeSetting" instance=ExtResource("11_x0wwn")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 304.0
+offset_right = 720.0
+offset_bottom = 320.0
+bus_name = "sfx"
+
+[node name="VolumeMaster_Voices" parent="Volume_Resolution/VolumeSetting" instance=ExtResource("11_x0wwn")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 359.0
+offset_right = 720.0
+offset_bottom = 375.0
+bus_name = "voices"
+
+[node name="VolumeMaster_Ambience" parent="Volume_Resolution/VolumeSetting" instance=ExtResource("11_x0wwn")]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 405.0
+offset_right = 720.0
+offset_bottom = 421.0
+bus_name = "ambience"
+
+[node name="SFXTestButton" type="TextureButton" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 216.0
+offset_right = 324.0
+offset_bottom = 280.0
+texture_normal = SubResource("AnimatedTexture_837s8")
+texture_pressed = SubResource("AnimatedTexture_7gge4")
+texture_hover = SubResource("AnimatedTexture_uwbk4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Volume_Resolution/VolumeSetting/SFXTestButton"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 111.0
+offset_bottom = 55.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 25
+text = "Test SFX
+"
+
+[node name="VoicesTestButton" type="TextureButton" parent="Volume_Resolution/VolumeSetting"]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 308.0
+offset_right = 324.0
+offset_bottom = 372.0
+texture_normal = SubResource("AnimatedTexture_837s8")
+texture_pressed = SubResource("AnimatedTexture_7gge4")
+texture_hover = SubResource("AnimatedTexture_uwbk4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Volume_Resolution/VolumeSetting/VoicesTestButton"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 19.0
+offset_right = 121.0
+offset_bottom = 45.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 22
+text = "Test Voices
+"
+
+[node name="Resolution" type="Panel" parent="Volume_Resolution"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_u7woe")
+
+[node name="ResolutionText" type="Label" parent="Volume_Resolution/Resolution"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 464.0
+offset_right = 668.0
+offset_bottom = 496.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_constants/shadow_outline_size = 12
+theme_override_fonts/font = ExtResource("7_qrb7m")
+theme_override_font_sizes/font_size = 32
+text = "Resolution"
+
+[node name="ResolutonsOption" type="OptionButton" parent="Volume_Resolution/Resolution"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 512.0
+offset_right = 739.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("43_2f58s")
+selected = 3
+item_count = 4
+popup/item_0/text = "1920x1080"
+popup/item_0/id = 0
+popup/item_1/text = "1600x900"
+popup/item_1/id = 1
+popup/item_2/text = "1280x720"
+popup/item_2/id = 2
+popup/item_3/text = "1152x648"
+popup/item_3/id = 3
+
+[node name="CheckButton" type="CheckButton" parent="Volume_Resolution/Resolution"]
+layout_mode = 0
+offset_left = 451.0
+offset_top = 564.0
+offset_right = 578.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("43_2f58s")
+text = "Fullscreen
+"
+
+[node name="ToggledOn" type="AudioStreamPlayer2D" parent="Volume_Resolution/Resolution"]
+position = Vector2(62, 0)
+stream = ExtResource("37_p1fj7")
+bus = &"sfx"
+
+[node name="ToggledOff" type="AudioStreamPlayer2D" parent="Volume_Resolution/Resolution"]
+position = Vector2(62, 0)
+stream = ExtResource("38_8dbke")
+bus = &"sfx"
+
+[node name="VsyncButton" type="CheckButton" parent="Volume_Resolution/Resolution"]
+layout_mode = 0
+offset_left = 611.0
+offset_top = 564.0
+offset_right = 705.0
+offset_bottom = 595.0
+theme_override_fonts/font = ExtResource("43_2f58s")
+button_pressed = true
+text = "VSync"
+
+[node name="Controls" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 104.0
+offset_right = 1120.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
+script = ExtResource("58_x5dep")
+
+[node name="PanelContainer" type="PanelContainer" parent="Controls"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 83
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 58
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="Controls/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="Controls/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Controls/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 36
+text = "Reset to Default"
+
+[node name="Miscellaneous" type="Panel" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CreditsButton" type="TextureButton" parent="Miscellaneous"]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 280.0
+offset_right = 643.0
+offset_bottom = 367.0
+texture_normal = SubResource("AnimatedTexture_837s8")
+texture_pressed = SubResource("AnimatedTexture_7gge4")
+texture_hover = SubResource("AnimatedTexture_uwbk4")
+texture_disabled = SubResource("AnimatedTexture_plg3i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Miscellaneous/CreditsButton"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 28.0
+offset_right = 159.0
+offset_bottom = 57.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 25
+text = "View Credits"
+vertical_alignment = 1
+
+[node name="Vol_Res_Tab" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 25.0
+offset_right = 226.0
+offset_bottom = 88.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_2sdgn")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Vol_Res_Tab"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 11.0
+offset_right = 174.0
+offset_bottom = 50.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 15
+text = "Volume and 
+Resolution"
+horizontal_alignment = 1
+
+[node name="Control_Tab" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 25.0
+offset_right = 419.0
+offset_bottom = 88.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_phxbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Control_Tab"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 9.0
+offset_right = 163.0
+offset_bottom = 50.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 35
+text = "Controls"
+horizontal_alignment = 1
+
+[node name="Misc_Tab" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 734.0
+offset_top = 25.0
+offset_right = 920.0
+offset_bottom = 88.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_3ond5")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Misc_Tab"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 15.0
+offset_right = 170.0
+offset_bottom = 44.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_font_sizes/font_size = 25
+text = "Miscellaneous"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="BACK_Button" to="." method="_on_back_button_pressed"]
+[connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster" to="." method="_on_volume_master_drag_ended"]
+[connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster_BGM" to="." method="_on_volume_master_bgm_drag_ended"]
+[connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster_SFX" to="." method="_on_volume_master_sfx_drag_ended"]
+[connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster_Voices" to="." method="_on_volume_master_voices_drag_ended"]
+[connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster_Ambience" to="." method="_on_volume_master_ambience_drag_ended"]
+[connection signal="pressed" from="Volume_Resolution/VolumeSetting/SFXTestButton" to="." method="_on_sfx_test_button_pressed"]
+[connection signal="pressed" from="Volume_Resolution/VolumeSetting/VoicesTestButton" to="." method="_on_voices_test_button_pressed"]
+[connection signal="item_selected" from="Volume_Resolution/Resolution/ResolutonsOption" to="." method="_on_resolutons_option_item_selected"]
+[connection signal="toggled" from="Volume_Resolution/Resolution/CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="toggled" from="Volume_Resolution/Resolution/VsyncButton" to="." method="_on_vsync_button_toggled"]
+[connection signal="pressed" from="Controls/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Miscellaneous/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Vol_Res_Tab" to="." method="_on_vol_res_tab_pressed"]
+[connection signal="pressed" from="Control_Tab" to="." method="_on_control_tab_pressed"]
+[connection signal="pressed" from="Misc_Tab" to="." method="_on_misc_tab_pressed"]

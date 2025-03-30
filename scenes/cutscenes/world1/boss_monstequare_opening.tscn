@@ -1,0 +1,237 @@
+[gd_scene load_steps=17 format=3 uid="uid://b8xk66iutk5b6"]
+
+[ext_resource type="Texture2D" uid="uid://cfrglyaplyq7n" path="res://sprites/levels/world1/world1_background.png" id="1_vwa0e"]
+[ext_resource type="Script" uid="uid://bxcwsby2cq85x" path="res://scenes/cutscenes/world1/boss_monstequare_opening.gd" id="1_wcad8"]
+[ext_resource type="Texture2D" uid="uid://b3vgq6a6vbu7p" path="res://sprites/levels/world1/world1_clouds.png" id="2_wcad8"]
+[ext_resource type="Texture2D" uid="uid://qktig673t85u" path="res://sprites/levels/world1/world1_bg_hills.png" id="3_tnjj0"]
+[ext_resource type="Texture2D" uid="uid://duh4u8qi1cq1p" path="res://sprites/levels/world1/world1_folderico.png" id="4_tn6vd"]
+[ext_resource type="Texture2D" uid="uid://chi5f4r2slqmn" path="res://sprites/levels/world1/world1_file.png" id="5_0v3cg"]
+[ext_resource type="Texture2D" uid="uid://4nsvba6jc4bi" path="res://sprites/levels/world1/windows_C_unavailable.png" id="6_80556"]
+[ext_resource type="Texture2D" uid="uid://cm0pp3afmqi33" path="res://sprites/levels/world1/windows_button_minimized.png" id="7_hs6cy"]
+[ext_resource type="Texture2D" uid="uid://drtjrbabse7qw" path="res://sprites/levels/world1/windows_button_maximized.png" id="8_wr1lf"]
+[ext_resource type="Texture2D" uid="uid://4c8xf8a0wfat" path="res://sprites/levels/world1/windows_button_close.png" id="9_bandy"]
+[ext_resource type="Texture2D" uid="uid://cifskgb0mf0v1" path="res://sprites/levels/world1/windows_searchbar.png" id="10_7ldr5"]
+[ext_resource type="Texture2D" uid="uid://dlccltej87xrs" path="res://sprites/levels/world1/windows_button_search.png" id="11_4lbnl"]
+[ext_resource type="PackedScene" uid="uid://dmn1tqpynegro" path="res://scenes/gameplaymechanics/world1/windows_forums.tscn" id="12_jjv5w"]
+[ext_resource type="AudioStream" uid="uid://csjwi7pl8tcx8" path="res://bgm/levels/world1/bgm_world1_boss_cutscene.ogg" id="13_nibtg"]
+[ext_resource type="PackedScene" uid="uid://06y64v51e68l" path="res://scenes/characters/playable/shimeji_ignore/shimeji_character_cutscene.tscn" id="14_qgsyd"]
+[ext_resource type="PackedScene" uid="uid://dk3kgrxsyroei" path="res://scenes/characters/bosses/monstequare/monstequare_cutscene.tscn" id="15_q0bxh"]
+
+[node name="MonstequareIntroCutscene" type="Node2D"]
+script = ExtResource("1_wcad8")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -1696.0
+offset_top = -2784.0
+offset_right = 15776.0
+offset_bottom = 4224.0
+texture = ExtResource("1_vwa0e")
+
+[node name="Clouds" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 128.0
+offset_right = 20320.0
+offset_bottom = 9104.0
+texture = ExtResource("2_wcad8")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Hills" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 1056.0
+offset_top = 3480.0
+offset_right = 22272.0
+offset_bottom = 3639.0
+texture = ExtResource("3_tnjj0")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Folders" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 1718.0
+offset_top = 3201.0
+offset_right = 1809.0
+offset_bottom = 3285.0
+texture = ExtResource("4_tn6vd")
+
+[node name="Label" type="Label" parent="Background/Folders"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 79.0
+offset_right = 73.0
+offset_bottom = 128.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+text = "Tutorial 
+Stuff"
+horizontal_alignment = 1
+
+[node name="Folders2" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 1842.0
+offset_top = 3203.0
+offset_right = 1933.0
+offset_bottom = 3287.0
+texture = ExtResource("4_tn6vd")
+
+[node name="Label" type="Label" parent="Background/Folders2"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 79.0
+offset_right = 73.0
+offset_bottom = 128.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+text = "Games
+"
+horizontal_alignment = 1
+
+[node name="Folders3" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 1965.0
+offset_top = 3203.0
+offset_right = 2056.0
+offset_bottom = 3287.0
+texture = ExtResource("4_tn6vd")
+
+[node name="Label" type="Label" parent="Background/Folders3"]
+layout_mode = 0
+offset_left = -11.0
+offset_top = 79.0
+offset_right = 105.0
+offset_bottom = 128.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+text = "Blue Test Ball's
+Secrets
+"
+horizontal_alignment = 1
+
+[node name="File" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 6928.0
+offset_top = 2512.0
+offset_right = 6995.0
+offset_bottom = 2596.0
+texture = ExtResource("5_0v3cg")
+
+[node name="Label" type="Label" parent="Background/File"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -46.0
+offset_top = 80.0
+offset_right = 113.0
+offset_bottom = 129.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+text = "ClimbClimbClimb.tpl
+"
+horizontal_alignment = 1
+
+[node name="File2" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 10704.0
+offset_top = 1439.0
+offset_right = 10771.0
+offset_bottom = 1523.0
+texture = ExtResource("5_0v3cg")
+
+[node name="Label" type="Label" parent="Background/File2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -46.0
+offset_top = 80.0
+offset_right = 113.0
+offset_bottom = 129.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 3
+text = "AlmostThere.bin"
+horizontal_alignment = 1
+
+[node name="UnavailableWindows" type="TextureRect" parent="Background"]
+layout_mode = 0
+offset_left = 2123.0
+offset_top = 3120.0
+offset_right = 2767.0
+offset_bottom = 3486.0
+texture = ExtResource("6_80556")
+
+[node name="Button_A" type="TextureRect" parent="Background/UnavailableWindows"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.572981
+anchor_top = -0.00819672
+anchor_right = 0.572981
+anchor_bottom = -0.00819672
+offset_left = 183.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 21.0
+texture = ExtResource("7_hs6cy")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_B" type="TextureRect" parent="Background/UnavailableWindows/Button_A"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("8_wr1lf")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_C" type="TextureRect" parent="Background/UnavailableWindows/Button_A/Button_B"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("9_bandy")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SearchBar" type="TextureRect" parent="Background/UnavailableWindows"]
+layout_mode = 0
+offset_left = 113.0
+offset_top = 36.0
+offset_right = 558.0
+offset_bottom = 53.0
+texture = ExtResource("10_7ldr5")
+
+[node name="SearchButton" type="TextureRect" parent="Background/UnavailableWindows"]
+layout_mode = 0
+offset_left = 568.0
+offset_top = 36.0
+offset_right = 585.0
+offset_bottom = 53.0
+texture = ExtResource("11_4lbnl")
+expand_mode = 1
+
+[node name="Forums" parent="." instance=ExtResource("12_jjv5w")]
+position = Vector2(688, 960)
+
+[node name="Level_BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_nibtg")
+autoplay = true
+bus = &"bgm"
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="ShimejiCharacter_Cutscene" parent="Characters" instance=ExtResource("14_qgsyd")]
+position = Vector2(191, 456)
+
+[node name="Monstequare_Cutscene" parent="Characters" instance=ExtResource("15_q0bxh")]
+position = Vector2(971, 361)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)

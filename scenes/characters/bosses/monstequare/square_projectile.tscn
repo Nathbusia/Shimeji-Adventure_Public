@@ -1,0 +1,212 @@
+[gd_scene load_steps=18 format=3 uid="uid://bfh720b01n2hu"]
+
+[ext_resource type="Script" uid="uid://yrsrwi6mw1f6" path="res://scenes/characters/enemy/arrow_projectile.gd" id="1_f6i71"]
+[ext_resource type="Texture2D" uid="uid://cjmxb0mduf1f2" path="res://sprites/characters/enemy/shooter/shooter_arrow0001.png" id="2_k6k4r"]
+[ext_resource type="Texture2D" uid="uid://bbsqntmvmdpdk" path="res://sprites/characters/enemy/shooter/shooter_arrow0002.png" id="3_ar3gx"]
+[ext_resource type="Texture2D" uid="uid://c7xfn6tqrkk0i" path="res://sprites/characters/enemy/shooter/shooter_arrow0003.png" id="4_ckroy"]
+[ext_resource type="Texture2D" uid="uid://27ib042m06kj" path="res://sprites/characters/enemy/shooter/shooter_arrow_death.png" id="5_xuwtr"]
+[ext_resource type="AudioStream" uid="uid://bbmb8tiw5qi6x" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_defeat.ogg" id="6_mf5sc"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_tbsby"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="8_hhi65"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cuaas"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_k6k4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ar3gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ckroy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_xuwtr")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uob2"]
+size = Vector2(50, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjbgy"]
+size = Vector2(57, 28)
+
+[sub_resource type="Animation" id="Animation_w7dvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arrow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1iihc"]
+resource_name = "defeat"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.353554, 2.63902),
+"update": 0,
+"values": [-1.5708, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Arrow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Arrow:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.307786, 3.36358),
+"update": 0,
+"values": [Vector2(0.44, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fb3yh"]
+_data = {
+&"RESET": SubResource("Animation_w7dvw"),
+&"defeat": SubResource("Animation_1iihc")
+}
+
+[sub_resource type="Animation" id="Animation_kicg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wthvk"]
+resource_name = "default"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Arrow:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3yw0k"]
+_data = {
+&"RESET": SubResource("Animation_kicg0"),
+&"default": SubResource("Animation_wthvk")
+}
+
+[node name="ArrowProjectile" type="CharacterBody2D"]
+script = ExtResource("1_f6i71")
+
+[node name="Arrow" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cuaas")
+autoplay = "default"
+
+[node name="MainHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(-10, 0.5)
+shape = SubResource("RectangleShape2D_2uob2")
+
+[node name="ProjectileBox" type="Area2D" parent="."]
+
+[node name="ProjectileHitBox" type="CollisionShape2D" parent="ProjectileBox"]
+position = Vector2(-10.5, 1)
+shape = SubResource("RectangleShape2D_qjbgy")
+
+[node name="ArrowAnim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fb3yh")
+}
+
+[node name="DefeatSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_mf5sc")
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tbsby")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_hhi65")
+bus = &"sfx"
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="ArrowLife" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3yw0k")
+}
+autoplay = "default"
+
+[connection signal="body_entered" from="ProjectileBox" to="." method="_on_projectile_box_body_entered"]
+[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]

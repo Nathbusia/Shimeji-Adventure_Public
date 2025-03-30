@@ -1,0 +1,17 @@
+friend: HOLY BUTTERCUP BLUE!! IT'S THE MEAN BALLS!!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Alright. No panic. This is where your combat comes to play.
+[signal arg="greatest"]
+friend: Enemies like these are simple to take down. All you gotta do is jump on their head, and they're gone!
+[signal arg="talking"]
+friend: But however, other enemies have different ability and different way to attack you. So, be careful.
+[signal arg="welcome"]
+friend: By the way, you can also perform Slam Dash on them. Which is perform by pressing down while in the air.
+[signal arg="greatest"]
+friend: So now that you get the memo...
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: TAKE THOSE GUYS DOWN!!
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

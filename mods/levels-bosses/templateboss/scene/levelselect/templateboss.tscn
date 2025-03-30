@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d0fsn3ie8nu0t"]
+
+[ext_resource type="Script" uid="uid://ccu78mfxfbxlf" path="res://mods/levels-bosses/templateboss/scene/levelselect/templateboss.gd" id="1_10ceh"]
+[ext_resource type="Texture2D" uid="uid://difyd3xgxja18" path="res://mods/levels-bosses/templateboss/sprite/levelselect/levelselect_thumbnail_templateboss.png" id="2_qeg8s"]
+
+[node name="TemplateBoss" type="Node2D"]
+script = ExtResource("1_10ceh")
+levelname = "Template Boss"
+levelcreator = "By Unknown"
+leveldesc = "A simple Template Boss Mod for you to get started on creating your very own boss battle! Check the Level Guide on the Source Code for more info about making bosses."
+levelthumb = ExtResource("2_qeg8s")

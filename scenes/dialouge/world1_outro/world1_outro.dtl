@@ -1,0 +1,51 @@
+[signal arg="welcome"]
+friend: WOOHOO!! You did it!
+[signal arg="playerflipon"]
+[signal arg="talking"]
+friend: You've managed to defeat the Monstequare! Now the Desktop should be back at peace once more.
+[signal arg="greatest"]
+friend: Now don't you think that your adventure ends here, or it's too short... This is only just the beginning.
+[signal arg="welcome"]
+friend: There's a lot more worlds to experience on than just the Desktop...
+[signal arg="normaltalk"]
+friend: You know! Internet, Websites, so on, and so forth. You'll see it for yourself.
+[signal arg="pointing"]
+friend: But anyways to begin with your next step, You have to head onto the Internet itself.
+[signal arg="normaltalk"]
+friend: This will be your next world to go.
+[signal arg="talking"]
+friend: Now, I've heard some rumours about incoming changes towards our technologies.
+[signal arg="greatest"]
+friend: Something to do with those... Snaps Snaps, Robo Arts, or those ticking clocks...
+[signal arg="normaltalk"]
+friend: Whatever it is. It may sound good, or bad...
+[signal arg="normaltalk"]
+friend: But from the reviews that I've heard, it's pretty bad...
+[signal arg="talking"]
+friend: You're going to head into the Internet and investigate these new technologies yourself. And find out who is the one responsible for it.
+[signal arg="welcome"]
+friend: And don't you worry about doing this alone. I'm sure you'll meet new friends like me throughout your Adventure.
+[signal arg="normaltalk"]
+friend: I wish you all the good luck.
+[signal arg="playerjumptwo"]
+[wait time="1.3"]
+[signal arg="shocked"]
+friend: WHAT?! You want me to come too?
+[signal arg="talking"]
+friend: Look, I'll love to come with you throughout this adventure... But somebody has to look after the Desktop while you're gone.
+[signal arg="pointing"]
+friend: And plus, there are still a lot more new people that are just like you that I need to teach on how to play this game.
+[signal arg="normaltalk"]
+friend: So, I have to stay behind. But you have to go.
+[signal arg="waving"]
+friend: Alright, good talk. Now head over to the Internet, and good luck with your Adventure!
+[signal arg="leaving"]
+[signal arg="flippedoff"]
+friend: Stay Safe!!!
+[signal arg="playerjump"]
+[wait time="1.0"]
+[signal arg="playerflipoff"]
+[wait time="1.0"]
+[signal arg="playermoveon"]
+[wait time="3.0"]
+[signal arg="blackscreen"]

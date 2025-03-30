@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://csiorw5bf083i"]
+
+[ext_resource type="Texture2D" uid="uid://delilopm5rbl2" path="res://sprites/gameplay/testlevel/TestBigBlock.png" id="1_vpgfi"]
+[ext_resource type="Script" uid="uid://bb3qwycxckho" path="res://scenes/gameplaymechanics/testlevel/test_big_block.gd" id="1_yu446"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t3t0a"]
+size = Vector2(352, 352)
+
+[node name="TestBigBlock" type="RigidBody2D"]
+script = ExtResource("1_yu446")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vpgfi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t3t0a")

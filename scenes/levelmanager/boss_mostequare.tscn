@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://sqi1lfej832f"]
+
+[ext_resource type="Script" uid="uid://cmtwdeoml81ds" path="res://scenes/levelmanager/boss_mostequare.gd" id="1_8beoy"]
+[ext_resource type="Texture2D" uid="uid://u7jmmdggxotp" path="res://sprites/menu/levelselect/world1/levelselect_thumbnail_world1boss.png" id="2_s41yd"]
+
+[node name="World1Boss" type="Node2D"]
+script = ExtResource("1_8beoy")
+levelname = "MONSTEQUARE ATTACK!!"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_s41yd")

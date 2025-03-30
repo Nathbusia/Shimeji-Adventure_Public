@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare: BWUEAH-HAHAHAHA!
+[signal arg="talking"]
+monstequare: SO! You're the one who's been causing all this havoc towards my little Mean Balls and Mean Squares.
+[signal arg="talkingB"]
+monstequare: These poor small fellows told me everything about you, and now you have to deal with me!
+[signal arg="short"]
+monstequare: I'll give you a chance to run away, or get clobbered by me!
+[wait time="2.0"]
+[signal arg="question"]
+monstequare: No response? Then I guess clobber it is!
+[signal arg="short"]
+monstequare: Come at me, Desktop Hero...
+[signal arg="battlestart"]
+monstequare: GIVE ME YOUR WOOORSE!!
+[signal arg="beginboss"]

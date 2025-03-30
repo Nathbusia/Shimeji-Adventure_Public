@@ -1,0 +1,16 @@
+{
+	"bluetestball":
+		{
+			"charactermod_path": "res://mods/characters/bluetestball/scene/shimeji_character_playable.tscn",
+			"charactermod_gameover": "res://mods/characters/bluetestball/scene/shimeji_character_cutscene.tscn",
+			"charactermod_cutscene": "res://mods/characters/bluetestball/scene/shimeji_character_cutscene.tscn",
+			"charactermod_select": "res://mods/characters/bluetestball/scene/characterselect/characterslot_bluetestball.tscn",
+		},
+	"redtestball":
+		{
+			"charactermod_path": "res://mods/characters/redtestball/scene/shimeji_character_playable.tscn",
+			"charactermod_gameover": "res://mods/characters/redtestball/scene/shimeji_character_cutscene.tscn",
+			"charactermod_cutscene": "res://mods/characters/redtestball/scene/shimeji_character_cutscene.tscn",
+			"charactermod_select": "res://mods/characters/redtestball/scene/characterselect/characterslot_redtestball.tscn",
+		},
+}

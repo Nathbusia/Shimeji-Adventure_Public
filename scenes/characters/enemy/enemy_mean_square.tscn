@@ -1,0 +1,186 @@
+[gd_scene load_steps=17 format=3 uid="uid://nm2pfdhcwbwk"]
+
+[ext_resource type="Script" uid="uid://dq2gu1w2cdmo" path="res://scenes/characters/enemy/enemy_mean_square.gd" id="1_0jr08"]
+[ext_resource type="Texture2D" uid="uid://doke0eibx7hqk" path="res://sprites/characters/enemy/meansquare/meansquare_dead.png" id="2_luls6"]
+[ext_resource type="Texture2D" uid="uid://bbg8u0yupod6w" path="res://sprites/characters/enemy/meansquare/meansquare0001.png" id="3_5snm1"]
+[ext_resource type="Texture2D" uid="uid://dtbsye5ncptbm" path="res://sprites/characters/enemy/meansquare/meansquare0002.png" id="4_dwoqs"]
+[ext_resource type="Texture2D" uid="uid://ch8bjovkuu7pa" path="res://sprites/characters/enemy/meansquare/meansquare0003.png" id="5_4yyde"]
+[ext_resource type="Texture2D" uid="uid://b4426oegpejqp" path="res://sprites/characters/enemy/meansquare/meansquare0004.png" id="6_k2eoi"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_dcfy2"]
+[ext_resource type="AudioStream" uid="uid://c3rbccj24a1j0" path="res://sfx/characters/enemy/sfx_enemy_defeat.ogg" id="8_jhes0"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="9_reqom"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ir77f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_luls6")
+}],
+"loop": true,
+"name": &"defeated",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_5snm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dwoqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4yyde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_k2eoi")
+}],
+"loop": true,
+"name": &"move",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2kaw"]
+size = Vector2(78.7238, 78.7238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwb3a"]
+size = Vector2(121, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ofgdn"]
+size = Vector2(110, 110)
+
+[sub_resource type="Animation" id="Animation_klajh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeanSquare:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("MeanSquare:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeanSquare:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dnweq"]
+resource_name = "death"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeanSquare:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.43333),
+"transitions": PackedFloat32Array(0.420448, 1.93187, 1.93187),
+"update": 0,
+"values": [0.0, 6.28319, 12.5664]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/path = NodePath("MeanSquare:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.307786, 3.73213, 4.43828),
+"update": 0,
+"values": [Vector2(0, 40), Vector2(100, -100), Vector2(300, 800)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MeanSquare:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(0.482968, 1),
+"update": 0,
+"values": [Vector2(1, 0.375), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fu0dk"]
+_data = {
+&"RESET": SubResource("Animation_klajh"),
+&"death": SubResource("Animation_dnweq")
+}
+
+[node name="Enemy_MeanSquare" type="CharacterBody2D" groups=["Enemies"]]
+script = ExtResource("1_0jr08")
+
+[node name="MeanSquare" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ir77f")
+animation = &"move"
+autoplay = "move"
+
+[node name="EnemyShape" type="CollisionShape2D" parent="."]
+position = Vector2(5, 1.90735e-06)
+scale = Vector2(1.39729, 1.39729)
+shape = SubResource("RectangleShape2D_p2kaw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="EnemyHitBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.5, -2)
+shape = SubResource("RectangleShape2D_xwb3a")
+
+[node name="EnemyDeadBox" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, 0)
+shape = SubResource("RectangleShape2D_ofgdn")
+disabled = true
+
+[node name="Mean_AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fu0dk")
+}
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dcfy2")
+bus = &"sfx"
+
+[node name="EnemyDefeated" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jhes0")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_reqom")
+bus = &"sfx"
+
+[node name="GroundDetector" type="RayCast2D" parent="."]
+target_position = Vector2(0, 63)
+
+[node name="WallDetector" type="RayCast2D" parent="."]
+target_position = Vector2(-61.285, 0)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="EnemyDeathTimer" to="." method="_on_enemy_death_timer_timeout"]

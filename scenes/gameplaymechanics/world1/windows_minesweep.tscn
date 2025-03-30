@@ -1,0 +1,210 @@
+[gd_scene load_steps=37 format=3 uid="uid://blnu5akqpu2md"]
+
+[ext_resource type="Texture2D" uid="uid://ddl68nbtf30x6" path="res://sprites/levels/world1/windows_mine.png" id="1_pnsek"]
+[ext_resource type="Texture2D" uid="uid://cm0pp3afmqi33" path="res://sprites/levels/world1/windows_button_minimized.png" id="3_yrwg8"]
+[ext_resource type="Texture2D" uid="uid://drtjrbabse7qw" path="res://sprites/levels/world1/windows_button_maximized.png" id="4_k8n4y"]
+[ext_resource type="Texture2D" uid="uid://dxuq2iptmmuuh" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0001.png" id="5_63imo"]
+[ext_resource type="Texture2D" uid="uid://4c8xf8a0wfat" path="res://sprites/levels/world1/windows_button_close.png" id="5_j3f2f"]
+[ext_resource type="Texture2D" uid="uid://dqmujkkflheh2" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0002.png" id="6_hgm74"]
+[ext_resource type="Texture2D" uid="uid://02wjesowolj2" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0003.png" id="7_f14vp"]
+[ext_resource type="Texture2D" uid="uid://uvemwpwh721u" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0004.png" id="8_ee370"]
+[ext_resource type="Texture2D" uid="uid://dyd7qsfcsn85y" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0005.png" id="9_c66xc"]
+[ext_resource type="Texture2D" uid="uid://dfb6bia6juq5j" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0006.png" id="10_qc0nw"]
+[ext_resource type="Texture2D" uid="uid://dycx6vsii20ju" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0007.png" id="11_buxak"]
+[ext_resource type="Texture2D" uid="uid://ly7b03u80bdr" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0008.png" id="12_nir3r"]
+[ext_resource type="Texture2D" uid="uid://bgikc3bms0whp" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0009.png" id="13_3lrw2"]
+[ext_resource type="Texture2D" uid="uid://c76qy0fetsic6" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0010.png" id="14_xj6ee"]
+[ext_resource type="Texture2D" uid="uid://bw2ednmvyuoxa" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0011.png" id="15_b5una"]
+[ext_resource type="Texture2D" uid="uid://487748kg0jgm" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0012.png" id="16_k5jdp"]
+[ext_resource type="Texture2D" uid="uid://brdnei7xq2e5e" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0013.png" id="17_mff4b"]
+[ext_resource type="Texture2D" uid="uid://pqqch53qsvla" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0014.png" id="18_gjd7s"]
+[ext_resource type="Texture2D" uid="uid://brxlp72c7o0p" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0015.png" id="19_30236"]
+[ext_resource type="Texture2D" uid="uid://ws8kbsgqfe7s" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0016.png" id="20_vq8hs"]
+[ext_resource type="Texture2D" uid="uid://rkivacj6xpgm" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0017.png" id="21_vsvag"]
+[ext_resource type="Texture2D" uid="uid://5tne7tgec8a3" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0018.png" id="22_w3b38"]
+[ext_resource type="Texture2D" uid="uid://bwtfjj8sre1m7" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0019.png" id="23_6nyrc"]
+[ext_resource type="Texture2D" uid="uid://doleqnxqdlby8" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0020.png" id="24_06je6"]
+[ext_resource type="Texture2D" uid="uid://0jjin62ajha5" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0021.png" id="25_pt1bc"]
+[ext_resource type="Texture2D" uid="uid://ceqoks33k4yw0" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0022.png" id="26_ndcpl"]
+[ext_resource type="Texture2D" uid="uid://dol23w84ujs6q" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0023.png" id="27_tg0pp"]
+[ext_resource type="Texture2D" uid="uid://c01rbg0lj7a10" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0024.png" id="28_6m5ny"]
+[ext_resource type="Texture2D" uid="uid://cvxjpct3318bw" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0025.png" id="29_34cbu"]
+[ext_resource type="Texture2D" uid="uid://bcrnq4rlna77c" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0026.png" id="30_73o3p"]
+[ext_resource type="Texture2D" uid="uid://dkswso07xg4xn" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0027.png" id="31_ig4fx"]
+[ext_resource type="Texture2D" uid="uid://ckhg1qdgyca6e" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0028.png" id="32_wcbpc"]
+[ext_resource type="Texture2D" uid="uid://t66cu3eka3b4" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0029.png" id="33_h6k2j"]
+[ext_resource type="Texture2D" uid="uid://bx5n7fetd8vjf" path="res://sprites/levels/world1/windows/minesweep/MinesweeperSmiley0030.png" id="34_dtmhx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2wmeq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_63imo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hgm74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_f14vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ee370")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_c66xc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qc0nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_buxak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nir3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3lrw2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xj6ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_b5una")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_k5jdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_mff4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_gjd7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_30236")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_vq8hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_vsvag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_w3b38")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6nyrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_06je6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_pt1bc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_ndcpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_tg0pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_6m5ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_34cbu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_73o3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_ig4fx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_wcbpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h6k2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_dtmhx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gppr4"]
+size = Vector2(259, 444)
+
+[node name="AdvertiseMent_FNFPNM" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+position = Vector2(187, 12)
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -264.0
+offset_right = -58.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_pnsek")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_A" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0113636
+anchor_top = -0.00671141
+anchor_right = 0.0113636
+anchor_bottom = 0.00671141
+offset_left = 183.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 21.0
+texture = ExtResource("3_yrwg8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_B" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227273
+anchor_right = 0.5
+anchor_bottom = 0.272727
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("4_k8n4y")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_C" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A/Button_B"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.227273
+anchor_right = 0.5
+anchor_bottom = 0.272727
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("5_j3f2f")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Smiley" type="AnimatedSprite2D" parent="WindowsPopUp"]
+position = Vector2(-202, -205)
+scale = Vector2(0.128788, 0.128788)
+sprite_frames = SubResource("SpriteFrames_2wmeq")
+autoplay = "default"
+frame_progress = 0.741121
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-192.5, -42)
+shape = SubResource("RectangleShape2D_gppr4")

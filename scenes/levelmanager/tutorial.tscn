@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfgcv0uxrd5nd"]
+
+[ext_resource type="Script" uid="uid://eubact82ytwx" path="res://scenes/levelmanager/tutorial.gd" id="1_o5ohw"]
+[ext_resource type="Texture2D" uid="uid://cdpynf3p20kuy" path="res://sprites/menu/levelselect/world1/levelselect_thumbnail_tutorial.png" id="2_lcn4x"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_o5ohw")
+levelname = "Tutorial: Learning The Basic"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_lcn4x")

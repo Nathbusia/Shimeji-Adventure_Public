@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://n3mt6lilarhq"]
+
+[ext_resource type="Script" uid="uid://d3v58le3haaf2" path="res://scenes/gameplaymechanics/spring.gd" id="1_7gv6o"]
+[ext_resource type="Texture2D" uid="uid://7ge1hsjfwoj2" path="res://sprites/gameplay/spring/spring0002.png" id="1_fofun"]
+[ext_resource type="Texture2D" uid="uid://bun6k4j2gqhx6" path="res://sprites/gameplay/spring/spring0003.png" id="2_rvic7"]
+[ext_resource type="Texture2D" uid="uid://cf4ajy7dhlfmj" path="res://sprites/gameplay/spring/spring0001.png" id="3_pfqjd"]
+[ext_resource type="Texture2D" uid="uid://cxqd8wnowpgbg" path="res://sprites/gameplay/spring/spring0004.png" id="4_qcrsu"]
+[ext_resource type="Texture2D" uid="uid://dye4takw3iyd0" path="res://sprites/gameplay/spring/spring0005.png" id="5_xtce1"]
+[ext_resource type="Texture2D" uid="uid://con2r502og3n7" path="res://sprites/gameplay/spring/spring0006.png" id="6_wxk6l"]
+[ext_resource type="AudioStream" uid="uid://5dji64tffqf4" path="res://sfx/gameplay/spring/sfx_spring_bounce_big.ogg" id="8_kf44g"]
+[ext_resource type="AudioStream" uid="uid://2js8df1n1jso" path="res://sfx/gameplay/spring/sfx_spring_bounce_small.ogg" id="9_4gf7y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7sbw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fofun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_rvic7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pfqjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qcrsu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xtce1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wxk6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pfqjd")
+}],
+"loop": false,
+"name": &"boing",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pfqjd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up7rl"]
+size = Vector2(62, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_km3rm"]
+size = Vector2(62, 45)
+
+[node name="Spring" type="RigidBody2D"]
+script = ExtResource("1_7gv6o")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_l7sbw")
+animation = &"boing"
+autoplay = "default"
+frame = 6
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_up7rl")
+
+[node name="SpringTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpringTrigger"]
+position = Vector2(0, 9.5)
+shape = SubResource("RectangleShape2D_km3rm")
+
+[node name="SpringBig" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_kf44g")
+
+[node name="SpringSmall" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_4gf7y")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="SpringTrigger" to="." method="_on_spring_trigger_body_entered"]

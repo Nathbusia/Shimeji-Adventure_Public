@@ -1,0 +1,196 @@
+[gd_scene load_steps=28 format=3 uid="uid://dhx0ck1hhfibr"]
+
+[ext_resource type="Script" uid="uid://b00e2vhm0lnug" path="res://scenes/demoend/demo_end_testworld.gd" id="1_ckrrq"]
+[ext_resource type="Texture2D" uid="uid://cu52l1utxxqcg" path="res://sprites/demoend/demoend_testworld_bg.png" id="2_8bnai"]
+[ext_resource type="Texture2D" uid="uid://blb2fj2xqws76" path="res://sprites/demoend/test/demoend_ms.png" id="3_iirsr"]
+[ext_resource type="Texture2D" uid="uid://ch7rjqf81orwu" path="res://sprites/demoend/test/demoend_mb.png" id="4_ffsb8"]
+[ext_resource type="Texture2D" uid="uid://2ymedkbxxphi" path="res://sprites/demoend/demoend_testworld_text.png" id="5_qv08v"]
+[ext_resource type="AudioStream" uid="uid://hdv4xsdbxm71" path="res://bgm/demoend/bgm_demoend.ogg" id="6_st1dx"]
+[ext_resource type="Texture2D" uid="uid://bmgrogj2eyep4" path="res://sprites/demoend/demoend_continue0001.png" id="7_65gbo"]
+[ext_resource type="Texture2D" uid="uid://b4l8faoglfg7i" path="res://sprites/demoend/demoend_continue0002.png" id="8_cr2qk"]
+[ext_resource type="Texture2D" uid="uid://cu4c3l8ywuo4x" path="res://sprites/demoend/demoend_continue0003.png" id="9_opbt4"]
+[ext_resource type="Texture2D" uid="uid://ww127oa48i3n" path="res://sprites/demoend/demoend_continue0007.png" id="10_ehkjy"]
+[ext_resource type="Texture2D" uid="uid://duevcsb1e5uvi" path="res://sprites/demoend/demoend_continue0008.png" id="11_mnwot"]
+[ext_resource type="Texture2D" uid="uid://htxqaib5wkt5" path="res://sprites/demoend/demoend_continue0009.png" id="12_sj8yb"]
+[ext_resource type="Texture2D" uid="uid://cn80aixq0rfvr" path="res://sprites/demoend/demoend_continue0004.png" id="13_t4pax"]
+[ext_resource type="Texture2D" uid="uid://cn2ba8pl0mnce" path="res://sprites/demoend/demoend_continue0005.png" id="14_xyqxx"]
+[ext_resource type="Texture2D" uid="uid://bcdmudj8xu3ut" path="res://sprites/demoend/demoend_continue0006.png" id="15_5j6pn"]
+[ext_resource type="AudioStream" uid="uid://f3bgnu5jalut" path="res://sfx/menu/sfx_menu_select.ogg" id="16_en0jh"]
+[ext_resource type="AudioStream" uid="uid://c34txxvwhy20f" path="res://sfx/menu/sfx_menu_deselect.ogg" id="17_rf8m4"]
+[ext_resource type="AudioStream" uid="uid://dlf2bwrdvr4wi" path="res://sfx/menu/sfx_menu_hover.ogg" id="18_t13gg"]
+
+[sub_resource type="Animation" id="Animation_iopdc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2464, 272)]
+}
+
+[sub_resource type="Animation" id="Animation_xt8hm"]
+resource_name = "new_animationS"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 3),
+"transitions": PackedFloat32Array(0.170755, 0.170755, 8.28211),
+"update": 0,
+"values": [Vector2(2464, 272), Vector2(2464, 272), Vector2(-16, 272)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mmn45"]
+_data = {
+&"RESET": SubResource("Animation_iopdc"),
+&"new_animationS": SubResource("Animation_xt8hm")
+}
+
+[sub_resource type="Animation" id="Animation_31bcr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1312, 176)]
+}
+
+[sub_resource type="Animation" id="Animation_ddix8"]
+resource_name = "new_animation"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.217638, 4.75683),
+"update": 0,
+"values": [Vector2(1312, 176), Vector2(272, 176)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vr6c"]
+_data = {
+&"RESET": SubResource("Animation_31bcr"),
+&"new_animation": SubResource("Animation_ddix8")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_jfdcm"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("7_65gbo")
+frame_1/texture = ExtResource("8_cr2qk")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("9_opbt4")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_27aol"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("10_ehkjy")
+frame_1/texture = ExtResource("11_mnwot")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("12_sj8yb")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_icwei"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("13_t4pax")
+frame_1/texture = ExtResource("14_xyqxx")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("15_5j6pn")
+frame_2/duration = 1.0
+
+[node name="DemoEnd_TestWorld" type="Node2D"]
+script = ExtResource("1_ckrrq")
+
+[node name="BG" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 656.0
+texture = ExtResource("2_8bnai")
+expand_mode = 1
+
+[node name="Char4" type="TextureRect" parent="."]
+offset_left = 2464.0
+offset_top = 272.0
+offset_right = 2820.0
+offset_bottom = 480.0
+texture = ExtResource("3_iirsr")
+expand_mode = 1
+flip_h = true
+
+[node name="MSSlide" type="AnimationPlayer" parent="Char4"]
+libraries = {
+&"": SubResource("AnimationLibrary_mmn45")
+}
+autoplay = "new_animationS"
+
+[node name="Char3" type="TextureRect" parent="."]
+offset_left = 1312.0
+offset_top = 176.0
+offset_right = 1901.0
+offset_bottom = 592.0
+texture = ExtResource("4_ffsb8")
+expand_mode = 1
+
+[node name="MBSlide" type="AnimationPlayer" parent="Char3"]
+libraries = {
+&"": SubResource("AnimationLibrary_6vr6c")
+}
+autoplay = "new_animation"
+
+[node name="Text" type="TextureRect" parent="."]
+offset_top = -13.0
+offset_right = 1152.0
+offset_bottom = 643.0
+texture = ExtResource("5_qv08v")
+expand_mode = 1
+
+[node name="DemoEndSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_st1dx")
+autoplay = true
+bus = &"bgm"
+
+[node name="Continue_Button" type="TextureButton" parent="."]
+offset_left = 848.0
+offset_top = 560.0
+offset_right = 1099.0
+offset_bottom = 690.0
+texture_normal = SubResource("AnimatedTexture_jfdcm")
+texture_pressed = SubResource("AnimatedTexture_27aol")
+texture_hover = SubResource("AnimatedTexture_icwei")
+
+[node name="ButtonSounds" type="Node2D" parent="."]
+
+[node name="Select" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("16_en0jh")
+bus = &"sfx"
+
+[node name="Deselect" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("17_rf8m4")
+bus = &"sfx"
+
+[node name="Hover" type="AudioStreamPlayer2D" parent="ButtonSounds"]
+stream = ExtResource("18_t13gg")
+bus = &"sfx"
+
+[connection signal="pressed" from="Continue_Button" to="." method="_on_continue_button_pressed"]

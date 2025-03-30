@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://dgpqppgneb2hk"]
+
+[ext_resource type="Script" uid="uid://b8o3bfd1d2jaq" path="res://mods/characters/bluetestball/scene/characterselect/characterslot_bluetestball.gd" id="1_ixvrv"]
+[ext_resource type="Texture2D" uid="uid://c8wqqh6gb0nuk" path="res://sprites/menu/charselect/CharacterSelect_hover_bg.png" id="2_fegbe"]
+[ext_resource type="Texture2D" uid="uid://3hga0dahx56y" path="res://sprites/menu/charselect/CharacterSelect_normal_bg.png" id="3_pgvqq"]
+[ext_resource type="Texture2D" uid="uid://cbnbk3djdrniw" path="res://sprites/menu/charselect/CharacterSelect_select_bg.png" id="4_xu4tp"]
+[ext_resource type="Texture2D" uid="uid://737fsm8p5xox" path="res://mods/characters/bluetestball/sprites/characterselect/bluetestball.png" id="5_m2aam"]
+[ext_resource type="Texture2D" uid="uid://btv8r3lyna733" path="res://sprites/menu/charselect/CharacterSelect_normal_border.png" id="6_6b4d3"]
+[ext_resource type="Texture2D" uid="uid://7hbxhtwk16pt" path="res://sprites/menu/charselect/CharacterSelect_select_bolder.png" id="7_4lca2"]
+[ext_resource type="Texture2D" uid="uid://cq8kfcxku5t1m" path="res://sprites/menu/charselect/CharacterSelect_hover_border.png" id="8_fhcrb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fklg4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"current",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fegbe")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pgvqq")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xu4tp")
+}],
+"loop": true,
+"name": &"select",
+"speed": 5.0
+}]
+
+[node name="characterslot_bluetestball" type="Panel"]
+script = ExtResource("1_ixvrv")
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_fklg4")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="CharSelect_Char" type="TextureRect" parent="CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_m2aam")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharSelect_BG/CharSelect_Char"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_6b4d3")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharSelect_BG/CharSelect_Char/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("6_6b4d3")
+texture_pressed = ExtResource("7_4lca2")
+texture_hover = ExtResource("8_fhcrb")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton" to="." method="_on_slot_button_pressed"]

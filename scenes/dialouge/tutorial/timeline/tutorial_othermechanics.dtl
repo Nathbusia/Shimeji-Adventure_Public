@@ -1,0 +1,20 @@
+friend: Here we are! The final step.
+[signal arg="talking"]
+friend: Now throughout this, you'll be going through a simple course to test out on everything you be taught throughout this tutorial.
+[signal arg="talking"]
+friend: Within so, you'll be seeing two more mechanics that might appear in normal gameplay...
+[signal arg="greatest"]
+friend: One being the springs. You know, where those Spring has Sprung, and the Sprung has... whatever they do.
+[signal arg="talking"]
+friend: But anyways, yeah. Those white spring will help you to bounce upwards, and reset your jump limit. Giving you more air time.
+[signal arg="welcome"]
+friend: Don't forget, if you use Slam Dash on the Springs, you'll bounce as higher than usual! This will come in handy in very tall surfaces and platforms. (This also applies to Slam Dashing enemies.)
+[signal arg="normaltalk"]
+friend: And lastly are the spikes.
+[signal arg="talking"]
+friend: These are one of the dangerous obstacles. And trust me, you don't wanna touch them...
+[signal arg="pointing"]
+friend: They're pointy and such, and make you lose health if touched. So, be careful.
+[signal arg="talking"]
+friend: Right, without said. Finish off this last course, and I'll see you at the end!
+[signal arg="end_cutscene"]

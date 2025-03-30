@@ -1,0 +1,674 @@
+[gd_scene load_steps=105 format=3 uid="uid://bf1g5l3rsqc5d"]
+
+[ext_resource type="Script" uid="uid://553b5apivxn4" path="res://scenes/characters/bosses/monstequare/monstequare.gd" id="1_6jerx"]
+[ext_resource type="Texture2D" uid="uid://x1gkxuqinujc" path="res://sprites/characters/bosses/monstequare/monstequare_damage0001.png" id="1_j41q3"]
+[ext_resource type="Shader" uid="uid://cr6tg8gqxmuno" path="res://scenes/characters/enemy/flash_damagae.gdshader" id="2_kksw2"]
+[ext_resource type="Texture2D" uid="uid://dnlwp5qt6iorw" path="res://sprites/characters/bosses/monstequare/monstequare_damage0002.png" id="2_ueuqy"]
+[ext_resource type="Texture2D" uid="uid://be0so77n8n27t" path="res://sprites/characters/bosses/monstequare/monstequare_damage0003.png" id="3_f5o4o"]
+[ext_resource type="Texture2D" uid="uid://dwosyf3ahwsf3" path="res://sprites/characters/bosses/monstequare/monstequare_damage0004.png" id="4_037xh"]
+[ext_resource type="Texture2D" uid="uid://xx74xd67jclf" path="res://sprites/characters/bosses/monstequare/monstequare_damage0005.png" id="5_hkpj5"]
+[ext_resource type="Texture2D" uid="uid://cr3ydwljmltxk" path="res://sprites/characters/bosses/monstequare/monstequare_damage0006.png" id="6_o323j"]
+[ext_resource type="Texture2D" uid="uid://csf7jn6h8kn3t" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0001.png" id="7_1j4e4"]
+[ext_resource type="Texture2D" uid="uid://mqs6yffvc0pf" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0002.png" id="8_ply2e"]
+[ext_resource type="Texture2D" uid="uid://b0mucnri52w00" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0003.png" id="9_cgmlr"]
+[ext_resource type="Texture2D" uid="uid://c3425nbfujcxl" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0004.png" id="10_gxdo8"]
+[ext_resource type="Texture2D" uid="uid://byk3s27gx4fy4" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0005.png" id="11_5d76i"]
+[ext_resource type="Texture2D" uid="uid://ddv4n6yc5x3j2" path="res://sprites/characters/bosses/monstequare/monstequare_defeated0006.png" id="12_8mm2q"]
+[ext_resource type="Texture2D" uid="uid://bdjrhcn7h7sxp" path="res://sprites/characters/bosses/monstequare/monstequare_idle0001.png" id="13_w4phk"]
+[ext_resource type="Texture2D" uid="uid://dqyo8d8deu0w8" path="res://sprites/characters/bosses/monstequare/monstequare_idle0002.png" id="14_inqqr"]
+[ext_resource type="Texture2D" uid="uid://bo04tpq006c3w" path="res://sprites/characters/bosses/monstequare/monstequare_idle0003.png" id="15_grqgt"]
+[ext_resource type="Texture2D" uid="uid://6js7ufypaf27" path="res://sprites/characters/bosses/monstequare/monstequare_idle0004.png" id="16_5udqn"]
+[ext_resource type="Texture2D" uid="uid://b4ipa54qvpsq3" path="res://sprites/characters/bosses/monstequare/monstequare_idle0005.png" id="17_otybu"]
+[ext_resource type="Texture2D" uid="uid://bf21lfdj1q0x4" path="res://sprites/characters/bosses/monstequare/monstequare_idle0006.png" id="18_u1qw7"]
+[ext_resource type="Texture2D" uid="uid://bq2m83ptwjgu7" path="res://sprites/characters/bosses/monstequare/monstequare_intro0010.png" id="19_jcakh"]
+[ext_resource type="Texture2D" uid="uid://mkg2n2mnwotg" path="res://sprites/characters/bosses/monstequare/monstequare_intro0011.png" id="20_kwska"]
+[ext_resource type="Texture2D" uid="uid://dlowceuknyjju" path="res://sprites/characters/bosses/monstequare/monstequare_intro0012.png" id="21_fh7qo"]
+[ext_resource type="Texture2D" uid="uid://brywr6h2n1iq6" path="res://sprites/characters/bosses/monstequare/monstequare_intro0013.png" id="22_1cm7e"]
+[ext_resource type="Texture2D" uid="uid://dlb3bvki23r8g" path="res://sprites/characters/bosses/monstequare/monstequare_intro0014.png" id="23_s4u6m"]
+[ext_resource type="Texture2D" uid="uid://bm2dqdyhv4c8w" path="res://sprites/characters/bosses/monstequare/monstequare_intro0015.png" id="24_f3qmg"]
+[ext_resource type="Texture2D" uid="uid://b7m7smv3d6ryh" path="res://sprites/characters/bosses/monstequare/monstequare_intro0016.png" id="25_tcegd"]
+[ext_resource type="Texture2D" uid="uid://bjb357qk7gwyk" path="res://sprites/characters/bosses/monstequare/monstequare_intro0017.png" id="26_0xlpi"]
+[ext_resource type="Texture2D" uid="uid://chqlnpbljowwl" path="res://sprites/characters/bosses/monstequare/monstequare_intro0018.png" id="27_huyuo"]
+[ext_resource type="Texture2D" uid="uid://cdsbnveaylbd8" path="res://sprites/characters/bosses/monstequare/monstequare_intro0019.png" id="28_x1xla"]
+[ext_resource type="Texture2D" uid="uid://c01tde7vn8hgj" path="res://sprites/characters/bosses/monstequare/monstequare_intro0020.png" id="29_7vfmy"]
+[ext_resource type="Texture2D" uid="uid://1g3m6iempgni" path="res://sprites/characters/bosses/monstequare/monstequare_intro0021.png" id="30_6h1mi"]
+[ext_resource type="Texture2D" uid="uid://dbvveu4duseoh" path="res://sprites/characters/bosses/monstequare/monstequare_intro0022.png" id="31_if5qt"]
+[ext_resource type="Texture2D" uid="uid://b33pu351xjv4p" path="res://sprites/characters/bosses/monstequare/monstequare_intro0023.png" id="32_0fu1a"]
+[ext_resource type="Texture2D" uid="uid://bnjo4clf3lspy" path="res://sprites/characters/bosses/monstequare/monstequare_intro0024.png" id="33_fhdl6"]
+[ext_resource type="Texture2D" uid="uid://djdate71r2kam" path="res://sprites/characters/bosses/monstequare/monstequare_intro0001.png" id="34_01ynd"]
+[ext_resource type="Texture2D" uid="uid://da0uja041qvhq" path="res://sprites/characters/bosses/monstequare/monstequare_intro0002.png" id="35_kwh16"]
+[ext_resource type="Texture2D" uid="uid://bssjmj5s2vu36" path="res://sprites/characters/bosses/monstequare/monstequare_intro0003.png" id="36_2qkjh"]
+[ext_resource type="Texture2D" uid="uid://dd77ovd586hd" path="res://sprites/characters/bosses/monstequare/monstequare_intro0004.png" id="37_cqd0j"]
+[ext_resource type="Texture2D" uid="uid://dsk7vasp8p6uy" path="res://sprites/characters/bosses/monstequare/monstequare_intro0005.png" id="38_h15jg"]
+[ext_resource type="Texture2D" uid="uid://drxodwjlvck2r" path="res://sprites/characters/bosses/monstequare/monstequare_intro0006.png" id="39_lopfq"]
+[ext_resource type="Texture2D" uid="uid://bamvrasbur201" path="res://sprites/characters/bosses/monstequare/monstequare_intro0007.png" id="40_f1g7g"]
+[ext_resource type="Texture2D" uid="uid://dxu82bafodm5p" path="res://sprites/characters/bosses/monstequare/monstequare_intro0008.png" id="41_m0l2o"]
+[ext_resource type="Texture2D" uid="uid://di64u3mt1xm1b" path="res://sprites/characters/bosses/monstequare/monstequare_intro0009.png" id="42_8xd1k"]
+[ext_resource type="Texture2D" uid="uid://bg5pi72h64od6" path="res://sprites/characters/bosses/monstequare/monstequare_spit0001.png" id="43_bxwqo"]
+[ext_resource type="Texture2D" uid="uid://dnbrm84ghyhjs" path="res://sprites/characters/bosses/monstequare/monstequare_spit0002.png" id="44_e5222"]
+[ext_resource type="Texture2D" uid="uid://4tlnyldccrjs" path="res://sprites/characters/bosses/monstequare/monstequare_spit0003.png" id="45_c4e4f"]
+[ext_resource type="Texture2D" uid="uid://btrydf8vnm32r" path="res://sprites/characters/bosses/monstequare/monstequare_spit0004.png" id="46_qalh3"]
+[ext_resource type="Texture2D" uid="uid://bhkjvlps83lb4" path="res://sprites/characters/bosses/monstequare/monstequare_spit0005.png" id="47_wwfrm"]
+[ext_resource type="Texture2D" uid="uid://dhmyas6hdemgb" path="res://sprites/characters/bosses/monstequare/monstequare_spit0006.png" id="48_uegbt"]
+[ext_resource type="Texture2D" uid="uid://1yo6u6h3uwfi" path="res://sprites/characters/bosses/monstequare/monstequare_summon0001.png" id="49_6m6k6"]
+[ext_resource type="Texture2D" uid="uid://b44nn4oapfutp" path="res://sprites/characters/bosses/monstequare/monstequare_summon0002.png" id="50_fs7rb"]
+[ext_resource type="Texture2D" uid="uid://c4s7llnuwfy6a" path="res://sprites/characters/bosses/monstequare/monstequare_summon0003.png" id="51_ieokq"]
+[ext_resource type="Texture2D" uid="uid://gpdsqut3pmdp" path="res://sprites/characters/bosses/monstequare/monstequare_summon0004.png" id="52_xj850"]
+[ext_resource type="Texture2D" uid="uid://x4xsxtgbbe2" path="res://sprites/characters/bosses/monstequare/monstequare_summon0005.png" id="53_kx87x"]
+[ext_resource type="Texture2D" uid="uid://bqbmtejssl5ly" path="res://sprites/characters/bosses/monstequare/monstequare_summon0006.png" id="54_xdh51"]
+[ext_resource type="AudioStream" uid="uid://c0a73mse2mj71" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_inhale.ogg" id="55_p5fm5"]
+[ext_resource type="AudioStream" uid="uid://bosgci1c0qjhv" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_roar.ogg" id="56_dw83u"]
+[ext_resource type="Texture2D" uid="uid://cyxwdbnad7vc8" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0008.png" id="56_ilymv"]
+[ext_resource type="Texture2D" uid="uid://b80qpccnkwfk8" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0001.png" id="56_t4udd"]
+[ext_resource type="Texture2D" uid="uid://d16j762n8d78q" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0002.png" id="57_4v7ak"]
+[ext_resource type="AudioStream" uid="uid://ilgxbhud12lo" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_spit.ogg" id="57_vnirn"]
+[ext_resource type="Texture2D" uid="uid://udmb2fkwnwyw" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0003.png" id="58_6vu74"]
+[ext_resource type="AudioStream" uid="uid://dktcjmrr7nxue" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_hurt01.ogg" id="58_nyv7o"]
+[ext_resource type="AudioStream" uid="uid://cpxqgx6xtq2cp" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_hurt02.ogg" id="59_ffrjw"]
+[ext_resource type="Texture2D" uid="uid://b4q8stcxgi3ya" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0004.png" id="59_gjns5"]
+[ext_resource type="Texture2D" uid="uid://v42k041bbsc3" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0005.png" id="60_4iqmk"]
+[ext_resource type="AudioStream" uid="uid://c5l6vwidgpb5s" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_summon01.ogg" id="60_h7pta"]
+[ext_resource type="Texture2D" uid="uid://cffh6k03qsk3x" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0006.png" id="61_p7rdm"]
+[ext_resource type="AudioStream" uid="uid://b5tw011cbi708" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_summon02.ogg" id="61_x8mhq"]
+[ext_resource type="AudioStream" uid="uid://dxlo5qmcgonvm" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_death.ogg" id="62_471j3"]
+[ext_resource type="Texture2D" uid="uid://c6surrafg45rj" path="res://sprites/characters/bosses/monstequare/spawneffect/monstequare_smmoneffect0007.png" id="62_pah7r"]
+[ext_resource type="AudioStream" uid="uid://c7lrenmq3qii7" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_defeated01.ogg" id="63_t5me1"]
+[ext_resource type="AudioStream" uid="uid://bla4l0brwmccb" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_defeated02.ogg" id="64_vbsjv"]
+[ext_resource type="AudioStream" uid="uid://cfk787phk3kac" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_hurt01.ogg" id="65_03erw"]
+[ext_resource type="AudioStream" uid="uid://bvekyq8omnebf" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_hurt02.ogg" id="66_uw76a"]
+[ext_resource type="AudioStream" uid="uid://bwq3bl6glyida" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_hurt03.ogg" id="67_232eu"]
+[ext_resource type="AudioStream" uid="uid://sitvwnumkiox" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_hurt04.ogg" id="68_7gnf1"]
+[ext_resource type="AudioStream" uid="uid://b66efa0q7k72j" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_inhale.ogg" id="69_lti3f"]
+[ext_resource type="AudioStream" uid="uid://d2buxh1rujhp3" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_roar.ogg" id="70_g20mv"]
+[ext_resource type="AudioStream" uid="uid://cp0k3vpxq06l7" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_spit01.ogg" id="71_u6u5t"]
+[ext_resource type="AudioStream" uid="uid://bjrvr5md0ivbf" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_spit02.ogg" id="72_8xbwm"]
+[ext_resource type="AudioStream" uid="uid://b7h4ubpd3r16s" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_spit03.ogg" id="73_5rvo2"]
+[ext_resource type="AudioStream" uid="uid://dhqkjoave8ssy" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_spit04.ogg" id="74_lpsos"]
+[ext_resource type="AudioStream" uid="uid://b7f2ufpdpaymy" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_summon01.ogg" id="75_d8yg5"]
+[ext_resource type="AudioStream" uid="uid://dftjtxaaej67m" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_summon02.ogg" id="76_idlxc"]
+[ext_resource type="AudioStream" uid="uid://beqhjj3ardpsr" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_summon03.ogg" id="77_msik0"]
+[ext_resource type="AudioStream" uid="uid://c23laum2lisww" path="res://sfx/characters/bosses/monstequare/sfx_monstequare_vox_summon04.ogg" id="78_twypi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbktw"]
+shader = ExtResource("2_kksw2")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1m12r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_j41q3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ueuqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_f5o4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_037xh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hkpj5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_o323j")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_1j4e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ply2e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_cgmlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gxdo8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}],
+"loop": false,
+"name": &"death",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5d76i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8mm2q")
+}],
+"loop": true,
+"name": &"death_loop",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_w4phk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_inqqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_grqgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5udqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_otybu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u1qw7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_jcakh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_kwska")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_fh7qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_1cm7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_s4u6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f3qmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tcegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f3qmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tcegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f3qmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tcegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f3qmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tcegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f3qmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_tcegd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0xlpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_huyuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_x1xla")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7vfmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_6h1mi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_if5qt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_0fu1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_fhdl6")
+}],
+"loop": false,
+"name": &"intro_roar",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_01ynd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kwh16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2qkjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_cqd0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_h15jg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_lopfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_f1g7g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_m0l2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8xd1k")
+}],
+"loop": false,
+"name": &"intro_start",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_bxwqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_e5222")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_c4e4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_qalh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_wwfrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_uegbt")
+}],
+"loop": false,
+"name": &"spit",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_6m6k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_fs7rb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_ieokq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xj850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kx87x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xj850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kx87x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xj850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kx87x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_xj850")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_kx87x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_xdh51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_6m6k6")
+}],
+"loop": false,
+"name": &"summon",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77yl7"]
+size = Vector2(320, 288)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rdd5h"]
+size = Vector2(352, 320)
+
+[sub_resource type="Animation" id="Animation_8be7w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MonstequareSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MonstequareSprite:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_221qf"]
+resource_name = "death"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MonstequareSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MonstequareSprite:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 5, 6.43333, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(6.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawn_star"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_717ff"]
+resource_name = "intro"
+length = 9.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MonstequareSprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_0ij3n"]
+resource_name = "spitattack"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6vx8i"]
+_data = {
+&"RESET": SubResource("Animation_8be7w"),
+&"death": SubResource("Animation_221qf"),
+&"intro": SubResource("Animation_717ff"),
+&"spitattack": SubResource("Animation_0ij3n")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jesj1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_ilymv")
+}],
+"loop": true,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_t4udd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4v7ak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_6vu74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_gjns5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_4iqmk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_p7rdm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_pah7r")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_k3ijc"]
+streams_count = 2
+stream_0/stream = ExtResource("58_nyv7o")
+stream_1/stream = ExtResource("59_ffrjw")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_05mgt"]
+streams_count = 2
+stream_0/stream = ExtResource("60_h7pta")
+stream_1/stream = ExtResource("61_x8mhq")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_revgk"]
+streams_count = 2
+stream_0/stream = ExtResource("63_t5me1")
+stream_1/stream = ExtResource("64_vbsjv")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_3xmyx"]
+streams_count = 4
+stream_0/stream = ExtResource("65_03erw")
+stream_1/stream = ExtResource("66_uw76a")
+stream_2/stream = ExtResource("67_232eu")
+stream_3/stream = ExtResource("68_7gnf1")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_246wx"]
+streams_count = 4
+stream_0/stream = ExtResource("71_u6u5t")
+stream_1/stream = ExtResource("72_8xbwm")
+stream_2/stream = ExtResource("73_5rvo2")
+stream_3/stream = ExtResource("74_lpsos")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_urgmj"]
+streams_count = 4
+stream_0/stream = ExtResource("75_d8yg5")
+stream_1/stream = ExtResource("76_idlxc")
+stream_2/stream = ExtResource("77_msik0")
+stream_3/stream = ExtResource("78_twypi")
+
+[node name="Monstequare" type="CharacterBody2D"]
+script = ExtResource("1_6jerx")
+
+[node name="MonstequareSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_gbktw")
+sprite_frames = SubResource("SpriteFrames_1m12r")
+animation = &"death_loop"
+autoplay = "intro_start"
+
+[node name="BossCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_77yl7")
+
+[node name="BossHitbox" type="Area2D" parent="."]
+
+[node name="HitboxCollision" type="CollisionShape2D" parent="BossHitbox"]
+position = Vector2(0, 32)
+shape = SubResource("RectangleShape2D_rdd5h")
+
+[node name="MonstequareAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6vx8i")
+}
+
+[node name="SpawnEffect" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0.34, 0.34, 1)
+texture_filter = 1
+position = Vector2(-368, 80)
+sprite_frames = SubResource("SpriteFrames_jesj1")
+animation = &"spawn"
+autoplay = "none"
+
+[node name="ProjectileSpawner" type="Marker2D" parent="."]
+position = Vector2(-240, 68)
+
+[node name="EnemySpawner" type="Marker2D" parent="."]
+position = Vector2(-368, 80)
+
+[node name="FinishStarAppear" type="Marker2D" parent="."]
+position = Vector2(-320, 16)
+
+[node name="Timers" type="Node2D" parent="."]
+
+[node name="PerformingAttackTime" type="Timer" parent="Timers"]
+wait_time = 2.5
+
+[node name="HoldInRoar" type="Timer" parent="Timers"]
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="IntroStartSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("55_p5fm5")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="IntroRoarSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("56_dw83u")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="SpitSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("57_vnirn")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="DamageSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_k3ijc")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="SummonSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_05mgt")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="DefeatedSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("62_471j3")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="Voices" type="Node2D" parent="."]
+
+[node name="DefeatedVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = SubResource("AudioStreamRandomizer_revgk")
+volume_db = 8.0
+bus = &"voices"
+
+[node name="DamageVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = SubResource("AudioStreamRandomizer_3xmyx")
+volume_db = 8.0
+bus = &"voices"
+
+[node name="IntroStartVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = ExtResource("69_lti3f")
+volume_db = 8.0
+bus = &"voices"
+
+[node name="IntroRoarVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = ExtResource("70_g20mv")
+volume_db = 8.0
+bus = &"voices"
+
+[node name="SpitVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = SubResource("AudioStreamRandomizer_246wx")
+volume_db = 8.0
+bus = &"voices"
+
+[node name="SummonVox" type="AudioStreamPlayer2D" parent="Voices"]
+stream = SubResource("AudioStreamRandomizer_urgmj")
+volume_db = 8.0
+bus = &"voices"
+
+[connection signal="frame_changed" from="MonstequareSprite" to="." method="_on_monstequare_sprite_frame_changed"]
+[connection signal="body_entered" from="BossHitbox" to="." method="_on_boss_hitbox_body_entered"]
+[connection signal="timeout" from="Timers/PerformingAttackTime" to="." method="_on_performing_attack_time_timeout"]
+[connection signal="timeout" from="Timers/HoldInRoar" to="." method="_on_hold_in_roar_timeout"]

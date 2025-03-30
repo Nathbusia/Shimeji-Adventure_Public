@@ -1,0 +1,235 @@
+[gd_scene load_steps=19 format=3 uid="uid://bihh4i4xmukyi"]
+
+[ext_resource type="Texture2D" uid="uid://ds0nbkbpdgkhj" path="res://sprites/worldmap/general/worldmap_levelspot0001.png" id="1_ty4fe"]
+[ext_resource type="Texture2D" uid="uid://be2bu3kfm7mso" path="res://sprites/worldmap/general/worldmap_levelspot0002.png" id="2_f0gxs"]
+[ext_resource type="Texture2D" uid="uid://bjn486784eo2g" path="res://sprites/worldmap/general/worldmap_levelspot0003.png" id="3_v0o8d"]
+[ext_resource type="Texture2D" uid="uid://clj3vin8cpc7o" path="res://sprites/worldmap/general/worldmap_levelspot0004.png" id="4_xmnnb"]
+[ext_resource type="Texture2D" uid="uid://ceb213ra4sew6" path="res://sprites/worldmap/general/worldmap_levelbubble0001.png" id="5_wo52p"]
+[ext_resource type="Texture2D" uid="uid://d10vgeadpl5ii" path="res://sprites/worldmap/general/worldmap_levelbubble0002.png" id="6_d0ntj"]
+[ext_resource type="Texture2D" uid="uid://b1c26puck2poe" path="res://sprites/worldmap/general/worldmap_levelbubble0003.png" id="7_7trsi"]
+[ext_resource type="Texture2D" uid="uid://0f5fvve0lrua" path="res://sprites/menu/levelselect/levelselect_thumbnail_nonselect.png" id="8_p3j5v"]
+[ext_resource type="Texture2D" uid="uid://c4x8506fww7ul" path="res://sprites/worldmap/general/worldmap_xkey0001.png" id="9_tqcxb"]
+[ext_resource type="Texture2D" uid="uid://bkbp4yi7ev8pn" path="res://sprites/worldmap/general/worldmap_xkey0002.png" id="10_42c3i"]
+[ext_resource type="Texture2D" uid="uid://dqpcck6cxawat" path="res://sprites/worldmap/general/worldmap_xkey0003.png" id="11_8leu7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhy67"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ty4fe")
+}],
+"loop": true,
+"name": &"available",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_f0gxs")
+}],
+"loop": true,
+"name": &"bonus",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_v0o8d")
+}],
+"loop": true,
+"name": &"clear",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_xmnnb")
+}],
+"loop": true,
+"name": &"non_available",
+"speed": 5.0
+}]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_olwxp"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("5_wo52p")
+frame_1/texture = ExtResource("6_d0ntj")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("7_7trsi")
+frame_2/duration = 1.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h2otf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_tqcxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_42c3i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8leu7")
+}],
+"loop": true,
+"name": &"xkey",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_x681o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LevelThumbBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-64, -128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LevelThumbBubble:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LevelThumbBubble:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_f6yf4"]
+resource_name = "popin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LevelThumbBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.176777, 6.9644),
+"update": 0,
+"values": [Vector2(-64, -73.515), Vector2(-64, -128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LevelThumbBubble:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LevelThumbBubble:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.176777, 6.9644),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_k80jc"]
+resource_name = "popout"
+length = 0.51
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LevelThumbBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(6.9644, 0.176777),
+"update": 0,
+"values": [Vector2(-64, -128), Vector2(-64, -73.515)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LevelThumbBubble:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LevelThumbBubble:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(6.9644, 0.176777),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6yr6u"]
+_data = {
+&"RESET": SubResource("Animation_x681o"),
+&"popin": SubResource("Animation_f6yf4"),
+&"popout": SubResource("Animation_k80jc")
+}
+
+[node name="LevelSpot" type="Node2D"]
+
+[node name="LevelSpotSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_mhy67")
+animation = &"available"
+
+[node name="LevelThumbBubble" type="TextureRect" parent="LevelSpotSprite"]
+texture_filter = 1
+offset_left = -64.0
+offset_top = -128.0
+offset_right = 76.0
+offset_bottom = -20.0
+texture = SubResource("AnimatedTexture_olwxp")
+
+[node name="LevelThumbnail" type="TextureRect" parent="LevelSpotSprite/LevelThumbBubble"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 19.0
+offset_right = 111.0
+offset_bottom = 67.0
+texture = ExtResource("8_p3j5v")
+expand_mode = 1
+
+[node name="XKey" type="AnimatedSprite2D" parent="LevelSpotSprite/LevelThumbBubble"]
+position = Vector2(117, 69)
+sprite_frames = SubResource("SpriteFrames_h2otf")
+animation = &"xkey"
+autoplay = "xkey"
+frame_progress = 0.290945
+
+[node name="BubbleAnim" type="AnimationPlayer" parent="LevelSpotSprite"]
+libraries = {
+&"": SubResource("AnimationLibrary_6yr6u")
+}

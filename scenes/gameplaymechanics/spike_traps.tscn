@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://csif7l4dsn2vb"]
+
+[ext_resource type="Script" uid="uid://2qi2pfh4ktf6" path="res://scenes/gameplaymechanics/spike_traps.gd" id="1_nhgdj"]
+[ext_resource type="Texture2D" uid="uid://bjcsohhmm8gir" path="res://sprites/levels/testlevels/testlevel_traps.png" id="1_x4wbq"]
+[ext_resource type="AudioStream" uid="uid://7osjp76ednlb" path="res://sfx/gameplay/dangers/sfx_spiketraps_stabbed_01.ogg" id="3_vd1u3"]
+[ext_resource type="AudioStream" uid="uid://bdvhgv3qyxtc5" path="res://sfx/gameplay/dangers/sfx_spiketraps_stabbed_02.ogg" id="4_1pyyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bnssw"]
+size = Vector2(64, 33)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7qlaq"]
+streams_count = 2
+stream_0/stream = ExtResource("3_vd1u3")
+stream_1/stream = ExtResource("4_1pyyc")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r14aq"]
+size = Vector2(66, 41)
+
+[node name="SpikeTraps" type="RigidBody2D"]
+script = ExtResource("1_nhgdj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_x4wbq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15.5)
+shape = SubResource("RectangleShape2D_bnssw")
+
+[node name="SpikeSound" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_7qlaq")
+
+[node name="SpikeTrigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeTrigger"]
+position = Vector2(0, 13.5)
+shape = SubResource("RectangleShape2D_r14aq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="SpikeTrigger" to="." method="_on_spike_trigger_body_entered"]

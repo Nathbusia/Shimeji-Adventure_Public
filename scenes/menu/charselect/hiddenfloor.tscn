@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bquv257eyhlpr"]
+
+[ext_resource type="Texture2D" uid="uid://dad2mb5t7mmsr" path="res://sprites/levels/testlevels/testlevel_ground.png" id="1_lkkfj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbn01"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HiddenPlat" type="AnimatableBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="HiddenPlat"]
+visible = false
+texture = ExtResource("1_lkkfj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HiddenPlat"]
+shape = SubResource("RectangleShape2D_xbn01")

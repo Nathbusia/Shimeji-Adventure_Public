@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="SaveDataResource" load_steps=2 format=3 uid="uid://grgmt1ogkdme"]
+
+[ext_resource type="Script" uid="uid://bt4pw3wltdx3j" path="res://managers/SaveData_Story.gd" id="1_yi0cy"]
+
+[resource]
+script = ExtResource("1_yi0cy")
+currentworld = ""
+currentlives = 3
+trianglestotal = 0
+savefile1made = false
+is_newsave = false
+world1_tutorial_trianglecollect1 = false
+world1_tutorial_trianglecollect2 = false
+world1_tutorial_trianglecollect3 = false
+world1_tutorial_trianglecollect4 = false
+world1_tutorial_completed = false
+world1_level1_unlocked = false
+world1_level1_trianglecollect1 = false
+world1_level1_trianglecollect2 = false
+world1_level1_trianglecollect3 = false
+world1_level1_trianglecollect4 = false
+world1_level1_completed = false
+world1_level2_unlocked = false
+world1_level2_trianglecollect1 = false
+world1_level2_trianglecollect2 = false
+world1_level2_trianglecollect3 = false
+world1_level2_trianglecollect4 = false
+world1_level2_completed = false
+world1_boss_unlocked = false
+world1_boss_completed = false
+data_dic = null
+metadata/_custom_type_script = "uid://bt4pw3wltdx3j"

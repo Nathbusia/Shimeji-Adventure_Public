@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq5rvpci7xj1k"]
+
+[ext_resource type="Script" uid="uid://bpf7d8cd4oeji" path="res://scenes/levelmanager/level2.gd" id="1_pdwgo"]
+[ext_resource type="Texture2D" uid="uid://dm1eh72bqjm0h" path="res://sprites/menu/levelselect/world1/levelselect_thumbnail_level2.png" id="2_f55q0"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_pdwgo")
+levelname = "Desktop to the Sky!"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_f55q0")

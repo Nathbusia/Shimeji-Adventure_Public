@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://43ycn7htk1hr"]
+
+[ext_resource type="Script" uid="uid://bcgmdukvl5flg" path="res://mods/levels-bosses/templateboss/scene/levelselect/levelslot_templateboss.gd" id="1_5mds0"]
+[ext_resource type="Texture2D" uid="uid://c8wqqh6gb0nuk" path="res://sprites/menu/charselect/CharacterSelect_hover_bg.png" id="2_3hruw"]
+[ext_resource type="Texture2D" uid="uid://3hga0dahx56y" path="res://sprites/menu/charselect/CharacterSelect_normal_bg.png" id="3_g37pe"]
+[ext_resource type="Texture2D" uid="uid://cbnbk3djdrniw" path="res://sprites/menu/charselect/CharacterSelect_select_bg.png" id="4_ypn4v"]
+[ext_resource type="Texture2D" uid="uid://c1t8mj8i45od0" path="res://mods/levels-bosses/templateboss/sprite/levelselect/templateboss_icon.png" id="5_5mds0"]
+[ext_resource type="Texture2D" uid="uid://btv8r3lyna733" path="res://sprites/menu/charselect/CharacterSelect_normal_border.png" id="6_42iyd"]
+[ext_resource type="Texture2D" uid="uid://7hbxhtwk16pt" path="res://sprites/menu/charselect/CharacterSelect_select_bolder.png" id="7_qvvtn"]
+[ext_resource type="Texture2D" uid="uid://cq8kfcxku5t1m" path="res://sprites/menu/charselect/CharacterSelect_hover_border.png" id="8_ivff2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fklg4"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"current",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3hruw")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g37pe")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_ypn4v")
+}],
+"loop": true,
+"name": &"select",
+"speed": 5.0
+}]
+
+[node name="levelslot_templateboss" type="Panel"]
+script = ExtResource("1_5mds0")
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_fklg4")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="LevelSelect_Icon" type="TextureRect" parent="CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("5_5mds0")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharSelect_BG/LevelSelect_Icon"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_42iyd")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharSelect_BG/LevelSelect_Icon/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("6_42iyd")
+texture_pressed = ExtResource("7_qvvtn")
+texture_hover = ExtResource("8_ivff2")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="CharSelect_BG/LevelSelect_Icon/CharSelect_FG/SlotButton" to="." method="_on_slot_button_pressed"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8gknjbol2dk8"]
+
+[ext_resource type="Texture2D" uid="uid://c23eg6lyfp27j" path="res://sprites/levels/world1/windows_C_B.png" id="1_32gm8"]
+[ext_resource type="Texture2D" uid="uid://cuf2f87ncukk3" path="res://sprites/levels/world1/windows/World1_Advert_PRR.png" id="2_hmaje"]
+[ext_resource type="Texture2D" uid="uid://cm0pp3afmqi33" path="res://sprites/levels/world1/windows_button_minimized.png" id="3_fdqcc"]
+[ext_resource type="Texture2D" uid="uid://drtjrbabse7qw" path="res://sprites/levels/world1/windows_button_maximized.png" id="4_mbffi"]
+[ext_resource type="Texture2D" uid="uid://4c8xf8a0wfat" path="res://sprites/levels/world1/windows_button_close.png" id="5_hpxjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0po6"]
+size = Vector2(641, 362)
+
+[node name="PRRAdvert" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -183.0
+offset_right = 322.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_32gm8")
+
+[node name="Advert" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 25.0
+offset_right = 612.0
+offset_bottom = 345.0
+texture = ExtResource("2_hmaje")
+expand_mode = 1
+
+[node name="Button_A" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 573.0
+offset_right = 589.0
+offset_bottom = 16.0
+texture = ExtResource("3_fdqcc")
+expand_mode = 1
+
+[node name="Button_B" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 594.0
+offset_right = 610.0
+offset_bottom = 16.0
+texture = ExtResource("4_mbffi")
+expand_mode = 1
+
+[node name="Button_C" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 615.0
+offset_right = 631.0
+offset_bottom = 16.0
+texture = ExtResource("5_hpxjh")
+expand_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-1.5, -2)
+shape = SubResource("RectangleShape2D_v0po6")

@@ -1,0 +1,1014 @@
+[gd_scene load_steps=176 format=3 uid="uid://by3wpjbyqmejp"]
+
+[ext_resource type="Script" uid="uid://chw322kfg5fmk" path="res://scenes/characters/npc/stickbuddy.gd" id="1_5clv0"]
+[ext_resource type="Texture2D" uid="uid://ddgyp1pyxmjvr" path="res://sprites/characters/npc/friend/friend_idle0001.png" id="1_ytdjo"]
+[ext_resource type="Texture2D" uid="uid://b04aopcajemcy" path="res://sprites/characters/npc/friend/friend_exit0001.png" id="2_6vpmq"]
+[ext_resource type="Texture2D" uid="uid://bcdycyuypsvbc" path="res://sprites/characters/npc/friend/friend_greatest0001.png" id="2_mdy0n"]
+[ext_resource type="Texture2D" uid="uid://chsspewdb5k4d" path="res://sprites/characters/npc/friend/friend_idle0002.png" id="2_u2hsc"]
+[ext_resource type="Texture2D" uid="uid://dgq8ptof5vqff" path="res://sprites/characters/npc/friend/friend_greatest0002.png" id="3_hq3lj"]
+[ext_resource type="Texture2D" uid="uid://bc45f5yr1s0wr" path="res://sprites/characters/npc/friend/friend_exit0002.png" id="3_qjyfq"]
+[ext_resource type="Texture2D" uid="uid://cgrqogxftbk73" path="res://sprites/characters/npc/friend/friend_idle0003.png" id="3_wmupb"]
+[ext_resource type="Texture2D" uid="uid://cxuvexf6vnp27" path="res://sprites/characters/npc/friend/friend_greatest0003.png" id="4_0gs3e"]
+[ext_resource type="Texture2D" uid="uid://cfvptg37pebtt" path="res://sprites/characters/npc/friend/friend_idle0004.png" id="4_fadou"]
+[ext_resource type="Texture2D" uid="uid://biwobov1cix2x" path="res://sprites/characters/npc/friend/friend_exit0003.png" id="4_w53he"]
+[ext_resource type="Texture2D" uid="uid://btlt71qxpuj1u" path="res://sprites/characters/npc/friend/friend_idle0005.png" id="5_5efkq"]
+[ext_resource type="Texture2D" uid="uid://df33wthnnka8f" path="res://sprites/characters/npc/friend/friend_greatest0004.png" id="5_g7fe0"]
+[ext_resource type="Texture2D" uid="uid://bjupk7cfvk64e" path="res://sprites/characters/npc/friend/friend_exit0004.png" id="5_v7fjm"]
+[ext_resource type="Texture2D" uid="uid://cvcwaqv17mgx3" path="res://sprites/characters/npc/friend/friend_greatest0005.png" id="6_0kxo6"]
+[ext_resource type="Texture2D" uid="uid://r1jewbc4tp1m" path="res://sprites/characters/npc/friend/friend_jump0001.png" id="6_5k00r"]
+[ext_resource type="Texture2D" uid="uid://cmui7mh6wx0ds" path="res://sprites/characters/npc/friend/friend_exit0005.png" id="6_wyhhw"]
+[ext_resource type="Texture2D" uid="uid://didbqi0ar8ua7" path="res://sprites/characters/npc/friend/friend_greatest0006.png" id="7_44jc4"]
+[ext_resource type="Texture2D" uid="uid://bob00jlu8mtqq" path="res://sprites/characters/npc/friend/friend_jump0002.png" id="7_h3o62"]
+[ext_resource type="Texture2D" uid="uid://bxl6xfbnov2bd" path="res://sprites/characters/npc/friend/friend_exit0006.png" id="7_k4ivb"]
+[ext_resource type="Texture2D" uid="uid://bskm307knl4ly" path="res://sprites/characters/npc/friend/friend_exit0007.png" id="8_0ysvu"]
+[ext_resource type="Texture2D" uid="uid://bwep80isi1ayk" path="res://sprites/characters/npc/friend/friend_greatest0007.png" id="8_b6fc2"]
+[ext_resource type="Texture2D" uid="uid://cjbecfu6bhpcw" path="res://sprites/characters/npc/friend/friend_jump0003.png" id="8_toe51"]
+[ext_resource type="Texture2D" uid="uid://iyr65x8uv6cq" path="res://sprites/characters/npc/friend/friend_jump0004.png" id="9_esgdk"]
+[ext_resource type="Texture2D" uid="uid://c6lyku5j458jj" path="res://sprites/characters/npc/friend/friend_exit0009.png" id="9_lcy7s"]
+[ext_resource type="Texture2D" uid="uid://cn85onb0he8ir" path="res://sprites/characters/npc/friend/friend_greatest0008.png" id="9_pjka6"]
+[ext_resource type="Texture2D" uid="uid://c8shsbkx1jf07" path="res://sprites/characters/npc/friend/friend_greatest0009.png" id="10_5whkj"]
+[ext_resource type="Texture2D" uid="uid://b6bq8euu1hyj8" path="res://sprites/characters/npc/friend/friend_exit0011.png" id="10_da0uw"]
+[ext_resource type="Texture2D" uid="uid://cb7bf2rvv6o7l" path="res://sprites/characters/npc/friend/friend_jump0005.png" id="10_p7hvb"]
+[ext_resource type="Texture2D" uid="uid://bhrmuphe7b0xx" path="res://sprites/characters/npc/friend/friend_exit0013.png" id="11_b8x23"]
+[ext_resource type="Texture2D" uid="uid://dyq7e0icbc3t7" path="res://sprites/characters/npc/friend/friend_greatest0010.png" id="11_bhvfh"]
+[ext_resource type="Texture2D" uid="uid://co2qsr6s8qjtp" path="res://sprites/characters/npc/friend/friend_move0001.png" id="11_yf5dg"]
+[ext_resource type="Texture2D" uid="uid://dn0yd0d3grrdh" path="res://sprites/characters/npc/friend/friend_greatest0011.png" id="12_4ki3x"]
+[ext_resource type="Texture2D" uid="uid://4j2328bp37hh" path="res://sprites/characters/npc/friend/friend_exit0015.png" id="12_jdps0"]
+[ext_resource type="Texture2D" uid="uid://cnmjishqg2p2d" path="res://sprites/characters/npc/friend/friend_move0002.png" id="12_wta8b"]
+[ext_resource type="Texture2D" uid="uid://gl5tnsjnjbdk" path="res://sprites/characters/npc/friend/friend_greatest0012.png" id="13_85cti"]
+[ext_resource type="Texture2D" uid="uid://cntbdnoxqfvag" path="res://sprites/characters/npc/friend/friend_move0003.png" id="13_jdlqn"]
+[ext_resource type="Texture2D" uid="uid://bqehn4py6rhp0" path="res://sprites/characters/npc/friend/friend_exit0017.png" id="13_pa8q0"]
+[ext_resource type="Texture2D" uid="uid://dbaw6d6ytc5xw" path="res://sprites/characters/npc/friend/friend_greatest0013.png" id="14_nk1to"]
+[ext_resource type="Texture2D" uid="uid://263daeb2jcdb" path="res://sprites/characters/npc/friend/friend_exit0018.png" id="14_rra55"]
+[ext_resource type="Texture2D" uid="uid://f77edge2y7dy" path="res://sprites/characters/npc/friend/friend_move0004.png" id="14_s6a1g"]
+[ext_resource type="Texture2D" uid="uid://d4ag0i14203n" path="res://sprites/characters/npc/friend/friend_greatest0014.png" id="15_1hw1f"]
+[ext_resource type="Texture2D" uid="uid://6ls0r1b0dsgw" path="res://sprites/characters/npc/friend/friend_exit0019.png" id="15_2d4pj"]
+[ext_resource type="Texture2D" uid="uid://dlcr0pllk26nw" path="res://sprites/characters/npc/friend/friend_move0005.png" id="15_wpa0f"]
+[ext_resource type="Texture2D" uid="uid://bfesmx5ijiu75" path="res://sprites/characters/npc/friend/friend_exit0020.png" id="16_ivcxh"]
+[ext_resource type="Texture2D" uid="uid://rggx6jvxqyhs" path="res://sprites/characters/npc/friend/friend_point0001.png" id="16_sd8sc"]
+[ext_resource type="Texture2D" uid="uid://du3uuutt2wsev" path="res://sprites/characters/npc/friend/friend_greatest0015.png" id="16_xy1od"]
+[ext_resource type="Texture2D" uid="uid://ciixdk4u0o02t" path="res://sprites/characters/npc/friend/friend_point0002.png" id="17_bp7ht"]
+[ext_resource type="Texture2D" uid="uid://6scr12e1lel" path="res://sprites/characters/npc/friend/friend_exit0021.png" id="17_cjan8"]
+[ext_resource type="Texture2D" uid="uid://cmm7xjvmtqmdw" path="res://sprites/characters/npc/friend/friend_exit0022.png" id="18_tpdrj"]
+[ext_resource type="Texture2D" uid="uid://c3g57kk1yag0" path="res://sprites/characters/npc/friend/friend_point0003.png" id="18_yrawd"]
+[ext_resource type="Texture2D" uid="uid://cw3y3yiq6i68q" path="res://sprites/characters/npc/friend/friend_exit0023.png" id="19_odqy5"]
+[ext_resource type="Texture2D" uid="uid://cpaynbmtgm0p" path="res://sprites/characters/npc/friend/friend_point0004.png" id="19_xewgf"]
+[ext_resource type="Texture2D" uid="uid://bb8v6scbb1835" path="res://sprites/characters/npc/friend/friend_point0005.png" id="20_heovm"]
+[ext_resource type="Texture2D" uid="uid://lugpeev31l86" path="res://sprites/characters/npc/friend/friend_point0006.png" id="21_05uts"]
+[ext_resource type="Texture2D" uid="uid://d3ic8cvoheuub" path="res://sprites/characters/npc/friend/friend_point0007.png" id="22_kkcvg"]
+[ext_resource type="Texture2D" uid="uid://dwmfxlhaeuoam" path="res://sprites/characters/npc/friend/friend_point0008.png" id="23_6owwb"]
+[ext_resource type="Texture2D" uid="uid://dygduwqbdot20" path="res://sprites/characters/npc/friend/friend_point0009.png" id="24_1oco3"]
+[ext_resource type="Texture2D" uid="uid://bf17m7pmt6yn2" path="res://sprites/characters/npc/friend/friend_point0010.png" id="25_2oln3"]
+[ext_resource type="Texture2D" uid="uid://wnpwaeaxv8fe" path="res://sprites/characters/npc/friend/friend_point0011.png" id="26_u5j3r"]
+[ext_resource type="Texture2D" uid="uid://ie63h2fh3jye" path="res://sprites/characters/npc/friend/friend_point0012.png" id="27_v8kjb"]
+[ext_resource type="Texture2D" uid="uid://dljc2eulu6uni" path="res://sprites/characters/npc/friend/friend_point0013.png" id="28_rrjxk"]
+[ext_resource type="Texture2D" uid="uid://3w684frlagum" path="res://sprites/characters/npc/friend/friend_point0014.png" id="29_4mp67"]
+[ext_resource type="Texture2D" uid="uid://j0ywtt11m0ne" path="res://sprites/characters/npc/friend/friend_point0015.png" id="30_q1t2g"]
+[ext_resource type="Texture2D" uid="uid://0xwgjp3j2vdj" path="res://sprites/characters/npc/friend/friend_point0016.png" id="31_2fy3y"]
+[ext_resource type="Texture2D" uid="uid://c76o85s05fjm8" path="res://sprites/characters/npc/friend/friend_point0017.png" id="32_k336f"]
+[ext_resource type="Texture2D" uid="uid://ir8vmupm6gd2" path="res://sprites/characters/npc/friend/friend_point0018.png" id="33_dt3lv"]
+[ext_resource type="Texture2D" uid="uid://bohaece673og6" path="res://sprites/characters/npc/friend/friend_point0019.png" id="34_22w4n"]
+[ext_resource type="Texture2D" uid="uid://eac553ta0emo" path="res://sprites/characters/npc/friend/friend_point0020.png" id="35_eq0b1"]
+[ext_resource type="Texture2D" uid="uid://b28yc7cbb7brj" path="res://sprites/characters/npc/friend/friend_point0021.png" id="36_4nedr"]
+[ext_resource type="Texture2D" uid="uid://c4u8nec6x21yr" path="res://sprites/characters/npc/friend/friend_point0022.png" id="37_11c6e"]
+[ext_resource type="Texture2D" uid="uid://cx7slhwhhpr17" path="res://sprites/characters/npc/friend/friend_point0023.png" id="38_a80eg"]
+[ext_resource type="Texture2D" uid="uid://csm8a0g2elmvy" path="res://sprites/characters/npc/friend/friend_point0024.png" id="39_q68rw"]
+[ext_resource type="Texture2D" uid="uid://b1acnql0c721s" path="res://sprites/characters/npc/friend/friend_talk0001.png" id="40_q3h5r"]
+[ext_resource type="Texture2D" uid="uid://cgou4fx323tvd" path="res://sprites/characters/npc/friend/friend_talk0002.png" id="41_xrpco"]
+[ext_resource type="Texture2D" uid="uid://c5lpxsnxuovui" path="res://sprites/characters/npc/friend/friend_talk0003.png" id="42_x5pb3"]
+[ext_resource type="Texture2D" uid="uid://bbr555qpuftnk" path="res://sprites/characters/npc/friend/friend_talk0004.png" id="43_was7f"]
+[ext_resource type="Texture2D" uid="uid://cuy6lme5hssqh" path="res://sprites/characters/npc/friend/friend_talk0005.png" id="44_ydfo0"]
+[ext_resource type="Texture2D" uid="uid://ro5gvn7ie36n" path="res://sprites/characters/npc/friend/friend_talk0006.png" id="45_aisuo"]
+[ext_resource type="Texture2D" uid="uid://cq1f363sumecl" path="res://sprites/characters/npc/friend/friend_talk0007.png" id="46_rgcap"]
+[ext_resource type="Texture2D" uid="uid://nauy35ya7dx1" path="res://sprites/characters/npc/friend/friend_talk0008.png" id="47_mxuq2"]
+[ext_resource type="Texture2D" uid="uid://mkqh6uk2qoyo" path="res://sprites/characters/npc/friend/friend_talk0009.png" id="48_vikim"]
+[ext_resource type="Texture2D" uid="uid://dhyvge0njycv2" path="res://sprites/characters/npc/friend/friend_talk0010.png" id="49_wuktf"]
+[ext_resource type="Texture2D" uid="uid://bdghgowknrf0l" path="res://sprites/characters/npc/friend/friend_talk0011.png" id="50_6tl5p"]
+[ext_resource type="Texture2D" uid="uid://c5qcjcfkeavng" path="res://sprites/characters/npc/friend/friend_talk0012.png" id="51_r8dsa"]
+[ext_resource type="Texture2D" uid="uid://y3xrj253lduu" path="res://sprites/characters/npc/friend/friend_talk0013.png" id="52_qnoq7"]
+[ext_resource type="Texture2D" uid="uid://d11nrp23n60wu" path="res://sprites/characters/npc/friend/friend_talk0014.png" id="53_33cwc"]
+[ext_resource type="Texture2D" uid="uid://3jhcoqqu5wka" path="res://sprites/characters/npc/friend/friend_talk0015.png" id="54_ouymo"]
+[ext_resource type="Texture2D" uid="uid://xyqwibw36rso" path="res://sprites/characters/npc/friend/friend_talk0016.png" id="55_5ughp"]
+[ext_resource type="Texture2D" uid="uid://bf4usjjnmfyq8" path="res://sprites/characters/npc/friend/friend_shock0001.png" id="56_e5p8m"]
+[ext_resource type="Texture2D" uid="uid://jjvmtlpoq8cj" path="res://sprites/characters/npc/friend/friend_talk0017.png" id="56_sg7aq"]
+[ext_resource type="Texture2D" uid="uid://4qershssykfb" path="res://sprites/characters/npc/friend/friend_talk0018.png" id="57_fktik"]
+[ext_resource type="Texture2D" uid="uid://dvts1xr3gttf" path="res://sprites/characters/npc/friend/friend_shock0002.png" id="57_oqr6j"]
+[ext_resource type="Texture2D" uid="uid://du1hqj7v15f4n" path="res://sprites/characters/npc/friend/friend_talk0019.png" id="58_cpb3q"]
+[ext_resource type="Texture2D" uid="uid://bucgneoqjqges" path="res://sprites/characters/npc/friend/friend_shock0003.png" id="58_kf785"]
+[ext_resource type="Texture2D" uid="uid://b8htns7u6vex4" path="res://sprites/characters/npc/friend/friend_shock0004.png" id="59_5ng8d"]
+[ext_resource type="Texture2D" uid="uid://crvx8b5m1p5ev" path="res://sprites/characters/npc/friend/friend_talk0020.png" id="59_asmt8"]
+[ext_resource type="Texture2D" uid="uid://c5nta4cmmf302" path="res://sprites/characters/npc/friend/friend_talk0021.png" id="60_a0wks"]
+[ext_resource type="Texture2D" uid="uid://bh1qrbpw2j6va" path="res://sprites/characters/npc/friend/friend_shock0005.png" id="60_o2ja7"]
+[ext_resource type="Texture2D" uid="uid://chdd163oogd0e" path="res://sprites/characters/npc/friend/friend_shock0006.png" id="61_e1sml"]
+[ext_resource type="Texture2D" uid="uid://b36xdik1hj4u2" path="res://sprites/characters/npc/friend/friend_talk0022.png" id="61_gqose"]
+[ext_resource type="Texture2D" uid="uid://kyf4h1od5gik" path="res://sprites/characters/npc/friend/friend_wave0001.png" id="62_aw2ge"]
+[ext_resource type="Texture2D" uid="uid://dpym63crgacdw" path="res://sprites/characters/npc/friend/friend_shock0007.png" id="62_ngxar"]
+[ext_resource type="Texture2D" uid="uid://3i8mtn3xrtjl" path="res://sprites/characters/npc/friend/friend_wave0002.png" id="63_adjsp"]
+[ext_resource type="Texture2D" uid="uid://cjk1bf0u8v4ot" path="res://sprites/characters/npc/friend/friend_shock0008.png" id="63_tcv6q"]
+[ext_resource type="Texture2D" uid="uid://6ly5txlkkxg4" path="res://sprites/characters/npc/friend/friend_wave0003.png" id="64_8601k"]
+[ext_resource type="Texture2D" uid="uid://c32umkkrmgxep" path="res://sprites/characters/npc/friend/friend_shock0009.png" id="64_u006v"]
+[ext_resource type="Texture2D" uid="uid://bgoi8f7eib7l6" path="res://sprites/characters/npc/friend/friend_shock0010.png" id="65_hibbn"]
+[ext_resource type="Texture2D" uid="uid://poy1ns8fgjmu" path="res://sprites/characters/npc/friend/friend_wave0004.png" id="65_kwf7w"]
+[ext_resource type="Texture2D" uid="uid://0atwg3vhkjnn" path="res://sprites/characters/npc/friend/friend_shock0011.png" id="66_c33g8"]
+[ext_resource type="Texture2D" uid="uid://5p6wmlnv3pr6" path="res://sprites/characters/npc/friend/friend_wave0005.png" id="66_s3y6v"]
+[ext_resource type="Texture2D" uid="uid://ba3wlvd8v78ir" path="res://sprites/characters/npc/friend/friend_wave0006.png" id="67_inlde"]
+[ext_resource type="Texture2D" uid="uid://dp0vjp6uu1r6v" path="res://sprites/characters/npc/friend/friend_shock0012.png" id="67_jnshh"]
+[ext_resource type="Texture2D" uid="uid://b8g4w50ardi0n" path="res://sprites/characters/npc/friend/friend_wave0007.png" id="68_5yr8l"]
+[ext_resource type="Texture2D" uid="uid://df5d68ci0nw1d" path="res://sprites/characters/npc/friend/friend_shock0013.png" id="68_tia5t"]
+[ext_resource type="Texture2D" uid="uid://qv00xdf5xopu" path="res://sprites/characters/npc/friend/friend_wave0008.png" id="69_huo2n"]
+[ext_resource type="Texture2D" uid="uid://bi1vhhdjotykd" path="res://sprites/characters/npc/friend/friend_shock0014.png" id="69_rx457"]
+[ext_resource type="Texture2D" uid="uid://dgcrymm26s7r3" path="res://sprites/characters/npc/friend/friend_wave0009.png" id="70_3hnsc"]
+[ext_resource type="Texture2D" uid="uid://r1do5dokryho" path="res://sprites/characters/npc/friend/friend_shock0015.png" id="70_dyhxf"]
+[ext_resource type="Texture2D" uid="uid://btpgqnd8xt8yw" path="res://sprites/characters/npc/friend/friend_wave0010.png" id="71_5ieca"]
+[ext_resource type="Texture2D" uid="uid://bcchkx7ps5j6b" path="res://sprites/characters/npc/friend/friend_shock0016.png" id="71_d8j6b"]
+[ext_resource type="Texture2D" uid="uid://buq63r6i46jqr" path="res://sprites/characters/npc/friend/friend_wave0011.png" id="72_awcxm"]
+[ext_resource type="Texture2D" uid="uid://uf8tm0pbuksq" path="res://sprites/characters/npc/friend/friend_shock0017.png" id="72_y14lh"]
+[ext_resource type="Texture2D" uid="uid://ck18nksx8d7t" path="res://sprites/characters/npc/friend/friend_shock0018.png" id="73_15fbr"]
+[ext_resource type="Texture2D" uid="uid://c5gvrf5ffwpi8" path="res://sprites/characters/npc/friend/friend_wave0012.png" id="73_71osi"]
+[ext_resource type="Texture2D" uid="uid://0ox8e648hepv" path="res://sprites/characters/npc/friend/friend_shock0019.png" id="74_1kj0b"]
+[ext_resource type="Texture2D" uid="uid://pa1ydf2i4bqf" path="res://sprites/characters/npc/friend/friend_wave0013.png" id="74_evf87"]
+[ext_resource type="Texture2D" uid="uid://k73djysvw3vq" path="res://sprites/characters/npc/friend/friend_wave0014.png" id="75_0qe0p"]
+[ext_resource type="Texture2D" uid="uid://8gowunclaf23" path="res://sprites/characters/npc/friend/friend_shock0020.png" id="75_wjd6s"]
+[ext_resource type="Texture2D" uid="uid://ccnim50fhwdwy" path="res://sprites/characters/npc/friend/friend_shock0021.png" id="76_jdn3q"]
+[ext_resource type="Texture2D" uid="uid://b2pmt63catbm8" path="res://sprites/characters/npc/friend/friend_wave0015.png" id="76_thk5i"]
+[ext_resource type="Texture2D" uid="uid://bagot7xnlelt2" path="res://sprites/characters/npc/friend/friend_wave0016.png" id="77_08e04"]
+[ext_resource type="Texture2D" uid="uid://b1513twhf5x75" path="res://sprites/characters/npc/friend/friend_shock0022.png" id="77_att0o"]
+[ext_resource type="Texture2D" uid="uid://s6oyei3t2y73" path="res://sprites/characters/npc/friend/friend_shock0023.png" id="78_10wf2"]
+[ext_resource type="AudioStream" uid="uid://ca0yj3c5nyep" path="res://sfx/characters/npc/sfx_npc_friend_speech01.ogg" id="78_q5r3m"]
+[ext_resource type="Texture2D" uid="uid://cx3a4hwukocrw" path="res://sprites/characters/npc/friend/friend_shock0024.png" id="79_ce3c3"]
+[ext_resource type="AudioStream" uid="uid://dagmbageuwy4v" path="res://sfx/characters/npc/sfx_npc_friend_speech02.ogg" id="79_ixphu"]
+[ext_resource type="AudioStream" uid="uid://ct1r16mggg1" path="res://sfx/characters/npc/sfx_npc_friend_speech03.ogg" id="80_ctqt0"]
+[ext_resource type="Texture2D" uid="uid://cohcv3i0owrhl" path="res://sprites/characters/npc/friend/friend_shock0025.png" id="80_rx77l"]
+[ext_resource type="AudioStream" uid="uid://8p8vvsdfgxfp" path="res://sfx/characters/npc/sfx_npc_friend_speech04.ogg" id="81_mak18"]
+[ext_resource type="AudioStream" uid="uid://i1j0ry3fdpsk" path="res://sfx/characters/npc/sfx_npc_friend_jump.ogg" id="82_jr7r5"]
+[ext_resource type="AudioStream" uid="uid://biyd8hsfrqxk" path="res://sfx/characters/shimeji/sfx_player_footstep_01.ogg" id="83_cj75s"]
+[ext_resource type="AudioStream" uid="uid://bs77r7dmt3p6i" path="res://sfx/characters/npc/sfx_npc_friend_jump_intro.ogg" id="84_vw2p7"]
+[ext_resource type="Texture2D" uid="uid://bkmgr3qp3pu6h" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0001.png" id="86_2r44p"]
+[ext_resource type="Texture2D" uid="uid://cljue88nd8n8q" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0002.png" id="87_upt57"]
+[ext_resource type="Texture2D" uid="uid://dty3vvkikjlvf" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0003.png" id="88_gdot8"]
+[ext_resource type="Texture2D" uid="uid://buclk4te4o71l" path="res://sprites/characters/npc/friend/friend_welcome0001.png" id="119_w2uvj"]
+[ext_resource type="Texture2D" uid="uid://deiabxvx7tsdh" path="res://sprites/characters/npc/friend/friend_welcome0002.png" id="120_0gq8x"]
+[ext_resource type="Texture2D" uid="uid://c7wqkw6spdlb1" path="res://sprites/characters/npc/friend/friend_welcome0003.png" id="121_ieh6q"]
+[ext_resource type="Texture2D" uid="uid://du26hu0mnv0vm" path="res://sprites/characters/npc/friend/friend_welcome0004.png" id="122_r6jqk"]
+[ext_resource type="Texture2D" uid="uid://cimmgm7gl2wqa" path="res://sprites/characters/npc/friend/friend_welcome0005.png" id="123_c64yb"]
+[ext_resource type="Texture2D" uid="uid://cihippy6t6dwx" path="res://sprites/characters/npc/friend/friend_welcome0006.png" id="124_vhgpy"]
+[ext_resource type="Texture2D" uid="uid://dc81ackg0r7xi" path="res://sprites/characters/npc/friend/friend_welcome0007.png" id="125_yidpk"]
+[ext_resource type="Texture2D" uid="uid://0r8cs1eyqaro" path="res://sprites/characters/npc/friend/friend_welcome0008.png" id="126_hadea"]
+[ext_resource type="Texture2D" uid="uid://v6rdkltpw8u0" path="res://sprites/characters/npc/friend/friend_welcome0009.png" id="127_54oab"]
+[ext_resource type="Texture2D" uid="uid://7ltwshrffcs3" path="res://sprites/characters/npc/friend/friend_welcome0010.png" id="128_aabuj"]
+[ext_resource type="Texture2D" uid="uid://ljlen5qqq2dw" path="res://sprites/characters/npc/friend/friend_welcome0011.png" id="129_b1d0u"]
+[ext_resource type="Texture2D" uid="uid://dmi6g4qstnkgd" path="res://sprites/characters/npc/friend/friend_welcome0012.png" id="130_pa4qc"]
+[ext_resource type="Texture2D" uid="uid://bqcbdtgfsugs4" path="res://sprites/characters/npc/friend/friend_welcome0013.png" id="131_p0tkq"]
+[ext_resource type="Texture2D" uid="uid://3x50lgdgcky7" path="res://sprites/characters/npc/friend/friend_welcome0014.png" id="132_mm12g"]
+[ext_resource type="Texture2D" uid="uid://cl88rln1g265d" path="res://sprites/characters/npc/friend/friend_welcome0015.png" id="133_dhtai"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_df4q6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6vpmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qjyfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w53he")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_v7fjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_wyhhw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k4ivb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0ysvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lcy7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_da0uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_b8x23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jdps0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_pa8q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_rra55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_2d4pj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ivcxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_cjan8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_tpdrj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_odqy5")
+}],
+"loop": false,
+"name": &"exit",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mdy0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hq3lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0gs3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_g7fe0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0kxo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_44jc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_b6fc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pjka6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5whkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_bhvfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_4ki3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_85cti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_nk1to")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_1hw1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xy1od")
+}],
+"loop": false,
+"name": &"greatest",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ytdjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u2hsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wmupb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fadou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5efkq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5k00r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h3o62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_toe51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_esgdk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_p7hvb")
+}],
+"loop": false,
+"name": &"jump",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_yf5dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_wta8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jdlqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_s6a1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wpa0f")
+}],
+"loop": true,
+"name": &"move",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_sd8sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_bp7ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_yrawd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_xewgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_heovm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_05uts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_kkcvg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_6owwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_1oco3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_2oln3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_u5j3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_v8kjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_rrjxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4mp67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_q1t2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_2fy3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_k336f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_dt3lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_22w4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_eq0b1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_4nedr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_11c6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_a80eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_q68rw")
+}],
+"loop": false,
+"name": &"point",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_e5p8m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_oqr6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_kf785")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_5ng8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_o2ja7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_e1sml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_ngxar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_tcv6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_u006v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_hibbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_c33g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_jnshh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_tia5t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_rx457")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_dyhxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_d8j6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_y14lh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_15fbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_1kj0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_wjd6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_jdn3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_att0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_10wf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_ce3c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_rx77l")
+}],
+"loop": false,
+"name": &"shock",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_q3h5r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_xrpco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_x5pb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_was7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ydfo0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_aisuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_rgcap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_mxuq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_vikim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_wuktf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_6tl5p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_r8dsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_qnoq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_33cwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ouymo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_5ughp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_sg7aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_fktik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_cpb3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_asmt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_a0wks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_gqose")
+}],
+"loop": false,
+"name": &"talk",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("62_aw2ge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_adjsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8601k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_kwf7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_s3y6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_inlde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_5yr8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_huo2n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_3hnsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_5ieca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_awcxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_71osi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_evf87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_0qe0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_thk5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_08e04")
+}],
+"loop": false,
+"name": &"wave",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("119_w2uvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_0gq8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_ieh6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_r6jqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_c64yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_vhgpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_yidpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_hadea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_54oab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_aabuj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_b1d0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_pa4qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_p0tkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_mm12g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_dhtai")
+}],
+"loop": false,
+"name": &"welcome",
+"speed": 12.0
+}]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_l2o3o"]
+streams_count = 4
+stream_0/stream = ExtResource("78_q5r3m")
+stream_1/stream = ExtResource("79_ixphu")
+stream_2/stream = ExtResource("80_ctqt0")
+stream_3/stream = ExtResource("81_mak18")
+
+[sub_resource type="Animation" id="Animation_msv02"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_pq22p"]
+resource_name = "exit"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"exit"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"time_to_go"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ao6uf"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_5rt7e"]
+resource_name = "intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.233258, 8.57418, 0.120742),
+"update": 0,
+"values": [Vector2(0, 1200), Vector2(0, -90), Vector2(0, 0)]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FriendSFX")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("82_jr7r5")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("83_cj75s")
+}],
+"times": PackedFloat32Array(0.233333, 1)
+}
+tracks/1/use_blend = true
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FriendSFX")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("84_vw2p7")
+}],
+"times": PackedFloat32Array(0.133333)
+}
+tracks/2/use_blend = true
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"jumping"
+}, {
+"args": [],
+"method": &"idle"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop_jumping"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro_dialogue"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjiea"]
+_data = {
+&"RESET": SubResource("Animation_msv02"),
+&"exit": SubResource("Animation_pq22p"),
+&"idle": SubResource("Animation_ao6uf"),
+&"intro": SubResource("Animation_5rt7e")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umqun"]
+size = Vector2(48, 80)
+
+[sub_resource type="Animation" id="Animation_2s4su"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-27, -71)]
+}
+
+[sub_resource type="Animation" id="Animation_sm0ha"]
+resource_name = "base"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u5ijg"]
+resource_name = "popin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.392292, 2.82843),
+"update": 0,
+"values": [Vector2(-27, -45), Vector2(-27, -71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vunq6"]
+resource_name = "popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2.82843, 0.392292),
+"update": 0,
+"values": [Vector2(-27, -71), Vector2(-27, -45)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2km46"]
+_data = {
+&"RESET": SubResource("Animation_2s4su"),
+&"base": SubResource("Animation_sm0ha"),
+&"popin": SubResource("Animation_u5ijg"),
+&"popout": SubResource("Animation_vunq6")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_wq4f5"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("86_2r44p")
+frame_1/texture = ExtResource("87_upt57")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("88_gdot8")
+frame_2/duration = 1.0
+
+[node name="Stickbuddy" type="Node2D"]
+script = ExtResource("1_5clv0")
+
+[node name="Friend" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_df4q6")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="FriendVox" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamRandomizer_l2o3o")
+bus = &"voices"
+
+[node name="FriendAmin" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vjiea")
+}
+autoplay = "intro"
+
+[node name="FriendSFX" type="AudioStreamPlayer2D" parent="."]
+bus = &"sfx"
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(-48, 0)
+shape = SubResource("RectangleShape2D_umqun")
+disabled = true
+
+[node name="SpeechOption" type="AnimationPlayer" parent="."]
+root_node = NodePath("../FriendAmin")
+libraries = {
+&"": SubResource("AnimationLibrary_2km46")
+}
+autoplay = "base"
+
+[node name="InteractiveSpeakBubble" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -27.0
+offset_top = -71.0
+offset_right = 29.0
+offset_bottom = -39.0
+texture = SubResource("AnimatedTexture_wq4f5")
+expand_mode = 1
+
+[connection signal="animation_finished" from="Friend" to="." method="_on_friend_animation_finished"]
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

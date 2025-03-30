@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfda1d5xdce6x"]
+
+[ext_resource type="Script" uid="uid://l5hnuxajy8cd" path="res://scenes/levelmanager/testlevel1.gd" id="1_vly0s"]
+[ext_resource type="Texture2D" uid="uid://bqv6a7bupel5k" path="res://sprites/menu/levelselect/testlevels/levelselect_thumbnail_testlevel01.png" id="2_34gvs"]
+
+[node name="Testlevel1" type="Node2D"]
+script = ExtResource("1_vly0s")
+levelname = "Test Level 1"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_34gvs")

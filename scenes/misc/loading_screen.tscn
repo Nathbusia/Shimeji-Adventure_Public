@@ -1,0 +1,215 @@
+[gd_scene load_steps=12 format=3 uid="uid://bc0bcx45bdor2"]
+
+[ext_resource type="Texture2D" uid="uid://by2gvpcpso762" path="res://sprites/loading/loading_background.png" id="1_5nh7s"]
+[ext_resource type="Script" uid="uid://b26lek0ko612q" path="res://scenes/misc/loading_screen.gd" id="1_m8fpm"]
+[ext_resource type="Texture2D" uid="uid://y7lwhgtlnyvd" path="res://sprites/loading/loading_shime2.png" id="2_4yt8e"]
+[ext_resource type="Texture2D" uid="uid://d0xagmarp4i72" path="res://sprites/loading/loading_shime1.png" id="3_q3ekw"]
+[ext_resource type="Texture2D" uid="uid://ciederns2c5kj" path="res://sprites/loading/loading_shime3.png" id="4_0qc2v"]
+[ext_resource type="FontFile" uid="uid://hini7n6ijhp3" path="res://fonts/DK Leftover Crayon.otf" id="6_lcm4h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0q2mh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4yt8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q3ekw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0qc2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_q3ekw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_jn1ui"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadThing/LoadingScreen/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LoadThing/LoadingScreen/AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LoadThing/LoadingScreen/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sihg0"]
+resource_name = "end_load"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadThing/LoadingScreen/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LoadThing/LoadingScreen/AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LoadThing/LoadingScreen/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ang0k"]
+resource_name = "start_load"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadThing/LoadingScreen/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LoadThing/LoadingScreen/AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LoadThing/LoadingScreen/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"loading_screen_has_full_coverage"],
+"method": &"emit_signal"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_874jp"]
+_data = {
+&"RESET": SubResource("Animation_jn1ui"),
+&"end_load": SubResource("Animation_sihg0"),
+&"start_load": SubResource("Animation_ang0k")
+}
+
+[node name="loadingscreen" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_m8fpm")
+
+[node name="LoadThing" type="CanvasLayer" parent="."]
+
+[node name="LoadingScreen" type="Panel" parent="LoadThing"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="LoadThing/LoadingScreen"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 656.0
+texture = ExtResource("1_5nh7s")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="LoadThing/LoadingScreen"]
+position = Vector2(1088, 576)
+scale = Vector2(0.75, 0.75)
+sprite_frames = SubResource("SpriteFrames_0q2mh")
+autoplay = "default"
+frame_progress = 0.699315
+
+[node name="Label" type="Label" parent="LoadThing/LoadingScreen"]
+layout_mode = 0
+offset_left = 896.0
+offset_top = 592.0
+offset_right = 1047.0
+offset_bottom = 625.0
+theme_override_fonts/font = ExtResource("6_lcm4h")
+theme_override_font_sizes/font_size = 30
+text = "Now Loading..."
+metadata/_edit_use_anchors_ = true
+
+[node name="loadanim" type="AnimationPlayer" parent="LoadThing/LoadingScreen"]
+root_node = NodePath("../../..")
+libraries = {
+&"": SubResource("AnimationLibrary_874jp")
+}
+autoplay = "start_load"

@@ -1,0 +1,405 @@
+[gd_scene load_steps=45 format=3 uid="uid://dtrt4c0un4pra"]
+
+[ext_resource type="Script" path="res://scenes/menu/character_select.gd" id="1_m3361"]
+[ext_resource type="Shader" path="res://scenes/menu/character_select_bgmove.gdshader" id="1_u67td"]
+[ext_resource type="Texture2D" uid="uid://bt8t8f5in6snr" path="res://sprites/menu/charselect/CharacterSelect_BG.png" id="2_n624g"]
+[ext_resource type="Texture2D" uid="uid://74ht0md3cy5r" path="res://sprites/menu/charselect/CharacterSelect_Bar.png" id="3_7ebb3"]
+[ext_resource type="Texture2D" uid="uid://bsm7dceomkc5j" path="res://sprites/menu/charselect/CharacterSelect_CharacterWindows_BG.png" id="4_d63vq"]
+[ext_resource type="Texture2D" uid="uid://c7x16a10mbv4c" path="res://sprites/menu/charselect/CharacterSelect_CharacterWindows_Layout.png" id="5_b1s1c"]
+[ext_resource type="Texture2D" uid="uid://dqhn4rhjohsan" path="res://sprites/menu/charselect/CharSelect_Text0001.png" id="6_75pme"]
+[ext_resource type="AudioStream" uid="uid://7tqytudkd7kn" path="res://bgm/menu/bgm_charmenu.ogg" id="6_j0672"]
+[ext_resource type="Texture2D" uid="uid://d6tnlivlprsc" path="res://sprites/menu/charselect/CharSelect_Text0002.png" id="7_0qnbf"]
+[ext_resource type="PackedScene" uid="uid://465s4hsknnte" path="res://scenes/characters/playable/shimeji_character_playable.tscn" id="7_anm4k"]
+[ext_resource type="Texture2D" uid="uid://b5gya40c1gpav" path="res://sprites/menu/charselect/CharSelect_Text0003.png" id="8_bwp4h"]
+[ext_resource type="Texture2D" uid="uid://t1k62og0e4xn" path="res://sprites/menu/charselect/CharSelect_Text0004.png" id="9_5seii"]
+[ext_resource type="Texture2D" uid="uid://cvuexnyl5hagt" path="res://sprites/menu/charselect/CharSelect_Text0005.png" id="10_rmkyh"]
+[ext_resource type="Texture2D" uid="uid://d3gthyvjwpvxk" path="res://sprites/menu/charselect/CharSelect_Text0006.png" id="11_ustj3"]
+[ext_resource type="Texture2D" uid="uid://c8wqqh6gb0nuk" path="res://sprites/menu/charselect/CharacterSelect_hover_bg.png" id="15_6etib"]
+[ext_resource type="Texture2D" uid="uid://dq80h23la56us" path="res://sprites/menu/charselect/characters/shimeji.png" id="15_w0xy1"]
+[ext_resource type="Texture2D" uid="uid://danprs41dhc4e" path="res://sprites/menu/charselect/characters/kuroshimeji.png" id="16_i2332"]
+[ext_resource type="Texture2D" uid="uid://3hga0dahx56y" path="res://sprites/menu/charselect/CharacterSelect_normal_bg.png" id="16_xbf4v"]
+[ext_resource type="Texture2D" uid="uid://cbnbk3djdrniw" path="res://sprites/menu/charselect/CharacterSelect_select_bg.png" id="17_8ewgl"]
+[ext_resource type="Texture2D" uid="uid://bqj83qx5wkoy0" path="res://sprites/menu/charselect/characters/shiminter.png" id="17_qn6vn"]
+[ext_resource type="Texture2D" uid="uid://bpn6j6wwc08c4" path="res://sprites/menu/charselect/characters/summeji.png" id="18_wi7ad"]
+[ext_resource type="Texture2D" uid="uid://drywvhfbge66y" path="res://sprites/menu/charselect/button/CharSelect_Go0001.png" id="19_4wbuc"]
+[ext_resource type="Texture2D" uid="uid://btv8r3lyna733" path="res://sprites/menu/charselect/CharacterSelect_normal_border.png" id="19_nhatm"]
+[ext_resource type="Texture2D" uid="uid://iia6qntqgr6n" path="res://sprites/menu/charselect/button/CharSelect_Go0002.png" id="20_fdbiu"]
+[ext_resource type="Texture2D" uid="uid://7hbxhtwk16pt" path="res://sprites/menu/charselect/CharacterSelect_select_bolder.png" id="20_miuy5"]
+[ext_resource type="Texture2D" uid="uid://cq8kfcxku5t1m" path="res://sprites/menu/charselect/CharacterSelect_hover_border.png" id="21_c3e5s"]
+[ext_resource type="Texture2D" uid="uid://54rf8jc78gfe" path="res://sprites/menu/charselect/button/CharSelect_Go0003.png" id="21_ip2tn"]
+[ext_resource type="Texture2D" uid="uid://cha4b7h7m58u4" path="res://sprites/menu/charselect/button/CharSelect_Go_Select0001.png" id="22_4favv"]
+[ext_resource type="Texture2D" uid="uid://crr4ws5esxgvi" path="res://sprites/menu/charselect/button/CharSelect_Go_Select0002.png" id="23_dbq01"]
+[ext_resource type="Texture2D" uid="uid://dlobdp4wkqdli" path="res://sprites/menu/charselect/button/CharSelect_Go_Select0003.png" id="24_oleqw"]
+[ext_resource type="Texture2D" uid="uid://bb5gxvuuhtlgf" path="res://sprites/menu/charselect/button/CharSelect_Go_Hover0001.png" id="25_n6f3l"]
+[ext_resource type="Texture2D" uid="uid://t8yvpduxxy3l" path="res://sprites/menu/charselect/button/CharSelect_Go_Hover0002.png" id="26_vv1q7"]
+[ext_resource type="Texture2D" uid="uid://dvtud2k2s0naq" path="res://sprites/menu/charselect/button/CharSelect_Go_Hover0003.png" id="27_pvpv7"]
+[ext_resource type="PackedScene" uid="uid://bquv257eyhlpr" path="res://scenes/menu/charselect/hiddenfloor.tscn" id="29_idor1"]
+[ext_resource type="AudioStream" uid="uid://g06i7gshwlkm" path="res://sfx/menu/charmenu/sfx_charmenu_select.ogg" id="34_311ha"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e78xu"]
+shader = ExtResource("1_u67td")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkole"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lui51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_75pme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0qnbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bwp4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_5seii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_rmkyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ustj3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ftp4p"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"current",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_6etib")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_xbf4v")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_8ewgl")
+}],
+"loop": true,
+"name": &"select",
+"speed": 5.0
+}]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_316af"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("19_4wbuc")
+frame_1/texture = ExtResource("20_fdbiu")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("21_ip2tn")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_0gb7p"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("22_4favv")
+frame_1/texture = ExtResource("23_dbq01")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("24_oleqw")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fmkfw"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("25_n6f3l")
+frame_1/texture = ExtResource("26_vv1q7")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("27_pvpv7")
+frame_2/duration = 1.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qct0d"]
+
+[sub_resource type="SystemFont" id="SystemFont_g26ms"]
+font_names = PackedStringArray("DK Harimau Dua")
+
+[node name="CharacterSelect" type="Node2D"]
+script = ExtResource("1_m3361")
+
+[node name="BG" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_e78xu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -272.0
+offset_right = 1280.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_n624g")
+expand_mode = 1
+
+[node name="BarBot" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = 612.0
+offset_right = 1211.0
+offset_bottom = 667.0
+texture = ExtResource("3_7ebb3")
+expand_mode = 1
+
+[node name="BarTop" type="TextureRect" parent="."]
+offset_left = -64.0
+offset_top = -11.0
+offset_right = 1211.0
+offset_bottom = 44.0
+texture = ExtResource("3_7ebb3")
+expand_mode = 1
+flip_v = true
+
+[node name="CharacterWindows" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_fkole")
+
+[node name="WindowsBG" type="TextureRect" parent="CharacterWindows"]
+layout_mode = 0
+offset_left = 807.0
+offset_top = 178.0
+offset_right = 1072.0
+offset_bottom = 430.0
+texture = ExtResource("4_d63vq")
+expand_mode = 1
+
+[node name="WindowsLayout" type="TextureRect" parent="CharacterWindows/WindowsBG"]
+layout_mode = 0
+offset_right = 265.0
+offset_bottom = 244.0
+texture = ExtResource("5_b1s1c")
+expand_mode = 1
+
+[node name="Ground" parent="CharacterWindows/WindowsBG/WindowsLayout" instance=ExtResource("29_idor1")]
+position = Vector2(136, 222)
+scale = Vector2(3.95575, 0.209886)
+
+[node name="Wall_L" parent="CharacterWindows/WindowsBG/WindowsLayout" instance=ExtResource("29_idor1")]
+position = Vector2(-10, 97)
+scale = Vector2(1, 3.68)
+
+[node name="Wall_R" parent="CharacterWindows/WindowsBG/WindowsLayout" instance=ExtResource("29_idor1")]
+position = Vector2(277, 97)
+scale = Vector2(1, 3.68)
+
+[node name="Text" type="AnimatedSprite2D" parent="."]
+position = Vector2(224, 21)
+scale = Vector2(0.324766, 0.324766)
+sprite_frames = SubResource("SpriteFrames_lui51")
+autoplay = "default"
+frame_progress = 0.268072
+
+[node name="CharMenu_BG" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_j0672")
+autoplay = true
+
+[node name="CharactersPanel" type="Panel" parent="."]
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 624.0
+offset_bottom = 592.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CharactersPanel"]
+layout_mode = 1
+offset_right = 204.0
+theme_override_constants/separation = 68
+alignment = 1
+
+[node name="characterslot_shimeji" type="Panel" parent="CharactersPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="CharactersPanel/HBoxContainer/characterslot_shimeji"]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_ftp4p")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="CharSelect_Char" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("15_w0xy1")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG/CharSelect_Char"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_nhatm")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG/CharSelect_Char/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("19_nhatm")
+texture_pressed = ExtResource("20_miuy5")
+texture_hover = ExtResource("21_c3e5s")
+metadata/_edit_use_anchors_ = true
+
+[node name="characterslot_kuroshimeji" type="Panel" parent="CharactersPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="CharactersPanel/HBoxContainer/characterslot_kuroshimeji"]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_ftp4p")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="CharSelect_Char" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("16_i2332")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG/CharSelect_Char"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_nhatm")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG/CharSelect_Char/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("19_nhatm")
+texture_pressed = ExtResource("20_miuy5")
+texture_hover = ExtResource("21_c3e5s")
+metadata/_edit_use_anchors_ = true
+
+[node name="characterslot_shiminter" type="Panel" parent="CharactersPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="CharactersPanel/HBoxContainer/characterslot_shiminter"]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_ftp4p")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="CharSelect_Char" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("17_qn6vn")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG/CharSelect_Char"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_nhatm")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG/CharSelect_Char/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("19_nhatm")
+texture_pressed = ExtResource("20_miuy5")
+texture_hover = ExtResource("21_c3e5s")
+metadata/_edit_use_anchors_ = true
+
+[node name="characterslot_summeji" type="Panel" parent="CharactersPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="CharSelect_BG" type="AnimatedSprite2D" parent="CharactersPanel/HBoxContainer/characterslot_summeji"]
+texture_filter = 1
+position = Vector2(32, 32)
+sprite_frames = SubResource("SpriteFrames_ftp4p")
+animation = &"normal"
+autoplay = "normal"
+
+[node name="CharSelect_Char" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG"]
+texture_filter = 1
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+texture = ExtResource("18_wi7ad")
+metadata/_edit_use_anchors_ = true
+
+[node name="CharSelect_FG" type="TextureRect" parent="CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG/CharSelect_Char"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_nhatm")
+metadata/_edit_use_anchors_ = true
+
+[node name="SlotButton" type="TextureButton" parent="CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG/CharSelect_Char/CharSelect_FG"]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+texture_normal = ExtResource("19_nhatm")
+texture_pressed = ExtResource("20_miuy5")
+texture_hover = ExtResource("21_c3e5s")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 880.0
+offset_top = 528.0
+offset_right = 1040.0
+offset_bottom = 608.0
+texture_normal = SubResource("AnimatedTexture_316af")
+texture_pressed = SubResource("AnimatedTexture_0gb7p")
+texture_hover = SubResource("AnimatedTexture_fmkfw")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CharacterName" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qct0d")
+
+[node name="Name" type="Label" parent="CharacterName"]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 430.0
+offset_right = 1031.0
+offset_bottom = 493.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = SubResource("SystemFont_g26ms")
+theme_override_font_sizes/font_size = 64
+text = "???"
+horizontal_alignment = 1
+
+[node name="SelectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("34_311ha")
+
+[node name="ShimejiCharacter_Playable" parent="." instance=ExtResource("7_anm4k")]
+position = Vector2(944, 307)
+
+[connection signal="pressed" from="CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton" to="." method="_on_slot_button_pressed"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

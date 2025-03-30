@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://xk3esod54x72"]
+
+[ext_resource type="Texture2D" uid="uid://dad2mb5t7mmsr" path="res://sprites/levels/testlevels/testlevel_ground.png" id="1_a52qs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0po6"]
+size = Vector2(1540, 871)
+
+[node name="Forums" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -772.0
+offset_top = -438.0
+offset_right = 773.0
+offset_bottom = 427.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_a52qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-2, -1.5)
+shape = SubResource("RectangleShape2D_v0po6")

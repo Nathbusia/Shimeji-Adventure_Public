@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://n4nen02am4cd"]
+
+[ext_resource type="Texture2D" uid="uid://dhrpkeqd3aoht" path="res://sprites/levels/world1/windows_B.png" id="1_qggi8"]
+[ext_resource type="Texture2D" uid="uid://em45c3kk20at" path="res://sprites/levels/world1/windows/World1_Advert_Mohawk.png" id="2_h5imy"]
+[ext_resource type="Texture2D" uid="uid://cm0pp3afmqi33" path="res://sprites/levels/world1/windows_button_minimized.png" id="3_3elsf"]
+[ext_resource type="Texture2D" uid="uid://drtjrbabse7qw" path="res://sprites/levels/world1/windows_button_maximized.png" id="4_ubl2j"]
+[ext_resource type="Texture2D" uid="uid://4c8xf8a0wfat" path="res://sprites/levels/world1/windows_button_close.png" id="5_6obcl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gppr4"]
+size = Vector2(259, 444)
+
+[node name="AdvertiseMent_Mohawk" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+position = Vector2(187, 12)
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -264.0
+offset_right = -58.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_qggi8")
+metadata/_edit_use_anchors_ = true
+
+[node name="GogglesScreen" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 244.0
+offset_bottom = 419.0
+texture = ExtResource("2_h5imy")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_A" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 183.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 21.0
+texture = ExtResource("3_3elsf")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_B" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("4_ubl2j")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_C" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A/Button_B"]
+layout_mode = 0
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("5_6obcl")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-192.5, -42)
+shape = SubResource("RectangleShape2D_gppr4")

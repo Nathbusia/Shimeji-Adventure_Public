@@ -1,0 +1,27 @@
+friend: Well Done! You completed the last course!
+[signal arg="normaltalk"]
+friend: Well, I guess that's it.
+[signal arg="greatest"]
+friend: You have successfully completed the Tutorial. You're now ready to explore more into the Desktop itself, and begin your adventure.
+[signal arg="talking"]
+friend: I hope everything that you learn here really comes in handy for you, and make you strong enough to playthrough Shimeji Adventure itself.
+[signal arg="greatest"]
+friend: You've been a good student, pal. And I've been a good teacher! Aren't I?
+[signal arg="normaltalk"]
+friend: But anyway, last thing.
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: To finish the level, just touch that Star. That is a finish star.
+[signal arg="talking"]
+friend: Once touched, the level is finished, and you move on to the next level, or choose any other levels.
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend: So, I guess that's all.
+[signal arg="talking"]
+friend: It's been a pleasure working with ya, and I'm sure hope to see ya again.
+[signal arg="talking"]
+friend: Also, if you ever wanted to take the lesson again, you know where come and visit. Right? It's the one that says "Tutorial\: Learning the Basic".
+[signal arg="greatest"]
+friend: Well, that's all from me. Touch that star, and begin your adventure from there!
+[signal arg="waving"]
+friend: GOOD LUCK PAL!!

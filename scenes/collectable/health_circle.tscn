@@ -1,0 +1,180 @@
+[gd_scene load_steps=13 format=3 uid="uid://dxyxnd3ltlsqo"]
+
+[ext_resource type="Texture2D" uid="uid://c37i30l21d5u8" path="res://sprites/collectable/healthcircle/HealthCircle0001.png" id="1_7th4v"]
+[ext_resource type="Script" uid="uid://cywupn7vu65fq" path="res://scenes/collectable/health_circle.gd" id="1_vbh7d"]
+[ext_resource type="Texture2D" uid="uid://dyhfr03cib85n" path="res://sprites/collectable/healthcircle/HealthCircle0002.png" id="2_m3ivg"]
+[ext_resource type="Texture2D" uid="uid://n8bj6w0fgg40" path="res://sprites/collectable/healthcircle/HealthCircle0003.png" id="3_bytbi"]
+[ext_resource type="AudioStream" uid="uid://yw7cokbvn8mr" path="res://sfx/gameplay/collectables/sfx_healthgain.ogg" id="4_803q7"]
+[ext_resource type="AudioStream" uid="uid://buy5an7fhhacq" path="res://sfx/gameplay/collectables/sfx_healthfull.ogg" id="6_on0oa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k1tqr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7th4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_m3ivg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bytbi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exr55"]
+
+[sub_resource type="Animation" id="Animation_xhe8u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AnimatedSprite2D:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_itbqk"]
+resource_name = "alreadyfull"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.189465, 1),
+"update": 0,
+"values": [Vector2(0.6, 0.6), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.189465, 1),
+"update": 0,
+"values": [Color(0.493545, 0.493546, 0.493546, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_74wek"]
+resource_name = "collect"
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.9, 1.2),
+"transitions": PackedFloat32Array(0.189465, 0.329877, 0.5, 0.297302, 4.75683),
+"update": 0,
+"values": [Vector2(1.3, 1.3), Vector2(0.7, 0.7), Vector2(1, 1), Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_healthends"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ufm7k"]
+_data = {
+&"RESET": SubResource("Animation_xhe8u"),
+&"alreadyfull": SubResource("Animation_itbqk"),
+&"collect": SubResource("Animation_74wek")
+}
+
+[node name="HealthCircle" type="Area2D"]
+script = ExtResource("1_vbh7d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_k1tqr")
+autoplay = "default"
+frame_progress = 0.244961
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_exr55")
+
+[node name="HealthSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_803q7")
+bus = &"sfx"
+
+[node name="HealthFullSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_on0oa")
+volume_db = -8.283
+bus = &"sfx"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ufm7k")
+}

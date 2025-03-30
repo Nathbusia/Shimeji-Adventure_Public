@@ -1,0 +1,78 @@
+[gd_scene load_steps=14 format=3 uid="uid://nqvvrv7sci1a"]
+
+[ext_resource type="Script" uid="uid://dl6w86qeikn5a" path="res://scenes/collectable/funny_sqaure_collectable.gd" id="1_1v40g"]
+[ext_resource type="Texture2D" uid="uid://ct3axsv17ogkr" path="res://sprites/collectable/funnysquare0001.png" id="1_mqcxo"]
+[ext_resource type="Texture2D" uid="uid://bjwbth4mw48i3" path="res://sprites/collectable/funnysquare_collected0001.png" id="2_dip8u"]
+[ext_resource type="Texture2D" uid="uid://cwdhpiopmby61" path="res://sprites/collectable/funnysquare0002.png" id="2_sg62n"]
+[ext_resource type="Texture2D" uid="uid://bo3y0njqfqru8" path="res://sprites/collectable/funnysquare_collected0002.png" id="3_gwhil"]
+[ext_resource type="Texture2D" uid="uid://cmcvp2e1b6oxp" path="res://sprites/collectable/funnysquare0003.png" id="3_t5gwf"]
+[ext_resource type="Texture2D" uid="uid://dupptu5t1peo0" path="res://sprites/collectable/funnysquare_collected0003.png" id="4_k63i4"]
+[ext_resource type="AudioStream" uid="uid://h78vem04dll3" path="res://sfx/gameplay/collectables/sfx_funnysquare_01.ogg" id="8_dxy5k"]
+[ext_resource type="AudioStream" uid="uid://b48s6hvkdu50" path="res://sfx/gameplay/collectables/sfx_funnysquare_02.ogg" id="9_mluu2"]
+[ext_resource type="AudioStream" uid="uid://cxohbuflatqad" path="res://sfx/gameplay/collectables/sfx_funnysquare_03.ogg" id="10_v075x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksvpl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dip8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gwhil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k63i4")
+}],
+"loop": false,
+"name": &"collected",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mqcxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sg62n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_t5gwf")
+}],
+"loop": true,
+"name": &"square",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_blhih"]
+size = Vector2(20, 16)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_sh13h"]
+streams_count = 3
+stream_0/stream = ExtResource("8_dxy5k")
+stream_1/stream = ExtResource("9_mluu2")
+stream_2/stream = ExtResource("10_v075x")
+
+[node name="FunnySqaureCollectable" type="Area2D"]
+script = ExtResource("1_1v40g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ksvpl")
+animation = &"collected"
+autoplay = "square"
+frame = 2
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_blhih")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.25
+
+[node name="SquareCollect" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamRandomizer_sh13h")
+bus = &"sfx"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

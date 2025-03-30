@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=3 uid="uid://ctq7a3s37ul0b"]
+
+[ext_resource type="Script" uid="uid://ovrghx6kk4e0" path="res://scenes/gameplaymechanics/moving_windows_hori.gd" id="1_7nv8q"]
+[ext_resource type="Texture2D" uid="uid://bm82cbnnkcewp" path="res://sprites/levels/world1/windows_C_A.png" id="2_44y7l"]
+[ext_resource type="Texture2D" uid="uid://cm0pp3afmqi33" path="res://sprites/levels/world1/windows_button_minimized.png" id="4_vh81k"]
+[ext_resource type="Texture2D" uid="uid://drtjrbabse7qw" path="res://sprites/levels/world1/windows_button_maximized.png" id="5_xgiup"]
+[ext_resource type="Texture2D" uid="uid://4c8xf8a0wfat" path="res://sprites/levels/world1/windows_button_close.png" id="6_rkv05"]
+[ext_resource type="Texture2D" uid="uid://cq6cvnpds2eaf" path="res://sprites/menu/title/Title_MouseCursor.png" id="7_m8viw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cpjbx"]
+size = Vector2(640, 444)
+
+[node name="MovingWindows_Horizontal" type="Node2D"]
+script = ExtResource("1_7nv8q")
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+position = Vector2(187, 12)
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -264.0
+offset_right = -58.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_44y7l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_A" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.543478
+anchor_top = -0.0111857
+anchor_right = 0.551242
+offset_left = 183.0
+offset_top = 5.0
+offset_right = 199.0
+offset_bottom = 21.0
+texture = ExtResource("4_vh81k")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_B" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52381
+anchor_right = 0.761905
+anchor_bottom = 0.238095
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("5_xgiup")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button_C" type="TextureRect" parent="WindowsPopUp/WindowsBG/Button_A/Button_B"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47619
+anchor_right = 0.714286
+anchor_bottom = 0.238095
+offset_left = 21.0
+offset_right = 37.0
+offset_bottom = 16.0
+texture = ExtResource("6_rkv05")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="MouseCursor" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = -4.0
+offset_right = 437.0
+offset_bottom = 119.0
+texture = ExtResource("7_m8viw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-187, -42)
+shape = SubResource("RectangleShape2D_cpjbx")
