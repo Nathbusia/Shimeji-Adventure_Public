@@ -26,8 +26,8 @@ But for now at this time, there's only Character Modding Guide. The Levels and B
 
 ## Authors
 
-FlameOut56 - Developer of Shimeji Adventure
-[Twitter](https://x.com/nathbusia) [Bluesky](https://bsky.app/profile/nathbusia.bsky.social) [YouTube](https://www.youtube.com/@NathanTheHedgehog) [Itch.io](https://flameout56.itch.io/) [GameJolt](https://gamejolt.com/@Flameout56)
+FlameOut56 - Developer of Shimeji Adventure:
+ [Twitter](https://x.com/nathbusia) [Bluesky](https://bsky.app/profile/nathbusia.bsky.social) [YouTube](https://www.youtube.com/@NathanTheHedgehog) [Itch.io](https://flameout56.itch.io/) [GameJolt](https://gamejolt.com/@Flameout56)
 
 
 ## License
