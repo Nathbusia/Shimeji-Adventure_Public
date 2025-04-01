@@ -5,8 +5,11 @@ class_name SaveDataThreeResource
 @export var currentworld: String = "world1"
 @export var currentplayerlives: int = 3
 @export var currentplayerlivest: int = 0
-@export var trianglestotal: int = 0
-@export var is_newsave: bool = false
+@export var maxcurrentlives : int = 3
+@export var trianglestotal : int = 0
+@export var trianglestotalt : int = 0
+@export var trianglestotalh : int = 0
+@export var maxtrianglestotal : int = 0
 
 #Story Mode Progress
 @export var world1_tutorial_trianglecollect1: bool = false

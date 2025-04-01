@@ -110,9 +110,9 @@ var points = 0
 var pointst = 0
 var pointsh = 0
 
-var lives = SaveFileManager.currentplayerlives
-var livest = SaveFileManager.currentplayerlivest
-var livesmax = SaveFileManager.maxcurrentlives
+var lives = 3
+var livest = 0
+var livesmax = 3
 
 var lost_life = false
 
@@ -123,6 +123,18 @@ var boss_health = 8
 var boss_defeat = false
 
 func _ready():
+	if ModeManager.is_story && ModeManager.is_savefile1:
+		lives = SaveFileManager.currentplayerlives
+		livest = SaveFileManager.currentplayerlivest
+		livesmax = SaveFileManager.maxcurrentlives
+	if ModeManager.is_story && ModeManager.is_savefile2:
+		lives = SaveFileManager2.currentplayerlives
+		livest = SaveFileManager2.currentplayerlivest
+		livesmax = SaveFileManager2.maxcurrentlives
+	if ModeManager.is_story && ModeManager.is_savefile3:
+		lives = SaveFileManager3.currentplayerlives
+		livest = SaveFileManager3.currentplayerlivest
+		livesmax = SaveFileManager3.maxcurrentlives
 	if CharactersManager.is_mod:
 		ShimejiCharacter_PlayableMod = load(player_character_mod_path).instantiate()
 	else:
@@ -220,14 +232,33 @@ func _ready():
 				score_layout_bg_dark.show()
 
 	if ModeManager.is_story:
-		if SaveFileManager.currentplayerlives == 1 or SaveFileManager.currentplayerlives == 2 or SaveFileManager.currentplayerlives == 3 or SaveFileManager.currentplayerlives == 4 or SaveFileManager.currentplayerlives == 5 or SaveFileManager.currentplayerlives == 6 or SaveFileManager.currentplayerlives == 7 or SaveFileManager.currentplayerlives == 8 or SaveFileManager.currentplayerlives == 9:
-			score_numbers_life_u.animation = str(SaveFileManager.currentplayerlives)
-			score_numbers_life_dark_u.animation = str(SaveFileManager.currentplayerlives)
-		if SaveFileManager.currentplayerlives == 10 or SaveFileManager.currentplayerlives == 20 or SaveFileManager.currentplayerlives == 30 or SaveFileManager.currentplayerlives == 40 or SaveFileManager.currentplayerlives == 50 or SaveFileManager.currentplayerlives == 60 or SaveFileManager.currentplayerlives == 70 or SaveFileManager.currentplayerlives == 80 or SaveFileManager.currentplayerlives == 90:
-			score_numbers_life_t.animation = str(SaveFileManager.currentplayerlivest)
-			score_numbers_life_dark_t.animation = str(SaveFileManager.currentplayerlivest)
-			score_numbers_life_u.animation = str(SaveFileManager.currentplayerlives)
-			score_numbers_life_dark_u.animation = str(SaveFileManager.currentplayerlives)
+		if ModeManager.is_savefile1:
+			if SaveFileManager.currentplayerlives == 1 or SaveFileManager.currentplayerlives == 2 or SaveFileManager.currentplayerlives == 3 or SaveFileManager.currentplayerlives == 4 or SaveFileManager.currentplayerlives == 5 or SaveFileManager.currentplayerlives == 6 or SaveFileManager.currentplayerlives == 7 or SaveFileManager.currentplayerlives == 8 or SaveFileManager.currentplayerlives == 9:
+				score_numbers_life_u.animation = str(SaveFileManager.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager.currentplayerlives)
+			if SaveFileManager.currentplayerlives == 10 or SaveFileManager.currentplayerlives == 20 or SaveFileManager.currentplayerlives == 30 or SaveFileManager.currentplayerlives == 40 or SaveFileManager.currentplayerlives == 50 or SaveFileManager.currentplayerlives == 60 or SaveFileManager.currentplayerlives == 70 or SaveFileManager.currentplayerlives == 80 or SaveFileManager.currentplayerlives == 90:
+				score_numbers_life_t.animation = str(SaveFileManager.currentplayerlivest)
+				score_numbers_life_dark_t.animation = str(SaveFileManager.currentplayerlivest)
+				score_numbers_life_u.animation = str(SaveFileManager.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager.currentplayerlives)
+		if ModeManager.is_savefile2:
+			if SaveFileManager2.currentplayerlives == 1 or SaveFileManager2.currentplayerlives == 2 or SaveFileManager2.currentplayerlives == 3 or SaveFileManager2.currentplayerlives == 4 or SaveFileManager2.currentplayerlives == 5 or SaveFileManager2.currentplayerlives == 6 or SaveFileManager2.currentplayerlives == 7 or SaveFileManager2.currentplayerlives == 8 or SaveFileManager2.currentplayerlives == 9:
+				score_numbers_life_u.animation = str(SaveFileManager2.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager2.currentplayerlives)
+			if SaveFileManager2.currentplayerlives == 10 or SaveFileManager2.currentplayerlives == 20 or SaveFileManager2.currentplayerlives == 30 or SaveFileManager2.currentplayerlives == 40 or SaveFileManager2.currentplayerlives == 50 or SaveFileManager2.currentplayerlives == 60 or SaveFileManager2.currentplayerlives == 70 or SaveFileManager2.currentplayerlives == 80 or SaveFileManager2.currentplayerlives == 90:
+				score_numbers_life_t.animation = str(SaveFileManager2.currentplayerlivest)
+				score_numbers_life_dark_t.animation = str(SaveFileManager2.currentplayerlivest)
+				score_numbers_life_u.animation = str(SaveFileManager2.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager2.currentplayerlives)
+		if ModeManager.is_savefile3:
+			if SaveFileManager3.currentplayerlives == 1 or SaveFileManager3.currentplayerlives == 2 or SaveFileManager3.currentplayerlives == 3 or SaveFileManager3.currentplayerlives == 4 or SaveFileManager3.currentplayerlives == 5 or SaveFileManager3.currentplayerlives == 6 or SaveFileManager3.currentplayerlives == 7 or SaveFileManager3.currentplayerlives == 8 or SaveFileManager3.currentplayerlives == 9:
+				score_numbers_life_u.animation = str(SaveFileManager3.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager3.currentplayerlives)
+			if SaveFileManager3.currentplayerlives == 10 or SaveFileManager3.currentplayerlives == 20 or SaveFileManager3.currentplayerlives == 30 or SaveFileManager3.currentplayerlives == 40 or SaveFileManager3.currentplayerlives == 50 or SaveFileManager3.currentplayerlives == 60 or SaveFileManager3.currentplayerlives == 70 or SaveFileManager3.currentplayerlives == 80 or SaveFileManager3.currentplayerlives == 90:
+				score_numbers_life_t.animation = str(SaveFileManager3.currentplayerlivest)
+				score_numbers_life_dark_t.animation = str(SaveFileManager3.currentplayerlivest)
+				score_numbers_life_u.animation = str(SaveFileManager3.currentplayerlives)
+				score_numbers_life_dark_u.animation = str(SaveFileManager3.currentplayerlives)
 	else:
 		lives = LivesManager.currentlives
 		livest = LivesManager.currentlivest
@@ -306,16 +337,39 @@ func add_point():
 
 func add_lives():
 	if ModeManager.is_story:
-		lives += 1
-		livesmax += 1
-		if lives == 10 or lives == 20 or lives == 30 or lives == 40 or lives == 50 or lives == 60 or lives == 70 or lives == 80 or lives == 90:
-			livest += 1
-			score_numbers_life_t.animation = str(livest)
-			score_numbers_life_dark_t.animation = str(livest)
-			lives = 0
-			score_numbers_life_u.animation = str(lives)
-			score_numbers_life_dark_u.animation = str(lives)
-		SaveFileManager.new_life()
+		if ModeManager.is_savefile1:
+			lives += 1
+			livesmax += 1
+			if lives == 10 or lives == 20 or lives == 30 or lives == 40 or lives == 50 or lives == 60 or lives == 70 or lives == 80 or lives == 90:
+				livest += 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 0
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager.new_life()
+		if ModeManager.is_savefile2:
+			lives += 1
+			livesmax += 1
+			if lives == 10 or lives == 20 or lives == 30 or lives == 40 or lives == 50 or lives == 60 or lives == 70 or lives == 80 or lives == 90:
+				livest += 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 0
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager2.new_life()
+		if ModeManager.is_savefile3:
+			lives += 1
+			livesmax += 1
+			if lives == 10 or lives == 20 or lives == 30 or lives == 40 or lives == 50 or lives == 60 or lives == 70 or lives == 80 or lives == 90:
+				livest += 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 0
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager3.new_life()
 	else:
 		lives += 1
 		livesmax += 1
@@ -360,16 +414,39 @@ func lose_health():
 
 func lose_lives():
 	if ModeManager.is_story:
-		lives -= 1
-		livesmax -= 1
-		if livesmax == 10 or livesmax == 20 or livesmax == 30 or livesmax == 40 or livesmax == 50 or livesmax == 60 or livesmax == 70 or livesmax == 80 or livesmax == 90:
-			livest -= 1
-			score_numbers_life_t.animation = str(livest)
-			score_numbers_life_dark_t.animation = str(livest)
-			lives = 9
-			score_numbers_life_u.animation = str(lives)
-			score_numbers_life_dark_u.animation = str(lives)
-		SaveFileManager.lose_life()
+		if ModeManager.is_savefile1:
+			lives -= 1
+			livesmax -= 1
+			if livesmax == 10 or livesmax == 20 or livesmax == 30 or livesmax == 40 or livesmax == 50 or livesmax == 60 or livesmax == 70 or livesmax == 80 or livesmax == 90:
+				livest -= 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 9
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager.lose_life()
+		if ModeManager.is_savefile2:
+			lives -= 1
+			livesmax -= 1
+			if livesmax == 10 or livesmax == 20 or livesmax == 30 or livesmax == 40 or livesmax == 50 or livesmax == 60 or livesmax == 70 or livesmax == 80 or livesmax == 90:
+				livest -= 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 9
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager2.lose_life()
+		if ModeManager.is_savefile3:
+			lives -= 1
+			livesmax -= 1
+			if livesmax == 10 or livesmax == 20 or livesmax == 30 or livesmax == 40 or livesmax == 50 or livesmax == 60 or livesmax == 70 or livesmax == 80 or livesmax == 90:
+				livest -= 1
+				score_numbers_life_t.animation = str(livest)
+				score_numbers_life_dark_t.animation = str(livest)
+				lives = 9
+				score_numbers_life_u.animation = str(lives)
+				score_numbers_life_dark_u.animation = str(lives)
+			SaveFileManager3.lose_life()
 	else:
 		lives -= 1
 		livesmax -= 1
