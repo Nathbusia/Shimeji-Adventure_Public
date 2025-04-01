@@ -99,7 +99,10 @@ func load_scene():
 		else:
 			LoadManager.load_scene("res://scenes/levels/" + LevelsManager.worldname + "/" + LevelsManager.levelname + ".tscn")
 	elif pressed_no:
-		LoadManager.load_scene("res://scenes/menu/level_select.tscn")
+		if ModeManager.is_story:
+			LoadManager.load_scene("res://scenes/worldmap/worldmap_world1.tscn")
+		else:
+			LoadManager.load_scene("res://scenes/menu/level_select.tscn")
 
 
 func _on_yes_button_pressed() -> void:

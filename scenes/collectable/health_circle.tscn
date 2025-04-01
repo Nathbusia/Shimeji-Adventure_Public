@@ -167,6 +167,7 @@ shape = SubResource("RectangleShape2D_exr55")
 
 [node name="HealthSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_803q7")
+volume_db = -4.0
 bus = &"sfx"
 
 [node name="HealthFullSFX" type="AudioStreamPlayer" parent="."]

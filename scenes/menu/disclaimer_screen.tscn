@@ -293,7 +293,7 @@ ignore_texture_size = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_6jlsm")
+&"": SubResource("AnimationLibrary_6jlsm")
 }
 autoplay = "intro"
 

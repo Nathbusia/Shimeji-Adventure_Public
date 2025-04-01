@@ -334,12 +334,12 @@ bus = &"sfx"
 
 [node name="AttackVoice" type="AudioStreamPlayer2D" parent="Voice"]
 stream = SubResource("AudioStreamRandomizer_cyygi")
-volume_db = 8.0
+volume_db = 5.0
 bus = &"voices"
 
 [node name="DefeatVoice" type="AudioStreamPlayer2D" parent="Voice"]
 stream = ExtResource("26_fvo4v")
-volume_db = 8.0
+volume_db = 5.0
 bus = &"voices"
 
 [node name="SFX" type="Node2D" parent="."]

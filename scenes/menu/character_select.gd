@@ -388,8 +388,12 @@ func _on_back_button_pressed() -> void:
 		charactername.text = "???"
 		windows_bg.modulate = "#ffffff"
 	else:
-		deselect.play()
-		LoadManager.load_scene("res://scenes/menu/level_select.tscn")
+		if ModeManager.is_story:
+			deselect.play()
+			LoadManager.load_scene("res://scenes/menu/story_save_file_select.tscn")
+		else:
+			deselect.play()
+			LoadManager.load_scene("res://scenes/menu/level_select.tscn")
 
 func _on_slot_button_pressed() -> void:
 	if characterselected:

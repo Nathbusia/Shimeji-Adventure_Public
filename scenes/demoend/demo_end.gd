@@ -24,6 +24,13 @@ func _process(_delta):
 func _on_continue_button_pressed() -> void:
 	if ModeManager.is_story:
 		if ModeManager.is_savefile1:
+			SaveFileManager.currentplayerlives = SaveFileManager.data_dic["currentlives"]
+			SaveFileManager.currentplayerlivest = SaveFileManager.data_dic["currentlivest"]
+			SaveFileManager.maxcurrentlives = SaveFileManager.data_dic["maxlives"]
+			SaveFileManager.trianglestotal = SaveFileManager.data_dic["trianglestotal"]
+			SaveFileManager.trianglestotalt = SaveFileManager.data_dic["trianglestotalt"]
+			SaveFileManager.trianglestotalh = SaveFileManager.data_dic["trianglestotalh"]
+			SaveFileManager.maxtrianglestotal = SaveFileManager.data_dic["maxtriangles"]
 			SaveFileManager.update_data(
 			LevelsManager.worldname, 
 			SaveFileManager.currentplayerlives,
@@ -60,7 +67,15 @@ func _on_continue_button_pressed() -> void:
 		SaveFileManager.update_w1_boss(
 			SaveFileManager.world1_boss_dic["unlocked"],
 			SaveFileManager.world1_boss_dic["hasbeencompleted"])
+		
 		if ModeManager.is_savefile2:
+			SaveFileManager2.currentplayerlives = SaveFileManager2.data_dic["currentlives"]
+			SaveFileManager2.currentplayerlivest = SaveFileManager2.data_dic["currentlivest"]
+			SaveFileManager2.maxcurrentlives = SaveFileManager2.data_dic["maxlives"]
+			SaveFileManager2.trianglestotal = SaveFileManager2.data_dic["trianglestotal"]
+			SaveFileManager2.trianglestotalt = SaveFileManager2.data_dic["trianglestotalt"]
+			SaveFileManager2.trianglestotalh = SaveFileManager2.data_dic["trianglestotalh"]
+			SaveFileManager2.maxtrianglestotal = SaveFileManager2.data_dic["maxtriangles"]
 			SaveFileManager2.update_data(
 			LevelsManager.worldname, 
 			SaveFileManager2.currentplayerlives,
@@ -97,7 +112,15 @@ func _on_continue_button_pressed() -> void:
 		SaveFileManager2.update_w1_boss(
 			SaveFileManager2.world1_boss_dic["unlocked"],
 			SaveFileManager2.world1_boss_dic["hasbeencompleted"])
+		
 		if ModeManager.is_savefile3:
+			SaveFileManager3.currentplayerlives = SaveFileManager3.data_dic["currentlives"]
+			SaveFileManager3.currentplayerlivest = SaveFileManager3.data_dic["currentlivest"]
+			SaveFileManager3.maxcurrentlives = SaveFileManager3.data_dic["maxlives"]
+			SaveFileManager3.trianglestotal = SaveFileManager3.data_dic["trianglestotal"]
+			SaveFileManager3.trianglestotalt = SaveFileManager3.data_dic["trianglestotalt"]
+			SaveFileManager3.trianglestotalh = SaveFileManager3.data_dic["trianglestotalh"]
+			SaveFileManager3.maxtrianglestotal = SaveFileManager3.data_dic["maxtriangles"]
 			SaveFileManager3.update_data(
 			LevelsManager.worldname, 
 			SaveFileManager3.currentplayerlives,

@@ -27,7 +27,6 @@ CharactersManager="*res://managers/CharactersManager.gd"
 CheckpointManager="*res://managers/CheckpointManager.gd"
 LevelsManager="*res://managers/LevelsManager.gd"
 ModeManager="*res://managers/ModeManager.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 SaveFileManager="*res://managers/SaveFileManager.gd"
 SaveFileManager2="*res://managers/SaveFileManager2.gd"
 SaveFileManager3="*res://managers/SaveFileManager3.gd"
@@ -39,8 +38,9 @@ ModCharManager="*res://managers/ModCharManager.gd"
 ModListManager="*res://managers/ModListManager.gd"
 ModLevelsManager="*res://managers/ModLevelsManager.gd"
 SettingsManager="*res://managers/SettingsManager.gd"
-DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 DiscordManager="*res://managers/DiscordManager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 
 [dialogic]
 

@@ -49,53 +49,132 @@ func load_scene():
 		SaveFileManager.trianglestotalt,
 		SaveFileManager.trianglestotalh,
 		SaveFileManager.maxtrianglestotal)
+
+		SaveFileManager.currentplayerlives = SaveFileManager.data_dic["currentlives"]
+		SaveFileManager.currentplayerlivest = SaveFileManager.data_dic["currentlivest"]
+		SaveFileManager.maxcurrentlives = SaveFileManager.data_dic["maxlives"]
+		SaveFileManager.trianglestotal = SaveFileManager.data_dic["trianglestotal"]
+		SaveFileManager.trianglestotalt = SaveFileManager.data_dic["trianglestotalt"]
+		SaveFileManager.trianglestotalh = SaveFileManager.data_dic["trianglestotalh"]
+		SaveFileManager.maxtrianglestotal = SaveFileManager.data_dic["maxtriangles"]
+
+		SaveFileManager.update_w1_tut(
+		SaveFileManager.world1_tutorial_dic["trianglecollected1"], 
+		SaveFileManager.world1_tutorial_dic["trianglecollected2"], 
+		SaveFileManager.world1_tutorial_dic["trianglecollected3"],
+		SaveFileManager.world1_tutorial_dic["trianglecollected4"],
+		SaveFileManager.world1_tutorial_dic["hasbeencompleted"])
+
+		SaveFileManager.update_w1_lv1(
+		SaveFileManager.world1_level1_dic["unlocked"],
+		SaveFileManager.world1_level1_dic["trianglecollected1"], 
+		SaveFileManager.world1_level1_dic["trianglecollected2"], 
+		SaveFileManager.world1_level1_dic["trianglecollected3"],
+		SaveFileManager.world1_level1_dic["trianglecollected4"],
+		SaveFileManager.world1_level1_dic["hasbeencompleted"])
+
+		SaveFileManager.update_w1_lv2(
+		SaveFileManager.world1_level2_dic["unlocked"],
+		SaveFileManager.world1_level2_dic["trianglecollected1"], 
+		SaveFileManager.world1_level2_dic["trianglecollected2"], 
+		SaveFileManager.world1_level2_dic["trianglecollected3"],
+		SaveFileManager.world1_level2_dic["trianglecollected4"],
+		SaveFileManager.world1_level2_dic["hasbeencompleted"])
+
+		SaveFileManager.update_w1_boss(
+		SaveFileManager.world1_boss_dic["unlocked"],
+		SaveFileManager.world1_boss_dic["hasbeencompleted"])
+		
 	if ModeManager.is_savefile2:
-		SaveFileManager.update_data02(
+		SaveFileManager2.update_data(
 		LevelsManager.worldname, 
-		SaveFileManager.currentplayerlives,
-		SaveFileManager.currentplayerlivest,
-		SaveFileManager.maxcurrentlives,
-		SaveFileManager.trianglestotal,
-		SaveFileManager.trianglestotalt,
-		SaveFileManager.trianglestotalh,
-		SaveFileManager.maxtrianglestotal)
+		SaveFileManager2.currentplayerlives,
+		SaveFileManager2.currentplayerlivest,
+		SaveFileManager2.maxcurrentlives,
+		SaveFileManager2.trianglestotal,
+		SaveFileManager2.trianglestotalt,
+		SaveFileManager2.trianglestotalh,
+		SaveFileManager2.maxtrianglestotal)
+		
+		SaveFileManager2.currentplayerlives = SaveFileManager2.data_dic["currentlives"]
+		SaveFileManager2.currentplayerlivest = SaveFileManager2.data_dic["currentlivest"]
+		SaveFileManager2.maxcurrentlives = SaveFileManager2.data_dic["maxlives"]
+		SaveFileManager2.trianglestotal = SaveFileManager2.data_dic["trianglestotal"]
+		SaveFileManager2.trianglestotalt = SaveFileManager2.data_dic["trianglestotalt"]
+		SaveFileManager2.trianglestotalh = SaveFileManager2.data_dic["trianglestotalh"]
+		SaveFileManager2.maxtrianglestotal = SaveFileManager2.data_dic["maxtriangles"]
+		
+		SaveFileManager2.update_w1_tut(
+		SaveFileManager2.world1_tutorial_dic["trianglecollected1"], 
+		SaveFileManager2.world1_tutorial_dic["trianglecollected2"], 
+		SaveFileManager2.world1_tutorial_dic["trianglecollected3"],
+		SaveFileManager2.world1_tutorial_dic["trianglecollected4"],
+		SaveFileManager2.world1_tutorial_dic["hasbeencompleted"])
+
+		SaveFileManager2.update_w1_lv1(
+		SaveFileManager2.world1_level1_dic["unlocked"],
+		SaveFileManager2.world1_level1_dic["trianglecollected1"], 
+		SaveFileManager2.world1_level1_dic["trianglecollected2"], 
+		SaveFileManager2.world1_level1_dic["trianglecollected3"],
+		SaveFileManager2.world1_level1_dic["trianglecollected4"],
+		SaveFileManager2.world1_level1_dic["hasbeencompleted"])
+
+		SaveFileManager2.update_w1_lv2(
+		SaveFileManager2.world1_level2_dic["unlocked"],
+		SaveFileManager2.world1_level2_dic["trianglecollected1"], 
+		SaveFileManager2.world1_level2_dic["trianglecollected2"], 
+		SaveFileManager2.world1_level2_dic["trianglecollected3"],
+		SaveFileManager2.world1_level2_dic["trianglecollected4"],
+		SaveFileManager2.world1_level2_dic["hasbeencompleted"])
+
+		SaveFileManager2.update_w1_boss(
+		SaveFileManager2.world1_boss_dic["unlocked"],
+		SaveFileManager2.world1_boss_dic["hasbeencompleted"])
 	if ModeManager.is_savefile3:
-		SaveFileManager.update_data03(
+		SaveFileManager3.update_data(
 		LevelsManager.worldname, 
-		SaveFileManager.currentplayerlives,
-		SaveFileManager.currentplayerlivest,
-		SaveFileManager.maxcurrentlives,
-		SaveFileManager.trianglestotal,
-		SaveFileManager.trianglestotalt,
-		SaveFileManager.trianglestotalh,
-		SaveFileManager.maxtrianglestotal)
-			
-	SaveFileManager.update_w1_tut(
-	SaveFileManager.world1_tutorial_dic["trianglecollected1"], 
-	SaveFileManager.world1_tutorial_dic["trianglecollected2"], 
-	SaveFileManager.world1_tutorial_dic["trianglecollected3"],
-	SaveFileManager.world1_tutorial_dic["trianglecollected4"],
-	SaveFileManager.world1_tutorial_dic["hasbeencompleted"])
+		SaveFileManager3.currentplayerlives,
+		SaveFileManager3.currentplayerlivest,
+		SaveFileManager3.maxcurrentlives,
+		SaveFileManager3.trianglestotal,
+		SaveFileManager3.trianglestotalt,
+		SaveFileManager3.trianglestotalh,
+		SaveFileManager3.maxtrianglestotal)
 
-	SaveFileManager.update_w1_lv1(
-	SaveFileManager.world1_level1_dic["unlocked"],
-	SaveFileManager.world1_level1_dic["trianglecollected1"], 
-	SaveFileManager.world1_level1_dic["trianglecollected2"], 
-	SaveFileManager.world1_level1_dic["trianglecollected3"],
-	SaveFileManager.world1_level1_dic["trianglecollected4"],
-	SaveFileManager.world1_level1_dic["hasbeencompleted"])
+		SaveFileManager3.currentplayerlives = SaveFileManager3.data_dic["currentlives"]
+		SaveFileManager3.currentplayerlivest = SaveFileManager3.data_dic["currentlivest"]
+		SaveFileManager3.maxcurrentlives = SaveFileManager3.data_dic["maxlives"]
+		SaveFileManager3.trianglestotal = SaveFileManager3.data_dic["trianglestotal"]
+		SaveFileManager3.trianglestotalt = SaveFileManager3.data_dic["trianglestotalt"]
+		SaveFileManager3.trianglestotalh = SaveFileManager3.data_dic["trianglestotalh"]
+		SaveFileManager3.maxtrianglestotal = SaveFileManager3.data_dic["maxtriangles"]
 
-	SaveFileManager.update_w1_lv2(
-	SaveFileManager.world1_level2_dic["unlocked"],
-	SaveFileManager.world1_level2_dic["trianglecollected1"], 
-	SaveFileManager.world1_level2_dic["trianglecollected2"], 
-	SaveFileManager.world1_level2_dic["trianglecollected3"],
-	SaveFileManager.world1_level2_dic["trianglecollected4"],
-	SaveFileManager.world1_level2_dic["hasbeencompleted"])
+		SaveFileManager3.update_w1_tut(
+		SaveFileManager3.world1_tutorial_dic["trianglecollected1"], 
+		SaveFileManager3.world1_tutorial_dic["trianglecollected2"], 
+		SaveFileManager3.world1_tutorial_dic["trianglecollected3"],
+		SaveFileManager3.world1_tutorial_dic["trianglecollected4"],
+		SaveFileManager3.world1_tutorial_dic["hasbeencompleted"])
 
-	SaveFileManager.update_w1_boss(
-	SaveFileManager.world1_boss_dic["unlocked"],
-	SaveFileManager.world1_boss_dic["hasbeencompleted"])
+		SaveFileManager3.update_w1_lv1(
+		SaveFileManager3.world1_level1_dic["unlocked"],
+		SaveFileManager3.world1_level1_dic["trianglecollected1"], 
+		SaveFileManager3.world1_level1_dic["trianglecollected2"], 
+		SaveFileManager3.world1_level1_dic["trianglecollected3"],
+		SaveFileManager3.world1_level1_dic["trianglecollected4"],
+		SaveFileManager3.world1_level1_dic["hasbeencompleted"])
+
+		SaveFileManager3.update_w1_lv2(
+		SaveFileManager3.world1_level2_dic["unlocked"],
+		SaveFileManager3.world1_level2_dic["trianglecollected1"], 
+		SaveFileManager3.world1_level2_dic["trianglecollected2"], 
+		SaveFileManager3.world1_level2_dic["trianglecollected3"],
+		SaveFileManager3.world1_level2_dic["trianglecollected4"],
+		SaveFileManager3.world1_level2_dic["hasbeencompleted"])
+
+		SaveFileManager3.update_w1_boss(
+		SaveFileManager3.world1_boss_dic["unlocked"],
+		SaveFileManager3.world1_boss_dic["hasbeencompleted"])
 	SaveGame.save_game()
 	LoadManager.load_scene("res://scenes/demoend/demo_end.tscn")
 

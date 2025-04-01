@@ -73,6 +73,7 @@ var credits = [
 		"Jean Makes Games"
 	],[
 		"Special Thanks",
+		"Gamingmints (For finalizing the logo design)",
 		"Escape Studios (This game debut as an Uni project)",
 		"Friends, Family, So on...",
 		"YOU! for playing this game."

@@ -157,6 +157,7 @@ libraries = {
 
 [node name="DefeatSFX" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_4g0v3")
+volume_db = 5.0
 
 [node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_e6ici")

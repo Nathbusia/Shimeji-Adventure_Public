@@ -133,11 +133,12 @@ shape = SubResource("RectangleShape2D_dpamc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_8xho1")
+&"": SubResource("AnimationLibrary_8xho1")
 }
 
 [node name="1upSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_pmrn5")
+volume_db = -4.0
 bus = &"sfx"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -92,7 +92,7 @@ func _ready() -> void:
 			SaveFileManager.trianglestotalt = SaveFileManager.data_dic["trianglestotalt"]
 			SaveFileManager.trianglestotalh = SaveFileManager.data_dic["trianglestotalh"]
 			SaveFileManager.maxtrianglestotal = SaveFileManager.data_dic["maxtriangles"]
-			
+		
 		if SaveFileManager.trianglestotal == 1 or SaveFileManager.trianglestotal == 2 or SaveFileManager.trianglestotal == 3 or SaveFileManager.trianglestotal == 4 or SaveFileManager.trianglestotal == 5 or SaveFileManager.trianglestotal == 6 or SaveFileManager.trianglestotal == 7 or SaveFileManager.trianglestotal == 8 or SaveFileManager.trianglestotal == 9:
 			tri_amount_numbers_u.animation = str(SaveFileManager.trianglestotal)
 		if SaveFileManager.trianglestotalt == 1 or SaveFileManager.trianglestotalt == 2 or SaveFileManager.trianglestotalt == 3 or SaveFileManager.trianglestotalt == 4 or SaveFileManager.trianglestotalt == 5 or SaveFileManager.trianglestotalt == 6 or SaveFileManager.trianglestotalt == 7 or SaveFileManager.trianglestotalt == 8 or SaveFileManager.trianglestotalt == 9:
@@ -126,7 +126,7 @@ func _ready() -> void:
 				level_spot_sprite_boss.play("available")
 			level_spot_sprite_lv2.play("clear")
 			unlock_wall_boss.disabled = true
-			
+
 			SaveFileManager2.currentplayerlives = SaveFileManager2.data_dic["currentlives"]
 			SaveFileManager2.currentplayerlivest = SaveFileManager2.data_dic["currentlivest"]
 			SaveFileManager2.maxcurrentlives = SaveFileManager2.data_dic["maxlives"]
@@ -134,7 +134,7 @@ func _ready() -> void:
 			SaveFileManager2.trianglestotalt = SaveFileManager2.data_dic["trianglestotalt"]
 			SaveFileManager2.trianglestotalh = SaveFileManager2.data_dic["trianglestotalh"]
 			SaveFileManager2.maxtrianglestotal = SaveFileManager2.data_dic["maxtriangles"]
-			
+
 		if SaveFileManager2.trianglestotal == 1 or SaveFileManager2.trianglestotal == 2 or SaveFileManager2.trianglestotal == 3 or SaveFileManager2.trianglestotal == 4 or SaveFileManager2.trianglestotal == 5 or SaveFileManager2.trianglestotal == 6 or SaveFileManager2.trianglestotal == 7 or SaveFileManager2.trianglestotal == 8 or SaveFileManager2.trianglestotal == 9:
 			tri_amount_numbers_u.animation = str(SaveFileManager2.trianglestotal)
 		if SaveFileManager2.trianglestotalt == 1 or SaveFileManager2.trianglestotalt == 2 or SaveFileManager2.trianglestotalt == 3 or SaveFileManager2.trianglestotalt == 4 or SaveFileManager2.trianglestotalt == 5 or SaveFileManager2.trianglestotalt == 6 or SaveFileManager2.trianglestotalt == 7 or SaveFileManager2.trianglestotalt == 8 or SaveFileManager2.trianglestotalt == 9:
@@ -168,7 +168,7 @@ func _ready() -> void:
 				level_spot_sprite_boss.play("available")
 			level_spot_sprite_lv2.play("clear")
 			unlock_wall_boss.disabled = true
-			
+
 			SaveFileManager3.currentplayerlives = SaveFileManager3.data_dic["currentlives"]
 			SaveFileManager3.currentplayerlivest = SaveFileManager3.data_dic["currentlivest"]
 			SaveFileManager3.maxcurrentlives = SaveFileManager3.data_dic["maxlives"]
@@ -176,7 +176,7 @@ func _ready() -> void:
 			SaveFileManager3.trianglestotalt = SaveFileManager3.data_dic["trianglestotalt"]
 			SaveFileManager3.trianglestotalh = SaveFileManager3.data_dic["trianglestotalh"]
 			SaveFileManager3.maxtrianglestotal = SaveFileManager3.data_dic["maxtriangles"]
-			
+
 		if SaveFileManager3.trianglestotal == 1 or SaveFileManager3.trianglestotal == 2 or SaveFileManager3.trianglestotal == 3 or SaveFileManager3.trianglestotal == 4 or SaveFileManager3.trianglestotal == 5 or SaveFileManager3.trianglestotal == 6 or SaveFileManager3.trianglestotal == 7 or SaveFileManager3.trianglestotal == 8 or SaveFileManager3.trianglestotal == 9:
 			tri_amount_numbers_u.animation = str(SaveFileManager3.trianglestotal)
 		if SaveFileManager3.trianglestotalt == 1 or SaveFileManager3.trianglestotalt == 2 or SaveFileManager3.trianglestotalt == 3 or SaveFileManager3.trianglestotalt == 4 or SaveFileManager3.trianglestotalt == 5 or SaveFileManager3.trianglestotalt == 6 or SaveFileManager3.trianglestotalt == 7 or SaveFileManager3.trianglestotalt == 8 or SaveFileManager3.trianglestotalt == 9:
@@ -191,6 +191,7 @@ func _ready() -> void:
 			score_numbers_life_t.animation = str(SaveFileManager3.currentplayerlivest)
 			score_numbers_life_dark_t.animation = str(SaveFileManager3.currentplayerlivest)
 	SaveGame.load_game()
+
 
 
 func _input(event: InputEvent) -> void:
@@ -279,7 +280,6 @@ func _on_go_button_pressed() -> void:
 		ModeManager.isin_worldmap = false
 		LoadManager.load_scene("res://scenes/cutscenes/world1/boss_monstequare_opening.tscn")
 	else:
-		ModeManager.isin_worldmap = false
 		LoadManager.load_scene("res://scenes/levels/" + LevelsManager.worldname + "/" + LevelsManager.levelname + ".tscn")
 	select.play()
 	go.play()
