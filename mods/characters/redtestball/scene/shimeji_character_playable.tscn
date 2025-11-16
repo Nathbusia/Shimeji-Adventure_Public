@@ -1,4 +1,4 @@
-[gd_scene load_steps=214 format=3 uid="uid://cr5dt74u6cqfq"]
+[gd_scene load_steps=215 format=3 uid="uid://cr5dt74u6cqfq"]
 
 [ext_resource type="Script" uid="uid://dg0imceagj4s" path="res://mods/characters/redtestball/scene/shimeji_character_playable.gd" id="1_mx7gv"]
 [ext_resource type="Texture2D" uid="uid://csgvx17dus3hp" path="res://mods/characters/redtestball/sprites/mainsprite/shime35.png" id="2_81ur2"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://bdkk72sxs22m2" path="res://mods/characters/redtestball/sprites/mainsprite/shime22.png" id="21_o1vwn"]
 [ext_resource type="Texture2D" uid="uid://beonm0e1ivs6m" path="res://mods/characters/redtestball/sprites/mainsprite/shime18.png" id="22_ofxm6"]
 [ext_resource type="Texture2D" uid="uid://btseh7113fhn6" path="res://mods/characters/redtestball/sprites/mainsprite/shime19.png" id="23_d5fe2"]
+[ext_resource type="Texture2D" uid="uid://46qhe1i1pysv" path="res://mods/characters/redtestball/sprites/mainsprite/shime33.png" id="23_jbhu8"]
 [ext_resource type="Texture2D" uid="uid://cnctv5v3ol6qo" path="res://mods/characters/redtestball/sprites/mainsprite/shime2.png" id="24_dra0v"]
 [ext_resource type="Texture2D" uid="uid://ccqj2lhjw7ai1" path="res://mods/characters/redtestball/sprites/mainsprite/shime3.png" id="25_72ng1"]
 [ext_resource type="Texture2D" uid="uid://dboj8esw55p3a" path="res://mods/characters/redtestball/sprites/mainsprite/shime11.png" id="26_hsf0l"]
@@ -407,7 +408,7 @@ animations = [{
 "texture": ExtResource("20_xvrsf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("19_wcmi0")
+"texture": ExtResource("23_jbhu8")
 }, {
 "duration": 1.0,
 "texture": ExtResource("20_xvrsf")
