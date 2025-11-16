@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare_jpn: ブワハハハハハ！
+[signal arg="talking"]
+monstequare_jpn: それで！お前が私の可愛いミーンボールとミーンスクエアにこんなにもひどいことをしていた犯人だったのか。
+[signal arg="talkingB"]
+monstequare_jpn: この哀れな小さな子たちが君のことをすべて話してくれたんだ。さあ、今度は君が私と向き合う番だ！
+[signal arg="short"]
+monstequare_jpn: 逃げるチャンスをやるか、それとも俺に叩きのめされるか、選ばせてやる！
+[wait time="2.0"]
+[signal arg="question"]
+monstequare_jpn: 返事がない？ なら、仕方ない、やっちゃうぞ！
+[signal arg="short"]
+monstequare_jpn: かかってこい、デスクトップヒーローよ…
+[signal arg="battlestart"]
+monstequare_jpn: お前の最悪なところを見せてみろ！！
+[signal arg="beginboss"]

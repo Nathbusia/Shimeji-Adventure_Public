@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://0j0h68bs4fw0"]
+
+[ext_resource type="Texture2D" uid="uid://5xoj2020rymm" path="res://sprites/levels/world2/world2_windowsB_Big.png" id="1_8ruit"]
+[ext_resource type="Texture2D" uid="uid://bdinlnticgrqr" path="res://sprites/levels/world1/windows/myforums.png" id="2_8ruit"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ngm6h"]
+size = Vector2(1096, 773)
+
+[node name="MyForumsAdvert" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+collision_mask = 3
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -183.0
+offset_right = 322.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8ruit")
+metadata/_edit_use_anchors_ = true
+
+[node name="Advert" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 41.5
+offset_top = 187.5
+offset_right = 1022.5
+offset_bottom = 739.5
+texture = ExtResource("2_8ruit")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_ngm6h")

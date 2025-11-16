@@ -1,0 +1,17 @@
+friend_jpn: しまった！それはまずいな… 壁だ。
+[signal arg="normaltalkB"]
+friend_jpn: でも、上に何かあるな。ただのジャンプじゃ無理みたいだ。
+[signal arg="talkingB"]
+[signal arg="flippedoff"]
+friend_jpn: さあ、ここで二段ジャンプを使う番です。
+[signal arg="talkingB"]
+friend_jpn: スペースキーを押してジャンプし、もう一度押すとダブルジャンプを実行します。
+[signal arg="pointingB"]
+friend_jpn: 覚えて。スペースキーを軽くタップすると、小刻みなジャンプができますよ。
+[signal arg="welcomeB"]
+friend_jpn: ジャンプの限界まで押し続ければ、大きな跳躍ができる。まるで跳ねるカエルのように。
+[signal arg="talkingB"]
+friend_jpn: だからこれについては。スペースキーを押し続けてから、もう一度押すと一番上まで到達できます！
+[signal arg="greatestB"]
+friend_jpn: よし！やってみよう！
+[signal arg="end_cutsceneB"]

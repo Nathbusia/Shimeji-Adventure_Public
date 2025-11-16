@@ -1,0 +1,1650 @@
+[gd_scene load_steps=100 format=3 uid="uid://dsdhj5328aqhe"]
+
+[ext_resource type="Texture2D" uid="uid://8i1r27hqgd17" path="res://sprites/characters/bosses/pete/pete_body.png" id="1_fnn00"]
+[ext_resource type="Script" uid="uid://o551qekggar2" path="res://scenes/characters/bosses/pete/pop_out_pete.gd" id="1_y6x7u"]
+[ext_resource type="Texture2D" uid="uid://dbv7vf8p5qwbo" path="res://sprites/characters/bosses/pete/pete_eyes0007.png" id="2_hgmhd"]
+[ext_resource type="Texture2D" uid="uid://c5wyw4e55fl4l" path="res://sprites/characters/bosses/pete/pete_eyes0008.png" id="3_wvn20"]
+[ext_resource type="Texture2D" uid="uid://dodtiy2v1en52" path="res://sprites/characters/bosses/pete/pete_eyes0009.png" id="4_k38f7"]
+[ext_resource type="Texture2D" uid="uid://dv1hw6aomh1yo" path="res://sprites/characters/bosses/pete/pete_eyes0010.png" id="5_koexp"]
+[ext_resource type="Texture2D" uid="uid://vs0hse5vw5cc" path="res://sprites/characters/bosses/pete/pete_eyes0011.png" id="6_wqj4f"]
+[ext_resource type="Texture2D" uid="uid://ctrdygie2l61b" path="res://sprites/characters/bosses/pete/pete_eyes0012.png" id="7_xtdp4"]
+[ext_resource type="Texture2D" uid="uid://cigxlx7135y6i" path="res://sprites/characters/bosses/pete/pete_eyes0013.png" id="8_pm22d"]
+[ext_resource type="Texture2D" uid="uid://ctdyre5mfq876" path="res://sprites/characters/bosses/pete/pete_eyes0001.png" id="9_i8eb7"]
+[ext_resource type="Texture2D" uid="uid://bem11dudw6d5x" path="res://sprites/characters/bosses/pete/pete_eyes0002.png" id="10_8mv08"]
+[ext_resource type="Texture2D" uid="uid://dygmjfs6hysm7" path="res://sprites/characters/bosses/pete/pete_eyes0003.png" id="11_1ibbs"]
+[ext_resource type="Texture2D" uid="uid://bfc30om0srdps" path="res://sprites/characters/bosses/pete/pete_eyes0004.png" id="12_dy5vo"]
+[ext_resource type="Texture2D" uid="uid://csug2cyfmrb7s" path="res://sprites/characters/bosses/pete/pete_eyes0005.png" id="13_8vx5h"]
+[ext_resource type="Texture2D" uid="uid://b2x88nvmtqy25" path="res://sprites/characters/bosses/pete/pete_eyes0006.png" id="14_srowy"]
+[ext_resource type="Texture2D" uid="uid://dtkpftriech0p" path="res://sprites/characters/bosses/pete/pete_eyes0018.png" id="15_ltwiq"]
+[ext_resource type="Texture2D" uid="uid://cm3p72pgqbo6q" path="res://sprites/characters/bosses/pete/pete_eyes0019.png" id="16_3ctnv"]
+[ext_resource type="Texture2D" uid="uid://n3g4e4ynetp6" path="res://sprites/characters/bosses/pete/pete_eyes0020.png" id="17_p7dye"]
+[ext_resource type="Texture2D" uid="uid://6wtmn0nvisx4" path="res://sprites/characters/bosses/pete/pete_eyes0021.png" id="18_v2cik"]
+[ext_resource type="Texture2D" uid="uid://chfkugtmyn0w6" path="res://sprites/characters/bosses/pete/pete_eyes0014.png" id="19_qnfdl"]
+[ext_resource type="Texture2D" uid="uid://dcsmys7yq7eat" path="res://sprites/characters/bosses/pete/pete_eyes0015.png" id="20_v4y24"]
+[ext_resource type="Texture2D" uid="uid://cbhglk3oh4wof" path="res://sprites/characters/bosses/pete/pete_eyes0016.png" id="21_kea2i"]
+[ext_resource type="Texture2D" uid="uid://bvirq16cos3b3" path="res://sprites/characters/bosses/pete/pete_eyes0017.png" id="22_5m6js"]
+[ext_resource type="Texture2D" uid="uid://bqhdynmfooesq" path="res://sprites/characters/bosses/pete/pete_moustache0002.png" id="23_b8kfj"]
+[ext_resource type="Texture2D" uid="uid://dhjbjjjn3tmh" path="res://sprites/characters/bosses/pete/pete_moustache0003.png" id="24_ksosk"]
+[ext_resource type="Texture2D" uid="uid://baiy8tj3ydus4" path="res://sprites/characters/bosses/pete/pete_moustache0004.png" id="25_idhr0"]
+[ext_resource type="Texture2D" uid="uid://8ao08lyvhbmn" path="res://sprites/characters/bosses/pete/pete_moustache0001.png" id="26_irma4"]
+[ext_resource type="Texture2D" uid="uid://b3xdey20l50n3" path="res://sprites/characters/bosses/pete/pete_mouth0003.png" id="27_56h3x"]
+[ext_resource type="Texture2D" uid="uid://d3vb1wkxq380t" path="res://sprites/characters/bosses/pete/pete_mouth0007.png" id="28_2eibr"]
+[ext_resource type="Texture2D" uid="uid://bp2l7548m845l" path="res://sprites/characters/bosses/pete/pete_mouth0008.png" id="29_y6x7u"]
+[ext_resource type="Texture2D" uid="uid://dvxvicr18ging" path="res://sprites/characters/bosses/pete/pete_mouth0010.png" id="30_kgpo4"]
+[ext_resource type="Texture2D" uid="uid://dgaqrexllrjtk" path="res://sprites/characters/bosses/pete/pete_mouth0009.png" id="31_buo8c"]
+[ext_resource type="Texture2D" uid="uid://dmtyjjy6a8u11" path="res://sprites/characters/bosses/pete/pete_mouth0002.png" id="32_178ny"]
+[ext_resource type="Texture2D" uid="uid://dnpw1jn7xjnjc" path="res://sprites/characters/bosses/pete/pete_mouth0001.png" id="33_gnnj4"]
+[ext_resource type="Texture2D" uid="uid://coxg7u6n5tx63" path="res://sprites/characters/bosses/pete/pete_mouth0004.png" id="34_p07pu"]
+[ext_resource type="Texture2D" uid="uid://4ql07vk4v62b" path="res://sprites/characters/bosses/pete/pete_mouth0005.png" id="35_46rqy"]
+[ext_resource type="Texture2D" uid="uid://cx6jttx8ulno5" path="res://sprites/characters/bosses/pete/pete_mouth0006.png" id="36_s0kn6"]
+[ext_resource type="AudioStream" uid="uid://b38y34x8t5kkt" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_glove01.ogg" id="37_5m6js"]
+[ext_resource type="AudioStream" uid="uid://dsq6ar8s86f8g" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_glove02.ogg" id="38_b8kfj"]
+[ext_resource type="AudioStream" uid="uid://6y77oe4dqo45" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_glove03.ogg" id="39_ksosk"]
+[ext_resource type="AudioStream" uid="uid://bg27gh86irxni" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_glove04.ogg" id="40_idhr0"]
+[ext_resource type="AudioStream" uid="uid://daachya15052n" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_beamcannon01.ogg" id="41_irma4"]
+[ext_resource type="AudioStream" uid="uid://bucjcgyiinjeb" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_beamcannon02.ogg" id="42_56h3x"]
+[ext_resource type="AudioStream" uid="uid://bbw8dio48xmif" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_beamcannon03.ogg" id="43_2eibr"]
+[ext_resource type="AudioStream" uid="uid://d18kvh22gvs85" path="res://sfx/characters/bosses/pete/sfx_pete_vox_attack_beamcannon04.ogg" id="44_y6x7u"]
+[ext_resource type="AudioStream" uid="uid://b86clvkyf1l2t" path="res://sfx/characters/bosses/pete/sfx_pete_vox_summon01.ogg" id="45_kgpo4"]
+[ext_resource type="AudioStream" uid="uid://dpir0suwg1dm2" path="res://sfx/characters/bosses/pete/sfx_pete_vox_summon02.ogg" id="46_buo8c"]
+[ext_resource type="AudioStream" uid="uid://lkm1gdlk2wws" path="res://sfx/characters/bosses/pete/sfx_pete_vox_summon03.ogg" id="47_178ny"]
+[ext_resource type="AudioStream" uid="uid://bks3kmhc4l18u" path="res://sfx/characters/bosses/pete/sfx_pete_vox_summon04.ogg" id="48_gnnj4"]
+[ext_resource type="AudioStream" uid="uid://7c7jrnqs8k7p" path="res://sfx/characters/bosses/pete/sfx_pete_vox_teleport_in01.ogg" id="49_p07pu"]
+[ext_resource type="AudioStream" uid="uid://b6apy26vhsv8x" path="res://sfx/characters/bosses/pete/sfx_pete_vox_teleport_in02.ogg" id="50_46rqy"]
+[ext_resource type="AudioStream" uid="uid://dxs2iwk1ljsvh" path="res://sfx/characters/bosses/pete/sfx_pete_vox_teleport_out01.ogg" id="51_s0kn6"]
+[ext_resource type="AudioStream" uid="uid://dvjig8wumcab3" path="res://sfx/characters/bosses/pete/sfx_pete_vox_teleport_out02.ogg" id="52_qvnti"]
+[ext_resource type="AudioStream" uid="uid://bsm7ovnsbtw2a" path="res://sfx/characters/bosses/pete/sfx_pete_vox_damaged01.ogg" id="53_arc8k"]
+[ext_resource type="AudioStream" uid="uid://c2jci7btny2gp" path="res://sfx/characters/bosses/pete/sfx_pete_vox_damaged02.ogg" id="54_oh12i"]
+[ext_resource type="AudioStream" uid="uid://d436abphj472" path="res://sfx/characters/bosses/pete/sfx_pete_vox_damaged03.ogg" id="55_f7vgn"]
+[ext_resource type="AudioStream" uid="uid://bkgx7whgf3tvl" path="res://sfx/characters/bosses/pete/sfx_pete_vox_damaged04.ogg" id="56_alc2k"]
+[ext_resource type="AudioStream" uid="uid://c7ib3bktfiw4h" path="res://sfx/characters/bosses/pete/sfx_pete_vox_damaged05.ogg" id="57_uddff"]
+[ext_resource type="AudioStream" uid="uid://dg8t2bcxp6gsg" path="res://sfx/characters/bosses/pete/sfx_pete_vox_defeat.ogg" id="58_sxfxc"]
+[ext_resource type="AudioStream" uid="uid://dqgswpingrpvo" path="res://sfx/characters/bosses/pete/sfx_pete_teleport_in.ogg" id="59_2eibr"]
+[ext_resource type="AudioStream" uid="uid://byfcxomkxnr1i" path="res://sfx/characters/bosses/pete/sfx_pete_teleport_out.ogg" id="60_y6x7u"]
+[ext_resource type="AudioStream" uid="uid://c5xas2crhyd0w" path="res://sfx/characters/bosses/pete/sfx_pete_damaged.ogg" id="61_kgpo4"]
+[ext_resource type="AudioStream" uid="uid://d1314iwilp6e5" path="res://sfx/characters/bosses/pete/sfx_pete_defeat.ogg" id="62_buo8c"]
+[ext_resource type="AudioStream" uid="uid://dlqp4o2mvp7rp" path="res://sfx/characters/bosses/pete/sfx_pete_windows_popup01.ogg" id="63_178ny"]
+[ext_resource type="AudioStream" uid="uid://bvt4ndxe83djp" path="res://sfx/characters/bosses/pete/sfx_pete_summon01.ogg" id="64_buo8c"]
+[ext_resource type="AudioStream" uid="uid://b6durir67qo1h" path="res://sfx/characters/bosses/pete/sfx_pete_windows_popup02.ogg" id="64_gnnj4"]
+[ext_resource type="AudioStream" uid="uid://cax4qa2bmerax" path="res://sfx/characters/bosses/pete/sfx_pete_summon02.ogg" id="65_178ny"]
+[ext_resource type="Texture2D" uid="uid://ddkgy5alk8eux" path="res://sprites/characters/bosses/pete/pete_sticknode_summon0001.png" id="68_46rqy"]
+[ext_resource type="Texture2D" uid="uid://djfqf14m4klxw" path="res://sprites/characters/bosses/pete/pete_sticknode_summon0002.png" id="69_s0kn6"]
+[ext_resource type="Texture2D" uid="uid://cdssr65quww4s" path="res://sprites/characters/bosses/pete/pete_sticknode_summon0003.png" id="70_qvnti"]
+[ext_resource type="Texture2D" uid="uid://ohod55u6i3p5" path="res://sprites/characters/bosses/pete/pete_sticknode_summon0004.png" id="71_arc8k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arc8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hgmhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wvn20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hgmhd")
+}],
+"loop": false,
+"name": &"attack_left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_k38f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_koexp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k38f7")
+}],
+"loop": false,
+"name": &"attack_right",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wqj4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xtdp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8mv08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ibbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dy5vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8vx5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_srowy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8vx5h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dy5vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1ibbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8mv08")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8eb7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ltwiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3ctnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3ctnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3ctnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_p7dye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_v2cik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}],
+"loop": false,
+"name": &"summon",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qnfdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_v4y24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_kea2i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5m6js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pm22d")
+}],
+"loop": false,
+"name": &"teleport",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oh12i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_b8kfj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ksosk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_idhr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ksosk")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_irma4")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7vgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_2eibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_y6x7u")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_2eibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_kgpo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_buo8c")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_gnnj4")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_gnnj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_56h3x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}],
+"loop": false,
+"name": &"summon",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_p07pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_46rqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_s0kn6")
+}],
+"loop": false,
+"name": &"teleport_in",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_s0kn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_p07pu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_46rqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_178ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_gnnj4")
+}],
+"loop": false,
+"name": &"teleport_out",
+"speed": 8.0
+}]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qb61j"]
+streams_count = 4
+stream_0/stream = ExtResource("37_5m6js")
+stream_1/stream = ExtResource("38_b8kfj")
+stream_2/stream = ExtResource("39_ksosk")
+stream_3/stream = ExtResource("40_idhr0")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_hxapm"]
+streams_count = 4
+stream_0/stream = ExtResource("41_irma4")
+stream_1/stream = ExtResource("42_56h3x")
+stream_2/stream = ExtResource("43_2eibr")
+stream_3/stream = ExtResource("44_y6x7u")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nnouc"]
+streams_count = 4
+stream_0/stream = ExtResource("45_kgpo4")
+stream_1/stream = ExtResource("46_buo8c")
+stream_2/stream = ExtResource("47_178ny")
+stream_3/stream = ExtResource("48_gnnj4")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4iqal"]
+streams_count = 2
+stream_0/stream = ExtResource("49_p07pu")
+stream_1/stream = ExtResource("50_46rqy")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gvssd"]
+streams_count = 2
+stream_0/stream = ExtResource("51_s0kn6")
+stream_1/stream = ExtResource("52_qvnti")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_d35hl"]
+streams_count = 5
+stream_0/stream = ExtResource("53_arc8k")
+stream_1/stream = ExtResource("54_oh12i")
+stream_2/stream = ExtResource("55_f7vgn")
+stream_3/stream = ExtResource("56_alc2k")
+stream_4/stream = ExtResource("57_uddff")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_gnnj4"]
+streams_count = 2
+stream_0/stream = ExtResource("64_buo8c")
+stream_1/stream = ExtResource("65_178ny")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_p07pu"]
+streams_count = 2
+stream_0/stream = ExtResource("63_178ny")
+stream_1/stream = ExtResource("64_gnnj4")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5m6js"]
+size = Vector2(803, 567)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8kfj"]
+size = Vector2(808, 575)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46rqy"]
+size = Vector2(808, 575)
+
+[sub_resource type="Animation" id="Animation_b8kfj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.386689, 0.386689)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Moustache:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PeteBody/Mouth:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PeteBody/Eyes:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PeteBody/Mouth:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VoiceClips/Teleport_In:playing")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SFX/TeleportInSFX:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("VoiceClips/Teleport_Out:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("SFX/TeleportOutSFX:playing")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ksosk"]
+resource_name = "attack_left"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(0.329877, 1, 1, 0.35355344, 1, 0.329877),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14), Vector2(-69.792, -53.694), Vector2(-81, -58), Vector2(-81, -58), Vector2(-69.792, -53.694), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94), Vector2(23.958, 307.8), Vector2(-3.847, 327.07), Vector2(-3.847, 327.07), Vector2(23.958, 307.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685), Vector2(19.052, 530.815), Vector2(11.817, 539.05), Vector2(11.817, 539.05), Vector2(19.052, 530.815), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_left"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_idhr0"]
+resource_name = "attack_right"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(0.329877, 1, 1, 0.35355344, 1, 0.329877),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14), Vector2(15.993, -53.694), Vector2(48.83, -58), Vector2(48.83, -58), Vector2(15.993, -53.694), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94), Vector2(69.213, 307.8), Vector2(116.103, 327.07), Vector2(116.103, 327.07), Vector2(69.213, 307.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685), Vector2(36.122, 530.815), Vector2(77.072, 539.05), Vector2(77.072, 539.05), Vector2(36.122, 530.815), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_right"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_y6x7u"]
+resource_name = "damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-9.902, -169.32), Vector2(33.028, -105.445), Vector2(-33.457, -94.51), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.602, 297.535), Vector2(43.548, 316.85), Vector2(4.373, 322.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 559.735), Vector2(60.102, 489.33), Vector2(-12.448, 541.275), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Moustache:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.19198621771937624, 0.05759586531581307, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.685, 0.685), Vector2(1.315, 1.315), Vector2(1, 1)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PeteBody:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.386689, 0.386689)]
+}
+
+[sub_resource type="Animation" id="Animation_kgpo4"]
+resource_name = "defeat"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-9.902, -169.32), Vector2(33.028, -105.445), Vector2(-33.457, -94.51), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.602, 297.535), Vector2(43.548, 316.85), Vector2(4.373, 322.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 559.735), Vector2(60.102, 489.33), Vector2(-12.448, 541.275), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Moustache:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.19198621771937624, 0.05759586531581307, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.685, 0.685), Vector2(1.315, 1.315), Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PeteBody:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.386689, 0.386689)]
+}
+
+[sub_resource type="Animation" id="Animation_5m6js"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.366022, 0.406126, 1),
+"update": 0,
+"values": [Vector2(-104.732, -113.14), Vector2(94.588, -113.14), Vector2(-104.732, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.267943, 1, 1),
+"update": 0,
+"values": [Vector2(23.868, 264.225), Vector2(23.868, 296.54), Vector2(23.868, 264.225)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.466516, 0.450625, 0.466516),
+"update": 0,
+"values": [Vector2(21.282, 491.55), Vector2(21.282, 562.905), Vector2(21.282, 491.55)]
+}
+
+[sub_resource type="Animation" id="Animation_irma4"]
+resource_name = "summon"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.992, -52.875), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.868, 307.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 535.65), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_56h3x"]
+resource_name = "teleport_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.18946461, 0.26794344, 1),
+"update": 0,
+"values": [Vector2(0.292, 0.292), Vector2(0.467, 0.467), Vector2(0.012, 0.012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Eyes:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_in"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VoiceClips/Teleport_In:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SFX/TeleportInSFX:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"teleporting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2eibr"]
+resource_name = "teleport_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4),
+"transitions": PackedFloat32Array(0.18301077, 0.26794344, 1),
+"update": 0,
+"values": [Vector2(0.012, 0.012), Vector2(0.467, 0.467), Vector2(0.387, 0.387)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Eyes:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"summon"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_out"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VoiceClips/Teleport_Out:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SFX/TeleportOutSFX:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ksosk"]
+_data = {
+&"RESET": SubResource("Animation_b8kfj"),
+&"attack_left": SubResource("Animation_ksosk"),
+&"attack_right": SubResource("Animation_idhr0"),
+&"damage": SubResource("Animation_y6x7u"),
+&"defeat": SubResource("Animation_kgpo4"),
+&"idle": SubResource("Animation_5m6js"),
+&"summon": SubResource("Animation_irma4"),
+&"teleport_in": SubResource("Animation_56h3x"),
+&"teleport_out": SubResource("Animation_2eibr")
+}
+
+[sub_resource type="Animation" id="Animation_s0kn6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(407.77, 279.75)]
+}
+
+[sub_resource type="Animation" id="Animation_46rqy"]
+resource_name = "defeat"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(407.77, 279.75), Vector2(430.15, 259.12), Vector2(391.47, 292.35), Vector2(415.83, 291.65)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qvnti"]
+_data = {
+&"RESET": SubResource("Animation_s0kn6"),
+&"defeat": SubResource("Animation_46rqy")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_alc2k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("68_46rqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_s0kn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_qvnti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_arc8k")
+}],
+"loop": false,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="PopOutPete" type="AnimatableBody2D" groups=["pete_hurtbox", "popout_pete"]]
+collision_mask = 5
+script = ExtResource("1_y6x7u")
+
+[node name="PeteBody" type="Sprite2D" parent="."]
+position = Vector2(407.77, 279.75)
+scale = Vector2(0.386689, 0.386689)
+texture = ExtResource("1_fnn00")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(-1.99226, -113.14)
+sprite_frames = SubResource("SpriteFrames_arc8k")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Moustache" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(23.8683, 279.94)
+sprite_frames = SubResource("SpriteFrames_oh12i")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(21.2822, 512.685)
+sprite_frames = SubResource("SpriteFrames_f7vgn")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="VoiceClips" type="Node2D" parent="."]
+
+[node name="Attack_BoxingGlove" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_qb61j")
+bus = &"voices"
+
+[node name="Attack_BeamCannon" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_hxapm")
+bus = &"voices"
+
+[node name="Summon" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_nnouc")
+bus = &"voices"
+
+[node name="Teleport_In" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_4iqal")
+bus = &"voices"
+
+[node name="Teleport_Out" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_gvssd")
+bus = &"voices"
+
+[node name="Damage" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = SubResource("AudioStreamRandomizer_d35hl")
+bus = &"voices"
+
+[node name="Defeat" type="AudioStreamPlayer2D" parent="VoiceClips"]
+stream = ExtResource("58_sxfxc")
+bus = &"voices"
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="TeleportInSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("59_2eibr")
+bus = &"sfx"
+
+[node name="TeleportOutSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("60_y6x7u")
+bus = &"sfx"
+
+[node name="DamageSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("61_kgpo4")
+bus = &"sfx"
+
+[node name="DefeatSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("62_buo8c")
+bus = &"sfx"
+
+[node name="SummonSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_gnnj4")
+bus = &"sfx"
+
+[node name="WindowsPopUpSFX" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_p07pu")
+bus = &"sfx"
+
+[node name="MainHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(407.5, 279.5)
+shape = SubResource("RectangleShape2D_5m6js")
+
+[node name="SticknodeDetect" type="Area2D" parent="."]
+collision_mask = 5
+
+[node name="CollisionPlayerDetect" type="CollisionShape2D" parent="SticknodeDetect"]
+position = Vector2(407, 278.5)
+shape = SubResource("RectangleShape2D_b8kfj")
+
+[node name="Hurtbox" type="Area2D" parent="." groups=["pete_hurtbox"]]
+
+[node name="CollisionHurtbox" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(407, 278.5)
+shape = SubResource("RectangleShape2D_46rqy")
+debug_color = Color(0.7, 0, 0, 0.41960785)
+
+[node name="Markers_Attack" type="Node2D" parent="."]
+
+[node name="PunchGloveWindowsSpawnA" type="Marker2D" parent="Markers_Attack"]
+position = Vector2(24, 713)
+
+[node name="PunchGloveWindowsSpawnB" type="Marker2D" parent="Markers_Attack"]
+position = Vector2(801, 721)
+
+[node name="BeamCannonWindowsSpawnA" type="Marker2D" parent="Markers_Attack"]
+position = Vector2(98, 713)
+
+[node name="BeamCannonWindowsSpawnB" type="Marker2D" parent="Markers_Attack"]
+position = Vector2(739, 721)
+
+[node name="Markers_Teleportation" type="Node2D" parent="."]
+
+[node name="TeleportSpawn" type="Marker2D" parent="Markers_Teleportation"]
+position = Vector2(274, 772)
+
+[node name="TeleportSpawn2" type="Marker2D" parent="Markers_Teleportation"]
+position = Vector2(344, 772)
+
+[node name="TeleportSpawn3" type="Marker2D" parent="Markers_Teleportation"]
+position = Vector2(436, 774)
+
+[node name="TeleportSpawn4" type="Marker2D" parent="Markers_Teleportation"]
+position = Vector2(506, 774)
+
+[node name="Markers_Sticknodes" type="Node2D" parent="."]
+
+[node name="SticknodeSpawn" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(142, 578.5)
+
+[node name="SticknodeSpawn2" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(224, 578.5)
+
+[node name="SticknodeSpawn3" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(294, 578.5)
+
+[node name="SticknodeSpawn4" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(376, 578.5)
+
+[node name="SticknodeSpawn5" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(449, 578.5)
+
+[node name="SticknodeSpawn6" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(531, 578.5)
+
+[node name="SticknodeSpawn7" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(601, 578.5)
+
+[node name="SticknodeSpawn8" type="Marker2D" parent="Markers_Sticknodes"]
+position = Vector2(683, 578.5)
+
+[node name="PeteAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ksosk")
+}
+autoplay = "teleport_out"
+
+[node name="PeteWindowsAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qvnti")
+}
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="IdleWaitTimer" type="Timer" parent="Timers"]
+wait_time = 4.0
+
+[node name="IdleWaitTimerHalf" type="Timer" parent="Timers"]
+wait_time = 3.0
+
+[node name="TeleportTimer" type="Timer" parent="Timers"]
+
+[node name="FinishStarAppear" type="Marker2D" parent="."]
+
+[node name="SticknodeSpawn_Sprites" type="Node2D" parent="."]
+
+[node name="SticknodeSpawnSprite" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(142, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite2" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(224, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite3" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(294, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite4" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(376, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite5" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(449, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite6" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(531, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite7" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(601, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[node name="SticknodeSpawnSprite8" type="AnimatedSprite2D" parent="SticknodeSpawn_Sprites"]
+visible = false
+texture_filter = 1
+position = Vector2(683, 578.5)
+sprite_frames = SubResource("SpriteFrames_alc2k")
+frame = 3
+frame_progress = 1.0
+
+[connection signal="timeout" from="Timers/IdleWaitTimer" to="." method="_on_idle_wait_timer_timeout"]
+[connection signal="timeout" from="Timers/IdleWaitTimerHalf" to="." method="_on_idle_wait_timer_half_timeout"]
+[connection signal="timeout" from="Timers/TeleportTimer" to="." method="_on_teleport_timer_timeout"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite" to="." method="_on_sticknode_spawn_sprite_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite2" to="." method="_on_sticknode_spawn_sprite_2_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite3" to="." method="_on_sticknode_spawn_sprite_3_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite4" to="." method="_on_sticknode_spawn_sprite_4_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite5" to="." method="_on_sticknode_spawn_sprite_5_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite6" to="." method="_on_sticknode_spawn_sprite_6_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite7" to="." method="_on_sticknode_spawn_sprite_7_frame_changed"]
+[connection signal="frame_changed" from="SticknodeSpawn_Sprites/SticknodeSpawnSprite8" to="." method="_on_sticknode_spawn_sprite_8_frame_changed"]

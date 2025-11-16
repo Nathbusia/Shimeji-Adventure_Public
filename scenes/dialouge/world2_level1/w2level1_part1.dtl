@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[signal arg="vclip_p1_01"]
+interfly: Alright. Let's get to the basic.
+[signal arg="vclip_p1_02"]
+interfly: On the internet, you will experience a wide range of interactions and entertainment! Which is how it usually goes here...
+[signal arg="vclip_p1_03"]
+interfly: And to make these magic works, you're going to need your little flying companion...
+[signal arg="vclip_p1_04"]
+[signal arg="greet"]
+interfly: A mouse cursor!
+[signal arg="vclip_p1_05"]
+interfly: This little tool will help you out throughout this journey.
+[signal arg="vclip_p1_06"]
+[signal arg="greet"]
+interfly: So, let's give it a test ride. Shall we?
+[signal arg="vclip_p1_07"]
+interfly: Click on the big button to open the door with the Left Click.
+[signal arg="vclip_p1_08"]
+interfly: Come on. Let's give it a shot!
+[signal arg="end_cutscene"]

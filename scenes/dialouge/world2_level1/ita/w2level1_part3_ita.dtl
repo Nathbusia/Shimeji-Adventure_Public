@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ottimo lavoro! Stai già diventando un professionista!
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ora, con gli elementi trascinabili, alcune di queste finestre possono essere scalate mentre si trascina.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Questo dovrebbe consentirti di raggiungere rapidamente la cima. Potrai raggiungere aree che prima non potevi raggiungere.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Tuttavia, esistono alcune limitazioni. Le finestre che consentono di salire e scendere possono essere trascinate solo verso l'alto e verso il basso...
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: E le finestre che possono essere scalate dal basso possono essere trascinate solo a destra e a sinistra.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Quindi, selezionane uno e trascinalo sulle finestre trascinabili successive.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part3_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Allora cominciamo.
+[signal arg="end_cutscene"]

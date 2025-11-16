@@ -1,0 +1,39 @@
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Oh, ciao piccoletto. Posso rubarti un minuto?
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Sono Clara! Piacere di conoscerti!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Sono piuttosto nuovo in questo mondo del lavoro su Internet. Quindi non ho ancora molta dimestichezza con tutta questa tecnologia.
+[signal arg="problem"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ita: A proposito... forse ho commesso un piccolo errore...
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Stavo per aprire la porta del negozio. Ma ehm... credo di aver perso le sfere luccicanti necessarie per aprirla.
+[signal arg="sad"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ita: Ho cercato in tutte le tasche, ma non c'era traccia di loro. Immagino di averli persi per sbaglio mentre correvo alla fermata dell'autobus...
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ita: Non voglio davvero perdere il lavoro il mio primo giorno. Allora, piccoletto, potresti farmi un grande favore?
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Potresti essere così gentile da aiutarmi a trovare quei tre oggetti? Se li restituisci tutti, sono sicuro che all'interno del negozio troverai qualcosa di triangolare che stai cercando.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Va bene, ti lascio fare. Vai a cercarli e portali qui.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ita: Grazie ancora!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

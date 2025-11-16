@@ -12,8 +12,8 @@ config_version=5
 
 config/name="Shimeji Adventure"
 config/version="1.0"
-run/main_scene="uid://do5y3lmndderp"
-config/features=PackedStringArray("4.4", "Mobile")
+run/main_scene="uid://6ujaj3lhh1jc"
+config/features=PackedStringArray("4.5", "Mobile")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
 boot_splash/image="uid://br0hdd1pc8ynm"
@@ -41,30 +41,255 @@ SettingsManager="*res://managers/SettingsManager.gd"
 DiscordManager="*res://managers/DiscordManager.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
+MultiplayerManager="*res://managers/MultiplayerManager.gd"
+LanguageManager="*res://managers/LanguageManager.gd"
+StoryManager="*res://managers/StoryManager.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Worker Userbeam": "res://scenes/dialouge/world2_level3/characters/Worker Userbeam.dch",
+"WorkerUserbeam_jpn": "res://scenes/dialouge/world2_level3/characters/WorkerUserbeam_jpn.dch",
+"clara": "res://scenes/dialouge/world2_level2/characters/clara.dch",
+"clara_fre": "res://scenes/dialouge/world2_level2/characters/clara_fre.dch",
+"clara_ger": "res://scenes/dialouge/world2_level2/characters/clara_ger.dch",
+"clara_ita": "res://scenes/dialouge/world2_level2/characters/clara_ita.dch",
+"clara_jpn": "res://scenes/dialouge/world2_level2/characters/clara_jpn.dch",
+"clara_spa": "res://scenes/dialouge/world2_level2/characters/clara_spa.dch",
 "friend": "res://scenes/dialouge/tutorial/characters/friend.dch",
-"monstequare": "res://scenes/dialouge/world1_boss_cutscene/characters/monstequare.dch"
+"friend_jpn": "res://scenes/dialouge/tutorial/characters/friend_jpn.dch",
+"interfly": "res://scenes/dialouge/world2_level1/characters/interfly.dch",
+"interfly_jpn": "res://scenes/dialouge/world2_level1/characters/interfly_jpn.dch",
+"monstequare": "res://scenes/dialouge/world1_boss_cutscene/characters/monstequare.dch",
+"monstequare_jpn": "res://scenes/dialouge/world1_boss_cutscene/characters/monstequare_jpn.dch",
+"pop_out_pete": "res://scenes/dialouge/world2_level3/characters/pop_out_pete.dch",
+"pop_out_pete_jpn": "res://scenes/dialouge/world2_level3/characters/pop_out_pete_jpn.dch"
 }
 directories/dtl_directory={
+"claraidialogue_intro": "res://scenes/dialouge/world2_level2/claraidialogue_intro.dtl",
+"claraidialogue_intro_fre": "res://scenes/dialouge/world2_level2/fre/claraidialogue_intro_fre.dtl",
+"claraidialogue_intro_ger": "res://scenes/dialouge/world2_level2/ger/claraidialogue_intro_ger.dtl",
+"claraidialogue_intro_ita": "res://scenes/dialouge/world2_level2/ita/claraidialogue_intro_ita.dtl",
+"claraidialogue_intro_jpn": "res://scenes/dialouge/world2_level2/jpn/claraidialogue_intro_jpn.dtl",
+"claraidialogue_intro_spa": "res://scenes/dialouge/world2_level2/spa/claraidialogue_intro_spa.dtl",
+"claraidialogue_orball": "res://scenes/dialouge/world2_level2/claraidialogue_orball.dtl",
+"claraidialogue_orball_fre": "res://scenes/dialouge/world2_level2/fre/claraidialogue_orball_fre.dtl",
+"claraidialogue_orball_ger": "res://scenes/dialouge/world2_level2/ger/claraidialogue_orball_ger.dtl",
+"claraidialogue_orball_ita": "res://scenes/dialouge/world2_level2/ita/claraidialogue_orball_ita.dtl",
+"claraidialogue_orball_jpn": "res://scenes/dialouge/world2_level2/jpn/claraidialogue_orball_jpn.dtl",
+"claraidialogue_orball_spa": "res://scenes/dialouge/world2_level2/spa/claraidialogue_orball_spa.dtl",
+"claraidialogue_orbone": "res://scenes/dialouge/world2_level2/claraidialogue_orbone.dtl",
+"claraidialogue_orbone_fre": "res://scenes/dialouge/world2_level2/fre/claraidialogue_orbone_fre.dtl",
+"claraidialogue_orbone_ger": "res://scenes/dialouge/world2_level2/ger/claraidialogue_orbone_ger.dtl",
+"claraidialogue_orbone_ita": "res://scenes/dialouge/world2_level2/ita/claraidialogue_orbone_ita.dtl",
+"claraidialogue_orbone_jpn": "res://scenes/dialouge/world2_level2/jpn/claraidialogue_orbone_jpn.dtl",
+"claraidialogue_orbone_spa": "res://scenes/dialouge/world2_level2/spa/claraidialogue_orbone_spa.dtl",
+"claraidialogue_orbtwo": "res://scenes/dialouge/world2_level2/claraidialogue_orbtwo.dtl",
+"claraidialogue_orbtwo_fre": "res://scenes/dialouge/world2_level2/fre/claraidialogue_orbtwo_fre.dtl",
+"claraidialogue_orbtwo_ger": "res://scenes/dialouge/world2_level2/ger/claraidialogue_orbtwo_ger.dtl",
+"claraidialogue_orbtwo_ita": "res://scenes/dialouge/world2_level2/ita/claraidialogue_orbtwo_ita.dtl",
+"claraidialogue_orbtwo_jpn": "res://scenes/dialouge/world2_level2/jpn/claraidialogue_orbtwo_jpn.dtl",
+"claraidialogue_orbtwo_spa": "res://scenes/dialouge/world2_level2/spa/claraidialogue_orbtwo_spa.dtl",
+"interflydialogue_shop": "res://scenes/dialouge/world2_level2/interflydialogue_shop.dtl",
+"interflydialogue_shop_fre": "res://scenes/dialouge/world2_level2/fre/interflydialogue_shop_fre.dtl",
+"interflydialogue_shop_ger": "res://scenes/dialouge/world2_level2/ger/interflydialogue_shop_ger.dtl",
+"interflydialogue_shop_ita": "res://scenes/dialouge/world2_level2/ita/interflydialogue_shop_ita.dtl",
+"interflydialogue_shop_jpn": "res://scenes/dialouge/world2_level2/jpn/interflydialogue_shop_jpn.dtl",
+"interflydialogue_shop_spa": "res://scenes/dialouge/world2_level2/spa/interflydialogue_shop_spa.dtl",
 "tutorial_checkpoint": "res://scenes/dialouge/tutorial/timeline/tutorial_checkpoint.dtl",
+"tutorial_checkpoint_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_checkpoint_fre.dtl",
+"tutorial_checkpoint_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_checkpoint_ger.dtl",
+"tutorial_checkpoint_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_checkpoint_ita.dtl",
+"tutorial_checkpoint_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_checkpoint_jpn.dtl",
+"tutorial_checkpoint_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_checkpoint_spa.dtl",
 "tutorial_collectable": "res://scenes/dialouge/tutorial/timeline/tutorial_collectable.dtl",
 "tutorial_collectable_damaged": "res://scenes/dialouge/tutorial/timeline/tutorial_collectable_damaged.dtl",
+"tutorial_collectable_damaged_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_collectable_damaged_fre.dtl",
+"tutorial_collectable_damaged_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_collectable_damaged_ger.dtl",
+"tutorial_collectable_damaged_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_collectable_damaged_ita.dtl",
+"tutorial_collectable_damaged_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_collectable_damaged_jpn.dtl",
+"tutorial_collectable_damaged_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_collectable_damaged_spa.dtl",
+"tutorial_collectable_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_collectable_fre.dtl",
+"tutorial_collectable_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_collectable_ger.dtl",
+"tutorial_collectable_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_collectable_ita.dtl",
+"tutorial_collectable_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_collectable_jpn.dtl",
+"tutorial_collectable_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_collectable_spa.dtl",
 "tutorial_crouch": "res://scenes/dialouge/tutorial/timeline/tutorial_crouch.dtl",
+"tutorial_crouch_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_crouch_fre.dtl",
+"tutorial_crouch_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_crouch_ger.dtl",
+"tutorial_crouch_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_crouch_ita.dtl",
+"tutorial_crouch_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_crouch_jpn.dtl",
+"tutorial_crouch_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_crouch_spa.dtl",
 "tutorial_doublejump": "res://scenes/dialouge/tutorial/timeline/tutorial_doublejump.dtl",
+"tutorial_doublejump_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_doublejump_fre.dtl",
+"tutorial_doublejump_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_doublejump_ger.dtl",
+"tutorial_doublejump_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_doublejump_ita.dtl",
+"tutorial_doublejump_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_doublejump_jpn.dtl",
+"tutorial_doublejump_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_doublejump_spa.dtl",
 "tutorial_ending": "res://scenes/dialouge/tutorial/timeline/tutorial_ending.dtl",
+"tutorial_ending_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_ending_fre.dtl",
+"tutorial_ending_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_ending_ger.dtl",
+"tutorial_ending_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_ending_ita.dtl",
+"tutorial_ending_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_ending_jpn.dtl",
+"tutorial_ending_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_ending_spa.dtl",
 "tutorial_enemy": "res://scenes/dialouge/tutorial/timeline/tutorial_enemy.dtl",
+"tutorial_enemy_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_enemy_fre.dtl",
+"tutorial_enemy_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_enemy_ger.dtl",
+"tutorial_enemy_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_enemy_ita.dtl",
+"tutorial_enemy_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_enemy_jpn.dtl",
+"tutorial_enemy_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_enemy_spa.dtl",
 "tutorial_intro": "res://scenes/dialouge/tutorial/timeline/tutorial_intro.dtl",
+"tutorial_intro_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_intro_fre.dtl",
+"tutorial_intro_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_intro_ger.dtl",
+"tutorial_intro_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_intro_ita.dtl",
+"tutorial_intro_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_intro_jpn.dtl",
+"tutorial_intro_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_intro_spa.dtl",
 "tutorial_othermechanics": "res://scenes/dialouge/tutorial/timeline/tutorial_othermechanics.dtl",
+"tutorial_othermechanics_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_othermechanics_fre.dtl",
+"tutorial_othermechanics_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_othermechanics_ger.dtl",
+"tutorial_othermechanics_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_othermechanics_ita.dtl",
+"tutorial_othermechanics_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_othermechanics_jpn.dtl",
+"tutorial_othermechanics_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_othermechanics_spa.dtl",
 "tutorial_triangles": "res://scenes/dialouge/tutorial/timeline/tutorial_triangles.dtl",
+"tutorial_triangles_fre": "res://scenes/dialouge/tutorial/timeline/fre/tutorial_triangles_fre.dtl",
+"tutorial_triangles_ger": "res://scenes/dialouge/tutorial/timeline/ger/tutorial_triangles_ger.dtl",
+"tutorial_triangles_ita": "res://scenes/dialouge/tutorial/timeline/ita/tutorial_triangles_ita.dtl",
+"tutorial_triangles_jpn": "res://scenes/dialouge/tutorial/timeline/jpn/tutorial_triangles_jpn.dtl",
+"tutorial_triangles_spa": "res://scenes/dialouge/tutorial/timeline/spa/tutorial_triangles_spa.dtl",
+"w2_intro_en": "res://scenes/dialouge/world2_intro/w2_intro_en.dtl",
+"w2_intro_fre": "res://scenes/dialouge/world2_intro/fre/w2_intro_fre.dtl",
+"w2_intro_ger": "res://scenes/dialouge/world2_intro/ger/w2_intro_ger.dtl",
+"w2_intro_ita": "res://scenes/dialouge/world2_intro/ita/w2_intro_ita.dtl",
+"w2_intro_jpn": "res://scenes/dialouge/world2_intro/jpn/w2_intro_jpn.dtl",
+"w2_intro_multi_en": "res://scenes/dialouge/world2_intro/w2_intro_multi_en.dtl",
+"w2_intro_multi_fre": "res://scenes/dialouge/world2_intro/fre/w2_intro_multi_fre.dtl",
+"w2_intro_multi_ger": "res://scenes/dialouge/world2_intro/ger/w2_intro_multi_ger.dtl",
+"w2_intro_multi_ita": "res://scenes/dialouge/world2_intro/ita/w2_intro_multi_ita.dtl",
+"w2_intro_multi_spa": "res://scenes/dialouge/world2_intro/spa/w2_intro_multi_spa.dtl",
+"w2_intro_spa": "res://scenes/dialouge/world2_intro/spa/w2_intro_spa.dtl",
+"w2level1_part1": "res://scenes/dialouge/world2_level1/w2level1_part1.dtl",
+"w2level1_part1_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part1_fre.dtl",
+"w2level1_part1_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part1_ger.dtl",
+"w2level1_part1_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part1_ita.dtl",
+"w2level1_part1_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part1_jpn.dtl",
+"w2level1_part1_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part1_spa.dtl",
+"w2level1_part2": "res://scenes/dialouge/world2_level1/w2level1_part2.dtl",
+"w2level1_part2_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part2_fre.dtl",
+"w2level1_part2_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part2_ger.dtl",
+"w2level1_part2_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part2_ita.dtl",
+"w2level1_part2_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part2_jpn.dtl",
+"w2level1_part2_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part2_spa.dtl",
+"w2level1_part3": "res://scenes/dialouge/world2_level1/w2level1_part3.dtl",
+"w2level1_part3_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part3_fre.dtl",
+"w2level1_part3_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part3_ger.dtl",
+"w2level1_part3_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part3_ita.dtl",
+"w2level1_part3_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part3_jpn.dtl",
+"w2level1_part3_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part3_spa.dtl",
+"w2level1_part4": "res://scenes/dialouge/world2_level1/w2level1_part4.dtl",
+"w2level1_part4_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part4_fre.dtl",
+"w2level1_part4_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part4_ger.dtl",
+"w2level1_part4_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part4_ita.dtl",
+"w2level1_part4_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part4_jpn.dtl",
+"w2level1_part4_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part4_spa.dtl",
+"w2level1_part5": "res://scenes/dialouge/world2_level1/w2level1_part5.dtl",
+"w2level1_part5_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part5_fre.dtl",
+"w2level1_part5_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part5_ger.dtl",
+"w2level1_part5_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part5_ita.dtl",
+"w2level1_part5_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part5_jpn.dtl",
+"w2level1_part5_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part5_spa.dtl",
+"w2level1_part6": "res://scenes/dialouge/world2_level1/w2level1_part6.dtl",
+"w2level1_part6_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part6_fre.dtl",
+"w2level1_part6_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part6_ger.dtl",
+"w2level1_part6_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part6_ita.dtl",
+"w2level1_part6_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part6_jpn.dtl",
+"w2level1_part6_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part6_spa.dtl",
+"w2level1_part7": "res://scenes/dialouge/world2_level1/w2level1_part7.dtl",
+"w2level1_part7_fre": "res://scenes/dialouge/world2_level1/fre/w2level1_part7_fre.dtl",
+"w2level1_part7_ger": "res://scenes/dialouge/world2_level1/ger/w2level1_part7_ger.dtl",
+"w2level1_part7_ita": "res://scenes/dialouge/world2_level1/ita/w2level1_part7_ita.dtl",
+"w2level1_part7_jpn": "res://scenes/dialouge/world2_level1/jpn/w2level1_part7_jpn.dtl",
+"w2level1_part7_spa": "res://scenes/dialouge/world2_level1/spa/w2level1_part7_spa.dtl",
+"w2lv3_conversationending": "res://scenes/dialouge/world2_level3/w2lv3_conversationending.dtl",
+"w2lv3_conversationending_fre": "res://scenes/dialouge/world2_level3/fre/w2lv3_conversationending_fre.dtl",
+"w2lv3_conversationending_ger": "res://scenes/dialouge/world2_level3/ger/w2lv3_conversationending_ger.dtl",
+"w2lv3_conversationending_ita": "res://scenes/dialouge/world2_level3/ita/w2lv3_conversationending_ita.dtl",
+"w2lv3_conversationending_jpn": "res://scenes/dialouge/world2_level3/jpn/w2lv3_conversationending_jpn.dtl",
+"w2lv3_conversationending_spa": "res://scenes/dialouge/world2_level3/spa/w2lv3_conversationending_spa.dtl",
 "world1_boss_openingintro": "res://scenes/dialouge/world1_boss_cutscene/world1_boss_openingintro.dtl",
-"world1_outro": "res://scenes/dialouge/world1_outro/world1_outro.dtl"
+"world1_boss_openingintro_fre": "res://scenes/dialouge/world1_boss_cutscene/fre/world1_boss_openingintro_fre.dtl",
+"world1_boss_openingintro_ger": "res://scenes/dialouge/world1_boss_cutscene/ger/world1_boss_openingintro_ger.dtl",
+"world1_boss_openingintro_ita": "res://scenes/dialouge/world1_boss_cutscene/ita/world1_boss_openingintro_ita.dtl",
+"world1_boss_openingintro_jpn": "res://scenes/dialouge/world1_boss_cutscene/jpn/world1_boss_openingintro_jpn.dtl",
+"world1_boss_openingintro_spa": "res://scenes/dialouge/world1_boss_cutscene/spa/world1_boss_openingintro_spa.dtl",
+"world1_outro": "res://scenes/dialouge/world1_outro/world1_outro.dtl",
+"world1_outro_fre": "res://scenes/dialouge/world1_outro/fre/world1_outro_fre.dtl",
+"world1_outro_ger": "res://scenes/dialouge/world1_outro/ger/world1_outro_ger.dtl",
+"world1_outro_ita": "res://scenes/dialouge/world1_outro/ita/world1_outro_ita.dtl",
+"world1_outro_jpn": "res://scenes/dialouge/world1_outro/jpn/world1_outro_jpn.dtl",
+"world1_outro_spa": "res://scenes/dialouge/world1_outro/spa/world1_outro_spa.dtl",
+"world2_boss_openingintro_en": "res://scenes/dialouge/world2_boss_cutscene/world2_boss_openingintro_en.dtl",
+"world2_boss_openingintro_fre": "res://scenes/dialouge/world2_boss_cutscene/fre/world2_boss_openingintro_fre.dtl",
+"world2_boss_openingintro_ger": "res://scenes/dialouge/world2_boss_cutscene/ger/world2_boss_openingintro_ger.dtl",
+"world2_boss_openingintro_ita": "res://scenes/dialouge/world2_boss_cutscene/ita/world2_boss_openingintro_ita.dtl",
+"world2_boss_openingintro_jpn": "res://scenes/dialouge/world2_boss_cutscene/jpn/world2_boss_openingintro_jpn.dtl",
+"world2_boss_openingintro_multi_en": "res://scenes/dialouge/world2_boss_cutscene/world2_boss_openingintro_multi_en.dtl",
+"world2_boss_openingintro_multi_fre": "res://scenes/dialouge/world2_boss_cutscene/fre/world2_boss_openingintro_multi_fre.dtl",
+"world2_boss_openingintro_multi_ger": "res://scenes/dialouge/world2_boss_cutscene/ger/world2_boss_openingintro_multi_ger.dtl",
+"world2_boss_openingintro_multi_ita": "res://scenes/dialouge/world2_boss_cutscene/ita/world2_boss_openingintro_multi_ita.dtl",
+"world2_boss_openingintro_multi_spa": "res://scenes/dialouge/world2_boss_cutscene/spa/world2_boss_openingintro_multi_spa.dtl",
+"world2_boss_openingintro_spa": "res://scenes/dialouge/world2_boss_cutscene/spa/world2_boss_openingintro_spa.dtl",
+"world2_outro": "res://scenes/dialouge/world2_outro/world2_outro.dtl",
+"world2_outro_fre": "res://scenes/dialouge/world2_outro/fre/world2_outro_fre.dtl",
+"world2_outro_ger": "res://scenes/dialouge/world2_outro/ger/world2_outro_ger.dtl",
+"world2_outro_ita": "res://scenes/dialouge/world2_outro/ita/world2_outro_ita.dtl",
+"world2_outro_jpn": "res://scenes/dialouge/world2_outro/jpn/world2_outro_jpn.dtl",
+"world2_outro_multi": "res://scenes/dialouge/world2_outro/world2_outro_multi.dtl",
+"world2_outro_multi_fre": "res://scenes/dialouge/world2_outro/fre/world2_outro_multi_fre.dtl",
+"world2_outro_multi_ger": "res://scenes/dialouge/world2_outro/ger/world2_outro_multi_ger.dtl",
+"world2_outro_multi_ita": "res://scenes/dialouge/world2_outro/ita/world2_outro_multi_ita.dtl",
+"world2_outro_multi_spa": "res://scenes/dialouge/world2_outro/spa/world2_outro_multi_spa.dtl",
+"world2_outro_spa": "res://scenes/dialouge/world2_outro/spa/world2_outro_spa.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://scenes/dialouge/dialogue_design_shime.tres"]
 layout/default_style="res://scenes/dialouge/dialogue_design_shime.tres"
+layout/style_directory={
+"": "res://scenes/dialouge/dialogue_design_shime.tres",
+"dialogue_design_shime": "res://scenes/dialouge/dialogue_design_shime.tres"
+}
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 
@@ -78,69 +303,53 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg", "res://addons/disc
 [global_group]
 
 Settings="For settings stuff."
+attackhitbox=""
 
 [input]
 
 sit={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
 left={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":65,"key_label":0,"unicode":97,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":-1.0,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
 right={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":68,"key_label":0,"unicode":100,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
-, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":0,"axis_value":1.0,"script":null)
 ]
 }
 jump={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 pause={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 run={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194325,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":4,"axis_value":1.0,"script":null)
 ]
 }
 up={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":-1.0,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":11,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 grab={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":10,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 start={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
-, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":6,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
 dialogic_default_action={
@@ -156,6 +365,181 @@ taunt={
 "deadzone": 0.2,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":84,"key_label":0,"unicode":116,"location":0,"echo":false,"script":null)
 ]
+}
+chat={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":86,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+shoot={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"location":0,"echo":false,"script":null)
+]
+}
+playertagcheck={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":67,"key_label":0,"unicode":99,"location":0,"echo":false,"script":null)
+]
+}
+teleport={
+"deadzone": 0.2,
+"events": []
+}
+sit_p2={
+"deadzone": 0.2,
+"events": []
+}
+left_p2={
+"deadzone": 0.2,
+"events": []
+}
+right_p2={
+"deadzone": 0.2,
+"events": []
+}
+jump_p2={
+"deadzone": 0.2,
+"events": []
+}
+pause_p2={
+"deadzone": 0.2,
+"events": []
+}
+run_p2={
+"deadzone": 0.2,
+"events": []
+}
+up_p2={
+"deadzone": 0.2,
+"events": []
+}
+grab_p2={
+"deadzone": 0.2,
+"events": []
+}
+start_p2={
+"deadzone": 0.2,
+"events": []
+}
+taunt_p2={
+"deadzone": 0.2,
+"events": []
+}
+sit_p3={
+"deadzone": 0.2,
+"events": []
+}
+left_p3={
+"deadzone": 0.2,
+"events": []
+}
+right_p3={
+"deadzone": 0.2,
+"events": []
+}
+jump_p3={
+"deadzone": 0.2,
+"events": []
+}
+pause_p3={
+"deadzone": 0.2,
+"events": []
+}
+run_p3={
+"deadzone": 0.2,
+"events": []
+}
+up_p3={
+"deadzone": 0.2,
+"events": []
+}
+grab_p3={
+"deadzone": 0.2,
+"events": []
+}
+start_p3={
+"deadzone": 0.2,
+"events": []
+}
+taunt_p3={
+"deadzone": 0.2,
+"events": []
+}
+sit_p4={
+"deadzone": 0.2,
+"events": []
+}
+left_p4={
+"deadzone": 0.2,
+"events": []
+}
+right_p4={
+"deadzone": 0.2,
+"events": []
+}
+jump_p4={
+"deadzone": 0.2,
+"events": []
+}
+pause_p4={
+"deadzone": 0.2,
+"events": []
+}
+run_p4={
+"deadzone": 0.2,
+"events": []
+}
+up_p4={
+"deadzone": 0.2,
+"events": []
+}
+grab_p4={
+"deadzone": 0.2,
+"events": []
+}
+start_p4={
+"deadzone": 0.2,
+"events": []
+}
+taunt_p4={
+"deadzone": 0.2,
+"events": []
+}
+playertagcheck_p2={
+"deadzone": 0.2,
+"events": []
+}
+playertagcheck_p3={
+"deadzone": 0.2,
+"events": []
+}
+playertagcheck_p4={
+"deadzone": 0.2,
+"events": []
+}
+shoot_p2={
+"deadzone": 0.2,
+"events": []
+}
+shoot_p3={
+"deadzone": 0.2,
+"events": []
+}
+shoot_p4={
+"deadzone": 0.2,
+"events": []
+}
+teleport_p2={
+"deadzone": 0.2,
+"events": []
+}
+teleport_p3={
+"deadzone": 0.2,
+"events": []
+}
+teleport_p4={
+"deadzone": 0.2,
+"events": []
 }
 
 [layer_names]

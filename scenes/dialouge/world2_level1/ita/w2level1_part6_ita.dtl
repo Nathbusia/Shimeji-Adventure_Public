@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ottimo! Ora siamo arrivati all'ultimo passaggio.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: Come puoi vedere, ci sono 3 fori colorati sul muro. Blu, rosso e verde.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: E forse ti starai chiedendo\: “Cosa c'è dentro questi fori?”
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Per dirla in parole semplici, amici, in queste mappe ci sono tre sfere Orb che rotolano qua e là. Tutte e tre corrispondono ai rispettivi colori.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: Tutto quello che devi fare è trovarli e inserirli nei fori del colore corretto.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Una volta inseriti tutti, la porta si sblocca e sei pronto per esplorare ulteriormente Internet!
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Bene, senza ulteriori indugi, vai e trova quelle 3 sfere Orb!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part6_08_ita.ogg" volume="2.0" bus="voices"]
+interfly: Buona fortuna! Conto su di te.
+[signal arg="end_cutscene"]

@@ -6,5 +6,10 @@
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_7w52i")
 levelname = "The Desktop Beginning"
+levelname_spa = "El comienzo del escritorio"
+levelname_fre = "Le début du bureau"
+levelname_ita = "L'inizio del desktop"
+levelname_ger = "Der Desktop-Anfang"
+levelname_jpn = "デスクトップの始まり"
 levelcreator = "By FlameOut56"
 levelthumb = ExtResource("2_df4bl")

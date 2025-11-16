@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_01_fre.ogg" volume="2.0" bus="voices"]
+interfly: Super ! Nous en sommes maintenant à la dernière étape.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_02_fre.ogg" volume="2.0" bus="voices"]
+interfly: Comme vous pouvez le voir, il y a trois trous colorés sur le mur. Bleu, rouge et vert.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_03_fre.ogg" volume="2.0" bus="voices"]
+interfly: Et vous vous demandez peut-être \: « Qu'est-ce qui se trouve à l'intérieur de ces trous ? »
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_04_fre.ogg" volume="2.0" bus="voices"]
+interfly: Pour faire simple, mes amis, sur ces cartes, trois boules Orb roulent ici et là. Elles correspondent toutes les trois à leurs couleurs respectives.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_05_fre.ogg" volume="2.0" bus="voices"]
+interfly: Il vous suffit de les trouver et de les insérer dans les trous de la bonne couleur.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_06_fre.ogg" volume="2.0" bus="voices"]
+interfly: Une fois toutes les clés insérées, la porte est déverrouillée et vous êtes prêt à explorer davantage Internet !
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_07_fre.ogg" volume="2.0" bus="voices"]
+interfly: Bon, sans plus attendre, allez chercher ces 3 boules d'orbe !
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part6_08_fre.ogg" volume="2.0" bus="voices"]
+interfly: Bonne chance ! Je compte sur toi.
+[signal arg="end_cutscene"]

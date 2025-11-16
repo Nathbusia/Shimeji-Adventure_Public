@@ -1,0 +1,21 @@
+[signal arg="greet"]
+[signal arg="vclip_lv2_01"]
+interfly: Oh, hey! Glad you managed to make it in.
+[signal arg="vclip_lv2_02"]
+interfly: "How was I able to get inside the store?" That's not really the focus at the moment...
+[signal arg="vclip_lv2_03"]
+interfly: However, I'd like you to take a look at this.
+[signal arg="flippedoff"]
+[signal arg="vclip_lv2_04"]
+interfly: This sites seems... Dark...
+[signal arg="vclip_lv2_05"]
+interfly: Forbidden even.
+[signal arg="flippedon"]
+[signal arg="vclip_lv2_06"]
+interfly: Maybe this is where Pop-Out Pete is getting all this bad information from. And even turning our beloved users into those Userbeams.
+[signal arg="vclip_lv2_07"]
+interfly: I want you to go inside this site and track down Pop Out Pete's following scheme.
+[signal arg="vclip_lv2_08"]
+[signal arg="greet"]
+interfly: Good luck out there, friend. I'm counting on you.
+[signal arg="end_cutscene"]

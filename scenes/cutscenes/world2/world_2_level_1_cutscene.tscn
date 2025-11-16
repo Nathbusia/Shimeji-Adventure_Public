@@ -1,0 +1,899 @@
+[gd_scene load_steps=52 format=3 uid="uid://fijwxk2lvmgf"]
+
+[ext_resource type="Script" uid="uid://d0qyjy144r6mh" path="res://scenes/cutscenes/world2/world_2_level_1_cutscene.gd" id="1_lf5pf"]
+[ext_resource type="Texture2D" uid="uid://dpnut3s1xnd5o" path="res://sprites/levels/world2/world2_background.png" id="1_ql7df"]
+[ext_resource type="Shader" uid="uid://dlp2a0e1tuhti" path="res://scenes/levels/world2/world2_patternmove2.gdshader" id="2_5e6ar"]
+[ext_resource type="Texture2D" uid="uid://cnuuge3ar5k3n" path="res://sprites/levels/world2/world2_background_hexpattern.png" id="3_hadxv"]
+[ext_resource type="Shader" uid="uid://c0b3syfifbvpb" path="res://scenes/levels/world2/world2_patternmove_left.gdshader" id="4_1shng"]
+[ext_resource type="Texture2D" uid="uid://d3yct50xf8k4" path="res://sprites/levels/world2/world2_background_wavepattern.png" id="5_lwm72"]
+[ext_resource type="Shader" uid="uid://bxwf84yaqeo47" path="res://scenes/levels/world2/world2_patternmove.gdshader" id="6_7pmpk"]
+[ext_resource type="Texture2D" uid="uid://hm8gavqlv2o4" path="res://sprites/levels/world2/world2_background_tech.png" id="7_niecj"]
+[ext_resource type="Texture2D" uid="uid://cm1ydaervuomq" path="res://sprites/levels/world2/world2_floatingwindows_PackA.png" id="8_xmvdi"]
+[ext_resource type="Texture2D" uid="uid://cservyuqkdtds" path="res://sprites/levels/world2/world2_floatingwindows_PackB.png" id="9_lf5pf"]
+[ext_resource type="PackedScene" uid="uid://cdw1qg5dm5rmo" path="res://scenes/gameplaymechanics/world2/world_2_ground.tscn" id="10_cibyl"]
+[ext_resource type="PackedScene" uid="uid://dyxlq4m1egmqt" path="res://scenes/gameplaymechanics/world2/office_door.tscn" id="11_sfcaj"]
+[ext_resource type="PackedScene" uid="uid://dfttl6loe0lh2" path="res://scenes/characters/playable/shimeji/shimeji_character_cutscene.tscn" id="12_5e6ar"]
+[ext_resource type="PackedScene" uid="uid://emhk2y1ibox7" path="res://scenes/characters/npc/interfly_cutscene.tscn" id="13_1shng"]
+[ext_resource type="AudioStream" uid="uid://b03f2h3kdb6bv" path="res://bgm/levels/world2/bgm_world2_level1_cutscene.ogg" id="14_lwm72"]
+[ext_resource type="Texture2D" uid="uid://iu8slpeulkcx" path="res://sprites/levels/world2/Cutscene/cutscene_world2level1_backstory_01.png" id="15_lwm72"]
+[ext_resource type="Texture2D" uid="uid://cfldf5p564uae" path="res://sprites/levels/world2/Cutscene/cutscene_world2level1_backstory_02.png" id="16_xmvdi"]
+[ext_resource type="Texture2D" uid="uid://cmlvbs2gwq7gu" path="res://sprites/levels/world2/Cutscene/cutscene_world2level1_backstory_03.png" id="17_lf5pf"]
+[ext_resource type="Texture2D" uid="uid://0bhep6kxihxt" path="res://sprites/levels/world2/Cutscene/cutscene_world2level1_backstory_04.png" id="18_cibyl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6jnsd"]
+shader = ExtResource("2_5e6ar")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_iumcf"]
+shader = ExtResource("4_1shng")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sy8x7"]
+shader = ExtResource("6_7pmpk")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nq84m"]
+shader = ExtResource("4_1shng")
+
+[sub_resource type="Animation" id="Animation_lf5pf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(221, 154)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_xmvdi"]
+resource_name = "cam_begin"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(0.34151012, 3.2490098),
+"update": 0,
+"values": [Vector2(221, 166), Vector2(870, 166)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_dialouge"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sfcaj"]
+resource_name = "cam_default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(3.2490098),
+"update": 0,
+"values": [Vector2(870, 166)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_6jnsd"]
+resource_name = "cam_door"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.39229217, 2.0705297),
+"update": 0,
+"values": [Vector2(870, 166), Vector2(1041, 164)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_iumcf"]
+resource_name = "cam_end"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1041, 164), Vector2(1041, -432)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_cibyl"]
+resource_name = "cam_shime"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(817, 193)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sy8x7"]
+_data = {
+&"RESET": SubResource("Animation_lf5pf"),
+&"cam_begin": SubResource("Animation_xmvdi"),
+&"cam_default": SubResource("Animation_sfcaj"),
+&"cam_door": SubResource("Animation_6jnsd"),
+&"cam_end": SubResource("Animation_iumcf"),
+&"cam_shime": SubResource("Animation_cibyl")
+}
+
+[sub_resource type="Animation" id="Animation_mork3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/Interfly_Cutscene/Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_48i1y"]
+resource_name = "interfly_flyaway"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/Interfly_Cutscene/Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1241, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j22l7"]
+_data = {
+&"RESET": SubResource("Animation_mork3"),
+&"interfly_flyaway": SubResource("Animation_48i1y")
+}
+
+[sub_resource type="Animation" id="Animation_k2sps"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(470, -134)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(438, -134)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CutsceneBackstory/BackStory_3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(438, -134)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CutsceneBackstory/BackStory_4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(438, -134)]
+}
+
+[sub_resource type="Animation" id="Animation_sy8x7"]
+resource_name = "part1_move"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(470, -113), Vector2(308, -113)]
+}
+
+[sub_resource type="Animation" id="Animation_vuesl"]
+resource_name = "part2_move"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(343.085, -192.295), Vector2(343.085, -64.175)]
+}
+
+[sub_resource type="Animation" id="Animation_qmhfv"]
+resource_name = "part3_move"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(438, -134), Vector2(226.905, -134)]
+}
+
+[sub_resource type="Animation" id="Animation_x0ond"]
+resource_name = "part4_move"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_4:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(404.85, -61.75), Vector2(404.85, -182.41)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vuesl"]
+_data = {
+&"RESET": SubResource("Animation_k2sps"),
+&"part1_move": SubResource("Animation_sy8x7"),
+&"part2_move": SubResource("Animation_vuesl"),
+&"part3_move": SubResource("Animation_qmhfv"),
+&"part4_move": SubResource("Animation_x0ond")
+}
+
+[sub_resource type="Animation" id="Animation_u2cim"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CutsceneBackstory/BackStory_3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../CutsceneBackstory/BackStory_2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../CutsceneBackstory/BackStory_3:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../CutsceneBackstory/BackStory_4:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../CutsceneBackstory/BackStory_4:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_nq84m"]
+resource_name = "part1_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_eqhe0"]
+resource_name = "part2_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.9999999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CutsceneBackstory/BackStory_2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_vemcb"]
+resource_name = "part3_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CutsceneBackstory/BackStory_3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7lxpu"]
+resource_name = "part4_end"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_4:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_jmcyu"]
+resource_name = "part4_fade"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../CutsceneBackstory/BackStory_3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../CutsceneBackstory/BackStory_4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../CutsceneBackstory/BackStory_4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k2sps"]
+_data = {
+&"RESET": SubResource("Animation_u2cim"),
+&"part1_fade": SubResource("Animation_nq84m"),
+&"part2_fade": SubResource("Animation_eqhe0"),
+&"part3_fade": SubResource("Animation_vemcb"),
+&"part4_end": SubResource("Animation_7lxpu"),
+&"part4_fade": SubResource("Animation_jmcyu")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuesl"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_eopfy"]
+resource_name = "FadeOut"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.1666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"load_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_buuiw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1jkas"]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okxtl"]
+_data = {
+&"FadeOut": SubResource("Animation_eopfy"),
+&"RESET": SubResource("Animation_buuiw"),
+&"Visible": SubResource("Animation_1jkas")
+}
+
+[node name="World2Level1_Cutscene" type="Node2D"]
+script = ExtResource("1_lf5pf")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -3304.0
+offset_top = -6949.0
+offset_right = 20907.0
+offset_bottom = 4456.0
+texture = ExtResource("1_ql7df")
+
+[node name="PatternB" type="TextureRect" parent="Background"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_6jnsd")
+layout_mode = 0
+offset_left = -1881.0
+offset_top = -927.0
+offset_right = 25295.0
+offset_bottom = 11716.0
+texture = ExtResource("3_hadxv")
+stretch_mode = 1
+
+[node name="PatternA" type="TextureRect" parent="Background"]
+modulate = Color(1, 1, 1, 0.458824)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_iumcf")
+layout_mode = 0
+offset_left = -1926.0
+offset_top = -831.0
+offset_right = 25250.0
+offset_bottom = 11812.0
+texture = ExtResource("5_lwm72")
+stretch_mode = 1
+
+[node name="PatternTech" type="TextureRect" parent="Background"]
+modulate = Color(0.29296875, 0.90057373, 1, 0.27058825)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_sy8x7")
+layout_mode = 0
+offset_left = -434.0
+offset_top = 2785.0
+offset_right = 18491.0
+offset_bottom = 8736.0
+texture = ExtResource("7_niecj")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsA" type="TextureRect" parent="Background"]
+modulate = Color(1, 1, 1, 0.403922)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_sy8x7")
+layout_mode = 0
+offset_left = -434.0
+offset_top = 2785.0
+offset_right = 18491.0
+offset_bottom = 8736.0
+texture = ExtResource("8_xmvdi")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsB" type="TextureRect" parent="Background"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_nq84m")
+layout_mode = 0
+offset_left = -434.0
+offset_top = 2785.0
+offset_right = 18491.0
+offset_bottom = 8736.0
+texture = ExtResource("9_lf5pf")
+stretch_mode = 1
+
+[node name="World2_Ground" parent="Background" instance=ExtResource("10_cibyl")]
+position = Vector2(2111, 7204)
+collision_layer = 1
+collision_mask = 5
+
+[node name="OfficeDoor" parent="." instance=ExtResource("11_sfcaj")]
+position = Vector2(1889, 160)
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="ShimejiCharacter_Cutscene" parent="Characters" instance=ExtResource("12_5e6ar")]
+position = Vector2(977, 190)
+
+[node name="ShimejiCharacter_Cutscene_Playable2" parent="Characters" instance=ExtResource("12_5e6ar")]
+position = Vector2(870, 190)
+
+[node name="ShimejiCharacter_Cutscene_Playable3" parent="Characters" instance=ExtResource("12_5e6ar")]
+position = Vector2(763, 190)
+
+[node name="ShimejiCharacter_Cutscene_Playable4" parent="Characters" instance=ExtResource("12_5e6ar")]
+position = Vector2(663, 190)
+
+[node name="Interfly_Cutscene" parent="Characters" instance=ExtResource("13_1shng")]
+position = Vector2(1155, 163)
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_lwm72")
+volume_db = -5.0
+autoplay = true
+
+[node name="CutsceneBackstory" type="Node2D" parent="."]
+visible = false
+
+[node name="BackStory_1" type="TextureRect" parent="CutsceneBackstory"]
+offset_left = 470.0
+offset_top = -134.0
+offset_right = 2518.0
+offset_bottom = 1018.0
+scale = Vector2(0.50961006, 0.50961006)
+texture = ExtResource("15_lwm72")
+
+[node name="BackStory_2" type="TextureRect" parent="CutsceneBackstory"]
+visible = false
+modulate = Color(1, 1, 1, 0)
+offset_left = 438.0
+offset_top = -134.0
+offset_right = 2486.0
+offset_bottom = 1018.0
+scale = Vector2(0.50961006, 0.50961006)
+texture = ExtResource("16_xmvdi")
+
+[node name="BackStory_3" type="TextureRect" parent="CutsceneBackstory"]
+visible = false
+offset_left = 438.0
+offset_top = -134.0
+offset_right = 2486.0
+offset_bottom = 1018.0
+scale = Vector2(0.50961006, 0.50961006)
+texture = ExtResource("17_lf5pf")
+
+[node name="BackStory_4" type="TextureRect" parent="CutsceneBackstory"]
+visible = false
+offset_left = 438.0
+offset_top = -134.0
+offset_right = 2486.0
+offset_bottom = 1018.0
+scale = Vector2(0.50961006, 0.50961006)
+texture = ExtResource("18_cibyl")
+
+[node name="CutsceneAnimations" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="CutsceneAnimations"]
+position = Vector2(221, 154)
+zoom = Vector2(1.5, 1.5)
+
+[node name="CameraAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_sy8x7")
+}
+autoplay = "cam_begin"
+
+[node name="InterflyAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_j22l7")
+}
+
+[node name="BackstoryAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_vuesl")
+}
+
+[node name="BackstoryFadeAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_k2sps")
+}
+
+[node name="BlackScreen" type="Panel" parent="CutsceneAnimations"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = -722.0
+offset_top = -999.0
+offset_right = 2256.0
+offset_bottom = 948.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vuesl")
+
+[node name="BlackScreenAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_okxtl")
+}
+autoplay = "Visible"

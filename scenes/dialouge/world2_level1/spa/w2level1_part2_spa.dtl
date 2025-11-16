@@ -1,0 +1,15 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_01_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Excelente trabajo! Ahora sigamos adelante.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_02_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¿Ves esas ventanas con la pestaña de color marrón?
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_03_spa.ogg" volume="2.0" bus="voices"]
+interfly: Esto significa que puedes arrastrar esas ventanas con el ratón.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_04_spa.ogg" volume="2.0" bus="voices"]
+interfly: Arrastrándolos, podés mover y reposicionar las plataformas disponibles.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_05_spa.ogg" volume="2.0" bus="voices"]
+interfly: Probemos. Haz clic con el botón izquierdo del ratón en las ventanas y utiliza el cursor para colocarlas correctamente, tal y como indica el punto.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part2_06_spa.ogg" volume="2.0" bus="voices"]
+interfly: Adelante.
+[signal arg="end_cutscene"]

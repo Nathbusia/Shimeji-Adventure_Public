@@ -6,5 +6,10 @@
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_o5ohw")
 levelname = "Tutorial: Learning The Basic"
+levelname_spa = "Tutorial: Aprendiendo lo básico"
+levelname_fre = "Tutoriel : Apprendre les bases"
+levelname_ita = "Tutorial: Imparare le basi"
+levelname_ger = "Tutorial: Die Grundlagen lernen"
+levelname_jpn = "チュートリアル: 基本を学ぶ"
 levelcreator = "By FlameOut56"
 levelthumb = ExtResource("2_lcn4x")

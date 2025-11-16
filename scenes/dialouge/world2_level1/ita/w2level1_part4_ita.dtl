@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Oh cielo... Sembra che abbiamo un problema.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: Amici. Quelle sostanze verdi appiccicose che si attaccano alle finestre, note come... “Stick Nodes”.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Quando si attaccano a una finestra trascinabile specifica, mantengono la presa e non lasciano che la finestra trascinabile si muova di un millimetro finché non vengono sconfitti.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: L'unico modo per sconfiggerli è avvicinarsi a loro e schiacciarli (se sono sul lato), oppure calpestarli come al solito.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: C'è un altro modo per affrontarli, ma ne parleremo tra poco.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ma per ora, elimina questi Sticknode e riposiziona le finestre trascinabili in modo che possiamo andare avanti.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part4_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Andiamo!
+[signal arg="end_cutscene"]

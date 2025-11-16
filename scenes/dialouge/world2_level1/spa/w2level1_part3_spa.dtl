@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_01_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Buen trabajo! ¡Ya te estás convirtiendo en un profesional!
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_02_spa.ogg" volume="2.0" bus="voices"]
+interfly: Ahora, con los elementos arrastrables, algunas de esas ventanas se pueden escalar mientras se arrastran.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_03_spa.ogg" volume="2.0" bus="voices"]
+interfly: Esto debería llevarte rápidamente a la cima. Podrás llegar a zonas a las que antes no podías acceder.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_04_spa.ogg" volume="2.0" bus="voices"]
+interfly: Sin embargo, hay algunas limitaciones. Las ventanas que permiten subir y bajar solo se pueden arrastrar hacia arriba y hacia abajo...
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_05_spa.ogg" volume="2.0" bus="voices"]
+interfly: Y las ventanas que se pueden escalar por debajo solo se pueden arrastrar hacia la izquierda y hacia la derecha.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_06_spa.ogg" volume="2.0" bus="voices"]
+interfly: Así que, métete en uno y arrástralo hasta las siguientes ventanas arrastrables.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part3_07_spa.ogg" volume="2.0" bus="voices"]
+interfly: Entonces, manos a la obra.
+[signal arg="end_cutscene"]

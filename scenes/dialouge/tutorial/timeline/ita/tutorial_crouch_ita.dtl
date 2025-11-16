@@ -1,0 +1,25 @@
+friend: Ok. Quindi abbiamo questo qui.
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Ora, per quanto mi riguarda, posso entrare facilmente e senza alcuno sforzo.
+[signal arg="pointing"]
+friend: Ma per una persona della tua corporatura, c'è bisogno di un certo impegno.
+[signal arg="welcome"]
+friend: Per superare ostacoli come questi, è in questo punto che devi usare la mossa di strisciare.
+[signal arg="talking"]
+friend: Allo stesso modo, per spostarti con i tasti freccia sinistra e destra, tieni premuto il tasto freccia giù per... sederti.
+[signal arg="normaltalk"]
+friend: È possibile eseguire questa operazione anche con un controller, muovendo la levetta analogica verso il basso (se l'avete configurata nelle impostazioni dei comandi).
+[signal arg="talking"]
+friend: Mentre sei seduto, usa di nuovo i tasti sinistro e destro per gattonare. È utile per infilarsi in spazi ristretti come questo.
+[signal arg="talking"]
+friend: Puoi sempre rilasciare il tasto freccia giù per smettere di strisciare. (Tuttavia, non puoi farlo mentre ti trovi sotto un'area ristretta. Devi aspettare finché non c'è spazio sufficiente per alzarti in piedi.)
+[signal arg="pointing"]
+friend: Ah sì, un'altra cosa che mi sono dimenticato di dirti all'inizio.
+[signal arg="welcome"]
+friend: Durante gli spostamenti, potete anche tenere premuto il tasto Maiusc per muovervi/strisciare più velocemente. È solo per coloro che non hanno tempo e vogliono iniziare subito.
+[signal arg="talking"]
+friend: Tuttavia, non avere troppa fretta. Usalo solo quando è necessario.
+[signal arg="greatest"]
+friend: Bene. Quindi, vai avanti e striscia attraverso questo varco.
+[signal arg="end_cutscene"]

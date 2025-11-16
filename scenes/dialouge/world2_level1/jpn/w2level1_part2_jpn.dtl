@@ -1,0 +1,15 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 素晴らしい仕事です！さて、次に進みましょう。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 茶色のタブが付いている窓が見えますか？
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: これは、マウスを使ってこれらのウィンドウをドラッグできるという意味です。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: それらをドラッグすることで、利用可能なプラットフォームを移動したり、位置を変更したりできます。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 試しにやってみましょう。マウスの左クリックでウィンドウをつかみ、マウス カーソルを使用して、ドットが示すように正しい位置に配置します。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part2_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、行きましょう。
+[signal arg="end_cutscene"]

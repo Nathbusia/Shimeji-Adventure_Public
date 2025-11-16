@@ -1,0 +1,21 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Oh, ciao! Sono contento che tu sia riuscito a venire.
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: “Come sono riuscito a entrare nel negozio?” Non è proprio questo il punto in questo momento...
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Tuttavia, vorrei che dessi un'occhiata a questo.
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Questo sito sembra... oscuro...
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: Persino proibito.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Forse è da qui che Pop-Out Pete sta ricevendo tutte queste informazioni errate. E sta persino trasformando i nostri amati utenti in quegli Userbeam.
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Voglio che tu entri in questo sito e scopra il seguente schema di Pop Out Pete.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level2/sfx_butterfly_level2_08_ita.ogg" volume="2.0" bus="voices"]
+interfly: Buona fortuna, amico mio. Conto su di te.
+[signal arg="end_cutscene"]

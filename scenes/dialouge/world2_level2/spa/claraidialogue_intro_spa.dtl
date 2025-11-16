@@ -1,0 +1,39 @@
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: Hola, pequeño. ¿Puedo robarte un minuto?
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Soy Clara! ¡Encantada de conocerte!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: Soy bastante nuevo en esto de trabajar por Internet. Por eso, todavía no estoy muy seguro de cómo funciona toda esta tecnología.
+[signal arg="problem"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_spa: Hablando de eso... Puede que haya cometido un pequeño error...
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: Iba a abrir la puerta de la tienda. Pero... creo que he perdido las esferas brillantes necesarias para abrirla.
+[signal arg="sad"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_spa: Busqué en todos mis bolsillos, pero no había ni rastro de ellas. Supongo que se me cayeron sin querer mientras corría hacia la parada del autobús...
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_spa: No quiero perder mi trabajo en mi primer día. Así que, pequeño, ¿podrías hacerme un gran favor?
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¿Podrías ser tan amable de ayudarme a encontrar esos tres? Si los devuelves todos, estoy seguro de que hay algo triangular dentro de la tienda que estás buscando.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: De acuerdo, te dejo con ello. Ve a buscarlos y tráelos aquí.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Gracias de nuevo!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

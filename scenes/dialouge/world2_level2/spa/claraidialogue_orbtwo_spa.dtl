@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Increíble! Eres un auténtico cazador de tesoros, ¿verdad?
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: Solo queda uno más. ¡Adelante, consigue la última Orb Ball!
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Muchas gracias de nuevo!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

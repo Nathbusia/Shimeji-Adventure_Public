@@ -1,14 +1,13 @@
-[gd_scene load_steps=98 format=3 uid="uid://f6ttpn2i4w7u"]
+[gd_scene load_steps=103 format=3 uid="uid://f6ttpn2i4w7u"]
 
 [ext_resource type="Script" uid="uid://pm17qv5ta7hk" path="res://scenes/menu/settings.gd" id="1_m2fo2"]
 [ext_resource type="Shader" uid="uid://dqr0gxgowot00" path="res://scenes/menu/main_menu_bgmove.gdshader" id="1_uyi0v"]
 [ext_resource type="Texture2D" uid="uid://by2gvpcpso762" path="res://sprites/loading/loading_background.png" id="2_j0vhe"]
 [ext_resource type="Texture2D" uid="uid://dnio0xbrb2bj" path="res://sprites/menu/settings/settings_background_shading.png" id="3_oqwm7"]
 [ext_resource type="AudioStream" uid="uid://dkp4qos62jky4" path="res://bgm/menu/bgm_settingsmenu.ogg" id="4_s08c2"]
-[ext_resource type="FontFile" uid="uid://hini7n6ijhp3" path="res://fonts/DK Leftover Crayon.otf" id="6_6aqfp"]
+[ext_resource type="FontFile" uid="uid://btdli1x8nfv64" path="res://fonts/Fafo Sans/Fafo Sans Bold.ttf" id="6_r1a2u"]
 [ext_resource type="AudioStream" uid="uid://covs3dxgqketi" path="res://sfx/characters/shimeji/sfx_player_jump.ogg" id="6_vktco"]
 [ext_resource type="AudioStream" uid="uid://dlt0lx7ordxhh" path="res://sfx/characters/shimeji/sfx_player_pickup.ogg" id="7_hs6o2"]
-[ext_resource type="FontFile" uid="uid://bxhpix5tod03j" path="res://fonts/DK Harimau Dua.otf" id="7_qrb7m"]
 [ext_resource type="AudioStream" uid="uid://dpqxdiauuupqk" path="res://sfx/characters/shimeji/sfx_player_throw.ogg" id="8_esv7b"]
 [ext_resource type="AudioStream" uid="uid://c5t2tqplxk71p" path="res://sfx/gameplay/button/sfx_button_on.ogg" id="8_y3u5o"]
 [ext_resource type="AudioStream" uid="uid://br61hsjskh0wh" path="res://sfx/characters/shimeji/sfx_player_damage.ogg" id="9_cbi6l"]
@@ -33,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://ckt1jwpmbnw5e" path="res://sprites/menu/main/buttons/MainMenu_Buttons0004.png" id="18_1ggj8"]
 [ext_resource type="AudioStream" uid="uid://cnw2n26nqyrxo" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_throw.ogg" id="18_r8r4n"]
 [ext_resource type="AudioStream" uid="uid://bbmb8tiw5qi6x" path="res://sfx/characters/enemy/shooter/sfx_shooter_arrow_defeat.ogg" id="19_tnxk4"]
+[ext_resource type="FontFile" uid="uid://j7u55jwbh8sy" path="res://fonts/けいなんポップ体.ttf" id="19_wcymd"]
 [ext_resource type="Texture2D" uid="uid://ci4pjitv327n8" path="res://sprites/menu/main/buttons/MainMenu_Buttons0005.png" id="19_xt6o8"]
 [ext_resource type="Texture2D" uid="uid://cc44trvsa81dr" path="res://sprites/menu/main/buttons/MainMenu_Buttons0006.png" id="20_gmpto"]
 [ext_resource type="AudioStream" uid="uid://cf36m7topxou7" path="res://sfx/characters/enemy/shooter/sfx_shooter_vox_defeated.ogg" id="22_sx2rp"]
@@ -56,16 +56,18 @@
 [ext_resource type="AudioStream" uid="uid://dlf2bwrdvr4wi" path="res://sfx/menu/sfx_menu_hover.ogg" id="36_40047"]
 [ext_resource type="AudioStream" uid="uid://e7ue8h4p0qdo" path="res://sfx/menu/settings/sfx_settings_toggleon.ogg" id="37_p1fj7"]
 [ext_resource type="AudioStream" uid="uid://bsrfuwgp3c0fu" path="res://sfx/menu/settings/sfx_settings_toggleoff.ogg" id="38_8dbke"]
-[ext_resource type="FontFile" uid="uid://du43hv6y8bbqs" path="res://fonts/DK Garden Gnome.otf" id="43_2f58s"]
 [ext_resource type="Texture2D" uid="uid://de2j1dvi7laj5" path="res://sprites/menu/settings/SettingsTabButtons0001.png" id="58_6baq3"]
 [ext_resource type="Script" uid="uid://8yp8v5xgmoh5" path="res://scenes/menu/settings_controls/InputSettings.gd" id="58_x5dep"]
 [ext_resource type="Texture2D" uid="uid://r2vag3wbctkm" path="res://sprites/menu/settings/SettingsTabButtons0002.png" id="59_jj0uj"]
 [ext_resource type="PackedScene" uid="uid://civeefdbnrfi1" path="res://scenes/menu/settings_controls/input_button.tscn" id="59_thfh4"]
 [ext_resource type="Texture2D" uid="uid://cr377ry77e06e" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0001.png" id="60_78s0r"]
+[ext_resource type="Script" uid="uid://ylait6oxv4jt" path="res://scenes/menu/settings_controls/InputSettings_player2.gd" id="60_lfjlu"]
 [ext_resource type="Texture2D" uid="uid://8o8twxh51yhy" path="res://sprites/menu/settings/SettingsTabButtons0003.png" id="60_x5dep"]
 [ext_resource type="Texture2D" uid="uid://qn0jh6e7lram" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0002.png" id="61_aml81"]
+[ext_resource type="Script" uid="uid://cleqwdi3o0hrf" path="res://scenes/menu/settings_controls/InputSettings_player3.gd" id="61_cvgx3"]
 [ext_resource type="Texture2D" uid="uid://cmoasrrf251g3" path="res://sprites/menu/settings/SettingsTabButtons0007.png" id="61_thfh4"]
 [ext_resource type="Texture2D" uid="uid://d2wbp8or1nv1r" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0003.png" id="62_lfjlu"]
+[ext_resource type="Script" uid="uid://c2qrm7f34m3qo" path="res://scenes/menu/settings_controls/InputSettings_player4.gd" id="62_r1a2u"]
 [ext_resource type="Texture2D" uid="uid://dl4nhhnqmenhh" path="res://sprites/menu/settings/SettingsTabButtons0008.png" id="62_s8sca"]
 [ext_resource type="Texture2D" uid="uid://ds80754l2ajia" path="res://sprites/menu/settings/SettingsTabButtons0009.png" id="63_78s0r"]
 [ext_resource type="Texture2D" uid="uid://bfgtakuccout7" path="res://sprites/menu/settings/SettingsTabButtons0004.png" id="64_aml81"]
@@ -74,6 +76,8 @@
 [ext_resource type="Texture2D" uid="uid://caj5xtcemhdh4" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0001.png" id="67_cvgx3"]
 [ext_resource type="Texture2D" uid="uid://bk1b2wnv3yl4h" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0002.png" id="68_r1a2u"]
 [ext_resource type="Texture2D" uid="uid://4vmpqau0w0la" path="res://sprites/menu/settings/SettingsTabButtons_Inactive0003.png" id="69_wcymd"]
+[ext_resource type="FontFile" uid="uid://bu0f0h2m1neee" path="res://fonts/Kid Knowledge 1.otf" id="73_plg3i"]
+[ext_resource type="FontFile" uid="uid://csvraqt5qhr8u" path="res://fonts/MochiyPopOne-Regular.ttf" id="79_r1a2u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lomwx"]
 shader = ExtResource("1_uyi0v")
@@ -207,15 +211,6 @@ frame_2/duration = 1.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6baq3"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_plg3i"]
-frames = 3
-speed_scale = 6.0
-frame_0/texture = ExtResource("60_78s0r")
-frame_1/texture = ExtResource("61_aml81")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("62_lfjlu")
-frame_2/duration = 1.0
-
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_w0w7y"]
 frames = 3
 speed_scale = 6.0
@@ -243,7 +238,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("66_plg3i")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_2sdgn"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_phxbc"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("67_cvgx3")
@@ -252,7 +247,18 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("69_wcymd")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_phxbc"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cvgx3"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_plg3i"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("60_78s0r")
+frame_1/texture = ExtResource("61_aml81")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("62_lfjlu")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2sdgn"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("67_cvgx3")
@@ -304,10 +310,11 @@ offset_top = 32.0
 offset_right = 697.0
 offset_bottom = 95.0
 theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("6_6aqfp")
-theme_override_font_sizes/font_size = 56
+theme_override_fonts/font = ExtResource("6_r1a2u")
+theme_override_font_sizes/font_size = 44
 text = "SETTINGS"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="BlendThin" type="AnimationPlayer" parent="."]
 libraries = {
@@ -359,8 +366,8 @@ offset_left = 371.0
 offset_top = 184.0
 offset_right = 470.0
 offset_bottom = 216.0
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "Master:"
 
 [node name="VolumeTextBGM" type="Label" parent="Volume_Resolution/VolumeSetting"]
@@ -369,8 +376,8 @@ offset_left = 371.0
 offset_top = 240.0
 offset_right = 470.0
 offset_bottom = 272.0
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "BGM:"
 
 [node name="VolumeTextSFX" type="Label" parent="Volume_Resolution/VolumeSetting"]
@@ -379,8 +386,8 @@ offset_left = 371.0
 offset_top = 301.0
 offset_right = 470.0
 offset_bottom = 333.0
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "SFX:"
 
 [node name="VolumeTextVoices" type="Label" parent="Volume_Resolution/VolumeSetting"]
@@ -389,8 +396,8 @@ offset_left = 371.0
 offset_top = 352.0
 offset_right = 470.0
 offset_bottom = 384.0
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "Voices:"
 
 [node name="VolumeTextVoices2" type="Label" parent="Volume_Resolution/VolumeSetting"]
@@ -399,8 +406,8 @@ offset_left = 350.0
 offset_top = 400.0
 offset_right = 476.0
 offset_bottom = 432.0
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "Ambience:"
 
 [node name="VolumeText" type="Label" parent="Volume_Resolution/VolumeSetting"]
@@ -412,8 +419,8 @@ offset_bottom = 160.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_constants/shadow_outline_size = 12
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "Volume"
 
 [node name="SFXTest" type="AudioStreamPlayer2D" parent="Volume_Resolution/VolumeSetting"]
@@ -479,15 +486,15 @@ stretch_mode = 0
 
 [node name="Text" type="Label" parent="Volume_Resolution/VolumeSetting/SFXTestButton"]
 layout_mode = 0
-offset_left = 17.0
+offset_left = 11.0
 offset_top = 18.0
-offset_right = 111.0
-offset_bottom = 55.0
+offset_right = 124.0
+offset_bottom = 41.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 25
-text = "Test SFX
-"
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 15
+text = "Test SFX"
+horizontal_alignment = 1
 
 [node name="VoicesTestButton" type="TextureButton" parent="Volume_Resolution/VolumeSetting"]
 layout_mode = 0
@@ -506,12 +513,12 @@ layout_mode = 0
 offset_left = 11.0
 offset_top = 19.0
 offset_right = 121.0
-offset_bottom = 45.0
+offset_bottom = 42.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 22
-text = "Test Voices
-"
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 15
+text = "Test Voices"
+horizontal_alignment = 1
 
 [node name="Resolution" type="Panel" parent="Volume_Resolution"]
 layout_mode = 0
@@ -528,8 +535,8 @@ offset_bottom = 496.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_constants/shadow_outline_size = 12
-theme_override_fonts/font = ExtResource("7_qrb7m")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("19_wcymd")
+theme_override_font_sizes/font_size = 23
 text = "Resolution"
 
 [node name="ResolutonsOption" type="OptionButton" parent="Volume_Resolution/Resolution"]
@@ -538,7 +545,7 @@ offset_left = 451.0
 offset_top = 512.0
 offset_right = 739.0
 offset_bottom = 544.0
-theme_override_fonts/font = ExtResource("43_2f58s")
+theme_override_fonts/font = ExtResource("79_r1a2u")
 selected = 3
 item_count = 4
 popup/item_0/text = "1920x1080"
@@ -552,13 +559,12 @@ popup/item_3/id = 3
 
 [node name="CheckButton" type="CheckButton" parent="Volume_Resolution/Resolution"]
 layout_mode = 0
-offset_left = 451.0
+offset_left = 347.0
 offset_top = 564.0
-offset_right = 578.0
-offset_bottom = 595.0
-theme_override_fonts/font = ExtResource("43_2f58s")
-text = "Fullscreen
-"
+offset_right = 497.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("79_r1a2u")
+text = "Fullscreen"
 
 [node name="ToggledOn" type="AudioStreamPlayer2D" parent="Volume_Resolution/Resolution"]
 position = Vector2(62, 0)
@@ -572,11 +578,11 @@ bus = &"sfx"
 
 [node name="VsyncButton" type="CheckButton" parent="Volume_Resolution/Resolution"]
 layout_mode = 0
-offset_left = 611.0
+offset_left = 718.0
 offset_top = 564.0
-offset_right = 705.0
-offset_bottom = 595.0
-theme_override_fonts/font = ExtResource("43_2f58s")
+offset_right = 826.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("79_r1a2u")
 button_pressed = true
 text = "VSync"
 
@@ -595,9 +601,24 @@ offset_bottom = 544.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
+
+[node name="Controls_Player1" type="Panel" parent="Controls"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
 script = ExtResource("58_x5dep")
 
-[node name="PanelContainer" type="PanelContainer" parent="Controls"]
+[node name="PanelContainer" type="PanelContainer" parent="Controls/Controls_Player1"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -611,46 +632,325 @@ offset_bottom = 220.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="Controls/PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Controls_Player1/PanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 83
 theme_override_constants/margin_top = 18
 theme_override_constants/margin_right = 58
 theme_override_constants/margin_bottom = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Controls/PanelContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Controls_Player1/PanelContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Controls/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ActionList" type="VBoxContainer" parent="Controls/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+[node name="ActionList" type="VBoxContainer" parent="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="InputButton" parent="Controls/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
+[node name="InputButton" parent="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
 layout_mode = 2
 
-[node name="ResetButton" type="Button" parent="Controls/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="ResetButton" type="Button" parent="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 focus_mode = 0
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 25
 text = "Reset to Default"
+
+[node name="Controls_Player2" type="Panel" parent="Controls"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
+script = ExtResource("60_lfjlu")
+
+[node name="PanelContainer" type="PanelContainer" parent="Controls/Controls_Player2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Controls_Player2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 83
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 58
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Controls_Player2/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 25
+text = "Reset to Default"
+
+[node name="Controls_Player3" type="Panel" parent="Controls"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
+script = ExtResource("61_cvgx3")
+
+[node name="PanelContainer" type="PanelContainer" parent="Controls/Controls_Player3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Controls_Player3/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 83
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 58
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Controls_Player3/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 25
+text = "Reset to Default"
+
+[node name="Controls_Player4" type="Panel" parent="Controls"]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6baq3")
+script = ExtResource("62_r1a2u")
+
+[node name="PanelContainer" type="PanelContainer" parent="Controls/Controls_Player4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -544.0
+offset_top = -220.0
+offset_right = 544.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Controls/Controls_Player4/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 83
+theme_override_constants/margin_top = 18
+theme_override_constants/margin_right = 58
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls/Controls_Player4/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Controls/Controls_Player4/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="Controls/Controls_Player4/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="Controls/Controls_Player4/PanelContainer/MarginContainer/VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("59_thfh4")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Controls/Controls_Player4/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 25
+text = "Reset to Default"
+
+[node name="Control_Player1" type="TextureButton" parent="Controls"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 455.0
+offset_right = 386.0
+offset_bottom = 501.0
+disabled = true
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_phxbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Controls/Control_Player1"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 9.0
+offset_right = 113.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("73_plg3i")
+theme_override_font_sizes/font_size = 23
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="Control_Player2" type="TextureButton" parent="Controls"]
+layout_mode = 0
+offset_left = 398.0
+offset_top = 454.0
+offset_right = 534.0
+offset_bottom = 500.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_phxbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Controls/Control_Player2"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 9.0
+offset_right = 113.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("73_plg3i")
+theme_override_font_sizes/font_size = 23
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="Control_Player3" type="TextureButton" parent="Controls"]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 454.0
+offset_right = 686.0
+offset_bottom = 500.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_phxbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Controls/Control_Player3"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 9.0
+offset_right = 113.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("73_plg3i")
+theme_override_font_sizes/font_size = 23
+text = "Player 3"
+horizontal_alignment = 1
+
+[node name="Control_Player4" type="TextureButton" parent="Controls"]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 454.0
+offset_right = 842.0
+offset_bottom = 500.0
+texture_normal = SubResource("AnimatedTexture_w0w7y")
+texture_pressed = SubResource("AnimatedTexture_fgu0h")
+texture_hover = SubResource("AnimatedTexture_e2f8l")
+texture_disabled = SubResource("AnimatedTexture_phxbc")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Controls/Control_Player4"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 9.0
+offset_right = 113.0
+offset_bottom = 36.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("73_plg3i")
+theme_override_font_sizes/font_size = 23
+text = "Player 4"
+horizontal_alignment = 1
 
 [node name="Miscellaneous" type="Panel" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cvgx3")
 
 [node name="CreditsButton" type="TextureButton" parent="Miscellaneous"]
 layout_mode = 0
-offset_left = 464.0
-offset_top = 280.0
-offset_right = 643.0
-offset_bottom = 367.0
+offset_left = 459.0
+offset_top = 322.0
+offset_right = 638.0
+offset_bottom = 409.0
 texture_normal = SubResource("AnimatedTexture_837s8")
 texture_pressed = SubResource("AnimatedTexture_7gge4")
 texture_hover = SubResource("AnimatedTexture_uwbk4")
@@ -661,14 +961,43 @@ stretch_mode = 0
 [node name="Text" type="Label" parent="Miscellaneous/CreditsButton"]
 layout_mode = 0
 offset_left = 15.0
-offset_top = 28.0
+offset_top = 10.0
 offset_right = 159.0
-offset_bottom = 57.0
+offset_bottom = 77.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 19
 text = "View Credits"
+horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="LanguageButton" type="TextureButton" parent="Miscellaneous"]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 216.0
+offset_right = 638.0
+offset_bottom = 303.0
+texture_normal = SubResource("AnimatedTexture_837s8")
+texture_pressed = SubResource("AnimatedTexture_7gge4")
+texture_hover = SubResource("AnimatedTexture_uwbk4")
+texture_disabled = SubResource("AnimatedTexture_plg3i")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Text" type="Label" parent="Miscellaneous/LanguageButton"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 13.0
+offset_right = 162.0
+offset_bottom = 74.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 19
+text = "Change Language"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Vol_Res_Tab" type="TextureButton" parent="."]
 layout_mode = 0
@@ -686,15 +1015,15 @@ stretch_mode = 0
 [node name="Text" type="Label" parent="Vol_Res_Tab"]
 layout_mode = 0
 offset_left = 16.0
-offset_top = 11.0
+offset_top = 7.0
 offset_right = 174.0
 offset_bottom = 50.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 15
-text = "Volume and 
-Resolution"
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 13
+text = "Volume and Resolution"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Control_Tab" type="TextureButton" parent="."]
 layout_mode = 0
@@ -712,14 +1041,15 @@ stretch_mode = 0
 [node name="Text" type="Label" parent="Control_Tab"]
 layout_mode = 0
 offset_left = 25.0
-offset_top = 9.0
+offset_top = 14.0
 offset_right = 163.0
-offset_bottom = 50.0
+offset_bottom = 55.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 35
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 18
 text = "Controls"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Misc_Tab" type="TextureButton" parent="."]
 layout_mode = 0
@@ -741,10 +1071,11 @@ offset_top = 15.0
 offset_right = 170.0
 offset_bottom = 44.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("43_2f58s")
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("79_r1a2u")
+theme_override_font_sizes/font_size = 18
 text = "Miscellaneous"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="BACK_Button" to="." method="_on_back_button_pressed"]
 [connection signal="drag_ended" from="Volume_Resolution/VolumeSetting/VolumeMaster" to="." method="_on_volume_master_drag_ended"]
@@ -757,8 +1088,16 @@ horizontal_alignment = 1
 [connection signal="item_selected" from="Volume_Resolution/Resolution/ResolutonsOption" to="." method="_on_resolutons_option_item_selected"]
 [connection signal="toggled" from="Volume_Resolution/Resolution/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="Volume_Resolution/Resolution/VsyncButton" to="." method="_on_vsync_button_toggled"]
-[connection signal="pressed" from="Controls/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player1" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player2" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player3" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Controls/Controls_Player4/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player4" method="_on_reset_button_pressed"]
+[connection signal="pressed" from="Controls/Control_Player1" to="." method="_on_control_player_1_pressed"]
+[connection signal="pressed" from="Controls/Control_Player2" to="." method="_on_control_player_2_pressed"]
+[connection signal="pressed" from="Controls/Control_Player3" to="." method="_on_control_player_3_pressed"]
+[connection signal="pressed" from="Controls/Control_Player4" to="." method="_on_control_player_4_pressed"]
 [connection signal="pressed" from="Miscellaneous/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Miscellaneous/LanguageButton" to="." method="_on_language_button_pressed"]
 [connection signal="pressed" from="Vol_Res_Tab" to="." method="_on_vol_res_tab_pressed"]
 [connection signal="pressed" from="Control_Tab" to="." method="_on_control_tab_pressed"]
 [connection signal="pressed" from="Misc_Tab" to="." method="_on_misc_tab_pressed"]

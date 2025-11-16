@@ -1,0 +1,17 @@
+friend: SANTO CIELO!! SONO LE PALLINE MALIGNE!!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Bene. Niente panico. È qui che entrano in gioco le tue abilità di combattimento.
+[signal arg="greatest"]
+friend: Nemici come questi sono facili da sconfiggere. Tutto quello che devi fare è saltargli sulla testa e sono spariti!
+[signal arg="talking"]
+friend: Tuttavia, altri nemici hanno abilità diverse e modi diversi di attaccarti. Quindi, fai attenzione.
+[signal arg="welcome"]
+friend: A proposito, puoi anche eseguire su di loro uno Slam Dash. Si esegue premendo il tasto giù mentre si è in aria.
+[signal arg="greatest"]
+friend: Ora che hai capito il messaggio...
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: ABBATTETE QUEI RAGAZZI!!
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

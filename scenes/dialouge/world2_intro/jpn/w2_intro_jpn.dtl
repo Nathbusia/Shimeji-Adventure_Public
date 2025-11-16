@@ -1,0 +1,64 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_01_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: こんにちは、新人の皆さん！インターネットへようこそ！
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_02_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 私はインターフライです。私はこの仮想世界への役に立つ仲間でありガイドです。
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_03_jpn.ogg" volume="0.0"]
+interfly_jpn: それで、旅行者さん、なぜここに来たのですか？
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_1"]
+[wait time="1.0"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_04_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: ああ!! あなたは、みんなが話題にしていたデスクトップヒーローなんですね！
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_05_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: うん！君のことは聞いていたよ。君はあのモンスタースクエアを倒した人だね。
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_06_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: あなたがここに来る途中、あの小さな棒人間の男が私たちにすべてを話しました。
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_07_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: そして、あなたがそうしてくれたことを私は嬉しく思います！だって...私たちも助けが必要なんです。
+[signal arg="allshime_sit"]
+[signal arg="adjustcamera_shime"]
+[wait time="1.0"]
+[signal arg="adjustcamera_default"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_08_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 何が起こったのか知りたいですか？ わかりました。
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_09_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 説明させてください...
+[signal arg="flashback_start"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_10_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: あの事件が起こる前は、インターネットは素晴らしい場所で、平和でした。ブラウザやウェブサイトが溢れかえっていた頃です。
+[signal arg="flashback_part2"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_11_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: ポップアップが登場するまではね… 信じてください、あれは見栄えがよくないんです…
+[signal arg="flashback_part3"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_12_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 多くの詐欺、悪質なウイルス、さらには一部のケチな輩がインターネット上で大混乱を引き起こし始めます。
+[signal arg="flashback_part4"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_13_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: そして、このすべてを始めた男が一人いるとしたら、それは他でもない、あのダメ男のポップアウト・ピートだ。
+[signal arg="flashback_end"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_14_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: したがって、彼の狂気を止めるには皆さんの協力が必要です。そして、ちょうどいいタイミングで来られたようですね！
+[signal arg="allshime_stand"]
+[signal arg="adjustcamera_shime"]
+[wait time="1.0"]
+[signal arg="adjustcamera_default"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_15_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: インターネット上の新しいものについては心配しないでください...
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_16_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: できる限り喜んでお手伝いし、ご案内させていただきます!
+[signal arg="adjustcamera_focusdoor"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_17_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: では、まずはインターネットに慣れることから始めてみませんか？ だって、あなたはここに来たばかりだから、少し勉強する必要があるのは分かってるんだけど…
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_18_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: さあ、入り口までついてきてください。ここから始めましょう。
+[signal arg="flyright"]
+[voice path="res://sfx/characters/npc/butterfly/jp/intro/sfx_butterfly_intro_19_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: さあ、行きましょう！
+[signal arg="playermoveon"]
+[signal arg="adjustcamera_moveup"]
+[wait time="3.0"]
+[signal arg="blackscreen"]

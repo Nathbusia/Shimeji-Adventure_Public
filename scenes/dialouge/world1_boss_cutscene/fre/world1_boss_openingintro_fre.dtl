@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare: BWUEAH-HAHAHAHA!
+[signal arg="talking"]
+monstequare: Alors ! C'est toi qui as causé tout ce chaos parmi mes petites Mean Balls et Mean Squares.
+[signal arg="talkingB"]
+monstequare: Ces pauvres petits m'ont tout raconté sur vous, et maintenant vous allez devoir vous expliquer avec moi !
+[signal arg="short"]
+monstequare: Je te donne la possibilité de t'enfuir, ou de te faire tabasser par moi !
+[wait time="2.0"]
+[signal arg="question"]
+monstequare: Pas de réponse ? Alors je suppose que c'est du clobbing !
+[signal arg="short"]
+monstequare: Viens te battre, Desktop Hero...
+[signal arg="battlestart"]
+monstequare: MONTREZ-MOI VOTRE PIRE !!
+[signal arg="beginboss"]

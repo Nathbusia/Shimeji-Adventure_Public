@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dr5bf6k8kdmwv"]
+[gd_scene load_steps=4 format=3 uid="uid://dr5bf6k8kdmwv"]
 
+[ext_resource type="Script" uid="uid://b73fy6dr08pq6" path="res://scenes/gameplaymechanics/climbable.gd" id="1_2cm4t"]
 [ext_resource type="Texture2D" uid="uid://b1fxjf35yr4cu" path="res://sprites/levels/testlevels/testlevel_climbable.png" id="1_ssfkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqj5o"]
 size = Vector2(70, 62)
 
 [node name="Climbable" type="Area2D"]
+script = ExtResource("1_2cm4t")
 
 [node name="ClimbBlock" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -16,3 +18,6 @@ texture = ExtResource("1_ssfkn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-4, -0.103909)
 shape = SubResource("RectangleShape2D_mqj5o")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

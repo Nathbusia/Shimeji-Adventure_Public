@@ -32,6 +32,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var volt_slam_animation: AnimationPlayer = $VoltSlam_Animation
 @onready var electro_sfx_loop: AudioStreamPlayer2D = $VoltSFX/ElectroSFXLoop
 
+@onready var slameffect = preload("res://scenes/characters/enemy/enemy_voltslam_electroeffect.tscn")
+@onready var slameffect_Right = preload("res://scenes/characters/enemy/enemy_voltslam_electroeffect.tscn")
 
 var is_dead = false
 var has_taken_damaged = false
@@ -117,6 +119,158 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 					body.hurt_invincible()
 					body.play_damaged_effect("blink")
 
+	if (body.name == "ShimejiCharacter_Playable_Player2"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			health -= 1
+			if health == 0:
+				is_dead = true
+				has_taken_damaged = true
+				collisiondeath()
+				volt_slam.animation = "death"
+				mean_animation_player.play("death")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				death_voice.play()
+				defeated_sfx.play()
+				enemy_death_timer.start()
+				body.bounce()
+				body.jump_count = 1
+			else:
+				has_taken_damaged = true
+				if attack_mode:
+					attack_mode = false
+				volt_slam.animation = "damaged"
+				volt_slam_animation.play("low_health")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				damaged_voice.play()
+				damaged_sfx.play()
+				body.bounce()
+				body.jump_count = 1
+		elif (y_delta < -40):
+			velocity.y = bouce
+		else:
+			if game_manager.health_p2 == 1:
+				game_manager.lose_health_player2()
+				game_manager.lives_p2 -= 1
+				body.death()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player2()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
+
+	if (body.name == "ShimejiCharacter_Playable_Player3"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			health -= 1
+			if health == 0:
+				is_dead = true
+				has_taken_damaged = true
+				collisiondeath()
+				volt_slam.animation = "death"
+				mean_animation_player.play("death")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				death_voice.play()
+				defeated_sfx.play()
+				enemy_death_timer.start()
+				body.bounce()
+				body.jump_count = 1
+			else:
+				has_taken_damaged = true
+				if attack_mode:
+					attack_mode = false
+				volt_slam.animation = "damaged"
+				volt_slam_animation.play("low_health")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				damaged_voice.play()
+				damaged_sfx.play()
+				body.bounce()
+				body.jump_count = 1
+		elif (y_delta < -40):
+			velocity.y = bouce
+		else:
+			if game_manager.health_p3 == 1:
+				game_manager.lose_health_player3()
+				game_manager.lives_p3 -= 1
+				body.death()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player3()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
+					
+	if (body.name == "ShimejiCharacter_Playable_Player4"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			health -= 1
+			if health == 0:
+				is_dead = true
+				has_taken_damaged = true
+				collisiondeath()
+				volt_slam.animation = "death"
+				mean_animation_player.play("death")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				death_voice.play()
+				defeated_sfx.play()
+				enemy_death_timer.start()
+				body.bounce()
+				body.jump_count = 1
+			else:
+				has_taken_damaged = true
+				if attack_mode:
+					attack_mode = false
+				volt_slam.animation = "damaged"
+				volt_slam_animation.play("low_health")
+				if body.is_fastfalling:
+					enemy_step_on_hard.play()
+				else:
+					enemy_step_on_sound.play()
+				damaged_voice.play()
+				damaged_sfx.play()
+				body.bounce()
+				body.jump_count = 1
+		elif (y_delta < -40):
+			velocity.y = bouce
+		else:
+			if game_manager.health_p4 == 1:
+				game_manager.lose_health_player4()
+				game_manager.lives_p4 -= 1
+				body.death()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player4()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
 func death():
 	health -= 1
 	if health == 0:
@@ -150,6 +304,15 @@ func collisiondeath():
 
 func _on_player_detector_body_entered(body: Node2D) -> void:
 	if (body.name == "ShimejiCharacter_Playable") && can_detect && !is_dead && !has_taken_damaged:
+		can_detect = false
+		attack()
+	if (body.name == "ShimejiCharacter_Playable_Player2") && can_detect && !is_dead && !has_taken_damaged:
+		can_detect = false
+		attack()
+	if (body.name == "ShimejiCharacter_Playable_Player3") && can_detect && !is_dead && !has_taken_damaged:
+		can_detect = false
+		attack()
+	if (body.name == "ShimejiCharacter_Playable_Player4") && can_detect && !is_dead && !has_taken_damaged:
 		can_detect = false
 		attack()
 
@@ -197,15 +360,13 @@ func _on_slam_time_timeout() -> void:
 
 func spawn_slameffect():
 		var scene = get_node("..") 
-		slameffect_path = "res://scenes/characters/enemy/enemy_voltslam_electroeffect.tscn"
-		var SlamEffect = load(slameffect_path).instantiate()
+		var SlamEffect = slameffect.instantiate()
 		SlamEffect.global_position = electro_effect_spawner_left.global_position
 		scene.add_child(SlamEffect)
 
 func spawn_slameffectRight():
 		var scene = get_node("..") 
-		slameffectRight_path = "res://scenes/characters/enemy/enemy_voltslam_electroeffect.tscn"
-		var SlamEffectRight = load(slameffectRight_path).instantiate()
+		var SlamEffectRight = slameffect_Right.instantiate()
 		SlamEffectRight.global_position = electro_effect_spawner_right.global_position
 		scene.add_child(SlamEffectRight)
 		SlamEffectRight.flip()

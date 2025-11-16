@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3q3qvwgi2e1b"]
+
+[ext_resource type="Texture2D" uid="uid://bgyqj5rlmfb54" path="res://sprites/levels/world2/Cutscene/outro/world2_outro_confetti.png" id="1_do0da"]
+
+[sub_resource type="Gradient" id="Gradient_do0da"]
+offsets = PackedFloat32Array(0.5140187, 0.7009346)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.101960786)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_frwj0"]
+gradient = SubResource("Gradient_do0da")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yjnu5"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(800, 1, 1)
+angular_velocity_min = -387.37
+angular_velocity_max = 176.83998
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+radial_velocity_min = -2.2351742e-05
+radial_velocity_max = -2.2351742e-05
+gravity = Vector3(0, 120, 0)
+scale_min = 0.099999994
+scale_max = 0.59999996
+scale_over_velocity_min = 396.83
+scale_over_velocity_max = 460.31998
+color = Color(1, 0.31, 0.31, 1)
+color_ramp = SubResource("GradientTexture1D_frwj0")
+hue_variation_min = -1.0
+hue_variation_max = 0.99999994
+
+[node name="World2Ending_Confetti" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+texture_filter = 1
+amount = 200
+texture = ExtResource("1_do0da")
+lifetime = 10.0
+preprocess = 30.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_yjnu5")

@@ -1,0 +1,262 @@
+[gd_scene load_steps=20 format=3 uid="uid://ckhks8roytb77"]
+
+[ext_resource type="Script" uid="uid://buvc6wlkaiea0" path="res://scenes/gameplaymechanics/world2/teleporter_door.gd" id="1_vkls3"]
+[ext_resource type="Texture2D" uid="uid://hdby0hwpttmb" path="res://sprites/gameplay/teleportdoor/world2_teleportationdoor.png" id="1_waq47"]
+[ext_resource type="Texture2D" uid="uid://pt1mxcn75la4" path="res://sprites/gameplay/controls/VKey_Button0001.png" id="2_bg6ji"]
+[ext_resource type="Texture2D" uid="uid://bjen4f3bog8dn" path="res://sprites/gameplay/controls/VKey_Button0002.png" id="3_cioff"]
+[ext_resource type="Texture2D" uid="uid://csoveagvtmvfn" path="res://sprites/gameplay/controls/VKey_Button0003.png" id="4_vkls3"]
+[ext_resource type="AudioStream" uid="uid://c2ma60dckrb2" path="res://sfx/gameplay/teleporterdoor/sfx_teleporterdoor_inside.ogg" id="6_d4txm"]
+[ext_resource type="AudioStream" uid="uid://bjhf34jurti1h" path="res://sfx/gameplay/teleporterdoor/sfx_teleporterdoor_outside.ogg" id="7_c6wba"]
+[ext_resource type="Texture2D" uid="uid://br0hdd1pc8ynm" path="res://sprites/boot/BootUp_BlackScreen.png" id="8_d4txm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4txm"]
+size = Vector2(103, 123)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c6wba"]
+size = Vector2(103, 123)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_jsl2r"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("2_bg6ji")
+frame_1/texture = ExtResource("3_cioff")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_vkls3")
+frame_2/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_kn66j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vkey:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vkey:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-18, -91)]
+}
+
+[sub_resource type="Animation" id="Animation_jsl2r"]
+resource_name = "base"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vkey:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tmbcy"]
+resource_name = "popin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vkey:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.297302, 2.92817),
+"update": 0,
+"values": [Vector2(-18, -61.34), Vector2(-18, -91)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vkey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_36lji"]
+resource_name = "popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vkey:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(0.297302, 5.46416),
+"update": 0,
+"values": [Vector2(-18, -91), Vector2(-18, -61.34)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vkey:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3gtv2"]
+_data = {
+&"RESET": SubResource("Animation_kn66j"),
+&"base": SubResource("Animation_jsl2r"),
+&"popin": SubResource("Animation_tmbcy"),
+&"popout": SubResource("Animation_36lji")
+}
+
+[sub_resource type="Animation" id="Animation_3gtv2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TeleportTransition/BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_c6wba"]
+resource_name = "transition"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TeleportTransition/BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"playinto"
+}, {
+"args": [],
+"method": &"transport"
+}, {
+"args": [],
+"method": &"playouto"
+}, {
+"args": [],
+"method": &"end_transport"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3yp1"]
+_data = {
+&"RESET": SubResource("Animation_3gtv2"),
+&"transition": SubResource("Animation_c6wba")
+}
+
+[node name="TeleporterDoor" type="AnimatableBody2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_vkls3")
+
+[node name="Door" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_waq47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_d4txm")
+
+[node name="Trigger" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger"]
+position = Vector2(-1.5, -1.5)
+shape = SubResource("RectangleShape2D_c6wba")
+
+[node name="Vkey" type="TextureRect" parent="."]
+offset_left = -18.0
+offset_top = -91.0
+offset_right = 17.0
+offset_bottom = -67.0
+texture = SubResource("AnimatedTexture_jsl2r")
+expand_mode = 1
+
+[node name="Vkey_Anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3gtv2")
+}
+autoplay = "base"
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="GoInto" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("6_d4txm")
+volume_db = 5.0
+bus = &"sfx"
+
+[node name="GoOuto" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("7_c6wba")
+bus = &"sfx"
+
+[node name="TeleportPoint" type="Marker2D" parent="."]
+position = Vector2(-103, 0)
+
+[node name="TeleportPoint_Player2" type="Marker2D" parent="."]
+position = Vector2(-142, 0)
+
+[node name="TeleportPoint_Player3" type="Marker2D" parent="."]
+position = Vector2(-183, 0)
+
+[node name="TeleportPoint_Player4" type="Marker2D" parent="."]
+position = Vector2(-229, 0)
+
+[node name="TeleportTransition" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="BlackScreen" type="TextureRect" parent="TeleportTransition"]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("8_d4txm")
+expand_mode = 1
+
+[node name="BlackScreen_Anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o3yp1")
+}
+
+[connection signal="body_entered" from="Trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="Trigger" to="." method="_on_trigger_body_exited"]

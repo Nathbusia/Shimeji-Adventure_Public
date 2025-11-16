@@ -17,8 +17,29 @@ func _on_slot_button_pressed() -> void:
 	add_child(level)
 	lss.level_thumbnail.texture = level.levelthumb
 	LevelsManager.leveldisplay = level.levelname
-	lss.level_name.text = level.levelname
+	if level.multilingual: #This will check if your level's Multilingual boot was set to true.
+		match LanguageManager.language:
+			"spanish":
+				lss.level_name.text = level.levelname_spa
+				lss.level_description.text = level.leveldesc_spa
+			"french":
+				lss.level_name.text = level.levelname_fre
+				lss.level_description.text = level.leveldesc_fre
+			"italian":
+				lss.level_name.text = level.levelname_ita
+				lss.level_description.text = level.leveldesc_ita
+			"german":
+				lss.level_name.text = level.levelname_ger
+				lss.level_description.text = level.leveldesc_ger
+			"japanese":
+				lss.level_name.text = level.levelname_jpn
+				lss.level_description.text = level.leveldesc_jpn
+			_: #English/Other Languages
+				lss.level_name.text = level.levelname
+				lss.level_description.text = level.leveldesc
+	else:
+		lss.level_name.text = level.levelname
+		lss.level_description.text = level.leveldesc
 	lss.level_creator.text = level.levelcreator
-	lss.level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	lss.go_button.show()

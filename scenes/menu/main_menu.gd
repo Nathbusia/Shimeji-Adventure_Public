@@ -17,6 +17,37 @@ func _ready() -> void:
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 	can_choose = true
+	
+	match LanguageManager.language:
+		"spanish":
+			$Buttons/Story/Text.text = "Historia"
+			$Buttons/Freeplay/Text.text = "Juego libre"
+			$Buttons/Settings/Label.text = "Configuración"
+			$Buttons/Quit/Text.text = "Abandonar"
+		"french":
+			$Buttons/Story/Text.text = "Histoire"
+			$Buttons/Freeplay/Text.text = "Jeu libre"
+			$Buttons/Settings/Label.text = "Paramètres"
+			$Buttons/Quit/Text.text = "Quitter"
+		"italian":
+			$Buttons/Story/Text.text = "Storia"
+			$Buttons/Freeplay/Text.text = "Gioco libero"
+			$Buttons/Settings/Label.text = "Impostazioni"
+			$Buttons/Quit/Text.text = "Esentato"
+		"german":
+			$Buttons/Story/Text.text = "Geschichte"
+			$Buttons/Freeplay/Text.text = "Freispiel"
+			$Buttons/Settings/Label.text = "Einstellungen"
+			$Buttons/Quit/Text.text = "Verlassen"
+		"japanese":
+			$GameLogo.texture = load("res://sprites/menu/title/Logo_New_Final3_JPN.png")
+			$Buttons/Story/Text.text = "ストーリー"
+			$Buttons/Freeplay/Text.text = "フリープレイ"
+			$Buttons/Settings/Label.text = "オプション"
+			$Buttons/Quit/Text.text = "終了"
+		_:
+			return
+			#It's just English
 
 func _process(delta):
 	if story.is_hovered() && can_choose:

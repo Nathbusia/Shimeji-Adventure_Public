@@ -1,11 +1,65 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvh7o2i410mkv"]
+[gd_scene load_steps=14 format=3 uid="uid://bvh7o2i410mkv"]
 
 [ext_resource type="Script" uid="uid://dlli8ptpusds5" path="res://scenes/menu/game_intro.gd" id="1_tihao"]
 [ext_resource type="Texture2D" uid="uid://dcguo2qrl1ju5" path="res://sprites/game_intro/Intro_FO56.png" id="1_xocov"]
 [ext_resource type="Texture2D" uid="uid://da1x5udi6puo1" path="res://sprites/game_intro/Intro_Godot.png" id="2_66s7g"]
+[ext_resource type="Texture2D" uid="uid://bnbdycf5vy86c" path="res://sprites/game_intro/Intro_Controllers.png" id="2_hifff"]
+[ext_resource type="Texture2D" uid="uid://nr27xns0a75k" path="res://sprites/game_intro/Intro_Controllers_FRE.png" id="3_woyal"]
+[ext_resource type="Texture2D" uid="uid://dontcetcn3dn0" path="res://sprites/game_intro/Intro_Controllers_GER.png" id="4_hfo3i"]
+[ext_resource type="Texture2D" uid="uid://bb6v1sa0a8rfh" path="res://sprites/game_intro/Intro_Controllers_ITA.png" id="5_cj00v"]
+[ext_resource type="Texture2D" uid="uid://cfft2h2f3wbge" path="res://sprites/game_intro/Intro_Controllers_JPN.png" id="6_4da7t"]
+[ext_resource type="Texture2D" uid="uid://d2l47a5j23a1v" path="res://sprites/game_intro/Intro_Controllers_SPA.png" id="7_x2g0g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6jsfp"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hifff")
+}],
+"loop": true,
+"name": &"control_eng",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_woyal")
+}],
+"loop": true,
+"name": &"control_fre",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_hfo3i")
+}],
+"loop": true,
+"name": &"control_ger",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cj00v")
+}],
+"loop": true,
+"name": &"control_ita",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4da7t")
+}],
+"loop": true,
+"name": &"control_jpn",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_x2g0g")
+}],
+"loop": true,
+"name": &"control_spa",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_xocov")
@@ -52,7 +106,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_obox6"]
 resource_name = "introthing"
-length = 9.2
+length = 20.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -72,10 +126,10 @@ tracks/1/path = NodePath("AnimatedSprite2D:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.3, 2.5, 3.6, 3.8, 4.8, 8.1, 9.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 2.5, 3.6, 3.8, 4.8, 8.1, 9.2, 9.400001, 10.400001, 13.700001, 14.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
 tracks/2/type = "method"
 tracks/2/imported = false
@@ -84,9 +138,12 @@ tracks/2/path = NodePath(".")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(9.2),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(9.4, 14.8),
+"transitions": PackedFloat32Array(1, 1),
 "values": [{
+"args": [],
+"method": &"controlthing"
+}, {
 "args": [],
 "method": &"gameintroend"
 }]

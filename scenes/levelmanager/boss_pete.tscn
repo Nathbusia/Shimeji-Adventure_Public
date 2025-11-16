@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj4wpmp6s61fr"]
+
+[ext_resource type="Script" uid="uid://7g556j1pde6w" path="res://scenes/levelmanager/boss_pete.gd" id="1_l3mw5"]
+[ext_resource type="Texture2D" uid="uid://gyxb8lrwfkae" path="res://sprites/menu/levelselect/world2/levelselect_thumbnail_world2boss.png" id="2_q17ys"]
+
+[node name="World2Boss" type="Node2D"]
+script = ExtResource("1_l3mw5")
+levelname = "Blocking the Pop-Up Master"
+levelname_spa = "Bloqueando el Pop-up Master"
+levelname_fre = "Bloquer le maître de la fenêtre contextuelle"
+levelname_ita = "Blocco del Pop-Up Master"
+levelname_ger = "Blockieren des Pop-Up-Masters"
+levelname_jpn = "ポップアップマスターをブロックする"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_q17ys")

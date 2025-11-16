@@ -230,6 +230,15 @@ bus = &"bgm"
 [node name="ShimejiCharacter_Cutscene" parent="Characters" instance=ExtResource("14_qgsyd")]
 position = Vector2(191, 456)
 
+[node name="ShimejiCharacter_Cutscene_Playable2" parent="Characters" instance=ExtResource("14_qgsyd")]
+position = Vector2(140, 456)
+
+[node name="ShimejiCharacter_Cutscene_Playable3" parent="Characters" instance=ExtResource("14_qgsyd")]
+position = Vector2(89, 456)
+
+[node name="ShimejiCharacter_Cutscene_Playable4" parent="Characters" instance=ExtResource("14_qgsyd")]
+position = Vector2(34, 456)
+
 [node name="Monstequare_Cutscene" parent="Characters" instance=ExtResource("15_q0bxh")]
 position = Vector2(971, 361)
 

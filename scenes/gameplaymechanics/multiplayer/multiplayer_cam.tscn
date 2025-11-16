@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjf6iem5t36sd"]
+
+[ext_resource type="Script" uid="uid://dqdw2nstcncgk" path="res://scenes/gameplaymechanics/multiplayer/multiplayer_cam.gd" id="1_6icwh"]
+
+[node name="MultiplayerCam" type="Camera2D"]
+position_smoothing_enabled = true
+script = ExtResource("1_6icwh")
+min_zoom = 5.0
+max_zoom = 1.0

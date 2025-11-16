@@ -1,0 +1,52 @@
+[signal arg="pete_cockytalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_01.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: まあまあまあ…猫が袋に入れて持って来たものを見てごらん。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_01_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: お前！
+[signal arg="playerjump"]
+[signal arg="specialanim_3"]
+[wait time="1.0"]
+[signal arg="pete_normaltalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_02.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: インターネット上で私が加えた変更点、見ましたか？なかなか見事でしょう？
+[signal arg="pete_smirktalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_03.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: それに、ポップアップがすっかり定着した今、私たちは過去のものになって、彼らと共存するのはどうだろう？
+[signal arg="greet"]
+[signal arg="pete_unimpress"]
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_02_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: まさかそんなことあるわけないだろ！
+[signal arg="inter_close"]
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_03_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: そっちのポップアップはダークウェブに返して、さっさと帰れ！
+[signal arg="pete_surprisedtalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_04.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: まあ！お前みたいな取るに足らない虫けらにしては、ずいぶん大げさな言い分だな。
+[signal arg="pete_cockytalk"]
+[signal arg="inter_back"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_05.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: 言っておくぜ。お前とその沼地育ちのちっぽけな間抜けが俺を倒せたなら、俺は撤退を命じるかもしれない。
+[signal arg="pete_eviltalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_06.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: それはまずありえない。なぜなら、お前たちどちらにも手加減するつもりはないからだ。
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_04_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: よし。決まりだな。お前がやるんだ、ポップアウト・ピート！
+[signal arg="flippedon"]
+[signal arg="cam_players"]
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_05_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: メールボックスは、ポップアウト・ピートを倒すため、はるかに強力なメールシューターを受け取った。
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_06_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 俺がそれを取りに行くから、お前はその道化師と真っ向から対峙する準備をしろ！
+[signal arg="playerjump"]
+[signal arg="specialanim_4"]
+[wait time="1.0"]
+[signal arg="flyaway"]
+[signal arg="greet"]
+[signal arg="cam_default"]
+[voice path="res://sfx/characters/npc/butterfly/jp/bossintro/sfx_butterfly_bossintro_07_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: よし！君を信じてる！
+[signal arg="pete_beginfight"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_07.ogg" volume="-5.0" bus="voices"]
+pop_out_pete_jpn: よし。さあ、ゲームを始めよう！！ハハハハハ！
+[signal arg="beginboss"]

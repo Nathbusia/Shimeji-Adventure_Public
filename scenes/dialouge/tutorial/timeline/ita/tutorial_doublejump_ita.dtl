@@ -1,0 +1,17 @@
+friend: Oh no! Non va bene... Un muro.
+[signal arg="normaltalkB"]
+friend: Ma c'è qualcosa lassù in cima. Tuttavia, un singolo salto non basterà a superare questo ostacolo.
+[signal arg="talkingB"]
+[signal arg="flippedoff"]
+friend: Ora questa è la parte in cui si usa il doppio salto.
+[signal arg="talkingB"]
+friend: Premi la barra spaziatrice per saltare, e poi premila di nuovo per eseguire un doppio salto.
+[signal arg="pointingB"]
+friend: Ricorda\: una leggera pressione del tasto Spazio ti permetterà di fare piccoli saltelli...
+[signal arg="welcomeB"]
+friend: Mentre tenendolo premuto fino a raggiungere il limite massimo di salto si ottiene un balzo enorme. Come una rana che salta.
+[signal arg="talkingB"]
+friend: Quindi, per farlo, tieni premuto il tasto Spazio e poi premilo di nuovo per raggiungere la cima!
+[signal arg="greatestB"]
+friend: Bene! Proviamoci!
+[signal arg="end_cutsceneB"]

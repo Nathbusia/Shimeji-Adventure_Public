@@ -1,0 +1,276 @@
+[gd_scene load_steps=18 format=3 uid="uid://dbv3u7l01fk1x"]
+
+[ext_resource type="Texture2D" uid="uid://cyrp0k04oiu5o" path="res://sprites/levels/world2/world2_windowsC.png" id="1_adiah"]
+[ext_resource type="Script" uid="uid://cbf07voqhtwhs" path="res://scenes/characters/bosses/pete/pete_windows_boxing_glove.gd" id="1_fio2n"]
+[ext_resource type="Texture2D" uid="uid://dmj3mar05anv2" path="res://sprites/characters/bosses/pete/windowsattack/pete_boxingglove_windowsbg.png" id="2_ong2t"]
+[ext_resource type="Texture2D" uid="uid://bxej2y1mgq2lr" path="res://sprites/characters/bosses/pete/windowsattack/pete_boxingglove.png" id="3_hrbc3"]
+[ext_resource type="AudioStream" uid="uid://yyt3uhbe3o5k" path="res://sfx/characters/bosses/pete/sfx_pete_boxingglove_pull.ogg" id="4_j6swx"]
+[ext_resource type="AudioStream" uid="uid://bxecw4sp4ikj2" path="res://sfx/characters/bosses/pete/sfx_pete_boxingglove_prepare.ogg" id="5_fio2n"]
+[ext_resource type="AudioStream" uid="uid://wt7a1nsyl8ju" path="res://sfx/characters/bosses/pete/sfx_pete_boxingglove_popin.ogg" id="6_xc20q"]
+[ext_resource type="AudioStream" uid="uid://bvqk5qmmgwcuk" path="res://sfx/characters/bosses/pete/sfx_pete_boxingglove_hit.ogg" id="7_o6eqs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvqgy"]
+size = Vector2(679.489, 448)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc20q"]
+size = Vector2(654, 772)
+
+[sub_resource type="Animation" id="Animation_xc20q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window/BoxingGlove:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.734375, 0.734375)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Window/BoxingGlove:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Window/BoxingGlove:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fio2n"]
+resource_name = "attack"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window/BoxingGlove:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2.5, 2.63333, 2.93333, 3.03333, 3.13333, 3.23333, 3.3, 4, 4.1),
+"transitions": PackedFloat32Array(0.233258, 2.73208, 0.574349, 1.56917, 1, 1, 1, 1, 1, 1, 0.233258),
+"update": 0,
+"values": [Vector2(0.734375, 0.734375), Vector2(0.339, 0.339), Vector2(0.339, 0.339), Vector2(0.229, 0.229), Vector2(0.159, 0.159), Vector2(1.094, 1.094), Vector2(0.789, 0.789), Vector2(1.019, 1.019), Vector2(0.844, 0.844), Vector2(0.844, 0.844), Vector2(0.734375, 0.734375)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Window/BoxingGlove:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, -0.113446, 0.113446, -0.113446, 0.113446, -0.113446, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Window/BoxingGlove:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2.93333, 3.03333, 3.29601),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.41, 0.41, 0.41, 1), Color(0.41, 0.41, 0.41, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.93333, 3.03333, 3.3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"pull_play"
+}, {
+"args": [],
+"method": &"prepare_play"
+}, {
+"args": [],
+"method": &"popin_play"
+}, {
+"args": [],
+"method": &"can_attack"
+}, {
+"args": [],
+"method": &"cant_attack"
+}, {
+"args": [],
+"method": &"leave"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o6eqs"]
+_data = {
+&"RESET": SubResource("Animation_xc20q"),
+&"attack": SubResource("Animation_fio2n")
+}
+
+[sub_resource type="Animation" id="Animation_lr728"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o6eqs"]
+resource_name = "popin"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.210224, 3.86375),
+"update": 0,
+"values": [Vector2(0.095, 0.095), Vector2(1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_uvqgy"]
+resource_name = "popout"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.176777, 2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.095, 0.095)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disappear"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5nk87"]
+_data = {
+&"RESET": SubResource("Animation_lr728"),
+&"popin": SubResource("Animation_o6eqs"),
+&"popout": SubResource("Animation_uvqgy")
+}
+
+[node name="PeteWindows_BoxingGlove" type="AnimatableBody2D"]
+position = Vector2(408, 433)
+collision_layer = 16
+collision_mask = 1045
+script = ExtResource("1_fio2n")
+
+[node name="Window" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_adiah")
+
+[node name="Background" type="Sprite2D" parent="Window"]
+texture_filter = 1
+position = Vector2(-1, 81)
+texture = ExtResource("2_ong2t")
+
+[node name="BoxingGlove" type="Sprite2D" parent="Window"]
+texture_filter = 1
+position = Vector2(2.99998, 65)
+scale = Vector2(0.734375, 0.734375)
+texture = ExtResource("3_hrbc3")
+
+[node name="Hitbox" type="Area2D" parent="Window/BoxingGlove" groups=["attackhitbox"]]
+collision_mask = 5
+
+[node name="AttackCollision" type="CollisionShape2D" parent="Window/BoxingGlove/Hitbox"]
+position = Vector2(0.680861, 0.680862)
+shape = SubResource("RectangleShape2D_uvqgy")
+disabled = true
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Pull" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("4_j6swx")
+bus = &"sfx"
+
+[node name="Prepare" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("5_fio2n")
+bus = &"sfx"
+
+[node name="Popin" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("6_xc20q")
+bus = &"sfx"
+
+[node name="Attack" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("7_o6eqs")
+bus = &"sfx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_xc20q")
+
+[node name="GloveAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o6eqs")
+}
+
+[node name="WindowsAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5nk87")
+}
+autoplay = "popin"
+
+[connection signal="body_entered" from="Window/BoxingGlove/Hitbox" to="." method="_on_hitbox_body_entered"]

@@ -1,0 +1,8 @@
+friend: ¡Eh! ¿Acabas de ver esa bandera que aparece después de pasar por ella?
+[signal arg="talking"]
+friend: Son puntos de control. Una vez activados, resultan muy útiles.
+[signal arg="talking"]
+friend: Por lo tanto, si pierdes una vida por culpa de un enemigo, un obstáculo peligroso o incluso por caer fuera del mapa, reaparecerás en el último punto de control que hayas activado. Esto te ayudará a volver al punto donde lo dejaste (a menos que prefieras empezar desde el principio, en cuyo caso solo tienes que saltarlo).
+[signal arg="greatest"]
+friend: Bien, sigamos adelante y pasemos al último paso.
+[signal arg="end_cutscene"]

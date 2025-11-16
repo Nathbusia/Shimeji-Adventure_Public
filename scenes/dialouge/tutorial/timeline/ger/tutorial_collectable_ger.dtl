@@ -1,0 +1,31 @@
+friend: Fantastische Arbeit! Und sehen Sie sich das an! Nicht ein einziger Kratzer!
+[signal arg="talking"]
+friend: Nun, falls Sie sich verletzt haben, können Sie diese weißen, schwebenden Kreise hier berühren.
+[signal arg="normaltalk"]
+[signal arg="signhealth"]
+friend: Das ist Gesundheit. Sie regenerieren ganz offensichtlich Ihre Gesundheit.
+[signal arg="pointing"]
+[signal arg="signhealthbar"]
+friend: Und Ihre Gesundheit, die sich oben links befindet, ist ziemlich wichtig...
+[signal arg="talking"]
+[signal arg="signhealthbar_empty"]
+friend: Du hast in diesem Spiel nur 5 Gesundheit, und wenn diese auf 0 sinken, bist du verloren! Du wirst ein Leben verlieren.
+[signal arg="greatest"]
+[signal arg="signlives"]
+friend: Sie beginnen in jedem Level mit 3 Leben (die Anzahl Ihrer Leben wird jedoch im Story-Modus gespeichert).
+[signal arg="talking"]
+friend: Wenn du alle Leben verloren hast, dann weißt du wahrscheinlich schon, was als Nächstes passiert... Oder?
+[signal arg="talking"]
+[signal arg="sign1up"]
+friend: Es gibt diese 1-Ups überall. Es sieht dir ähnlich. So.
+[signal arg="greatest"]
+friend: Wenn Sie eines entdecken, greifen Sie unbedingt danach. Diese sind sehr nützlich. Besonders wenn es schwierig wird!
+[signal arg="normaltalk"]
+[signal arg="signsquare"]
+friend: Und diese lustigen Quadrate sind... eben lustige Quadrate.
+[signal arg="talking"]
+friend: Du kannst so viele sammeln, wie du möchtest. Oder du ignorierst sie einfach. Ja.
+[signal arg="talking"]
+[signal arg="signempty"]
+friend: Rechts. Sammelt all diese Sammelobjekte ein, und dann machen wir weiter. Diese Lektion ist nun fast beendet.
+[signal arg="end_cutscene"]

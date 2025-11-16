@@ -85,6 +85,144 @@ func _on_projectile_box_body_entered(body: Node2D) -> void:
 					arrow_anim.play("defeat")
 					enemy_death_timer.start()
 					if not is_on_floor():
+						velocity.y += gravity
+
+	if (body.name == "ShimejiCharacter_Playable_Player2"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			is_dead = true
+			collisiondeath()
+			defeat_sfx.play()
+			arrow_anim.play("defeat")
+			if body.is_fastfalling:
+				enemy_step_on_hard.play()
+			else:
+				enemy_step_on_sound.play()
+			enemy_death_timer.start()
+			body.bounce()
+			if not is_on_floor():
+				velocity.y += gravity 
+			body.jump_count = 1
+		else:
+			if game_manager.health_p2 == 1:
+				game_manager.lose_health_player2()
+				game_manager.lives_p2 -= 1
+				body.death()
+				body.play_death_effect("death")
+				is_dead = true
+				collisiondeath()
+				defeat_sfx.play()
+				arrow_anim.play("defeat")
+				enemy_death_timer.start()
+				if not is_on_floor():
+					velocity.y += gravity 
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player2()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
+					is_dead = true
+					collisiondeath()
+					defeat_sfx.play()
+					arrow_anim.play("defeat")
+					enemy_death_timer.start()
+					if not is_on_floor():
+						velocity.y += gravity 
+
+	if (body.name == "ShimejiCharacter_Playable_Player3"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			is_dead = true
+			collisiondeath()
+			defeat_sfx.play()
+			arrow_anim.play("defeat")
+			if body.is_fastfalling:
+				enemy_step_on_hard.play()
+			else:
+				enemy_step_on_sound.play()
+			enemy_death_timer.start()
+			body.bounce()
+			if not is_on_floor():
+				velocity.y += gravity 
+			body.jump_count = 1
+		else:
+			if game_manager.health_p3 == 1:
+				game_manager.lose_health_player3()
+				game_manager.lives_p3 -= 1
+				body.death()
+				body.play_death_effect("death")
+				is_dead = true
+				collisiondeath()
+				defeat_sfx.play()
+				arrow_anim.play("defeat")
+				enemy_death_timer.start()
+				if not is_on_floor():
+					velocity.y += gravity 
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player3()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
+					is_dead = true
+					collisiondeath()
+					defeat_sfx.play()
+					arrow_anim.play("defeat")
+					enemy_death_timer.start()
+					if not is_on_floor():
+						velocity.y += gravity 
+
+	if (body.name == "ShimejiCharacter_Playable_Player4"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 50):
+			is_dead = true
+			collisiondeath()
+			defeat_sfx.play()
+			arrow_anim.play("defeat")
+			if body.is_fastfalling:
+				enemy_step_on_hard.play()
+			else:
+				enemy_step_on_sound.play()
+			enemy_death_timer.start()
+			body.bounce()
+			if not is_on_floor():
+				velocity.y += gravity 
+			body.jump_count = 1
+		else:
+			if game_manager.health_p4 == 1:
+				game_manager.lose_health_player4()
+				game_manager.lives_p4 -= 1
+				body.death()
+				body.play_death_effect("death")
+				is_dead = true
+				collisiondeath()
+				defeat_sfx.play()
+				arrow_anim.play("defeat")
+				enemy_death_timer.start()
+				if not is_on_floor():
+					velocity.y += gravity 
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player4()
+					body.get_hurt()
+					body.hurt_invincible()
+					body.play_damaged_effect("blink")
+					is_dead = true
+					collisiondeath()
+					defeat_sfx.play()
+					arrow_anim.play("defeat")
+					enemy_death_timer.start()
+					if not is_on_floor():
 						velocity.y += gravity 
 
 func collisiondeath():

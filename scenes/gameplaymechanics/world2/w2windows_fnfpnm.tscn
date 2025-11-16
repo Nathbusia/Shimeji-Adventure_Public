@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcvhychir2cdj"]
+
+[ext_resource type="Script" uid="uid://mppxrmpharfr" path="res://scenes/gameplaymechanics/world2/windows_pop_up_draggable.gd" id="1_gpdod"]
+[ext_resource type="Texture2D" uid="uid://ga12tfnfsy6s" path="res://sprites/levels/world1/windows/World1_Advert_FNFPNM.png" id="2_17lwh"]
+[ext_resource type="Texture2D" uid="uid://b1bmf6uabnbki" path="res://sprites/levels/world2/world2_windowsC_draggable.png" id="2_s8o8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gppr4"]
+size = Vector2(654, 773)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpdod"]
+size = Vector2(662, 784)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8o8l"]
+size = Vector2(682, 802)
+
+[node name="AdvertiseMent_FNFPNM" type="AnimatableBody2D" groups=["dragwindows"]]
+collision_mask = 5
+script = ExtResource("1_gpdod")
+
+[node name="WindowsBG" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -135.0
+offset_top = -252.0
+offset_right = 519.0
+offset_bottom = 521.0
+texture = ExtResource("2_s8o8l")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GogglesScreen" type="TextureRect" parent="WindowsBG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00304878
+anchor_top = 0.184994
+anchor_right = 0.166159
+anchor_bottom = 0.42044
+offset_left = 15.0
+offset_top = 45.0
+offset_right = 244.0
+offset_bottom = 419.0
+texture = ExtResource("2_17lwh")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(192, 134.5)
+shape = SubResource("RectangleShape2D_gppr4")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = -135.0
+offset_top = -252.0
+offset_right = 519.0
+offset_bottom = 521.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerDetect" type="Area2D" parent="."]
+
+[node name="CollisionPlayerDetect" type="CollisionShape2D" parent="PlayerDetect"]
+position = Vector2(192, 134)
+shape = SubResource("RectangleShape2D_gpdod")
+
+[node name="SticknodeDetect" type="Area2D" parent="." groups=["dragwindows"]]
+
+[node name="CollisionPlayerDetect" type="CollisionShape2D" parent="SticknodeDetect"]
+position = Vector2(192, 134)
+shape = SubResource("RectangleShape2D_s8o8l")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_up" from="Button" to="." method="_on_button_button_up"]
+[connection signal="body_entered" from="PlayerDetect" to="." method="_on_player_detect_body_entered"]
+[connection signal="body_exited" from="PlayerDetect" to="." method="_on_player_detect_body_exited"]

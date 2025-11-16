@@ -1,0 +1,26 @@
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さて、どうやらスティックノードはドラッグ可能なウィンドウの下に配置されるようになったようです。
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 今こそ、彼らを倒す別の方法を共有するのに最適な時期です。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: もし上に敵や操作不可能な物体がある場合は、この便利な箱が必要です。その名も「メールシューター」！
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: マウスの左クリックでクリックすると、電子メールが送信されます。一度に送信できるメールは1通のみです。したがって、電子メールが起動されるか、破棄されるか、または 3 秒間飛行するまで待つ必要があります。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: グラブボタンで拾い上げて別の場所に移動できます。なんと！持ちながら撃つことだってできるんです！
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さらに、タイミングが合えば、彼らの上に飛び乗ってより高い位置に到達することも可能です！つまり、あなたが彼らより速ければ、の話です。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: メールがなくなると、新しいメールがボックスに送信されるまでに少なくとも 5 秒かかります。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_08_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: そうなれば、再びそれらを撃ち落とすことができる。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_09_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: よし、始めよう。メールシューターを使ってあの2つのスティックノードを撃墜してから、ドラッグ可能なウィンドウの位置を調整しよう。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part5_10_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: もうすぐ終わります！
+[signal arg="end_cutscene"]

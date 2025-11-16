@@ -1,0 +1,21 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡¡¡Yupi!! ¡Los has encontrado todos!
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Muchas gracias, pequeño!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: Como prometí, aquí tienes tu recompensa.
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Entra en la tienda y encuentra lo que buscas!
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_spa: ¡Gracias de nuevo, pequeño!
+[signal arg="happy"]
+[signal arg="gain_access"]
+[signal arg="end_cutscene"]

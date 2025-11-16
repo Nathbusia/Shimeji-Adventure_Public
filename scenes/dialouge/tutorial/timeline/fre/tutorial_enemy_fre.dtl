@@ -1,0 +1,17 @@
+friend: SACRÉ BLEU !! CE SONT LES MÉCHANTS BALLS !!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Très bien. Pas de panique. C'est là que vos compétences au combat entrent en jeu.
+[signal arg="greatest"]
+friend: Des ennemis comme ceux-ci sont faciles à éliminer. Il suffit de leur sauter sur la tête, et le tour est joué !
+[signal arg="talking"]
+friend: Cependant, d'autres ennemis possèdent des capacités différentes et des façons différentes de vous attaquer. Soyez donc prudent.
+[signal arg="welcome"]
+friend: Au fait, vous pouvez également effectuer un Slam Dash sur eux. Cela se fait en appuyant vers le bas tout en étant dans les airs.
+[signal arg="greatest"]
+friend: Maintenant que vous avez reçu le mémo...
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: DESCENDEZ CES TYPES !!
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

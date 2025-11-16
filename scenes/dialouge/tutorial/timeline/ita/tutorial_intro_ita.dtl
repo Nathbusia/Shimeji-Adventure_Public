@@ -1,0 +1,22 @@
+friend: Beh, ciao! Sono contento che tu sia arrivato.
+[signal arg="pointing"]
+friend: Sono Stickbuddy! Il tuo piccolo aiutante e il tuo padrone!
+[signal arg="normaltalk"]
+friend: Stavo solo scherzando!
+[signal arg="talking"]
+friend: Comunque, ho sentito che sei nuovo a tutta questa faccenda di "Shimeji Adventure".
+[signal arg="talking"]
+friend: Bene, allora. Prima di iniziare, vorrei dire questo...
+[signal arg="welcome"]
+friend: BENVENUTO IN SHIMEJI ADVENTURE!!
+[signal arg="normaltalk"]
+friend: Ecco fatto. Molto meglio...
+[signal arg="talking"]
+friend: Ma ora passiamo alle basi.
+[signal arg="talking"]
+friend: Probabilmente dovresti sapere come muoverti. Vero? Usa i tasti freccia sinistra e destra per spostare il tuo Shimeji.
+[signal arg="talking"]
+friend: Oppure, qualsiasi tasto che avete configurato nella sezione "Configurazione tasti" del menu andrà benissimo!
+[signal arg="pointing"]
+friend: Ora vieni qui e ti spiegherò meglio cosa devi fare.
+[signal arg="end_cutscene"]

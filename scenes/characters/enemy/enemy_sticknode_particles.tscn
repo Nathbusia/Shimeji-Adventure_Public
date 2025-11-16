@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh45phq1cn5yu"]
+
+[ext_resource type="Texture2D" uid="uid://3gnmdc2c2voe" path="res://sprites/characters/enemy/sticknode/sticknode_drop.png" id="1_h2cjn"]
+[ext_resource type="Script" uid="uid://k85wt7ip1vi4" path="res://scenes/characters/enemy/enemy_sticknode_particles.gd" id="2_0tpph"]
+[ext_resource type="AudioStream" uid="uid://daxg5domb27b6" path="res://sfx/characters/enemy/sticknode/sfx_sticknode_pop.ogg" id="2_o11cq"]
+
+[sub_resource type="Curve" id="Curve_h2cjn"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="enemy_sticknode_particles" type="CPUParticles2D"]
+emitting = false
+amount = 20
+texture = ExtResource("1_h2cjn")
+lifetime = 0.8
+one_shot = true
+speed_scale = 2.5
+explosiveness = 1.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_h2cjn")
+script = ExtResource("2_0tpph")
+
+[node name="DestroySound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_o11cq")
+autoplay = true

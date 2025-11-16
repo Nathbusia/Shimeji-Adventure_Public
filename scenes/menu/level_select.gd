@@ -2,12 +2,14 @@ class_name LevelSelect extends Node2D
 
 @onready var world_selection_buttons: Panel = $WorldSelect/WorldSelectionButtons
 @onready var world_1_button: TextureButton = $WorldSelect/WorldSelectionButtons/HBoxContainer/World1/World1Button
+@onready var world_2_button: TextureButton = $WorldSelect/WorldSelectionButtons/HBoxContainer/World2/World2Button
 @onready var test_button: TextureButton = $WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/TestButton
 @onready var custom_button: TextureButton = $WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/CustomButton
 @onready var slot_button_lv_1: TextureButton = $LevelSelect/TestWorld/HBoxContainer/levelslot_testlevel1/CharSelect_BG/LevelSelect_Icon/CharSelect_FG/SlotButton_lv1
 @onready var slot_button_lv_2: TextureButton = $LevelSelect/TestWorld/HBoxContainer/levelslot_testlevel2/CharSelect_BG/LevelSelect_Icon/CharSelect_FG/SlotButton_lv2
 @onready var test_world: Panel = $LevelSelect/TestWorld
 @onready var world_1: Panel = $LevelSelect/World1
+@onready var world_2: Panel = $LevelSelect/World2
 @onready var custom: Panel = $LevelSelect/Custom
 @onready var text: AnimatedSprite2D = $Text
 @onready var go_button: TextureButton = $GO_Button
@@ -22,6 +24,16 @@ class_name LevelSelect extends Node2D
 @onready var level_creator: Label = $LevelSelect/LevelInfo/LevelCreator
 @onready var level_description: Label = $LevelSelect/LevelInfo/DescriptionThing/LevelDescription
 
+#Multiplayer Stuff
+@onready var player_amount: Control = $PlayerAmount
+@onready var player_amount_one: TextureButton = $PlayerAmount/PlayerPanel/PlayerAmount_One
+@onready var player_amount_two: TextureButton = $PlayerAmount/PlayerPanel/PlayerAmount_Two
+@onready var player_amount_three: TextureButton = $PlayerAmount/PlayerPanel/PlayerAmount_Three
+@onready var player_amount_four: TextureButton = $PlayerAmount/PlayerPanel/PlayerAmount_Four
+@onready var go_button_players: TextureButton = $PlayerAmount/PlayerPanel/GO_Button_Players
+@onready var back_button_players: TextureButton = $PlayerAmount/PlayerPanel/BACK_Button_Players
+
+
 var has_hoverplayed = false
 var is_inlevelselect
 var is_inworldselect
@@ -35,6 +47,63 @@ func _ready():
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 	load_customlevels()
+
+	match LanguageManager.language:
+		"spanish":
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "Mundo 1"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World2/WorldText.text = "Mundo 2"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/WorldText.text = "Mundo de prueba"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/WorldText.text = "Niveles personalizados"
+			$PlayerAmount/PlayerPanel/PlayerAmountText.text = "¿Cuántos jugadores?"
+			$PlayerAmount/PlayerPanel/PlayerAmount_One/AmountText.text = "Uno"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Two/AmountText.text = "Dos"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Three/AmountText.text = "Tres"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Four/AmountText.text = "Cuatro"
+		"french":
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "Monde 1"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World2/WorldText.text = "Monde 2"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/WorldText.text = "Monde des tests"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/WorldText.text = "Niveaux personnalisés"
+			$PlayerAmount/PlayerPanel/PlayerAmountText.text = "Combien de joueurs ?"
+			$PlayerAmount/PlayerPanel/PlayerAmount_One/AmountText.text = "Un"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Two/AmountText.text = "Deux"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Three/AmountText.text = "Trois"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Four/AmountText.text = "Quatre"
+		"italian":
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "Mondo 1"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World2/WorldText.text = "Mondo 2"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/WorldText.text = "Mondo di prova"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/WorldText.text = "Livelli personalizzati"
+			$PlayerAmount/PlayerPanel/PlayerAmountText.text = "Quanti giocatori?"
+			$PlayerAmount/PlayerPanel/PlayerAmount_One/AmountText.text = "Uno"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Two/AmountText.text = "Due"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Three/AmountText.text = "Tre"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Four/AmountText.text = "Quattro"
+		"german":
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "Welt 1"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World2/WorldText.text = "Welt 2"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/WorldText.text = "Testwelt"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/WorldText.text = "Benutzerdefinierte"
+			$PlayerAmount/PlayerPanel/PlayerAmountText.text = "Wie viele Spieler?"
+			$PlayerAmount/PlayerPanel/PlayerAmount_One/AmountText.text = "Eins"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Two/AmountText.text = "Zwei"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Three/AmountText.text = "Drei"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Four/AmountText.text = "Vier"
+		"japanese":
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "ワールド1"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/World2/WorldText.text = "ワールド2"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/TestWorld/WorldText.text = "テストワールド"
+			$WorldSelect/WorldSelectionButtons/HBoxContainer/Custom/WorldText.text = "カスタムレベル"
+			$PlayerAmount/PlayerPanel/PlayerAmountText.text = "プレイヤーは何人ですか？"
+			$PlayerAmount/PlayerPanel/PlayerAmount_One/AmountText.text = "一"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Two/AmountText.text = "二"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Three/AmountText.text = "三"
+			$PlayerAmount/PlayerPanel/PlayerAmount_Four/AmountText.text = "四"
+		_:
+			return
+			#Just English
+	
+	text.play("world_" + LanguageManager.language)
 
 func load_customlevels():
 		#These are for the Mods (There's a lot of Numbers... Couldn't figure out an eaiser way without hecking up the code...)
@@ -353,6 +422,10 @@ func _process(delta):
 		if !has_hoverplayed:
 			hover.play()
 			has_hoverplayed = true
+	elif world_2_button.is_hovered() && can_choose:
+		if !has_hoverplayed:
+			hover.play()
+			has_hoverplayed = true
 	elif test_button.is_hovered() && can_choose:
 		if !has_hoverplayed:
 			hover.play()
@@ -365,9 +438,9 @@ func _process(delta):
 		has_hoverplayed = false
 	
 	if is_inlevelselect:
-		text.animation = "level"
+		text.play("level_" + LanguageManager.language)
 	else:
-		text.animation = "world"
+		text.play("world_" + LanguageManager.language)
 
 
 func _on_test_button_pressed() -> void:
@@ -399,6 +472,7 @@ func _on_back_button_pressed() -> void:
 		level_select.hide()
 		test_world.hide()
 		world_1.hide()
+		world_2.hide()
 		custom.hide()
 		go_button.hide()
 		level_thumbnail.texture = preload("res://sprites/menu/levelselect/levelselect_thumbnail_nonselect.png")
@@ -421,10 +495,27 @@ func _on_slot_button_lv_1_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 	
@@ -437,10 +528,27 @@ func _on_slot_button_lv_2_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 
@@ -448,7 +556,7 @@ func _on_slot_button_lv_2_pressed() -> void:
 func _on_go_button_pressed() -> void:
 	LevelsManager.levelname = curLevel
 	LevelsManager.worldname = curWorld
-	LoadManager.load_scene("res://scenes/menu/character_select.tscn")
+	player_amount.show()
 	select.play()
 
 
@@ -461,10 +569,27 @@ func _on_slot_button_tutorial_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 
@@ -478,10 +603,27 @@ func _on_slot_button_world_1_level_1_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 
@@ -495,10 +637,27 @@ func _on_slot_button_world_1_boss_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 
@@ -512,10 +671,27 @@ func _on_slot_button_world_1_level_2_pressed() -> void:
 	LevelsManager.is_mod = false
 	add_child(level)
 	level_thumbnail.texture = level.levelthumb
-	level_name.text = level.levelname
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
 	LevelsManager.leveldisplay = level.levelname
 	level_creator.text = level.levelcreator
-	level_description.text = level.leveldesc
 	print("Current Level is now " + LevelsManager.leveldisplay + "!")
 	go_button.show()
 
@@ -528,3 +704,229 @@ func _on_custom_button_pressed() -> void:
 	is_inlevelselect = true
 	curWorld = "custom"
 	print("Current World is now " + curWorld + "!")
+
+
+func _on_player_amount_one_pressed() -> void:
+	select.play()
+	ModeManager.is_multiplayer = false
+	ModeManager.multi_2players = false
+	ModeManager.multi_3players = false
+	ModeManager.multi_4players = false
+	player_amount_one.disabled = true
+	player_amount_three.disabled = false
+	player_amount_two.disabled = false
+	player_amount_four.disabled = false
+	go_button_players.show()
+	print("It's now One Player")
+	print("Multiplayer Mode: " + str(ModeManager.is_multiplayer))
+	print("2 Players Mode: " + str(ModeManager.multi_2players))
+	print("3 Players Mode: " + str(ModeManager.multi_3players))
+	print("4 Players Mode: " + str(ModeManager.multi_4players))
+
+
+func _on_player_amount_two_pressed() -> void:
+	select.play()
+	ModeManager.is_multiplayer = true
+	ModeManager.multi_2players = true
+	ModeManager.multi_3players = false
+	ModeManager.multi_4players = false
+	player_amount_one.disabled = false
+	player_amount_three.disabled = false
+	player_amount_two.disabled = true
+	player_amount_four.disabled = false
+	go_button_players.show()
+	print("It's now Two Players")
+	print("Multiplayer Mode: " + str(ModeManager.is_multiplayer))
+	print("2 Players Mode: " + str(ModeManager.multi_2players))
+	print("3 Players Mode: " + str(ModeManager.multi_3players))
+	print("4 Players Mode: " + str(ModeManager.multi_4players))
+
+
+func _on_player_amount_three_pressed() -> void:
+	select.play()
+	ModeManager.is_multiplayer = true
+	ModeManager.multi_2players = false
+	ModeManager.multi_3players = true
+	ModeManager.multi_4players = false
+	player_amount_one.disabled = false
+	player_amount_three.disabled = true
+	player_amount_two.disabled = false
+	player_amount_four.disabled = false
+	go_button_players.show()
+	print("It's now Three Players")
+	print("Multiplayer Mode: " + str(ModeManager.is_multiplayer))
+	print("2 Players Mode: " + str(ModeManager.multi_2players))
+	print("3 Players Mode: " + str(ModeManager.multi_3players))
+	print("4 Players Mode: " + str(ModeManager.multi_4players))
+
+func _on_player_amount_four_pressed() -> void:
+	select.play()
+	ModeManager.is_multiplayer = true
+	ModeManager.multi_2players = false
+	ModeManager.multi_3players = false
+	ModeManager.multi_4players = true
+	player_amount_one.disabled = false
+	player_amount_three.disabled = false
+	player_amount_two.disabled = false
+	player_amount_four.disabled = true
+	go_button_players.show()
+	print("It's now Four Players")
+	print("Multiplayer Mode: " + str(ModeManager.is_multiplayer))
+	print("2 Players Mode: " + str(ModeManager.multi_2players))
+	print("3 Players Mode: " + str(ModeManager.multi_3players))
+	print("4 Players Mode: " + str(ModeManager.multi_4players))
+
+func _on_back_button_players_pressed() -> void:
+	deselect.play()
+	player_amount.hide()
+
+
+func _on_go_button_players_pressed() -> void:
+	select.play()
+	LoadManager.load_scene("res://scenes/menu/character_select.tscn")
+
+
+func _on_world_2_button_pressed() -> void:
+	select.play()
+	world_selection_buttons.hide()
+	world_2.show()
+	level_select.show()
+	is_inlevelselect = true
+	curWorld = "world2"
+	print("Current World is now " + curWorld + "!")
+
+
+func _on_slot_button_w_2_level_1_pressed() -> void:
+	select.play()
+	curLevel = "world2_level1"
+	level_path = "res://scenes/levelmanager/world2_level1.tscn"
+	var level = load(level_path).instantiate()
+	LevelsManager.is_bossbattle = false
+	LevelsManager.is_mod = false
+	add_child(level)
+	level_thumbnail.texture = level.levelthumb
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
+	LevelsManager.leveldisplay = level.levelname
+	level_creator.text = level.levelcreator
+	print("Current Level is now " + LevelsManager.leveldisplay + "!")
+	go_button.show()
+
+
+func _on_slot_button_w_2_level_2_pressed() -> void:
+	select.play()
+	curLevel = "world2_level2"
+	level_path = "res://scenes/levelmanager/world2_level2.tscn"
+	var level = load(level_path).instantiate()
+	LevelsManager.is_bossbattle = false
+	LevelsManager.is_mod = false
+	add_child(level)
+	level_thumbnail.texture = level.levelthumb
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
+	LevelsManager.leveldisplay = level.levelname
+	level_creator.text = level.levelcreator
+	print("Current Level is now " + LevelsManager.leveldisplay + "!")
+	go_button.show()
+
+
+func _on_slot_button_w_2_level_3_pressed() -> void:
+	select.play()
+	curLevel = "world2_level3"
+	level_path = "res://scenes/levelmanager/world2_level3.tscn"
+	var level = load(level_path).instantiate()
+	LevelsManager.is_bossbattle = false
+	LevelsManager.is_mod = false
+	add_child(level)
+	level_thumbnail.texture = level.levelthumb
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
+	LevelsManager.leveldisplay = level.levelname
+	level_creator.text = level.levelcreator
+	print("Current Level is now " + LevelsManager.leveldisplay + "!")
+	go_button.show()
+
+
+func _on_slot_button_world_2_boss_pressed() -> void:
+	select.play()
+	curLevel = "boss_pete"
+	level_path = "res://scenes/levelmanager/boss_pete.tscn"
+	var level = load(level_path).instantiate()
+	LevelsManager.is_bossbattle = true
+	LevelsManager.is_mod = false
+	add_child(level)
+	level_thumbnail.texture = level.levelthumb
+	match LanguageManager.language:
+		"spanish":
+			level_name.text = level.levelname_spa
+			level_description.text = level.leveldesc_spa
+		"french":
+			level_name.text = level.levelname_fre
+			level_description.text = level.leveldesc_fre
+		"italian":
+			level_name.text = level.levelname_ita
+			level_description.text = level.leveldesc_ita
+		"german":
+			level_name.text = level.levelname_ger
+			level_description.text = level.leveldesc_ger
+		"japanese":
+			level_name.text = level.levelname_jpn
+			level_description.text = level.leveldesc_jpn
+		_:
+			level_name.text = level.levelname
+			level_description.text = level.leveldesc
+	LevelsManager.leveldisplay = level.levelname
+	level_creator.text = level.levelcreator
+	print("Current Level is now " + LevelsManager.leveldisplay + "!")
+	go_button.show()

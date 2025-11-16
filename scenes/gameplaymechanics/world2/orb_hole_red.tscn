@@ -1,0 +1,163 @@
+[gd_scene load_steps=21 format=3 uid="uid://e3jtbafm4c5"]
+
+[ext_resource type="Script" uid="uid://bxn6bes0vs8rl" path="res://scenes/gameplaymechanics/world2/orb_hole_red.gd" id="1_t176u"]
+[ext_resource type="Texture2D" uid="uid://pv71igcndr7m" path="res://sprites/levels/world2/world2_orbhole_red0002.png" id="2_3ooc6"]
+[ext_resource type="Texture2D" uid="uid://bfg6aog1cdb7b" path="res://sprites/levels/world2/world2_orbhole_red0003.png" id="3_75uee"]
+[ext_resource type="Texture2D" uid="uid://cgtiwxn1qt42s" path="res://sprites/levels/world2/world2_orbhole_red0004.png" id="4_pep7u"]
+[ext_resource type="Texture2D" uid="uid://dc6b6bx4hwrmy" path="res://sprites/levels/world2/world2_orbhole_red0005.png" id="5_wv32y"]
+[ext_resource type="Texture2D" uid="uid://7mbvuta31o8s" path="res://sprites/levels/world2/world2_orbhole_red0001.png" id="6_hmdng"]
+[ext_resource type="AudioStream" uid="uid://dklktfu3ysceh" path="res://sfx/gameplay/orbhole/sfx_orb_inside_A.ogg" id="7_7djtg"]
+[ext_resource type="AudioStream" uid="uid://dg744rfk624eu" path="res://sfx/gameplay/orbhole/sfx_orb_inside_B.ogg" id="8_cvo82"]
+[ext_resource type="AudioStream" uid="uid://cc05ap8r5xiwb" path="res://sfx/gameplay/orbhole/sfx_orb_inside_C.ogg" id="9_cbq4u"]
+[ext_resource type="AudioStream" uid="uid://b82ryap68jm7v" path="res://sfx/gameplay/orbhole/sfx_orbhole_activate_A.ogg" id="10_cj8ud"]
+[ext_resource type="AudioStream" uid="uid://dwexf82xvipp7" path="res://sfx/gameplay/orbhole/sfx_orbhole_activate_B.ogg" id="11_yrb6x"]
+[ext_resource type="AudioStream" uid="uid://dj8l0lefs4041" path="res://sfx/gameplay/orbhole/sfx_orbhole_activate_C.ogg" id="12_lsikh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7djtg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3ooc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_75uee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pep7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wv32y")
+}],
+"loop": false,
+"name": &"insert",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hmdng")
+}],
+"loop": true,
+"name": &"standard",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qi6dv"]
+radius = 42.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bix8x"]
+radius = 26.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ilmsu"]
+streams_count = 3
+stream_0/stream = ExtResource("7_7djtg")
+stream_1/stream = ExtResource("8_cvo82")
+stream_2/stream = ExtResource("9_cbq4u")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_me08f"]
+streams_count = 3
+stream_0/stream = ExtResource("10_cj8ud")
+stream_1/stream = ExtResource("11_yrb6x")
+stream_2/stream = ExtResource("12_lsikh")
+
+[sub_resource type="Animation" id="Animation_nyfqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/OrbBall_Insert:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SFX/OrbBall_Activate:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_if3jy"]
+resource_name = "activate"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SFX/OrbBall_Insert:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SFX/OrbBall_Activate:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_86u13"]
+_data = {
+&"RESET": SubResource("Animation_nyfqv"),
+&"activate": SubResource("Animation_if3jy")
+}
+
+[node name="OrbHole_Red" type="AnimatableBody2D"]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_t176u")
+
+[node name="OrbHole" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_7djtg")
+animation = &"standard"
+autoplay = "standard"
+
+[node name="MainHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_qi6dv")
+
+[node name="InsertHole" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 5
+
+[node name="InsertHole" type="CollisionShape2D" parent="InsertHole"]
+position = Vector2(-2, -2)
+shape = SubResource("CircleShape2D_bix8x")
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="OrbBall_Insert" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_ilmsu")
+volume_db = 6.0
+bus = &"sfx"
+
+[node name="OrbBall_Activate" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_me08f")
+volume_db = 6.0
+bus = &"sfx"
+
+[node name="OrbSounds" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_86u13")
+}
+
+[connection signal="body_entered" from="InsertHole" to="." method="_on_insert_hole_body_entered"]

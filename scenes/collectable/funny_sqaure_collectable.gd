@@ -18,6 +18,27 @@ func _on_body_entered(body: Node2D) -> void:
 			results.add_point()
 			is_collected = true
 			timer.start()
+		if (body.name == "ShimejiCharacter_Playable_Player2"):
+			funnysquare.animation = "collected"
+			square_collect.play()
+			game_manager.add_point_player2()
+			results.add_point()
+			is_collected = true
+			timer.start()
+		if (body.name == "ShimejiCharacter_Playable_Player3"):
+			funnysquare.animation = "collected"
+			square_collect.play()
+			game_manager.add_points_player3()
+			results.add_point()
+			is_collected = true
+			timer.start()
+		if (body.name == "ShimejiCharacter_Playable_Player4"):
+			funnysquare.animation = "collected"
+			square_collect.play()
+			game_manager.add_points_player4()
+			results.add_point()
+			is_collected = true
+			timer.start()
 		else:
 			return #So that no other enemies or objects can collect points other than the player itself.
 

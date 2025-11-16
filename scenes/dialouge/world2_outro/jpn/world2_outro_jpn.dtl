@@ -1,0 +1,55 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_01_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: うわー！  やったね！  本当にやったんだね！
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_02_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: まあ、厳密に言えば、私たちはそれを成し遂げたわけです。  あなたを教え、あのEメールシューターなどを与えたのは私ですからね…
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_03_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: でも、ここでもう一度言いますが、あなたが一番多くの作業をしました。  ですから、あなたはすべての功績に値します。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_04_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: とにかく、皆さんのご協力のおかげで、インターネットが正常に戻りました。  新品同様！
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_05_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: あなたの英雄的な行為のおかげで、「インターネットヒーロー」実績を授与したいと思います！
+[signal arg="shimep1_jumptwo"]
+[signal arg="shimemodp1_specialanim_6"]
+[signal arg="othershime_taunt"]
+[signal arg="crowdcheer"]
+[signal arg="cam_player"]
+[wait time="2.0"]
+[signal arg="cam_default"]
+[signal arg="othershime_backtoidle"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_06_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: ああ！  まだ仕事が終わってないんですか？  今回はどこへ行くんですか？
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_1"]
+[wait time="1.0"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_07_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: ああ、なるほど。  世界中の人々が作成したコンテンツでいっぱいのサイトへ向かっています。  古い床！
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_08_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: その方向にサイトがあります。  まっすぐ進んで、右に曲がれば、そこに着くはずです。
+[signal arg="cam_movingplatform"]
+[signal arg="allshime_gotoplatform"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_09_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: この動くプラットフォームに乗ってください。あっという間にそこへ着きますよ！
+[signal arg="greet"]
+[signal arg="playerflipon"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_10_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: でも、改めて、本当に助けてくれてありがとう！  あなたは本当にいい友達ですね。  くそっ！  もしかしたら、あなたをパートナーと呼ぶかもしれません。  もしそれでよければですが…
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_2"]
+[wait time="1.0"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_11_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: 素晴らしい！  よかったです！
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_12_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: はい。  オールドフロアーズへ出発し、旅の間安全に過ごしてください！
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_13_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: あと一つ！いつでもインターネットに帰ってきてね！
+[signal arg="movingplatform_move"]
+[signal arg="playerflipoff"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/outro/sfx_butterfly_outro_14_jpn.ogg" volume="0.0" bus="voices"]
+interfly_jpn: またね、友よ！
+[signal arg="cam_ending"]
+[signal arg="movingplatform_moveon"]

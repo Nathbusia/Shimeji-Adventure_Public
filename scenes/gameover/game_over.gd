@@ -5,6 +5,9 @@ extends Node2D
 @onready var game_over_text: AnimatedSprite2D = $GameOverText
 @onready var continue_text: AnimatedSprite2D = $ContinueText
 @onready var shimeji_character_gameover: Node2D = $Character/ShimejiCharacter_Gameover
+@onready var shimeji_character_gameover_player_2: Node2D = $Character/ShimejiCharacter_Gameover_Player2
+@onready var shimeji_character_gameover_player_3: Node2D = $Character/ShimejiCharacter_Gameover_Player3
+@onready var shimeji_character_gameover_player_4: Node2D = $Character/ShimejiCharacter_Gameover_Player4
 @onready var game_over_screen_anim: AnimationPlayer = $GameOverScreenAnim
 @onready var black_screen: Panel = $BlackScreen
 @onready var black_screen_anim: AnimationPlayer = $BlackScreenAnim
@@ -30,22 +33,85 @@ var player_character_path = "res://scenes/characters/playable/" + CharactersMana
 var player_charactermod_path = "res://mods/characters/" + CharactersManager.charactername + "/scene/shimeji_character_gameover.tscn"
 @onready var ShimejiCharacter_PlayableMod : Node2D
 
+var player_character_path_player2 = "res://scenes/characters/playable/" + CharactersManager.charactername_player2 + "/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_Playable_Player2 : Node2D 
+var player_charactermod_path_player2 = "res://mods/characters/" + CharactersManager.charactername_player2 + "/scene/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_PlayableMod_Player2  : Node2D
+@onready var cutscene_anim_p2: AnimationPlayer = $Characters/ShimejiCharacter_Cutscene_Playable2/CutsceneAnim
+
+var player_character_path_player3 = "res://scenes/characters/playable/" + CharactersManager.charactername_player3 + "/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_Playable_Player3 : Node2D 
+var player_charactermod_path_player3 = "res://mods/characters/" + CharactersManager.charactername_player3 + "/scene/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_PlayableMod_Player3  : Node2D
+@onready var cutscene_anim_p3: AnimationPlayer = $Characters/ShimejiCharacter_Cutscene_Playable3/CutsceneAnim
+
+var player_character_path_player4 = "res://scenes/characters/playable/" + CharactersManager.charactername_player4 + "/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_Playable_Player4 : Node2D 
+var player_charactermod_path_player4 = "res://mods/characters/" + CharactersManager.charactername_player4 + "/scene/shimeji_character_gameover.tscn"
+@onready var ShimejiCharacter_PlayableMod_Player4  : Node2D
+@onready var cutscene_anim_p4: AnimationPlayer = $Characters/ShimejiCharacter_Cutscene_Playable4/CutsceneAnim
+
 var haschoosed = false
 var has_hoverplayed = false
 var pressed_yes = false
 var pressed_no = false
 
 func _ready():
+	var scene = get_node("Character") 
 	DiscordRPC.state = "Got a Game Over"
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
+	
+	match LanguageManager.language:
+		"spanish":
+			$Yes_Button.hide()
+			$Yes_Button_SPA.show()
+		"french":
+			$Yes_Button.hide()
+			$Yes_Button_FRE.show()
+			$No_Button.hide()
+			$No_Button_FRE.show()
+		"italian":
+			$Yes_Button.hide()
+			$Yes_Button_ITA.show()
+		"german":
+			$Yes_Button.hide()
+			$Yes_Button_GER.show()
+			$No_Button.hide()
+			$No_Button_GER.show()
+		"japanese":
+			$Yes_Button.hide()
+			$Yes_Button_JPN.show()
+			$No_Button.hide()
+			$No_Button_JPN.show()
+		_:
+			pass
+	
+	$GameOverText.play("default_" + LanguageManager.shortlang)
+	$ContinueText.play("default_" + LanguageManager.shortlang)
 	
 	if CharactersManager.is_mod:
 		ShimejiCharacter_PlayableMod = load(player_charactermod_path).instantiate()
 	else:
 		ShimejiCharacter_Playable = load(player_character_path).instantiate()
 	
-	var scene = get_node("Character") 
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p2:
+				ShimejiCharacter_PlayableMod_Player2 = load(player_charactermod_path_player2).instantiate()
+			else:
+				ShimejiCharacter_Playable_Player2 = load(player_character_path_player2).instantiate()
+		if ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p3:
+				ShimejiCharacter_PlayableMod_Player3 = load(player_charactermod_path_player3).instantiate()
+			else:
+				ShimejiCharacter_Playable_Player3 = load(player_character_path_player3).instantiate()
+		if ModeManager.multi_4players:
+			if CharactersManager.is_mod_p4:
+				ShimejiCharacter_PlayableMod_Player4 = load(player_charactermod_path_player4).instantiate()
+			else:
+				ShimejiCharacter_Playable_Player4 = load(player_character_path_player4).instantiate()
+	
 	if CharactersManager.is_mod:
 		ShimejiCharacter_PlayableMod.position = shimeji_character_gameover.global_position
 		scene.remove_child(shimeji_character_gameover)
@@ -56,6 +122,59 @@ func _ready():
 		scene.remove_child(shimeji_character_gameover)
 		scene.add_child(ShimejiCharacter_Playable)
 		ShimejiCharacter_Playable.name = shimeji_character_gameover.name
+
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p2:
+				ShimejiCharacter_PlayableMod_Player2.position = shimeji_character_gameover_player_2.global_position
+				ShimejiCharacter_PlayableMod_Player2.hide()
+				scene.remove_child(shimeji_character_gameover_player_2)
+				scene.add_child(ShimejiCharacter_PlayableMod_Player2)
+				ShimejiCharacter_PlayableMod_Player2.name = shimeji_character_gameover_player_2.name
+			else:
+				ShimejiCharacter_Playable_Player2.position = shimeji_character_gameover_player_2.global_position
+				ShimejiCharacter_Playable_Player2.hide()
+				scene.remove_child(shimeji_character_gameover_player_2)
+				scene.add_child(ShimejiCharacter_Playable_Player2)
+				ShimejiCharacter_Playable_Player2.name = shimeji_character_gameover_player_2.name
+				
+		if ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p3:
+				ShimejiCharacter_PlayableMod_Player3.position = shimeji_character_gameover_player_3.global_position
+				ShimejiCharacter_PlayableMod_Player3.hide()
+				scene.remove_child(shimeji_character_gameover_player_3)
+				scene.add_child(ShimejiCharacter_PlayableMod_Player3)
+				ShimejiCharacter_PlayableMod_Player3.name = shimeji_character_gameover_player_3.name
+			else:
+				ShimejiCharacter_Playable_Player3.position = shimeji_character_gameover_player_3.global_position
+				ShimejiCharacter_Playable_Player3.hide()
+				scene.remove_child(shimeji_character_gameover_player_3)
+				scene.add_child(ShimejiCharacter_Playable_Player3)
+				ShimejiCharacter_Playable_Player3.name = shimeji_character_gameover_player_3.name
+		if ModeManager.multi_4players:
+			if CharactersManager.is_mod_p4:
+				ShimejiCharacter_PlayableMod_Player4.position = shimeji_character_gameover_player_4.global_position
+				ShimejiCharacter_PlayableMod_Player4.hide()
+				scene.remove_child(shimeji_character_gameover_player_4)
+				scene.add_child(ShimejiCharacter_PlayableMod_Player4)
+				ShimejiCharacter_PlayableMod_Player4.name = shimeji_character_gameover_player_4.name
+			else:
+				ShimejiCharacter_Playable_Player4.position = shimeji_character_gameover_player_4.global_position
+				ShimejiCharacter_Playable_Player4.hide()
+				scene.remove_child(shimeji_character_gameover_player_4)
+				scene.add_child(ShimejiCharacter_Playable_Player4)
+				ShimejiCharacter_Playable_Player4.name = shimeji_character_gameover_player_4.name
+					
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players:
+			scene.remove_child(shimeji_character_gameover_player_3)
+			scene.remove_child(shimeji_character_gameover_player_4)
+		if ModeManager.multi_3players:
+			scene.remove_child(shimeji_character_gameover_player_4)
+	else:
+		scene.remove_child(shimeji_character_gameover_player_2)
+		scene.remove_child(shimeji_character_gameover_player_3)
+		scene.remove_child(shimeji_character_gameover_player_4)
 
 # Called when the node enters the scene tree for the first time.
 func _process(_delta):
@@ -76,6 +195,36 @@ func char_fall():
 	else:
 		ShimejiCharacter_Playable.falling()
 
+func char_fall_p2():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p2:
+				ShimejiCharacter_PlayableMod_Player2.falling()
+				ShimejiCharacter_PlayableMod_Player2.show()
+			else:
+				ShimejiCharacter_Playable_Player2.falling()
+				ShimejiCharacter_Playable_Player2.show()
+
+func char_fall_p3():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p3:
+				ShimejiCharacter_PlayableMod_Player3.falling()
+				ShimejiCharacter_PlayableMod_Player3.show()
+			else:
+				ShimejiCharacter_Playable_Player3.falling()
+				ShimejiCharacter_Playable_Player3.show()
+
+func char_fall_p4():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_4players:
+			if CharactersManager.is_mod_p4:
+				ShimejiCharacter_PlayableMod_Player4.falling()
+				ShimejiCharacter_PlayableMod_Player4.show()
+			else:
+				ShimejiCharacter_Playable_Player4.falling()
+				ShimejiCharacter_Playable_Player4.show()
+
 func play_cotinuetheme():
 	continue_bgm.play()
 	
@@ -84,7 +233,31 @@ func funny_crash():
 		ShimejiCharacter_PlayableMod.crash_land()
 	else:
 		ShimejiCharacter_Playable.crash_land()
-	
+
+func funny_crash_p2():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p2:
+				ShimejiCharacter_PlayableMod_Player2.crash_land()
+			else:
+				ShimejiCharacter_Playable_Player2.crash_land()
+
+func funny_crash_p3():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p3:
+				ShimejiCharacter_PlayableMod_Player3.crash_land()
+			else:
+				ShimejiCharacter_Playable_Player3.crash_land()
+
+func funny_crash_p4():
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_4players:
+			if CharactersManager.is_mod_p4:
+				ShimejiCharacter_PlayableMod_Player4.crash_land()
+			else:
+				ShimejiCharacter_Playable_Player4.crash_land()
+
 func start_transition():
 	black_screen_anim.play("FadeOut")
 
@@ -93,6 +266,24 @@ func load_scene():
 		ShimejiCharacter_PlayableMod.idle()
 	else:
 		ShimejiCharacter_Playable.idle()
+	
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p2:
+				ShimejiCharacter_PlayableMod_Player2.idle()
+			else:
+				ShimejiCharacter_Playable_Player2.idle()
+		if ModeManager.multi_3players || ModeManager.multi_4players:
+			if CharactersManager.is_mod_p3:
+				ShimejiCharacter_PlayableMod_Player3.idle()
+			else:
+				ShimejiCharacter_Playable_Player3.idle()
+		if ModeManager.multi_4players:
+			if CharactersManager.is_mod_p4:
+				ShimejiCharacter_PlayableMod_Player4.idle()
+			else:
+				ShimejiCharacter_Playable_Player4.idle()
+
 	if pressed_yes:
 		if LevelsManager.is_mod:
 			LoadManager.load_scene("res://mods/levels-bosses/" + LevelsManager.levelname + "/scene/" + LevelsManager.levelname + ".tscn")
@@ -119,6 +310,20 @@ func _on_yes_button_pressed() -> void:
 			ShimejiCharacter_PlayableMod.yes_click()
 		else:
 			ShimejiCharacter_Playable.yes_click()
+		
+		if ModeManager.is_multiplayer:
+			if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+				$Player2Act.start()
+			if ModeManager.multi_3players || ModeManager.multi_4players:
+				$Player3Act.start()
+			if ModeManager.multi_4players:
+				$Player4Act.start()
+
+		if ModeManager.is_story:
+			SaveFileManager.currentplayerlives = 3
+			SaveFileManager.currentplayerlivest = 0
+			SaveFileManager.maxcurrentlives = 3
+			SaveGame.save_game()
 		game_over_screen_anim.play("outro")
 		
 
@@ -137,4 +342,60 @@ func _on_no_button_pressed() -> void:
 			ShimejiCharacter_PlayableMod.no_click()
 		else:
 			ShimejiCharacter_Playable.no_click()
+
+		if ModeManager.is_multiplayer:
+			if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+				$Player2Act.start()
+			if ModeManager.multi_3players || ModeManager.multi_4players:
+				$Player3Act.start()
+			if ModeManager.multi_4players:
+				$Player4Act.start()
+		
+		if ModeManager.is_story:
+			SaveFileManager.currentplayerlives = 3
+			SaveFileManager.currentplayerlivest = 0
+			SaveFileManager.maxcurrentlives = 3
+			SaveGame.save_game()
 		game_over_screen_anim.play("outro")
+
+
+func _on_player_2_act_timeout() -> void:
+	if pressed_yes:
+		if CharactersManager.is_mod_p2:
+			ShimejiCharacter_PlayableMod_Player2.yes_click()
+		else:
+			ShimejiCharacter_Playable_Player2.yes_click()
+	if pressed_no:
+		if CharactersManager.is_mod_p2:
+			ShimejiCharacter_PlayableMod_Player2.no_click()
+		else:
+			ShimejiCharacter_Playable_Player2.no_click()
+	$Player2Act.stop()
+
+
+func _on_player_3_act_timeout() -> void:
+	if pressed_yes:
+		if CharactersManager.is_mod_p3:
+			ShimejiCharacter_PlayableMod_Player3.yes_click()
+		else:
+			ShimejiCharacter_Playable_Player3.yes_click()
+	if pressed_no:
+		if CharactersManager.is_mod_p3:
+			ShimejiCharacter_PlayableMod_Player3.no_click()
+		else:
+			ShimejiCharacter_Playable_Player3.no_click()
+	$Player3Act.stop()
+
+
+func _on_player_4_act_timeout() -> void:
+	if pressed_yes:
+		if CharactersManager.is_mod_p4:
+			ShimejiCharacter_PlayableMod_Player4.yes_click()
+		else:
+			ShimejiCharacter_Playable_Player4.yes_click()
+	if pressed_no:
+		if CharactersManager.is_mod_p4:
+			ShimejiCharacter_PlayableMod_Player4.no_click()
+		else:
+			ShimejiCharacter_Playable_Player4.no_click()
+	$Player4Act.stop()

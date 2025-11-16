@@ -1,0 +1,1153 @@
+[gd_scene load_steps=52 format=3 uid="uid://brntnfpcsxi61"]
+
+[ext_resource type="Texture2D" uid="uid://2fxlqn7dh02x" path="res://sprites/levels/world2/world2_background_level2.png" id="1_1yjvy"]
+[ext_resource type="Script" uid="uid://bd1vklp7bpfbj" path="res://scenes/cutscenes/world2/world2_ending.gd" id="1_se7wv"]
+[ext_resource type="Shader" uid="uid://dlp2a0e1tuhti" path="res://scenes/levels/world2/world2_patternmove2.gdshader" id="2_yfish"]
+[ext_resource type="Texture2D" uid="uid://48lf62bcbm66" path="res://sprites/levels/world2/world2_background_hexpattern_white.png" id="3_bvude"]
+[ext_resource type="Shader" uid="uid://c0b3syfifbvpb" path="res://scenes/levels/world2/world2_patternmove_left.gdshader" id="4_etvg6"]
+[ext_resource type="Shader" uid="uid://bxwf84yaqeo47" path="res://scenes/levels/world2/world2_patternmove.gdshader" id="6_1hnn8"]
+[ext_resource type="Texture2D" uid="uid://hm8gavqlv2o4" path="res://sprites/levels/world2/world2_background_tech.png" id="7_1yjvy"]
+[ext_resource type="Texture2D" uid="uid://cm1ydaervuomq" path="res://sprites/levels/world2/world2_floatingwindows_PackA.png" id="8_bvude"]
+[ext_resource type="Texture2D" uid="uid://cservyuqkdtds" path="res://sprites/levels/world2/world2_floatingwindows_PackB.png" id="9_2imnn"]
+[ext_resource type="Texture2D" uid="uid://bdh2tuef7tj0n" path="res://sprites/levels/world2/world2_citybgB.png" id="9_txiwj"]
+[ext_resource type="Texture2D" uid="uid://c2pcl25tg4jqm" path="res://sprites/levels/world2/world2_citybgA.png" id="10_t0mg6"]
+[ext_resource type="PackedScene" uid="uid://cdw1qg5dm5rmo" path="res://scenes/gameplaymechanics/world2/world_2_ground.tscn" id="10_txiwj"]
+[ext_resource type="Texture2D" uid="uid://bokcdyrhkicmn" path="res://sprites/levels/world2/world2_hills.png" id="11_se7wv"]
+[ext_resource type="PackedScene" uid="uid://0d6rcu8bavme" path="res://scenes/cutscenes/world2/objects/cheering_crowd_a_1.tscn" id="12_015cg"]
+[ext_resource type="PackedScene" uid="uid://ddp8ipog2twq0" path="res://scenes/cutscenes/world2/objects/cheering_crowd_b_1.tscn" id="13_bvude"]
+[ext_resource type="PackedScene" uid="uid://dfttl6loe0lh2" path="res://scenes/characters/playable/shimeji/shimeji_character_cutscene.tscn" id="14_233rq"]
+[ext_resource type="PackedScene" uid="uid://emhk2y1ibox7" path="res://scenes/characters/npc/interfly_cutscene.tscn" id="15_d6jm7"]
+[ext_resource type="PackedScene" uid="uid://b3q3qvwgi2e1b" path="res://scenes/cutscenes/world2/objects/world_2_ending_confetti.tscn" id="17_2imnn"]
+[ext_resource type="AudioStream" uid="uid://bnifw1tcwyhld" path="res://bgm/levels/world2/bgm_world2_outro_cutscene.ogg" id="18_2imnn"]
+[ext_resource type="AudioStream" uid="uid://bgluo6j8acd2v" path="res://sfx/gameplay/cutscene/amb_world2outro_crowdcheer.ogg" id="19_txiwj"]
+[ext_resource type="Texture2D" uid="uid://bv20hycaok8ed" path="res://sprites/levels/world2/world2_moving_platforms.png" id="20_t0mg6"]
+[ext_resource type="AudioStream" uid="uid://b16d3v6fkxg6q" path="res://sfx/gameplay/cutscene/sfx_world2outro_crowdagree.ogg" id="21_015cg"]
+[ext_resource type="AudioStream" uid="uid://covs3dxgqketi" path="res://sfx/characters/shimeji/sfx_player_jump.ogg" id="22_233rq"]
+[ext_resource type="AudioStream" uid="uid://cbonus5n34xr" path="res://sfx/gameplay/cutscene/sfx_world2outro_movingplatform_move.ogg" id="24_b3bnw"]
+[ext_resource type="AudioStream" uid="uid://ntnao7ndfijs" path="res://sfx/gameplay/cutscene/sfx_world2outro_movingplatform_activate.ogg" id="25_1x35q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1x35q"]
+shader = ExtResource("2_yfish")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c1s7n"]
+shader = ExtResource("6_1hnn8")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j0gif"]
+shader = ExtResource("4_etvg6")
+
+[sub_resource type="Animation" id="Animation_mork3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/Interfly_Cutscene/Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/Interfly_Cutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11712, 627)]
+}
+
+[sub_resource type="Animation" id="Animation_48i1y"]
+resource_name = "interfly_flyaway"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/Interfly_Cutscene/Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1241, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_233rq"]
+resource_name = "interfly_flyin"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/Interfly_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 4),
+"transitions": PackedFloat32Array(0.16493852, 4.9245768),
+"update": 0,
+"values": [Vector2(12433, 627), Vector2(11712, 627)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j22l7"]
+_data = {
+&"RESET": SubResource("Animation_mork3"),
+&"interfly_flyaway": SubResource("Animation_48i1y"),
+&"interfly_flyin": SubResource("Animation_233rq")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n21d8"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_eopfy"]
+resource_name = "FadeOut"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.1666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"load_scene"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_buuiw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1jkas"]
+resource_name = "Visible"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_okxtl"]
+_data = {
+&"FadeOut": SubResource("Animation_eopfy"),
+&"RESET": SubResource("Animation_buuiw"),
+&"Visible": SubResource("Animation_1jkas")
+}
+
+[sub_resource type="Animation" id="Animation_t0mg6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/ShimejiCharacter_Cutscene:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11320, 652)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11413, 652)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11515, 652)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11212, 652)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Ambience/Jump:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_se7wv"]
+resource_name = "player_celebration"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/ShimejiCharacter_Cutscene:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.49, 0.5, 1.1, 1.11, 1.8, 1.81, 2.6333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.26666668, 0.6566667, 0.6666667, 1.2666667, 1.2766666, 1.9666667, 1.9766667, 2.8000002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.39000002, 0.4, 1, 1.01, 1.6999999, 1.7099999, 2.5333335),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.46666664, 0.8566667, 0.8666667, 1.4666667, 1.4766667, 2.1666665, 2.1766665, 3.0000002),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1), Vector2(-1, 1), Vector2(-1, 1), Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_015cg"]
+resource_name = "player_movetoplatform"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Characters/ShimejiCharacter_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4, 2, 2.1666667),
+"transitions": PackedFloat32Array(1, 0.3186403, 1, 1),
+"update": 0,
+"values": [Vector2(11320, 652), Vector2(11750, 652), Vector2(11992, 426), Vector2(12189, 525)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4000001, 2, 2.1666667),
+"transitions": PackedFloat32Array(1, 0.3186403, 1, 1),
+"update": 0,
+"values": [Vector2(11413, 652), Vector2(11851, 652), Vector2(12101, 426), Vector2(12288, 525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4000001, 2, 2.1666667),
+"transitions": PackedFloat32Array(1, 0.3186403, 1, 1),
+"update": 0,
+"values": [Vector2(11515, 652), Vector2(11961, 652), Vector2(12209, 426), Vector2(12383, 525)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4000001, 2, 2.1666667),
+"transitions": PackedFloat32Array(1, 0.3186403, 1, 1),
+"update": 0,
+"values": [Vector2(11212, 652), Vector2(11633, 652), Vector2(11861, 426), Vector2(12078, 525)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("..")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.4, 2.1666667, 2.2000003),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"player_walk"
+}, {
+"args": [],
+"method": &"player_jump"
+}, {
+"args": [],
+"method": &"player_idle"
+}, {
+"args": [],
+"method": &"platform_engage"
+}]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Ambience/Jump:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_015cg"]
+_data = {
+&"RESET": SubResource("Animation_t0mg6"),
+&"player_celebration": SubResource("Animation_se7wv"),
+&"player_movetoplatform": SubResource("Animation_015cg")
+}
+
+[sub_resource type="Animation" id="Animation_n21d8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPlatformThing/Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(12227, 605)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11347, 651)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11446, 651)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11541, 651)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11236, 651)]
+}
+
+[sub_resource type="Animation" id="Animation_j0gif"]
+resource_name = "platform_takeoff_part1"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPlatformThing/Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12227, 605), Vector2(13832, 605)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12189, 525), Vector2(13799, 525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12288, 525), Vector2(13898, 525)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12383, 525), Vector2(13993, 525)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(12078, 525), Vector2(13688, 525)]
+}
+
+[sub_resource type="Animation" id="Animation_ti374"]
+resource_name = "platform_takeoff_part2"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MovingPlatformThing/Platform:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13832, 605), Vector2(16572.625, 605)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Characters/ShimejiCharacter_Cutscene:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13799, 525), Vector2(16539.625, 525)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13898, 525), Vector2(16638.625, 525)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13993, 525), Vector2(16733.625, 525)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Characters/ShimejiCharacter_Cutscene_Playable4:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(13688, 525), Vector2(16428.625, 525)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_aigkf"]
+_data = {
+&"RESET": SubResource("Animation_n21d8"),
+&"platform_takeoff_part1": SubResource("Animation_j0gif"),
+&"platform_takeoff_part2": SubResource("Animation_ti374")
+}
+
+[sub_resource type="Animation" id="Animation_b3bnw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11396, 564.94)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23, 1.23)]
+}
+
+[sub_resource type="Animation" id="Animation_d6jm7"]
+resource_name = "cam_default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11396, 564.94)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23, 1.23)]
+}
+
+[sub_resource type="Animation" id="Animation_aigkf"]
+resource_name = "cam_ending"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(15237, 508), Vector2(15573, 508), Vector2(16100, -434)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23, 1.23)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"black_screen_start"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_c1s7n"]
+resource_name = "cam_movingplatform"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(0.21763767, 5.4641595),
+"update": 0,
+"values": [Vector2(11396, 564.94), Vector2(11998, 565)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.23, 1.23)]
+}
+
+[sub_resource type="Animation" id="Animation_1x35q"]
+resource_name = "cam_player"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11380, 634)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.31, 2.31)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j0gif"]
+_data = {
+&"RESET": SubResource("Animation_b3bnw"),
+&"cam_default": SubResource("Animation_d6jm7"),
+&"cam_ending": SubResource("Animation_aigkf"),
+&"cam_movingplatform": SubResource("Animation_c1s7n"),
+&"cam_player": SubResource("Animation_1x35q")
+}
+
+[node name="World2Ending" type="Node2D"]
+script = ExtResource("1_se7wv")
+
+[node name="BackgroundBegin" type="TextureRect" parent="."]
+offset_left = 4836.0
+offset_top = -3602.0
+offset_right = 23770.0
+offset_bottom = 2349.0
+texture = ExtResource("1_1yjvy")
+
+[node name="PatternB" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_1x35q")
+layout_mode = 0
+offset_right = 18939.0
+offset_bottom = 5951.0
+texture = ExtResource("3_bvude")
+stretch_mode = 1
+
+[node name="PatternTech" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c1s7n")
+layout_mode = 0
+offset_right = 18925.0
+offset_bottom = 5951.0
+texture = ExtResource("7_1yjvy")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsA" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.403922)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_c1s7n")
+layout_mode = 0
+offset_right = 18925.0
+offset_bottom = 5951.0
+texture = ExtResource("8_bvude")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsB" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_j0gif")
+layout_mode = 0
+offset_right = 18925.0
+offset_bottom = 5951.0
+texture = ExtResource("9_2imnn")
+stretch_mode = 1
+
+[node name="CityB" type="TextureRect" parent="BackgroundBegin"]
+layout_mode = 0
+offset_top = 3726.0
+offset_right = 18987.0
+offset_bottom = 4313.0
+texture = ExtResource("9_txiwj")
+stretch_mode = 1
+
+[node name="CityA" type="TextureRect" parent="BackgroundBegin"]
+layout_mode = 0
+offset_top = 3744.0
+offset_right = 18987.0
+offset_bottom = 4539.0
+texture = ExtResource("10_t0mg6")
+stretch_mode = 1
+
+[node name="Hills" type="TextureRect" parent="BackgroundBegin"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 3456.0
+offset_right = 18987.0
+offset_bottom = 4536.0
+texture = ExtResource("11_se7wv")
+stretch_mode = 1
+
+[node name="CrowdsBGBack2" type="Node2D" parent="BackgroundBegin"]
+position = Vector2(-4836, 3602)
+
+[node name="CheeringCrowdA1" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(10757, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB1" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(10857, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdA2" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(10985, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB2" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(11085, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdA3" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11212, 725)
+scale = Vector2(0.63200825, 0.63200825)
+
+[node name="CheeringCrowdB3" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(11312, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdA4" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11440, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB4" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(11540, 725)
+scale = Vector2(0.63200825, 0.63200825)
+
+[node name="CheeringCrowdA5" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11657, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB5" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(11757, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdA6" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11885, 725)
+scale = Vector2(0.63200825, 0.63200825)
+
+[node name="CheeringCrowdB6" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(11985, 725)
+scale = Vector2(0.63200825, 0.63200825)
+
+[node name="CheeringCrowdA7" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12112, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB7" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(12212, 725)
+scale = Vector2(0.63200825, 0.63200825)
+
+[node name="CheeringCrowdA8" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12340, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CheeringCrowdB8" parent="BackgroundBegin/CrowdsBGBack2" instance=ExtResource("13_bvude")]
+position = Vector2(12440, 725)
+scale = Vector2(0.6320072, 0.6320072)
+
+[node name="CrowdsBGBack" type="Node2D" parent="BackgroundBegin"]
+position = Vector2(-4836, 3602)
+
+[node name="CheeringCrowdA1" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(10833, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB1" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(10933, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA2" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11061, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB2" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(11161, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA3" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11288, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB3" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(11388, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA4" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11516, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB4" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(11616, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA5" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11733, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB5" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(11833, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA6" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11961, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB6" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(12061, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA7" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12188, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB7" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(12288, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdA8" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12416, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CheeringCrowdB8" parent="BackgroundBegin/CrowdsBGBack" instance=ExtResource("13_bvude")]
+position = Vector2(12516, 723)
+scale = Vector2(0.781714, 0.781714)
+
+[node name="CrowdsBG" type="Node2D" parent="BackgroundBegin"]
+position = Vector2(-4836, 3602)
+
+[node name="CheeringCrowdA1" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(10679, 723)
+
+[node name="CheeringCrowdB1" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(10779, 723)
+
+[node name="CheeringCrowdA2" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(10907, 723)
+
+[node name="CheeringCrowdB2" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(11007, 723)
+
+[node name="CheeringCrowdA3" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11134, 723)
+
+[node name="CheeringCrowdB3" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(11234, 723)
+
+[node name="CheeringCrowdA4" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11362, 723)
+
+[node name="CheeringCrowdB4" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(11462, 723)
+
+[node name="CheeringCrowdA5" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11579, 723)
+
+[node name="CheeringCrowdB5" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(11679, 723)
+
+[node name="CheeringCrowdA6" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(11807, 723)
+
+[node name="CheeringCrowdB6" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(11907, 723)
+
+[node name="CheeringCrowdA7" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12034, 723)
+
+[node name="CheeringCrowdB7" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(12134, 723)
+
+[node name="CheeringCrowdA8" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("12_015cg")]
+texture_filter = 1
+position = Vector2(12262, 723)
+
+[node name="CheeringCrowdB8" parent="BackgroundBegin/CrowdsBG" instance=ExtResource("13_bvude")]
+position = Vector2(12362, 723)
+
+[node name="World2_Ground" parent="BackgroundBegin" instance=ExtResource("10_txiwj")]
+position = Vector2(4471, 4317)
+collision_layer = 1
+collision_mask = 5
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="ShimejiCharacter_Cutscene" parent="Characters" instance=ExtResource("14_233rq")]
+position = Vector2(11347, 651)
+
+[node name="ShimejiCharacter_Cutscene_Playable2" parent="Characters" instance=ExtResource("14_233rq")]
+position = Vector2(11446, 651)
+scale = Vector2(-1, 1)
+
+[node name="ShimejiCharacter_Cutscene_Playable3" parent="Characters" instance=ExtResource("14_233rq")]
+position = Vector2(11541, 651)
+scale = Vector2(-1, 1)
+
+[node name="ShimejiCharacter_Cutscene_Playable4" parent="Characters" instance=ExtResource("14_233rq")]
+position = Vector2(11236, 651)
+scale = Vector2(-1, 1)
+
+[node name="Interfly_Cutscene" parent="Characters" instance=ExtResource("15_d6jm7")]
+position = Vector2(11712, 627)
+
+[node name="World2Ending_Confetti" parent="." instance=ExtResource("17_2imnn")]
+position = Vector2(11448, 268)
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_2imnn")
+volume_db = -5.0
+autoplay = true
+
+[node name="CutsceneAnimations" type="Node2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="CutsceneAnimations"]
+position = Vector2(11396, 564.94)
+zoom = Vector2(1.23, 1.23)
+
+[node name="InterflyAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_j22l7")
+}
+autoplay = "interfly_flyin"
+
+[node name="BlackScreen" type="Panel" parent="CutsceneAnimations"]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 7873.0
+offset_top = -3782.0
+offset_right = 21335.0
+offset_bottom = 2722.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n21d8")
+
+[node name="BlackScreenAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_okxtl")
+}
+autoplay = "Visible"
+
+[node name="PlayersAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_015cg")
+}
+autoplay = "player_celebration"
+
+[node name="PlatformAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_aigkf")
+}
+
+[node name="CameraAnim" type="AnimationPlayer" parent="CutsceneAnimations"]
+libraries = {
+&"": SubResource("AnimationLibrary_j0gif")
+}
+
+[node name="Ambience" type="Node2D" parent="."]
+
+[node name="CrowdSound" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("19_txiwj")
+volume_db = -4.0
+autoplay = true
+bus = &"sfx"
+
+[node name="CrowdAgree" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("21_015cg")
+volume_db = -2.0
+bus = &"sfx"
+
+[node name="Jump" type="AudioStreamPlayer" parent="Ambience"]
+stream = ExtResource("22_233rq")
+bus = &"sfx"
+
+[node name="MovingPlatformThing" type="Node2D" parent="."]
+
+[node name="Platform" type="Sprite2D" parent="MovingPlatformThing"]
+texture_filter = 1
+position = Vector2(12227, 605)
+scale = Vector2(1.6001955, 1)
+texture = ExtResource("20_t0mg6")
+
+[node name="PlatformHover" type="AudioStreamPlayer2D" parent="MovingPlatformThing/Platform"]
+stream = ExtResource("24_b3bnw")
+volume_db = 1.0
+
+[node name="PlatformActivate" type="AudioStreamPlayer" parent="MovingPlatformThing"]
+stream = ExtResource("25_1x35q")
+
+[node name="BeginDialogueTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="BeginDialogueTimer" to="." method="_on_begin_dialogue_timer_timeout"]

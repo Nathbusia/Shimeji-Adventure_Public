@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 素晴らしい！これで最後のステップに入ります。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: ご覧のとおり、壁には3色の穴が開いています。青、赤、そして緑です。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: そしてあなたはこう思うかもしれない、「この穴の中には何が入っているんだろう？」
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 簡単に言うと、皆さん、これらのマップ全体で、3つのオーブボールが転がっています。3つ全てがそれぞれの色と一致しています。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 必要なのは、それらを見つけて正しい色の穴に差し込むだけです。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: すべて挿入されると、ドアのロックが解除され、インターネットのさらに奥へ探索する準備が整います！
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: よし、言うまでもないが、さっそくあの3つのオーブボールを探し出せ！
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part6_08_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: がんばって！頼むよ。
+[signal arg="end_cutscene"]

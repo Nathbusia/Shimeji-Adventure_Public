@@ -1,0 +1,26 @@
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_01_ger.ogg" volume="2.0" bus="voices"]
+interfly: Nun gut. Es scheint, als würden die Sticknodes nun unter diesen verschiebbaren Fenstern kleben bleiben.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_02_ger.ogg" volume="2.0" bus="voices"]
+interfly: Jetzt ist der perfekte Zeitpunkt für mich, eine weitere Möglichkeit zu teilen, wie man sie besiegen kann.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_03_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wenn sich oben ein Feind oder ein Objekt befindet, mit dem Sie nicht interagieren können, benötigen Sie unsere hilfreiche Box. Den E-Mail-Shooter!
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_04_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wenn Sie mit der linken Maustaste darauf klicken, werden E-Mails versendet. Es kann jeweils nur eine E-Mail versendet werden. Sie müssen also warten, bis die E-Mail gestartet wurde, zerstört wurde oder 3 Sekunden lang geflogen ist.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_05_ger.ogg" volume="2.0" bus="voices"]
+interfly: Du kannst sie mit dem Grab-Button aufnehmen und an einen anderen Ort verschieben. Verdammt! Du kannst sogar schießen, während du sie hältst!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_06_ger.ogg" volume="2.0" bus="voices"]
+interfly: Außerdem kannst du sogar auf sie springen, um eine bessere Höhe zu erreichen! Das geht allerdings nur, wenn du schneller bist als sie.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_07_ger.ogg" volume="2.0" bus="voices"]
+interfly: Sobald Sie keine E-Mails mehr haben, dauert es mindestens 5 Sekunden, bis die neue E-Mail in den Posteingang gesendet wird.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_08_ger.ogg" volume="2.0" bus="voices"]
+interfly: Sobald dies geschehen ist, können Sie sie erneut abschießen.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_09_ger.ogg" volume="2.0" bus="voices"]
+interfly: Gut, dann los. Schießen Sie mit dem E-Mail-Shooter die beiden Sticknodes ab und positionieren Sie dann das verschiebbare Fenster neu.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part5_10_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wir sind fast fertig!
+[signal arg="end_cutscene"]

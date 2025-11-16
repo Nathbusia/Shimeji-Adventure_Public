@@ -1,0 +1,177 @@
+[gd_scene load_steps=15 format=3 uid="uid://dlv8roesqkmdm"]
+
+[ext_resource type="Texture2D" uid="uid://c1u1jqntfkl55" path="res://sprites/levels/world2/world2_email.png" id="1_8dy3j"]
+[ext_resource type="Script" uid="uid://cw4l8psq553gh" path="res://scenes/gameplaymechanics/world2/email_shooter_emails.gd" id="1_bbtuq"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="2_qwn2j"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="3_bbtuq"]
+[ext_resource type="AudioStream" uid="uid://dgbckicm0qe3g" path="res://sfx/gameplay/mailbox/sfx_mailbox_emailspin.ogg" id="4_dw22j"]
+[ext_resource type="AudioStream" uid="uid://ccypxksco60sd" path="res://sfx/gameplay/mailbox/sfx_mailbox_hit.ogg" id="5_12js5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fo1qg"]
+size = Vector2(100, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lvmkk"]
+size = Vector2(98, 55)
+
+[sub_resource type="Animation" id="Animation_3qmtk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fyyi7"]
+resource_name = "hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, -0.21), Vector2(1, 1.295), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.733333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"delete"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xpeqs"]
+_data = {
+&"RESET": SubResource("Animation_3qmtk"),
+&"hit": SubResource("Animation_fyyi7")
+}
+
+[sub_resource type="Animation" id="Animation_hrvqv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nulk4"]
+resource_name = "spin"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.785398, 1.5708, 2.35619, 3.14159, 4.71239, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8jnnp"]
+_data = {
+&"RESET": SubResource("Animation_hrvqv"),
+&"spin": SubResource("Animation_nulk4")
+}
+
+[node name="EmailShooter_Emails" type="CharacterBody2D" groups=["email"]]
+script = ExtResource("1_bbtuq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_8dy3j")
+
+[node name="MainHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_fo1qg")
+
+[node name="TriggerHitbox" type="Area2D" parent="."]
+collision_mask = 5
+
+[node name="TriggerHitbox" type="CollisionShape2D" parent="TriggerHitbox"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_lvmkk")
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("2_qwn2j")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("3_bbtuq")
+bus = &"sfx"
+
+[node name="MailboxSpin" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("4_dw22j")
+bus = &"sfx"
+
+[node name="MailboxHit" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("5_12js5")
+bus = &"sfx"
+
+[node name="MailAnimation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xpeqs")
+}
+
+[node name="MailAnimationSpin" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8jnnp")
+}
+
+[node name="Lifetime" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="Lifetime" to="." method="_on_lifetime_timeout"]

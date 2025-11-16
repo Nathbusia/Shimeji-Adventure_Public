@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://d2wbp8or1nv1r" path="res://sprites/menu/main/buttons/MainMenu_Buttons_Unavailable0003.png" id="22_u83mj"]
 [ext_resource type="AudioStream" uid="uid://c34txxvwhy20f" path="res://sfx/menu/sfx_menu_deselect.ogg" id="22_wnvm7"]
 [ext_resource type="AudioStream" uid="uid://dlf2bwrdvr4wi" path="res://sfx/menu/sfx_menu_hover.ogg" id="23_6bo75"]
-[ext_resource type="FontFile" uid="uid://du43hv6y8bbqs" path="res://fonts/DK Garden Gnome.otf" id="23_47nsa"]
+[ext_resource type="FontFile" uid="uid://csvraqt5qhr8u" path="res://fonts/MochiyPopOne-Regular.ttf" id="23_q78k2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_rci4f"]
 shader = ExtResource("1_m3uul")
@@ -335,14 +335,16 @@ stretch_mode = 0
 
 [node name="Text" type="Label" parent="Buttons/Story"]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 26.0
-offset_right = 175.0
-offset_bottom = 85.0
+offset_left = 21.0
+offset_top = 32.0
+offset_right = 212.0
+offset_bottom = 91.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_47nsa")
-theme_override_font_sizes/font_size = 51
+theme_override_fonts/font = ExtResource("23_q78k2")
+theme_override_font_sizes/font_size = 33
 text = "Story"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Freeplay" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -358,14 +360,16 @@ stretch_mode = 0
 
 [node name="Text" type="Label" parent="Buttons/Freeplay"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 26.0
-offset_right = 205.0
-offset_bottom = 85.0
+offset_left = -11.0
+offset_top = 32.0
+offset_right = 234.0
+offset_bottom = 91.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_47nsa")
-theme_override_font_sizes/font_size = 51
+theme_override_fonts/font = ExtResource("23_q78k2")
+theme_override_font_sizes/font_size = 33
 text = "Freeplay"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Settings" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -379,17 +383,19 @@ texture_hover = SubResource("AnimatedTexture_ljw1f")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Text" type="Label" parent="Buttons/Settings"]
+[node name="Label" type="Label" parent="Buttons/Settings"]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 26.0
-offset_right = 205.0
-offset_bottom = 85.0
+offset_left = -14.0
+offset_top = 31.0
+offset_right = 239.0
+offset_bottom = 152.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_47nsa")
-theme_override_font_sizes/font_size = 51
+theme_override_fonts/font = ExtResource("23_q78k2")
+theme_override_font_sizes/font_size = 33
 text = "Settings
 "
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Quit" type="TextureButton" parent="Buttons"]
 layout_mode = 0
@@ -406,14 +412,16 @@ stretch_mode = 0
 [node name="Text" type="Label" parent="Buttons/Quit"]
 layout_mode = 0
 offset_left = 61.0
-offset_top = 26.0
+offset_top = 32.0
 offset_right = 168.0
-offset_bottom = 85.0
+offset_bottom = 111.0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("23_47nsa")
-theme_override_font_sizes/font_size = 51
+theme_override_fonts/font = ExtResource("23_q78k2")
+theme_override_font_sizes/font_size = 33
 text = "Quit
 "
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="ButtonAnim" type="AnimationPlayer" parent="Buttons"]
 libraries = {

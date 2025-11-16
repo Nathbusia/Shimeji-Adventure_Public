@@ -7,7 +7,7 @@ friend: Now this is the part where you use your double jump.
 [signal arg="talkingB"]
 friend: Press the Space key to jump, and then press it again to perform a double jump.
 [signal arg="pointingB"]
-friend: Rmemeber. Little tap of the Space key will give ya small hops...
+friend: Remember. A little tap of the Space key will give ya small hops...
 [signal arg="welcomeB"]
 friend: Whereas holding it down until you reach your jump limit for a huge leap. Like a leaping frog.
 [signal arg="talkingB"]

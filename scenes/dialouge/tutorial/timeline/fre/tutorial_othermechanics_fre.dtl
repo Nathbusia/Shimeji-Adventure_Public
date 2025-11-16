@@ -1,0 +1,20 @@
+friend: Nous y voilà ! La dernière étape.
+[signal arg="talking"]
+friend: Tout au long de ce processus, vous suivrez un cours simple afin de tester tout ce que vous aurez appris au cours de ce tutoriel.
+[signal arg="talking"]
+friend: Vous découvrirez également deux autres mécanismes susceptibles d'apparaître dans le jeu normal...
+[signal arg="greatest"]
+friend: Un étant les ressorts. Vous savez, là où le Printemps a surgi, et le Surgi a... peu importe ce qu'ils font.
+[signal arg="talking"]
+friend: Mais bon, oui. Ces ressorts blancs vous aideront à rebondir vers le haut et à réinitialiser votre limite de saut. Vous aurez ainsi plus de temps dans les airs.
+[signal arg="welcome"]
+friend: N'oubliez pas que si vous utilisez Slam Dash sur les ressorts, vous rebondirez plus haut que d'habitude ! Cela vous sera utile sur les surfaces et les plates-formes très hautes. (Cela s'applique également aux ennemis Slam Dashing.)
+[signal arg="normaltalk"]
+friend: Et enfin, il y a les pointes.
+[signal arg="talking"]
+friend: Ce sont l'un des obstacles dangereux. Et croyez-moi, vous ne voulez pas les toucher...
+[signal arg="pointing"]
+friend: Ils sont pointus et vous font perdre des points de vie si vous les touchez. Alors, faites attention.
+[signal arg="talking"]
+friend: D'accord, sans en parler. Finis ce dernier plat, et on se retrouve à la fin !
+[signal arg="end_cutscene"]

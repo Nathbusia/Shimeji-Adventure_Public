@@ -1,0 +1,8 @@
+friend: Yo! Hast du die Flagge bemerkt, die auftauchte, nachdem du daran vorbeigegangen bist?
+[signal arg="talking"]
+friend: Das sind Kontrollpunkte. Sie werden richtig praktisch, sobald sie aktiviert sind.
+[signal arg="talking"]
+friend: Wenn du also durch einen Gegner, ein gefährliches Hindernis oder sogar durch einen Sturz von der Karte ein Leben verlierst, wirst du am zuletzt aktivierten Kontrollpunkt wiederbelebt. So kannst du direkt dort weiterspielen, wo du aufgehört hast. (Es sei denn, du möchtest lieber von vorne anfangen, dann kannst du diesen Schritt überspringen.)
+[signal arg="greatest"]
+friend: Gut, kommen wir nun zum letzten Schritt.
+[signal arg="end_cutscene"]

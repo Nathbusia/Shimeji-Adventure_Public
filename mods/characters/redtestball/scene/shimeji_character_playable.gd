@@ -53,6 +53,8 @@ const OOFPUSH_VELOCITY = -450.0
 @onready var grab_wall_sound: AudioStreamPlayer = $PlayerSFX/GrabWallSound
 @onready var climbing_sounds: AudioStreamPlayer = $PlayerSFX/ClimbingSounds
 @onready var taunt_sound: AudioStreamPlayer = $PlayerSFX/TauntSound
+@onready var teleport: AudioStreamPlayer = $PlayerSFX/Teleport
+
 
 #UI Stuff
 @export var score_charPortrait: CompressedTexture2D
@@ -78,12 +80,28 @@ var prevVelocity: Vector2 = Vector2.ZERO
 #Attack Hitbox (Custom Characters only)
 var attacking = false
 @export var can_attack : bool
+@export var multilingual : bool
 @onready var hitbox_collision: CollisionShape2D = $Hitbox/HitboxCollision
 
-@export var charname : String # Your Character Name
+@export var charname : String # Your Character Name (English)
+@export var charname_spa : String # Your Character Name (Spanish)
+@export var charname_fre : String # Your Character Name (French)
+@export var charname_ita : String # Your Character Name (Italian)
+@export var charname_ger : String # Your Character Name (German)
+@export var charname_jpn : String # Your Character Name (Japanese)
 @export var character : String # Your character file name
 @export var charcolour : String # Your Colour (Use colour code)
 @export var darkcolour = false
+
+#Multiplayer Stuff
+var is_player1 = false
+var is_player2 = false
+var is_player3 = false
+var is_player4 = false
+var inputplayer = ""
+@onready var tag: AnimatedSprite2D = $Tag
+@onready var player_position: AnimatedSprite2D = $PlayerPosition
+@onready var shime_animation_player_multi: AnimationPlayer = $Shime_AnimationPlayer_Multi
 
 var can_move = true
 var is_sitting = false
@@ -106,6 +124,7 @@ var is_incutscene = false
 var is_taunting = false
 var is_waitidling = false
 var is_idle = false
+var is_throwing = false
 
 var idle_anim_counter: int = 0
 
@@ -117,7 +136,7 @@ var end_taunt : Array = [5]
 func bounce():
 	if is_fastfalling:
 		velocity.y = HIGHBOUNCE_VELOCITY
-		sprite_2d.animation = "jump"
+		sprite_2d.play("jump")
 		slam_dash_bounce_timer.start()
 	else:
 		velocity.y = BOUNCE_VELOCITY
@@ -126,15 +145,52 @@ func bounce_fast():
 	velocity.y = HIGHBOUNCE_VELOCITY
 
 func _ready() -> void:
-	Dialogic.timeline_started.connect(set_physics_process.bind(false))
-	Dialogic.timeline_started.connect(set_process_input.bind(false))
-	Dialogic.timeline_ended.connect(set_physics_process.bind(true))
-	Dialogic.timeline_ended.connect(set_process_input.bind(true))
+#Optional if your character is name differently in other languages
+	if multilingual:
+		match LanguageManager.language:
+			"spanish":
+				charname = charname_spa
+			"french":
+				charname = charname_fre
+			"italian":
+				charname = charname_ita
+			"german":
+				charname = charname_ger
+			"japanese":
+				charname = charname_jpn
+			_:
+				return
+				#Uses its English/Default name
 
 func _physics_process(delta: float) -> void:
 		if is_dead:
 			return
-		
+
+		if ModeManager.is_multiplayer:
+			if is_player1:
+				inputplayer = MultiplayerManager.controls_p1
+			if is_player2:
+				inputplayer = MultiplayerManager.controls_p2
+			if is_player3:
+				inputplayer = MultiplayerManager.controls_p3
+			if is_player4:
+				inputplayer = MultiplayerManager.controls_p4
+		else:
+			inputplayer = MultiplayerManager.controls_p1
+
+		if ModeManager.is_multiplayer:
+			if charcolour == "#000000":
+				tag.animation = "tags_dark"
+			else:
+				tag.self_modulate = Color(charcolour)
+			if charcolour == "#000000":
+				pass
+			else:
+				player_position.self_modulate = Color(charcolour)
+		else:
+			tag.hide()
+			player_position.hide()
+
 		#Animations
 		if not level_complete:
 			if not is_fastfalling:
@@ -146,14 +202,18 @@ func _physics_process(delta: float) -> void:
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "crouching_fast"
+							sprite_2d.play("crouching_fast")
+							is_waitidling = false
+							is_throwing = false
 						else:
 							stand_shape.disabled = true
 							crouch_shape.disabled = false
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "crouching"
+							sprite_2d.play("crouching")
+							is_waitidling = false
+							is_throwing = false
 					elif can_carry == false:
 						if is_running:
 							stand_shape.disabled = false
@@ -161,15 +221,15 @@ func _physics_process(delta: float) -> void:
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "carry_fast"
+							sprite_2d.play("carry_fast")
 							is_waitidling = false
 						else:
-							stand_shape.disabled = true
-							crouch_shape.disabled = false
+							stand_shape.disabled = false
+							crouch_shape.disabled = true
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "carry"
+							sprite_2d.play("carry")
 							is_waitidling = false
 					else:
 						if is_running:
@@ -178,20 +238,22 @@ func _physics_process(delta: float) -> void:
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "run"
+							sprite_2d.play("run")
 							is_sitting = false
 							stuck_undertile = false
 							is_waitidling = false
+							is_throwing = false
 						else:
 							stand_shape.disabled = false
 							crouch_shape.disabled = true
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "walk"
+							sprite_2d.play("walk")
 							is_sitting = false
 							stuck_undertile = false
 							is_waitidling = false
+							is_throwing = false
 				else:
 					if is_sitting && !is_climbing && !is_damaged && !is_climbing_hori && !is_taunting && !is_waitidling:
 						stand_shape.disabled = true
@@ -199,23 +261,24 @@ func _physics_process(delta: float) -> void:
 						sit_shape.disabled = false
 						hori_climb_shape.disabled = true
 						slam_dash_shape.disabled = true
-						sprite_2d.animation = "sit"
+						is_throwing = false
+						sprite_2d.play("sit")
 					elif can_carry == false && !is_climbing && !is_damaged && !is_climbing_hori && !is_taunting && !is_waitidling:
 						stand_shape.disabled = false
 						crouch_shape.disabled = true
 						sit_shape.disabled = true
 						hori_climb_shape.disabled = true
 						slam_dash_shape.disabled = true
-						sprite_2d.animation = "carry_idle"
+						sprite_2d.play("carry_idle")
 						is_waitidling = false
 					else:
-						if !is_climbing && !is_damaged && !is_climbing_hori && !is_taunting && !is_waitidling:
+						if !is_climbing && !is_damaged && !is_climbing_hori && !is_taunting && !is_waitidling && !is_throwing:
 							stand_shape.disabled = false
 							crouch_shape.disabled = true
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "idle"
+							sprite_2d.play("idle")
 							stuck_undertile = false
 							is_sitting = false
 			
@@ -224,31 +287,32 @@ func _physics_process(delta: float) -> void:
 				if not is_fastfalling:
 					if is_damaged == true:
 						velocity.y += gravity * delta
-						sprite_2d.animation = "damaged"
+						sprite_2d.play("damaged")
 					elif is_damaged == false:
 						velocity.y += gravity * delta
 						if is_damaged == true:
-							sprite_2d.animation = "damaged"
+							sprite_2d.play("damaged")
 							$Shime_AnimationPlayer_SlamDash.play("null")
 						else:
-							if can_carry == false:
-								sprite_2d.animation = "carry_jump"
-							else:
-								sprite_2d.animation = "jump"
+							if !is_throwing:
+								if can_carry == false:
+									sprite_2d.play("carry_jump")
+								else:
+									sprite_2d.play("jump")
 
 			# Same Code from Above but if the character is sitting.
 			if not is_on_floor() and is_sitting and not is_climbing and not is_climbing_hori and can_carry:
 				is_sitting = false
 				if is_damaged == true:
 					velocity.y += gravity * delta
-					sprite_2d.animation = "damaged"
+					sprite_2d.play("damaged")
 				elif is_damaged == false:
 					velocity.y += gravity * delta
 					if is_damaged == true:
-						sprite_2d.animation = "damaged"
+						sprite_2d.play("damaged")
 						$Shime_AnimationPlayer_SlamDash.play("null")
 					else:
-						sprite_2d.animation = "jump"
+						sprite_2d.play("jump")
 					is_waitidling = false
 					idle_wait_timer.stop()
 
@@ -285,7 +349,7 @@ func _physics_process(delta: float) -> void:
 
 			#Climbing Code
 			if is_climbing && !is_climbing_hori && can_carry:
-				if Input.is_action_pressed("sit"):
+				if Input.is_action_pressed("sit" + inputplayer) && !is_incutscene:
 					if is_running:
 						velocity.y = RUNCLIMB_SPEED
 						if velocity.y > 0:
@@ -294,7 +358,7 @@ func _physics_process(delta: float) -> void:
 						velocity.y = CLIMB_SPEED
 						if velocity.y > 0:
 							sprite_2d.play("climb")
-				elif Input.is_action_pressed("up"):
+				elif Input.is_action_pressed("up" + inputplayer) && !is_incutscene:
 					if is_running:
 						velocity.y = -RUNCLIMB_SPEED
 						if velocity.y < 0:
@@ -313,7 +377,7 @@ func _physics_process(delta: float) -> void:
 				sit_shape.disabled = true
 				hori_climb_shape.disabled = false
 				slam_dash_shape.disabled = true
-				if Input.is_action_pressed("left"):
+				if Input.is_action_pressed("left" + inputplayer) && !is_incutscene:
 					if is_running:
 						velocity.x = -RUNCLIMB_SPEED
 						if velocity.x < 0:
@@ -322,7 +386,7 @@ func _physics_process(delta: float) -> void:
 						velocity.x = -CLIMB_SPEED
 						if velocity.x < 0:
 							sprite_2d.play("climb_hori")
-				elif Input.is_action_pressed("right"):
+				elif Input.is_action_pressed("right" + inputplayer) && !is_incutscene:
 					if is_running:
 						velocity.x = RUNCLIMB_SPEED
 						if velocity.x > 0:
@@ -335,7 +399,7 @@ func _physics_process(delta: float) -> void:
 					velocity.y = 0
 					sprite_2d.play("climb_horiidle")
 				
-				if Input.is_action_pressed("sit"):
+				if Input.is_action_pressed("sit" + inputplayer) && !is_incutscene:
 					stand_shape.disabled = false
 					crouch_shape.disabled = true
 					sit_shape.disabled = true
@@ -344,7 +408,7 @@ func _physics_process(delta: float) -> void:
 					is_climbing_hori = false
 					
 			# Handle jump.
-			if Input.is_action_just_pressed("jump") and can_jump and jump_count < max_jump and not is_sitting and not is_fastfalling:
+			if Input.is_action_just_pressed("jump" + inputplayer) && !is_incutscene and can_jump and jump_count < max_jump and not is_sitting and not is_fastfalling:
 				is_taunting = false
 				if is_waitidling:
 					sprite_2d.play("jump")
@@ -368,7 +432,7 @@ func _physics_process(delta: float) -> void:
 				else:
 					velocity.y = JUMP_VELOCITY
 					sfx_jump.play()
-			if Input.is_action_just_released("jump") and jump_count < max_jump and not is_sitting and not is_fastfalling:
+			if Input.is_action_just_released("jump" + inputplayer) and jump_count < max_jump and not is_sitting and not is_fastfalling && !is_incutscene:
 				velocity.y *= 0.1
 			if not is_on_floor():
 				velocity.y = lerp(prevVelocity.y, velocity.y, 0.95)
@@ -385,7 +449,7 @@ func _physics_process(delta: float) -> void:
 			
 			# Fast Fall Code
 			if not is_climbing and not is_climbing_hori && can_carry:
-				if Input.is_action_just_pressed('sit') and not is_on_floor() and not is_sitting:
+				if Input.is_action_just_pressed('sit' + inputplayer) and not is_on_floor() and not is_sitting && !is_incutscene:
 					if is_fastfalling:
 						return #So you won't be able to press it again.
 					else:
@@ -397,16 +461,17 @@ func _physics_process(delta: float) -> void:
 						start_slam_dash()
 						sfx_slam_dash_start.play()
 						
-				if Input.is_action_just_released('sit') and not is_on_floor() and not is_sitting:
+				if Input.is_action_just_released('sit' + inputplayer) and not is_on_floor() and not is_sitting && !is_incutscene:
 					return
 
 			#Attacking Code (Custom Characters Exclusive)
 			if Input.is_action_just_pressed("grab") && can_attack && can_carry && !is_sitting && !is_fastfalling && !is_climbing && !is_climbing_hori:
 				attack()
+				is_throwing = true #This will make the animation the actually play than getting cut very quickly.
 
 			#Sitting Code
 			if not is_climbing and not is_climbing_hori && can_carry:
-				if Input.is_action_pressed('sit') and is_on_floor():
+				if Input.is_action_pressed('sit' + inputplayer) and is_on_floor() && !is_incutscene:
 					is_sitting = true
 					is_taunting = false
 					if (velocity.x > 1 || velocity.x < -1) and is_sitting:
@@ -414,22 +479,22 @@ func _physics_process(delta: float) -> void:
 							stand_shape.disabled = true
 							crouch_shape.disabled = false
 							sit_shape.disabled = true
-							sprite_2d.animation = "crouching_fast"
+							sprite_2d.play("crouching_fast")
 						else:
 							stand_shape.disabled = true
 							crouch_shape.disabled = false
 							sit_shape.disabled = true
-							sprite_2d.animation = "crouching"
+							sprite_2d.play("crouching")
 					else:
 						stand_shape.disabled = true
 						crouch_shape.disabled = true
 						sit_shape.disabled = false
-						sprite_2d.animation = "sit"
-				if Input.is_action_just_released('sit') and is_on_floor():
+						sprite_2d.play("sit")
+				if Input.is_action_just_released('sit' + inputplayer) and is_on_floor() && !is_incutscene:
 					if not_undertile():
 						is_sitting = false
 						stuck_undertile = false
-						sprite_2d.animation = "idle"
+						sprite_2d.play("idle")
 					else:
 						if stuck_undertile != true:
 							stand_shape.disabled = true
@@ -438,14 +503,14 @@ func _physics_process(delta: float) -> void:
 							stuck_undertile = true
 
 			if stuck_undertile && not_undertile():
-				sprite_2d.animation = "idle"
+				sprite_2d.play("idle")
 				is_sitting = false
 				stuck_undertile = false
 
 			#Run Input Code
-			if Input.is_action_pressed('run'):
+			if Input.is_action_pressed('run' + inputplayer) && !is_incutscene:
 				is_running = true
-			elif Input.is_action_just_released('run'):
+			elif Input.is_action_just_released('run' + inputplayer) && !is_incutscene:
 				is_running = false
 
 			#Damaged Code
@@ -455,21 +520,45 @@ func _physics_process(delta: float) -> void:
 				is_damaged = false
 			
 			#Taunting Code
-			if Input.is_action_just_pressed("taunt") && velocity.x == 0 && velocity.y == 0 && !is_sitting && !is_climbing && !is_climbing_hori && !is_fastfalling && !is_damaged:
+			if Input.is_action_just_pressed("taunt" + inputplayer) && !is_incutscene && velocity.x == 0 && velocity.y == 0 && !is_sitting && !is_climbing && !is_climbing_hori && !is_fastfalling && !is_damaged:
 				is_taunting = true
 				if is_waitidling:
 					is_waitidling = false
 					idle_timer.stop()
 					idle_wait_timer.stop()
-				sprite_2d.animation = "taunt"
+				sprite_2d.play("taunt")
 				taunt_sound.play()
 				shime_animation_player.play("sit_out")
 			
+			#Check Player Tags Code (Only for Multiplayer)
+			if Input.is_action_just_pressed("playertagcheck" + inputplayer) && ModeManager.is_multiplayer:
+				$Shime_AnimationPlayer_Multi.play("playerPos")
+			
+			#Teleportation Code
+			if Input.is_action_just_pressed("teleport" + inputplayer) && !is_incutscene && !is_sitting && !is_climbing && !is_climbing_hori && !is_fastfalling && !is_damaged:
+				if ModeManager.is_multiplayer:
+					if is_player1:
+						teleport.play()
+						game_manager.teleport_shimeji()
+					if is_player2:
+						teleport.play()
+						game_manager.teleport_shimeji_player2()
+					if is_player3:
+						teleport.play()
+						game_manager.teleport_shimeji_player3()
+					if is_player4:
+						teleport.play()
+						game_manager.teleport_shimeji_player4()
+				else:
+					teleport.play()
+					game_manager.teleport_shimeji()
+			
+			
 			# Get the input direction and handle the movement/deceleration.
 			# As good practice, you should replace UI actions with custom gameplay actions.
-			var direction := Input.get_axis("left", "right")
+			var direction := Input.get_axis("left" + inputplayer, "right" + inputplayer)
 			var was_on_floor = is_on_floor()
-			if direction && not is_taunting && not is_fastfalling && can_move:
+			if direction && not is_taunting && not is_fastfalling && can_move && !is_incutscene:
 				if is_sitting:
 					if is_running:
 						velocity.x = move_toward(velocity.x, direction * RUNCROUCH_SPEED, 45)
@@ -485,10 +574,10 @@ func _physics_process(delta: float) -> void:
 					velocity.x = move_toward(velocity.x, 0, 45)
 				else:
 					velocity.x = move_toward(velocity.x, 0, 40)
-					
+			
 			move_and_slide()
 			for i in get_slide_collision_count(): slam_dash_land(get_slide_collision(i))
-			if direction !=0 && !is_climbing:
+			if direction !=0 && !is_climbing && !is_incutscene:
 				sprite_2d.flip_h = direction > 0
 			
 func not_undertile():
@@ -504,14 +593,14 @@ func slam_dash_land(collision: KinematicCollision2D):
 			sprite_2d.play("damaged")
 			$Shime_AnimationPlayer_SlamDash.play("null")
 		else:
-			sprite_2d.animation = "land"
+			sprite_2d.play("land")
 			$Shime_AnimationPlayer_SlamDash.play("slam_land")
 			sfx_slam_dash_fall.stop()
 	
 func start_slam_dash():
 	is_fastfalling = true
 	velocity = Vector2.ZERO
-	sprite_2d.animation = "fall"
+	sprite_2d.play("fall")
 	$Shime_AnimationPlayer_SlamDash.play("slam_intro")
 
 func slam_dash():
@@ -549,7 +638,7 @@ func death():
 	if is_dead:
 		return
 		
-	sprite_2d.animation = "death"
+	sprite_2d.play("death")
 	ouch.play()
 	dead.play()
 	has_respawned = false
@@ -559,15 +648,54 @@ func play_death_effect(name):
 	$Shime_AnimationPlayer.play(name)
 	
 func respawn():
-	if game_manager.livesmax == 0:
-		game_manager.load_gameover()
+	is_dead = false
+	play_damaged_effect("blink")
+	shime_animation_player.play("RESET")
+	is_invincible = true
+	damaged_timer.start()
+	if ModeManager.is_multiplayer:
+		if is_player1:
+			if game_manager.livesmax == 0:
+				remove_from_group("players")
+				hide()
+				
+			else:
+				game_manager.respawn_shimeji()
+				print("Respawning Player 1")
+		if is_player2:
+			if game_manager.livesmax_p2 == 0:
+				remove_from_group("players")
+				hide()
+			else:
+				game_manager.respawn_shimeji_player2()
+				print("Respawning Player 2")
+		if is_player3:
+			if game_manager.livesmax_p3 == 0:
+				remove_from_group("players")
+				hide()
+			else:
+				game_manager.respawn_shimeji_player3()
+				print("Respawning Player 3")
+		if is_player4:
+			if game_manager.livesmax_p4 == 0:
+				remove_from_group("players")
+				hide()
+			else:
+				game_manager.respawn_shimeji_player4()
+				print("Respawning Player 4")
 	else:
-		is_dead = false
-		play_damaged_effect("blink")
-		shime_animation_player.play("RESET")
-		is_invincible = true
-		damaged_timer.start()
 		game_manager.respawn_shimeji()
+		print("Respawning Player")
+	if ModeManager.is_multiplayer:
+		if ModeManager.multi_2players && game_manager.livesmax == 0 && game_manager.livesmax_p2 == 0:
+			game_manager.load_gameover()
+		if ModeManager.multi_3players && game_manager.livesmax == 0 && game_manager.livesmax_p2 == 0 && game_manager.livesmax_p3 == 0:
+			game_manager.load_gameover()
+		if ModeManager.multi_4players && game_manager.livesmax == 0 && game_manager.livesmax_p2 == 0 && game_manager.livesmax_p3 == 0 && game_manager.livesmax_p4 == 0:
+			game_manager.load_gameover()
+	else:
+		if game_manager.livesmax == 0:
+			game_manager.load_gameover()
 
 func _on_damaged_timer_timeout() -> void:
 	is_invincible = false
@@ -594,17 +722,20 @@ func _on_sprite_2d_frame_changed() -> void:
 			sprite_2d.animation = "idle_dangling_loop"
 	elif sprite_2d.animation == "idle_dangling_end":
 		if sprite_2d.frame in idle_wait_frames:
-			sprite_2d.animation = "idle"
+			sprite_2d.play("idle")
 			is_waitidling = false
 	elif sprite_2d.animation == "taunt":
 		if sprite_2d.frame in end_taunt:
-			sprite_2d.animation = "idle"
+			sprite_2d.play("idle")
 			is_taunting = false
 	elif sprite_2d.animation == "throw":
 		if sprite_2d.frame in idle_wait_frames:
-			sprite_2d.animation = "idle"
-			attacking = false
-			hitbox_collision.disabled = true
+			sprite_2d.play("idle")
+			is_throwing = false
+	elif sprite_2d.animation == "throw_midair":
+		if sprite_2d.frame in idle_wait_frames:
+			sprite_2d.play("jump")
+			is_throwing = false
 	else:
 		footsteps_sounds.stop()
 		sfx_move_crouching.stop()
@@ -645,7 +776,10 @@ func attack():
 			area.get_parent().death()
 	
 	attacking = true
-	sprite_2d.animation = "throw"
+	if !is_on_floor():
+		sprite_2d.play("throw_midair")
+	else:
+		sprite_2d.play("throw")
 	hitbox_collision.disabled = false
 
 

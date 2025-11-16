@@ -1,0 +1,21 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: YIPPE!! You found them all!
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Thank you very much, small fella!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: As promise, here's you reward.
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Go inside the store, and get what you're looking for!
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Thanks again, small fella!
+[signal arg="happy"]
+[signal arg="gain_access"]
+[signal arg="end_cutscene"]

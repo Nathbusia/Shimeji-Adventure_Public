@@ -1,0 +1,28 @@
+friend: Bravo ! Vous avez terminé le dernier cours !
+[signal arg="normaltalk"]
+friend: Eh bien, je suppose que c'est tout.
+[signal arg="greatest"]
+friend: Vous avez terminé le Tutoriel. Vous êtes maintenant prêt à explorer davantage le Bureau lui-même et à commencer votre aventure.
+[signal arg="talking"]
+friend: J'espère que tout ce que vous apprendrez ici vous sera vraiment utile et vous donnera la force nécessaire pour terminer Shimeji Adventure.
+[signal arg="greatest"]
+friend: Tu as été un bon élève, mon ami. Et j'ai été un bon professeur ! N'est-ce pas ?
+[signal arg="normaltalk"]
+friend: Mais bref, dernière chose.
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: Pour terminer le niveau, il suffit de toucher cette étoile.\
+C'est une étoile de fin.
+[signal arg="talking"]
+friend: Une fois touché, le niveau est terminé, et vous passez au niveau suivant, ou choisissez n'importe quel autre niveau.
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend: Alors, je suppose que c'est tout.
+[signal arg="talking"]
+friend: Ce fut un plaisir de travailler avec vous, et j'espère bien vous revoir.
+[signal arg="talking"]
+friend: De plus, si jamais vous souhaitez revoir cette leçon, vous savez où venir. Droit? C'est celle qui s'intitule « Tutoriel \: Apprendre les bases ».
+[signal arg="greatest"]
+friend: Voilà, c'est tout pour moi. Touchez cette étoile, et votre aventure commencera à partir de là !
+[signal arg="waving"]
+friend: Bonne chance, mon pote !

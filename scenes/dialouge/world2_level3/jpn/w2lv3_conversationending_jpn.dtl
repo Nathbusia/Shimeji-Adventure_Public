@@ -1,0 +1,39 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: おや、こんにちは、みんな！この辺りで何か変わったものを見つけましたか？
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: いや？ まあいいや。だって最近、ポップアウトピートの会話に偶然出くわしたんだ。
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 今、彼が話している！聞いてごらん。
+（君たち二人もインターフライも、向こう側で何が起きているか耳を澄ませてくれ。ここでは、ポップアウトピートが従業員の一人とユーザービーム変換装置について話しているのが聞こえる。）
+[signal arg="pete_vc01"]
+pop_out_pete_jpn: さて、ユーザービームの変換は今のところどうですか？
+[signal arg="pete_vc02"]
+WorkerUserbeam_jpn: あのさ、あの上司のことなんだけど。ちょっと問題が起きてるんだ。
+[signal arg="pete_vc03"]
+pop_out_pete_jpn: えっ？！ どうしたんだ？
+[signal arg="pete_vc04"]
+WorkerUserbeam_jpn: どうやら、ダークウェブに侵入者（あるいは複数の侵入者）が潜んでいるようです。
+[signal arg="pete_vc05"]
+WorkerUserbeam_jpn: 彼らはユーザービームを次々と左右にスワイプしている。
+[signal arg="pete_vc06"]
+pop_out_pete_jpn: ぐわっ！！！これがインターフライの仕業か！あのろくでなしの虫め。どうやら自分で対処するしかないようだ。
+[signal arg="pete_vc07"]
+WorkerUserbeam_jpn: あそこに行くの？
+[signal arg="pete_vc08"]
+pop_out_pete_jpn: ああ。心配するな、俺はその虫けらと、そこの沼地から這い出てくるちっぽけな小僧どもを待ってやるさ。
+[signal arg="pete_vc09"]
+WorkerUserbeam_jpn: 了解、ボス。がんばってね！
+[signal arg="pete_vc10"]
+pop_out_pete_jpn: そろそろ彼らに「突然の」サプライズを仕掛ける時だ。ムハハハハ！
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: おっと！どうやら彼が私たちの存在に気づいたようだ。
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: まあ、彼と正面から戦うしかないだろうな。
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 郵便受けの設置に行ってくる。その間に、君はあそこに登ってポップアウトピートと合流してくれ。そこから追いつくから。
+[voice path="res://sfx/characters/npc/butterfly/jp/level3/sfx_butterfly_level3_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、やろうぜ、みんな。これだ！！
+[signal arg="end_cutscene"]

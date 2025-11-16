@@ -44,7 +44,8 @@ var credits = [
 		"APMMusic - Main Source of Music",
 		"Ded Good Music",
 		"Sonoton Recorded Music Library",
-		"Juice Music"
+		"Juice Music",
+		
 	],[
 		"Sound Effects Sources",
 		"Cymatics - Video Game Vol. 1",
@@ -55,7 +56,13 @@ var credits = [
 		"DOVA-SYNDROME (Only for the Disclaimer pop-in SFX)",
 		"ROBLOX (Only for the button sounds)",
 		"Sonic Generations (Only for the button sounds)",
-		"ToonTown Online (for the Slam Dash and Spring SFX)"
+		"ToonTown Online (for the Slam Dash and Spring SFX)",
+		"VoiceKiller - Voice of Interfly",
+		"VST Speek - Voice of Pop-Out Pete & Worker Userbeam",
+		"Wii U BIOS System - Mii Sounds (Used for Clerk Clara)",
+		"Microsoft Windows XP (Hearable during Pete's Bossfight)",
+		"Windows 98's TaDa! Sound Effect (Heard during World 2 Level 2)",
+		"Puyo Puyo (Only for Sticknode's Popping Sounds)"
 	],[
 		"Plug-ins",
 		"Dialogic Team",

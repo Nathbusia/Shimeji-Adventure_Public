@@ -6,5 +6,10 @@
 [node name="Testlevel2" type="Node2D"]
 script = ExtResource("1_tsbcs")
 levelname = "Test Level 2"
+levelname_spa = "Prueba de nivel 2"
+levelname_fre = "Test de niveau 2"
+levelname_ita = "Livello di prova 2"
+levelname_ger = "Teststufe 2"
+levelname_jpn = "テストレベル2"
 levelcreator = "By FlameOut56"
 levelthumb = ExtResource("2_sobsi")

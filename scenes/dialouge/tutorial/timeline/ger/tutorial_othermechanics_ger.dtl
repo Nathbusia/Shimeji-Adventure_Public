@@ -1,0 +1,20 @@
+friend: Da sind wir! Der letzte Schritt.
+[signal arg="talking"]
+friend: Nun, währenddessen wirst du einen einfachen Kurs durchlaufen, um alles zu testen, was dir in diesem Tutorial beigebracht wird.
+[signal arg="talking"]
+friend: Darin werden Sie also zwei weitere Mechaniken kennenlernen, die im normalen Spielverlauf auftauchen könnten...
+[signal arg="greatest"]
+friend: Eines sind die Sprungfedern. Du weißt schon, wo der Sprungfedern erwacht, und der Sprungfedern hat... was auch immer sie tun.
+[signal arg="talking"]
+friend: Aber wie dem auch sei, ja. Diese weißen Sprungfedern helfen dir, nach oben zu springen und dein Sprunglimit zurückzusetzen. Dadurch hast du mehr Zeit in der Luft.
+[signal arg="welcome"]
+friend: Vergesst nicht\: Wenn ihr Slam Dash auf den Sprungfedern einsetzt, springt ihr höher als sonst! Das ist besonders nützlich auf sehr hohen Oberflächen und Plattformen. (Dies gilt auch für den Einsatz von Slam Dash gegen Gegner.)
+[signal arg="normaltalk"]
+friend: Und schließlich wären da noch die Spike.
+[signal arg="talking"]
+friend: Das sind einige der gefährlichen Hindernisse. Und glauben Sie mir, Sie wollen sie nicht berühren...
+[signal arg="pointing"]
+friend: Sie sind spitz und so weiter, und wenn man sie berührt, verliert man Gesundheit. Seien Sie also vorsichtig.
+[signal arg="talking"]
+friend: Alles klar, versteht sich von selbst. Beende diesen letzten Kurs, und wir sehen uns am Ende!
+[signal arg="end_cutscene"]

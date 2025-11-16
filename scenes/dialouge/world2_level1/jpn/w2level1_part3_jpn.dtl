@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 素晴らしい！もうすっかりプロみたいですね！
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さて、ドラッグ可能なウィンドウについては、登攀中にドラッグできるものもあります。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: これですぐに頂上に到達できるはずです。本来は到達できなかった領域に到達できるようになります。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: ただし、いくつかの制限があります。上下に移動できるウィンドウは、上下方向にしかドラッグできません。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: そして、水平方向に移動できる窓は、左右にしかドラッグできません。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、どれか一つを選んで、次のドラッグ可能なウィンドウまでドラッグしてください。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part3_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: それでは、始めましょう。
+[signal arg="end_cutscene"]

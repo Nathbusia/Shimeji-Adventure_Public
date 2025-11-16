@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://baa6djqu7oa8i"]
+
+[ext_resource type="Script" uid="uid://c5jcyc37if64f" path="res://scenes/gameplaymechanics/world2/orb_ball_green.gd" id="1_dt2lm"]
+[ext_resource type="Texture2D" uid="uid://dafw5usyi5ma5" path="res://sprites/levels/world2/world2_orb_green0001.png" id="2_vtsur"]
+[ext_resource type="Texture2D" uid="uid://citchkd044gbe" path="res://sprites/levels/world2/world2_orb_green0002.png" id="3_s1r0o"]
+[ext_resource type="Texture2D" uid="uid://cu1h434m85xuj" path="res://sprites/levels/world2/world2_orb_green0003.png" id="4_cikpb"]
+[ext_resource type="Texture2D" uid="uid://bd2v8kxlml2eq" path="res://sprites/levels/world2/world2_orb_green0004.png" id="5_4tx5m"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cwxr6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vtsur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s1r0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cikpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4tx5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_cikpb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_s1r0o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_re68y"]
+radius = 24.3311
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7aun"]
+size = Vector2(50, 48)
+
+[node name="OrbBall_Green" type="RigidBody2D" groups=["orb_green"]]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_dt2lm")
+
+[node name="Ball" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_cwxr6")
+autoplay = "default"
+frame_progress = 0.289421
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+light_mask = 4
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_re68y")
+
+[node name="GrabHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabHitbox"]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_v7aun")

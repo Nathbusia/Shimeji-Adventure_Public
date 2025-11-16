@@ -24,7 +24,19 @@ func run_dialogue(dialogue_string):
 	Dialogic.start(dialogue_string)
 
 func _on_dialouge_start_time_timeout() -> void:
-	run_dialogue("world1_boss_openingintro")
+	match LanguageManager.language:
+		"spanish":
+			run_dialogue("world1_boss_openingintro_" + LanguageManager.shortlang)
+		"french":
+			run_dialogue("world1_boss_openingintro_" + LanguageManager.shortlang)
+		"italian":
+			run_dialogue("world1_boss_openingintro_" + LanguageManager.shortlang)
+		"german":
+			run_dialogue("world1_boss_openingintro_" + LanguageManager.shortlang)
+		"japanese":
+			run_dialogue("world1_boss_openingintro_" + LanguageManager.shortlang)
+		_:
+			run_dialogue("world1_boss_openingintro")
 	dialouge_start_time.stop()
 
 func DialogicSignal(argument:String):

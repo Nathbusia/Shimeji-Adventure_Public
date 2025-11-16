@@ -1,0 +1,15 @@
+[signal arg="greet"]
+[signal arg="vclip_p2_01"]
+interfly: Excellent work! Now let's move on.
+[signal arg="vclip_p2_02"]
+interfly: You see those windows with the brown-coloured tab?
+[signal arg="vclip_p2_03"]
+interfly: This means that your mouse can drag those windows.
+[signal arg="vclip_p2_04"]
+interfly: Dragging them allows you to move and reposition the available platforms.
+[signal arg="greet"]
+[signal arg="vclip_p2_05"]
+interfly: Let's give it a shot. Grab the windows with the left mouse click, and use your mouse cursor to position it correctly as the dot shows.
+[signal arg="vclip_p2_06"]
+interfly: On you go.
+[signal arg="end_cutscene"]

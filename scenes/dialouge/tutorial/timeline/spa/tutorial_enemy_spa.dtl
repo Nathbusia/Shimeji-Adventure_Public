@@ -1,0 +1,17 @@
+friend: ¡SANTO CIELO AZUL!! ¡SON LAS PELOTAS MALVADAS!!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Está bien. No te pongas en pánico. Aquí es donde tu combate entra en juego.
+[signal arg="greatest"]
+friend: Los enemigos como estos son fáciles de derribar. Solo tienes que saltar sobre su cabeza, ¡y desaparecen!
+[signal arg="talking"]
+friend: Pero, sin embargo, otros enemigos tienen diferentes habilidades y diferentes formas de atacarte. Así que, ten cuidado.
+[signal arg="welcome"]
+friend: Por cierto, también puedes realizar Slam Dash sobre ellos. Se realiza presionando hacia abajo mientras estás en el aire.
+[signal arg="greatest"]
+friend: Así que ahora que ya te has enterado...
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: ¡¡ACABEN CON ESOS TIPOS!!
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare: BWUEAH-HAHAHAHA!
+[signal arg="talking"]
+monstequare: ¡Así que tú eres el que ha estado causando todo este caos a mis pequeños Mean Balls y Mean Squares!
+[signal arg="talkingB"]
+monstequare: Estos pobres muchachitos me lo contaron todo sobre ti, ¡y ahora tendrás que vérselas conmigo!
+[signal arg="short"]
+monstequare: ¡Te daré la oportunidad de huir, o de que te dé una paliza!
+[wait time="2.0"]
+[signal arg="question"]
+monstequare: ¿No hay respuesta? ¡Entonces supongo que tendré que darte una paliza!
+[signal arg="short"]
+monstequare: ¡Ven a por mí, Héroe de Escritorio...!
+[signal arg="battlestart"]
+monstequare: ¡¡MUÉSTRAME TU PEOR!!
+[signal arg="beginboss"]

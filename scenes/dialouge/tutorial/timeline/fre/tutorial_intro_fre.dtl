@@ -1,0 +1,22 @@
+friend: Eh bien, bonjour ! Je suis ravi que vous soyez là.
+[signal arg="pointing"]
+friend: Je suis Stickbuddy ! Votre petit assistant, et votre maître !
+[signal arg="normaltalk"]
+friend: Je plaisante !
+[signal arg="talking"]
+friend: Mais bon, j'ai entendu dire que tu es nouveau dans ce truc de "Shimeji Adventure".
+[signal arg="talking"]
+friend: Eh bien, alors. Avant de commencer, j'aimerais dire ceci...
+[signal arg="welcome"]
+friend: BIENVENUE DANS SHIMEJI ADVENTURE !!
+[signal arg="normaltalk"]
+friend: Voilà. C'est beaucoup mieux...
+[signal arg="talking"]
+friend: Bon, passons maintenant aux choses essentielles.
+[signal arg="talking"]
+friend: Vous devriez probablement savoir comment vous déplacer. N'est-ce pas ? Vous savez, utilisez les touches fléchées gauche ou droite pour déplacer votre Shimeji.
+[signal arg="talking"]
+friend: Ou n'importe quelle touche que vous avez configurée dans le menu Keybinding fera l'affaire !
+[signal arg="pointing"]
+friend: Viens ici, je vais t'expliquer plus en détail ce qu'il faut faire.
+[signal arg="end_cutscene"]

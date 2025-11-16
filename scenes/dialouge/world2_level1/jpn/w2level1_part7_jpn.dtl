@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: おめでとう、みんな！！インターネット上のすべてのテストと指示をクリアできたね！
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: マウス カーソル、ドラッグ可能なウィンドウ、電子メール シューターなどについて学んだことすべてにより、インターネット自体の内部に入る準備が整ったと思います。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 興奮してしまってすみません…さて、本題に戻ります。
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、あの輝く星をタッチしてこのウィンドウに進み、インターネットの旅を始めましょう！
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、中に入って、ポップアウト・ピートの企みを完全に阻止しよう！
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part7_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 現地でお会いしましょう、皆さん！
+[signal arg="end_cutscene"]

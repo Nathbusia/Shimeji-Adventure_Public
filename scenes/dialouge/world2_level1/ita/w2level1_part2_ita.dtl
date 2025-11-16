@@ -1,0 +1,15 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ottimo lavoro! Ora andiamo avanti.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: Vedi quelle finestre con la linguetta marrone?
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ciò significa che il mouse può trascinare quelle finestre.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Trascinandoli è possibile spostare e riposizionare le piattaforme disponibili.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: Proviamo. Clicca con il tasto sinistro del mouse sulle finestre e usa il cursore del mouse per posizionarle correttamente come indicato dal punto.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part2_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Vai pure.
+[signal arg="end_cutscene"]

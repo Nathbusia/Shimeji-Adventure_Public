@@ -1,0 +1,412 @@
+[gd_scene load_steps=21 format=3 uid="uid://b5tqqs752q2db"]
+
+[ext_resource type="Texture2D" uid="uid://oyihgm2ncwvs" path="res://sprites/levels/world2/world2_emailbox_back.png" id="1_ltqbr"]
+[ext_resource type="Script" uid="uid://dm6fc3yqag7ul" path="res://scenes/gameplaymechanics/world2/email_shooter.gd" id="1_prlfj"]
+[ext_resource type="Texture2D" uid="uid://bubiu6ih6h203" path="res://sprites/levels/world2/world2_emailbox_front.png" id="2_lehjn"]
+[ext_resource type="Texture2D" uid="uid://crv78wc1foj5r" path="res://sprites/levels/world2/world2_emailbox_notification.png" id="3_oak8k"]
+[ext_resource type="FontFile" uid="uid://bu0f0h2m1neee" path="res://fonts/Kid Knowledge 1.otf" id="4_crifj"]
+[ext_resource type="AudioStream" uid="uid://dsgeyh0kg27p7" path="res://sfx/gameplay/mailbox/sfx_mailbox_shoot.ogg" id="5_jxlnk"]
+[ext_resource type="AudioStream" uid="uid://ckiot0muifhu7" path="res://sfx/gameplay/mailbox/sfx_mailbox_newmail.ogg" id="6_prlfj"]
+[ext_resource type="AudioStream" uid="uid://dfnrn0j4sbe0i" path="res://sfx/gameplay/mailbox/sfx_mailbox_newmail_jingle.ogg" id="7_3j3et"]
+[ext_resource type="AudioStream" uid="uid://ds8iv1547ccxo" path="res://sfx/gameplay/mailbox/sfx_mailbox_yougotmail.ogg" id="8_5i4fk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4fx8"]
+size = Vector2(95, 60)
+
+[sub_resource type="Animation" id="Animation_prlfj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_back:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EmailBox_front:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jxlnk"]
+resource_name = "shoot"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_back:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0.765), Vector2(1, 1.155), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EmailBox_front:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 0.82), Vector2(1, 1.11), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3j3et"]
+_data = {
+&"RESET": SubResource("Animation_prlfj"),
+&"shoot": SubResource("Animation_jxlnk")
+}
+
+[sub_resource type="Animation" id="Animation_y4fx8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_Notification:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EmailBox_Notification:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(79, -16)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EmailBox_Notification:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SFX/EmailNewMail:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SFX/EmailNewMailJin:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SFX/EmailVoice:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_5i4fk"]
+resource_name = "bop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_Notification:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.65, 0.65), Vector2(1.145, 1.145), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3j3et"]
+resource_name = "fadein"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_Notification:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.287174, 2.29739),
+"update": 0,
+"values": [Vector2(79, 55.595), Vector2(79, -16)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EmailBox_Notification:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.287175, 2.54912),
+"update": 0,
+"values": [Vector2(0.61, 0.61), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EmailBox_Notification:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SFX/EmailNewMail:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SFX/EmailNewMailJin:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.25),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SFX/EmailVoice:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_xmewd"]
+resource_name = "fadeout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("EmailBox_Notification:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.277392, 4.43827),
+"update": 0,
+"values": [Vector2(79, -16), Vector2(79, 55.595)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("EmailBox_Notification:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.258816, 4.59479),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.61, 0.61)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("EmailBox_Notification:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1i6g8"]
+_data = {
+&"RESET": SubResource("Animation_y4fx8"),
+&"bop": SubResource("Animation_5i4fk"),
+&"fadein": SubResource("Animation_3j3et"),
+&"fadeout": SubResource("Animation_xmewd")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jxlnk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prlfj"]
+size = Vector2(97, 39)
+
+[node name="EmailShooter" type="RigidBody2D" groups=["email_shooter"]]
+collision_layer = 4
+collision_mask = 5
+script = ExtResource("1_prlfj")
+
+[node name="EmailBox_back" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 96.0
+offset_bottom = 48.0
+pivot_offset = Vector2(48, 48)
+texture = ExtResource("1_ltqbr")
+
+[node name="EmailSpawn" type="Marker2D" parent="."]
+position = Vector2(48, -14)
+
+[node name="EmailBox_front" type="TextureRect" parent="."]
+texture_filter = 1
+offset_top = 4.0
+offset_right = 95.0
+offset_bottom = 65.0
+pivot_offset = Vector2(48, 61)
+texture = ExtResource("2_lehjn")
+
+[node name="EmailBox_Notification" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 79.0
+offset_top = -16.0
+offset_right = 114.0
+offset_bottom = 19.0
+pivot_offset = Vector2(18, 15)
+texture = ExtResource("3_oak8k")
+
+[node name="AmountNumber" type="Label" parent="EmailBox_Notification"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 13.0
+offset_top = 7.0
+offset_right = 23.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("4_crifj")
+theme_override_font_sizes/font_size = 26
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="EmailShoot" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("5_jxlnk")
+volume_db = 8.0
+bus = &"sfx"
+
+[node name="EmailNewMail" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("6_prlfj")
+volume_db = 8.0
+bus = &"sfx"
+
+[node name="EmailNewMailJin" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("7_3j3et")
+volume_db = 8.0
+bus = &"sfx"
+
+[node name="EmailVoice" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("8_5i4fk")
+bus = &"sfx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(47.5, 36)
+shape = SubResource("RectangleShape2D_y4fx8")
+
+[node name="EmailAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3j3et")
+}
+
+[node name="NotificationAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1i6g8")
+}
+
+[node name="ShootButton" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 95.0
+offset_bottom = 66.0
+focus_mode = 0
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="RanOutTimer" type="Timer" parent="."]
+wait_time = 4.0
+
+[node name="RanOutBar" type="ProgressBar" parent="."]
+offset_left = 19.0
+offset_top = 59.0
+offset_right = 73.0
+offset_bottom = 63.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_jxlnk")
+show_percentage = false
+
+[node name="GrabHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabHitbox"]
+light_mask = 4
+position = Vector2(47.5, 46)
+shape = SubResource("RectangleShape2D_prlfj")
+
+[node name="EmailHitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EmailHitBox"]
+position = Vector2(47.5, 36)
+shape = SubResource("RectangleShape2D_y4fx8")
+
+[node name="PoofMark" type="Marker2D" parent="."]
+position = Vector2(48, 36)
+
+[connection signal="pressed" from="ShootButton" to="." method="_on_shoot_button_pressed"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="RanOutTimer" to="." method="_on_ran_out_timer_timeout"]

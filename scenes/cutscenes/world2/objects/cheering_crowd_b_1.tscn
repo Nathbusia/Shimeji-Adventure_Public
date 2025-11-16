@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://ddp8ipog2twq0"]
+
+[ext_resource type="Texture2D" uid="uid://6qjtva20gcih" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdB0001.png" id="1_rp5sj"]
+[ext_resource type="Texture2D" uid="uid://bw01xeuxj6sfy" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdB0002.png" id="2_ykbqd"]
+[ext_resource type="Texture2D" uid="uid://cbvh8lp4r7kg" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdB0003.png" id="3_pd4k7"]
+[ext_resource type="Texture2D" uid="uid://c3nbrfbvey4p" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdB0004.png" id="4_qormm"]
+[ext_resource type="Texture2D" uid="uid://p5ay83r2evqh" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdB0005.png" id="5_a6vsf"]
+[ext_resource type="Script" uid="uid://dqux6apq6omws" path="res://scenes/cutscenes/world2/objects/crowd_sprite.gd" id="6_ykbqd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nx1fl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rp5sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ykbqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pd4k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qormm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a6vsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_pd4k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ykbqd")
+}],
+"loop": true,
+"name": &"cheer",
+"speed": 12.0
+}]
+
+[node name="CheeringCrowdB1" type="Node2D"]
+
+[node name="CrowdSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_nx1fl")
+animation = &"cheer"
+autoplay = "cheer"
+frame_progress = 0.09128729
+offset = Vector2(0, -62)
+script = ExtResource("6_ykbqd")

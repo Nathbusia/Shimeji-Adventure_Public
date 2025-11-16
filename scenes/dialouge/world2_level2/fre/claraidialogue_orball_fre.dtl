@@ -1,0 +1,21 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Youpi ! Vous les avez tous trouvés !
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Merci beaucoup, petit bonhomme !
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Comme promis, voici ta récompense.
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Entrez dans le magasin et trouvez ce que vous cherchez !
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Merci encore, petit bonhomme !
+[signal arg="happy"]
+[signal arg="gain_access"]
+[signal arg="end_cutscene"]

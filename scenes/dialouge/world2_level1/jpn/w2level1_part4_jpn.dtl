@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: あらまあ…どうやら問題が起きたみたいだ。
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 友よ。窓にべったりと付着しているあの緑色のネバネバしたものは…「スティクノード」と呼ばれるものだ。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: これらのキャラクターは、特定のドラッグ可能なウィンドウに張り付くと、しっかりと掴み続け、倒されるまでそのドラッグ可能なウィンドウを一切動かさせない。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 彼らを倒す唯一の方法は、彼らに向かって歩いていき、横にいる場合は押しつぶすか、あるいは普段のように上から踏みつけることです。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 彼らに対処する方法は他にもありますが、それについては後ほど説明します。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: でも今は、これらのスティックノードをここから押し出して、ドラッグ可能なウィンドウの位置を調整して、先に進めるようにしてくれ。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part4_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、出発しましょう！
+[signal arg="end_cutscene"]

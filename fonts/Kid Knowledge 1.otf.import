@@ -1,0 +1,35 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://bu0f0h2m1neee"
+path="res://.godot/imported/Kid Knowledge 1.otf-5eb073f6723b4e2c481a142641eea57d.fontdata"
+
+[deps]
+
+source_file="res://fonts/Kid Knowledge 1.otf"
+dest_files=["res://.godot/imported/Kid Knowledge 1.otf-5eb073f6723b4e2c481a142641eea57d.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=4
+keep_rounding_remainders=true
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

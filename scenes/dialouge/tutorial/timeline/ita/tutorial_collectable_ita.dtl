@@ -1,0 +1,31 @@
+friend: Ottimo lavoro! E guarda un po'! Nemmeno un graffio!
+[signal arg="talking"]
+friend: Se ti sei fatto male, puoi toccare questi cerchi bianchi fluttuanti.
+[signal arg="normaltalk"]
+[signal arg="signhealth"]
+friend: Questi sono la salute. Ovviamente rigenerano la tua salute.
+[signal arg="pointing"]
+[signal arg="signhealthbar"]
+friend: E la tua salute, lì in alto a sinistra, è piuttosto importante...
+[signal arg="talking"]
+[signal arg="signhealthbar_empty"]
+friend: Hai a disposizione solo 5 punti salute per tutta la durata del gioco, e se i tuoi punti salute scendono a zero, sei spacciato! Perderai una vita.
+[signal arg="greatest"]
+[signal arg="signlives"]
+friend: Si inizia con 3 vite in ogni livello (anche se il numero di vite verrà salvato durante la modalità Storia).
+[signal arg="talking"]
+friend: Se hai finito le vite a disposizione, probabilmente sai già cosa succederà dopo... Giusto?
+[signal arg="talking"]
+[signal arg="sign1up"]
+friend: Ci sono quei 1-up in giro. Hanno una certa somiglianza con te.
+[signal arg="greatest"]
+friend: Se ne trovate uno, assicuratevi di prenderlo. Sono molto utili, soprattutto quando le cose si fanno difficili!
+[signal arg="normaltalk"]
+[signal arg="signsquare"]
+friend: E per quanto riguarda quei quadrati buffi, beh, sono semplicemente... quadrati buffi.
+[signal arg="talking"]
+friend: Puoi raccoglierne quante ne vuoi. Oppure ignorarle. Sì.
+[signal arg="talking"]
+[signal arg="signempty"]
+friend: Bene. Raccogli tutti questi oggetti da collezione e poi passeremo alla fase successiva. Questa lezione è quasi finita.
+[signal arg="end_cutscene"]

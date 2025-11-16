@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Erstaunlich! Du bist wirklich ein guter Schatzsucher, nicht wahr?
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Jetzt fehlt nur noch einer. Los, hol dir den letzten Orb Ball!
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Nochmals vielen Dank!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

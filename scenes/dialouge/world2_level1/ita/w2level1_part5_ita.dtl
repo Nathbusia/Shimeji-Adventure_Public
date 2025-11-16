@@ -1,0 +1,26 @@
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Bene, bene. Sembra che gli Sticknodes ora si attacchino sotto quelle finestre trascinabili.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: Ora è il momento perfetto per condividere un altro modo per sconfiggerli.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Se c'è un nemico o un oggetto in alto con cui è impossibile interagire, avrai bisogno della nostra utile scatola. L'Email Shooter!
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Cliccandoci sopra con il tasto sinistro del mouse invierai delle email. Puoi inviare solo una email alla volta. Quindi, devi aspettare che l'email sia stata lanciata, distrutta o abbia volato per 3 secondi.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: Puoi raccoglierli con il pulsante Grab e spostarli in un altro luogo. Diamine! Puoi persino sparare mentre li tieni in mano!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Inoltre, puoi anche saltarci sopra per guadagnare altezza! Questo, ovviamente, se sei più veloce di loro.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Una volta esaurite le e-mail, ci vorranno almeno 5 secondi prima che quella nuova venga inviata nella casella.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_08_ita.ogg" volume="2.0" bus="voices"]
+interfly: Una volta fatto questo, potrai sparargli di nuovo.
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_09_ita.ogg" volume="2.0" bus="voices"]
+interfly: Bene, procediamo. Utilizza l'Email Shooter per abbattere quei due Sticknode, quindi riposiziona la finestra trascinabile.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level1/sfx_butterfly_level1_part5_10_ita.ogg" volume="2.0" bus="voices"]
+interfly: Abbiamo quasi finito!
+[signal arg="end_cutscene"]

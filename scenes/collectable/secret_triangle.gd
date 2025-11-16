@@ -20,7 +20,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if is_collected:
 		return
 	else:
-		if (body.name == "ShimejiCharacter_Playable") && not is_collected:
+		if (body.name == "ShimejiCharacter_Playable") || (body.name == "ShimejiCharacter_Playable_Player2") || (body.name == "ShimejiCharacter_Playable_Player3") || (body.name == "ShimejiCharacter_Playable_Player4") && not is_collected:
 			animation_player.play("popin_out")
 			triangle_collected.play("collect")
 			ray_anim_collected.play("collect")

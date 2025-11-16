@@ -1,0 +1,17 @@
+friend: ¡Uy! Eso no es bueno... Una pared.
+[signal arg="normaltalkB"]
+friend: Pero hay algo arriba. Aunque, un solo salto no va a ser suficiente para esto.
+[signal arg="talkingB"]
+[signal arg="flippedoff"]
+friend: Ahora esta es la parte donde usas tu doble salto.
+[signal arg="talkingB"]
+friend: Presiona la tecla Espacio para saltar, y luego presiona nuevamente para realizar un doble salto.
+[signal arg="pointingB"]
+friend: Recuerda. Un pequeño toque de la tecla Espacio te dará pequeños saltos...
+[signal arg="welcomeB"]
+friend: Mientras lo mantienes presionado hasta que alcanzas tu límite de salto para dar un gran salto. Como una rana saltarina.
+[signal arg="talkingB"]
+friend: Así que para esto. Mantén presionada la barra espaciadora y luego vuelve a presionarla para llegar a la cima.
+[signal arg="greatestB"]
+friend: ¡Bien! ¡Vamos a intentarlo!
+[signal arg="end_cutsceneB"]

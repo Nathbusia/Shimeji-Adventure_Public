@@ -1,0 +1,28 @@
+friend: Ben fatto! Hai completato l'ultimo corso!
+[signal arg="normaltalk"]
+friend: Bene, credo che sia tutto.
+[signal arg="greatest"]
+friend: Hai completato con successo il Tutorial. Ora sei pronto per esplorare più a fondo il desktop e iniziare la tua avventura.
+[signal arg="talking"]
+friend: Spero che tutto ciò che imparerai qui ti sarà davvero utile e ti renderà abbastanza forte da poter giocare a Shimeji Adventure.
+[signal arg="greatest"]
+friend: Sei stato un bravo studente, amico mio. E io sono stato un bravo insegnante, non è vero?
+[signal arg="normaltalk"]
+friend: Comunque, un'ultima cosa.
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: Per completare il livello, basta toccare quella stella. Questa è una stella finita.
+[signal arg="talking"]
+friend: Una volta toccato, il livello è completato e si passa al livello successivo, oppure si possono scegliere altri livelli.
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend: Quindi, credo sia tutto.
+[signal arg="talking"]
+friend: È stato un piacere lavorare con te e spero davvero di rivederti presto.
+[signal arg="talking"]
+friend: Inoltre, se in futuro voleste ripetere la lezione, sapete dove trovarla, giusto? È quella intitolata "Tutorial\: Apprendimento delle basi".
+[signal arg="greatest"]
+friend: Bene, questo è tutto da parte mia. Tocca quella stella e da lì inizia la tua avventura!
+[signal arg="waving"]
+friend: BUONA FORTUNA AMICO!!
+[signal arg="end_cutscene"]

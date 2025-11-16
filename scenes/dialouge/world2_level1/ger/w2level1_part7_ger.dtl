@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_01_ger.ogg" volume="2.0" bus="voices"]
+interfly: Herzlichen Glückwunsch, Freunde! Ihr habt es geschafft, alle Tests und Anweisungen im Internet zu absolvieren!
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_02_ger.ogg" volume="2.0" bus="voices"]
+interfly: Mit all dem, was Sie über den Mauszeiger, verschiebbare Fenster, E-Mail-Shooter usw. gelernt haben, sind Sie meiner Meinung nach bereit, sich ins Internet zu begeben.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_03_ger.ogg" volume="2.0" bus="voices"]
+interfly: Entschuldigen Sie meine Aufregung... Nun gut.
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_04_ger.ogg" volume="2.0" bus="voices"]
+interfly: Treten Sie nun an dieses Fenster heran, indem Sie diesen strahlenden Stern berühren, um Ihre Reise im Internet zu beginnen!
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_05_ger.ogg" volume="2.0" bus="voices"]
+interfly: Jetzt gehen wir rein und machen Pop-Out Petes Plan ein für alle Mal ein Ende!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part7_06_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wir sehen uns dort, Freunde!
+[signal arg="end_cutscene"]

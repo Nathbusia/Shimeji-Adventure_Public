@@ -12,6 +12,8 @@ size = Vector2(70, 70)
 [node name="ThrowableObject" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 5
+center_of_mass_mode = 1
+center_of_mass = Vector2(474.23, 484.83)
 script = ExtResource("1_sxgul")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

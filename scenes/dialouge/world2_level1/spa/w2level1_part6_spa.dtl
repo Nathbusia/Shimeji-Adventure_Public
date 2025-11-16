@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_01_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Genial! Ahora pasamos al último paso.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_02_spa.ogg" volume="2.0" bus="voices"]
+interfly: Como puedes ver, hay tres agujeros de colores en la pared\: azul, rojo y verde.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_03_spa.ogg" volume="2.0" bus="voices"]
+interfly: Y quizá te preguntes\: «¿Qué hay dentro de estos agujeros?».
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_04_spa.ogg" volume="2.0" bus="voices"]
+interfly: En pocas palabras, amigos, a lo largo de estos mapas hay tres bolas Orb rodando por aquí. Las tres coinciden con sus respectivos colores.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_05_spa.ogg" volume="2.0" bus="voices"]
+interfly: Todo lo que tienes que hacer es encontrarlos e insertarlos en los agujeros del color correcto.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_06_spa.ogg" volume="2.0" bus="voices"]
+interfly: Una vez insertadas todas, la puerta se desbloquea y ya estás listo para seguir explorando Internet.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_07_spa.ogg" volume="2.0" bus="voices"]
+interfly: Bien, sin más preámbulos, ¡adelante, encuentra esas tres bolas esféricas!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part6_08_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Buena suerte! Cuento contigo.
+[signal arg="end_cutscene"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpymoc8imwjte"]
+
+[ext_resource type="Script" uid="uid://ba85d54gf1ihe" path="res://scenes/levelmanager/world2_level3.gd" id="1_xr1l4"]
+[ext_resource type="Texture2D" uid="uid://dtmubaic204q6" path="res://sprites/menu/levelselect/world2/levelselect_thumbnail_w2level3.png" id="2_nelc6"]
+
+[node name="World2_Level3" type="Node2D"]
+script = ExtResource("1_xr1l4")
+levelname = "The Dark Web"
+levelname_spa = "La Red Oscura"
+levelname_fre = "Le Dark Web"
+levelname_ita = "Il Dark Web"
+levelname_ger = "Das Darknet"
+levelname_jpn = "ダークウェブ"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_nelc6")

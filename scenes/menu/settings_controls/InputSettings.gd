@@ -14,10 +14,105 @@ var input_actions = {
 	"run" = "Run/Dash",
 	"jump" = "Jump",
 	"sit" = "Sit/Slam Dash/Climb Down",
-	"grab" = "Grab/Interact/Custom Attack",
+	"grab" = "Grab/Custom Attack",
+	"chat" = "Interact",
 	"start" = "Start",
+	"pause" = "Pause",
 	"dialogic_default_action" = "Dialogue Action",
-	"taunt" =  "Taunt"
+	"taunt" =  "Taunt",
+	"shoot" = "Shoot (Power Up)",
+	"playertagcheck" = "Check Player Tag (Multiplayer Only)",
+	"teleport" = "Teleport"
+}
+
+var input_actions_spa = {
+	"left" = "Izquierda",
+	"right" = "Derecha",
+	"up" = "Treparse",
+	"run" = "Correr",
+	"jump" = "Brinco",
+	"sit" = "Sentar/Slam Dash/Baja",
+	"grab" = "Grab/Ataque personalizado",
+	"chat" = "Interactuar",
+	"start" = "Empiezo",
+	"pause" = "Pausa",
+	"dialogic_default_action" = "Acción de diálogo",
+	"taunt" =  "Pulla",
+	"shoot" = "Dispara (Power Up)",
+	"playertagcheck" = "Comprobar etiqueta de jugador (solo multijugador)",
+	"teleport" = "Teletransportarse"
+}
+
+var input_actions_fre = {
+	"left" = "Gauche",
+	"right" = "Droite",
+	"up" = "Grimper Haut",
+	"run" = "Courir",
+	"jump" = "Saute",
+	"sit" = "S'asseoir/Slam Dash/Descendre",
+	"grab" = "Grab/Attaque personnalisée",
+	"chat" = "Interagir",
+	"start" = "Démarrer",
+	"pause" = "Pause",
+	"dialogic_default_action" = "Action de dialogue",
+	"taunt" =  "Raillerie",
+	"shoot" = "Tirer (Power Up)",
+	"playertagcheck" = "Vérifiez le Tag du Joueur (Multijoueur uniquement)",
+	"teleport" = "Téléporter"
+}
+
+var input_actions_ita = {
+	"left" = "Sinistra",
+	"right" = "Destro",
+	"up" = "Salire",
+	"run" = "Correre",
+	"jump" = "Salto",
+	"sit" = "Sedersi/Slam Dash/Scendere",
+	"grab" = "Grab/Attacco personalizzato",
+	"chat" = "Interagire",
+	"start" = "Inizio",
+	"pause" = "Pausa",
+	"dialogic_default_action" = "Dialogo Azione",
+	"taunt" =  "Provocare",
+	"shoot" = "Sparare (Power Up)",
+	"playertagcheck" = "Controlla il Tag del Giocatore (Solo Multigiocatore)",
+	"teleport" = "Teletrasportarsi"
+}
+
+var input_actions_ger = {
+	"left" = "Linke",
+	"right" = "Rechte",
+	"up" = "Hinaufklettern",
+	"run" = "Laufen",
+	"jump" = "Springen",
+	"sit" = "Sitzen/Slam Dash/Absteigen",
+	"grab" = "Grab/Benutzerdefinierter Angriff",
+	"chat" = "Interagieren",
+	"start" = "Start",
+	"pause" = "Pause",
+	"dialogic_default_action" = "Dialogaktion",
+	"taunt" =  "Verspotten",
+	"shoot" = "Schießen (Power Up)",
+	"playertagcheck" = "Player-Tag prüfen (nur Multiplayer)",
+	"teleport" = "Teleportieren"
+}
+
+var input_actions_jpn = {
+	"left" = "左に移動",
+	"right" = "右に移動",
+	"up" = "登る",
+	"run" = "走る/ダッシュ",
+	"jump" = "ジャンプ",
+	"sit" = "座る/スラムダッシュ/降りる",
+	"grab" = "掴む/カスタム攻撃",
+	"chat" = "交流する",
+	"start" = "始める",
+	"pause" = "ポーズ",
+	"dialogic_default_action" = "対話アクション",
+	"taunt" =  "からかう",
+	"shoot" = "シュート（パワーアップ）",
+	"playertagcheck" = "プレイヤータグを確認する（マルチプレイヤーのみ）",
+	"teleport" = "テレポート"
 }
 
 func _ready():
@@ -33,7 +128,19 @@ func _create_action_list():
 		var action_label = button.find_child("LabelAction")
 		var input_label = button.find_child("LabelInput")
 		
-		action_label.text = input_actions[action]
+		match LanguageManager.language:
+			"spanish":
+				action_label.text = input_actions_spa[action]
+			"french":
+				action_label.text = input_actions_fre[action]
+			"italian":
+				action_label.text = input_actions_ita[action]
+			"german":
+				action_label.text = input_actions_ger[action]
+			"japanese":
+				action_label.text = input_actions_jpn[action]
+			_:
+				action_label.text = input_actions[action]
 		
 		var events = InputMap.action_get_events(action)
 		if events.size() > 0:
@@ -49,12 +156,24 @@ func _on_input_button_pressed(button, action):
 		is_remapping = true
 		action_to_remap = action
 		remapping_button = button
-		button.find_child("LabelInput").text = "Press Key/Button to bind..."
+		match LanguageManager.language:
+			"spanish":
+				button.find_child("LabelInput").text = "Presiona la tecla/botón para vincular..."
+			"french":
+				button.find_child("LabelInput").text = "Appuyez sur la touche/bouton pour lier..."
+			"italian":
+				button.find_child("LabelInput").text = "Premi Tasto/Pulsante per assegnare..."
+			"german":
+				button.find_child("LabelInput").text = "Drücken Sie eine Taste/Schaltfläche, um sie zuzuweisen..."
+			"japanese":
+				button.find_child("LabelInput").text = "キー／ボタンを押して割り当ててください..."
+			_:
+				button.find_child("LabelInput").text = "Press Key/Button to bind..."
 
 func _input(event):
 	if is_remapping:
 		if (
-			event is InputEventKey ||
+			event is InputEventKey || event is InputEventJoypadButton || event is InputEventJoypadMotion ||
 			(event is InputEventMouseButton && event.pressed)
 		):
 			#Preventing Double clicking

@@ -5,6 +5,22 @@ signal loading_screen_has_full_coverage
 @onready var loading_screen: Panel = $LoadThing/LoadingScreen
 @onready var loadanim: AnimationPlayer = $LoadThing/LoadingScreen/loadanim
 
+func _ready() -> void:
+	match LanguageManager.language:
+		"spanish":
+			$LoadThing/LoadingScreen/Label.text = "Cargando..."
+		"french":
+			$LoadThing/LoadingScreen/Label.text = "Chargement..."
+		"italian":
+			$LoadThing/LoadingScreen/Label.text = "Caricamento..."
+		"german":
+			$LoadThing/LoadingScreen/Label.text = "Wird geladen..."
+		"japanese":
+			$LoadThing/LoadingScreen/Label.text = "LOADING..."
+		_:
+			return
+			#Engish once more
+
 func _update_progress_bar(_new_value: float) -> void:
 	pass
 	

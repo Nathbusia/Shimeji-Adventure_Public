@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_01_ger.ogg" volume="2.0" bus="voices"]
+interfly: Großartige Arbeit! Du wirst schon fast zum Profi!
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_02_ger.ogg" volume="2.0" bus="voices"]
+interfly: Mit den Drag-Funktionen können einige dieser Fenster nun während des Ziehens erklommen werden.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_03_ger.ogg" volume="2.0" bus="voices"]
+interfly: Das sollte Ihnen einen schnellen Aufstieg an die Spitze ermöglichen. So können Sie Bereiche erreichen, die Ihnen zuvor verschlossen waren.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_04_ger.ogg" volume="2.0" bus="voices"]
+interfly: Es gibt jedoch einige Einschränkungen. Fenster, die man hoch- und runterklettern kann, lassen sich nur nach oben und unten ziehen...
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_05_ger.ogg" volume="2.0" bus="voices"]
+interfly: Und Fenster, die man von unten erklimmen kann, lassen sich nur nach links und rechts ziehen.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_06_ger.ogg" volume="2.0" bus="voices"]
+interfly: Also, springen Sie in eines hinein und ziehen Sie es zu den nächsten verschiebbaren Fenstern.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part3_07_ger.ogg" volume="2.0" bus="voices"]
+interfly: Dann lass uns weitermachen.
+[signal arg="end_cutscene"]

@@ -5,7 +5,18 @@
 
 [node name="TemplateBoss" type="Node2D"]
 script = ExtResource("1_10ceh")
+multilingual = true
 levelname = "Template Boss"
+levelname_spa = "Jefe de Plantilla"
+levelname_fre = "Modèle Boss"
+levelname_ita = "Capo Modello"
+levelname_ger = "Vorlagen-Boss"
+levelname_jpn = "テンプレートボス"
 levelcreator = "By Unknown"
 leveldesc = "A simple Template Boss Mod for you to get started on creating your very own boss battle! Check the Level Guide on the Source Code for more info about making bosses."
+leveldesc_spa = "¡Un simple Mod de Plantilla de Jefe para que empieces a crear tu propia batalla de jefes! Consulta la Guía de Niveles en el Código Fuente para más información sobre cómo hacer jefes."
+leveldesc_fre = "Un simple Mod de Template de Boss pour vous aider à commencer à créer votre propre bataille de boss ! Consultez le Guide de Niveau dans le Code Source pour plus d'informations sur la création de boss."
+leveldesc_ita = "Un semplice Mod Template Boss per aiutarti a iniziare a creare la tua personale battaglia contro i boss!Controlla la Guida ai Livelli nel Codice Sorgente per ulteriori informazioni su come creare boss."
+leveldesc_ger = "Ein einfaches Template-Boss-Mod, damit du mit der Erstellung deiner eigenen Bosskämpfe beginnen kannst! Sieh dir den Level-Leitfaden im Quellcode an, um weitere Informationen zur Erstellung von Bossen zu erhalten."
+leveldesc_jpn = "シンプルなテンプレートボスMODで、あなた自身のボスバトルを作成してみましょう！ボスの作り方については、ソースコードのレベルガイドをご確認ください。"
 levelthumb = ExtResource("2_qeg8s")

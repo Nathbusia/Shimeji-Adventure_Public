@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbdoatskows4a"]
+
+[ext_resource type="Script" uid="uid://tuplkj5mfgb8" path="res://scenes/levelmanager/world2_level2.gd" id="1_0rs4h"]
+[ext_resource type="Texture2D" uid="uid://bqv4clru3hw3b" path="res://sprites/menu/levelselect/world2/levelselect_thumbnail_w2level2.png" id="2_p6hp5"]
+
+[node name="World2_Level2" type="Node2D"]
+script = ExtResource("1_0rs4h")
+levelname = "Welcome to the Internet!"
+levelname_spa = "¡Bienvenidos a Internet!"
+levelname_fre = "Bienvenue sur Internet !"
+levelname_ita = "Benvenuti su Internet!"
+levelname_ger = "Willkommen im Internet!"
+levelname_jpn = "インターネットへようこそ！"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_p6hp5")

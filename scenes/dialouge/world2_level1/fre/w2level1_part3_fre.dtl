@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_01_fre.ogg" volume="2.0" bus="voices"]
+interfly: Bravo ! Tu deviens déjà un vrai pro !
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_02_fre.ogg" volume="2.0" bus="voices"]
+interfly: Désormais, grâce aux éléments déplaçables, certaines de ces fenêtres peuvent être agrandies pendant que vous les faites glisser.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_03_fre.ogg" volume="2.0" bus="voices"]
+interfly: Cela devrait vous permettre d'atteindre rapidement le sommet. Vous pourrez ainsi accéder à des zones qui vous étaient initialement inaccessibles.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_04_fre.ogg" volume="2.0" bus="voices"]
+interfly: Cependant, il existe certaines limites. Les fenêtres qui permettent de monter et descendre ne peuvent être déplacées que vers le haut et vers le bas...
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_05_fre.ogg" volume="2.0" bus="voices"]
+interfly: Et les fenêtres qui peuvent être escaladées par en dessous ne peuvent être déplacées que vers la gauche et vers la droite.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_06_fre.ogg" volume="2.0" bus="voices"]
+interfly: Alors, cliquez dessus et faites-le glisser vers la fenêtre suivante pouvant être déplacée.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part3_07_fre.ogg" volume="2.0" bus="voices"]
+interfly: Allons-y alors.
+[signal arg="end_cutscene"]

@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_01_ger.ogg" volume="2.0" bus="voices"]
+interfly: Großartig! Jetzt kommen wir zum letzten Schritt.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_02_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wie Sie sehen können, gibt es drei farbige Löcher in der Wand. Blau, rot und grün.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_03_ger.ogg" volume="2.0" bus="voices"]
+interfly: Und Sie fragen sich vielleicht\: „Was kommt in diese Löcher hinein?“
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_04_ger.ogg" volume="2.0" bus="voices"]
+interfly: Um es einfach auszudrücken, Freunde\: Auf diesen Karten rollen drei Kugeln herum. Alle drei haben die gleiche Farbe.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_05_ger.ogg" volume="2.0" bus="voices"]
+interfly: Sie müssen sie nur finden und in die richtigen Farblöcher stecken.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_06_ger.ogg" volume="2.0" bus="voices"]
+interfly: Sobald alle eingegeben sind, wird die Tür entriegelt und Sie können weiter im Internet surfen!
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_07_ger.ogg" volume="2.0" bus="voices"]
+interfly: Richtig, ohne weitere Worte, mach dich auf die Suche nach den 3 Kugeln!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part6_08_ger.ogg" volume="2.0" bus="voices"]
+interfly: Viel Glück! Ich zähle auf dich.
+[signal arg="end_cutscene"]

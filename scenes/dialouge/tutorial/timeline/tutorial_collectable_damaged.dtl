@@ -3,7 +3,7 @@ friend: Aww sizzle sazzle dang it! It looks like you took a beating out of them.
 friend: But no need to worry, you can touch these white floating circles here.
 [signal arg="normaltalk"]
 [signal arg="signhealth"]
-friend: These are health. They regenerate your heath obviously.
+friend: These are health. They regenerate your health obviously.
 [signal arg="pointing"]
 [signal arg="signhealthbar"]
 friend: And your health over there on the top left is pretty important...
@@ -17,7 +17,7 @@ friend: You start with 3 lives in every level (though your live amount will be s
 friend: If you ran out of lives, then you should probably know what happened next by now... Right?
 [signal arg="talking"]
 [signal arg="sign1up"]
-friend: There are those 1-up around the place. It has a resemblance of you. Like so.
+friend: There are those 1-ups around the place. It has a resemblance to you. Like so.
 [signal arg="greatest"]
 friend: If you do spot one, be sure to grab it. These are very useful. Especially when things get tough!
 [signal arg="normaltalk"]
@@ -27,5 +27,5 @@ friend: And for those funny squares, they're just... funny squares.
 friend: You can collect as much as you can. Or ignore them. Yeah.
 [signal arg="talking"]
 [signal arg="signempty"]
-friend: Right. Collect each of those collectable, and we'll move on. This lesson's almost done now.
+friend: Right. Collect each of those collectables, and we'll move on. This lesson's almost done now.
 [signal arg="end_cutscene"]

@@ -1,0 +1,15 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_01_fre.ogg" volume="2.0" bus="voices"]
+interfly: Excellent travail ! Passons maintenant à la suite.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_02_fre.ogg" volume="2.0" bus="voices"]
+interfly: Vous voyez ces fenêtres avec l'onglet de couleur marron ?
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_03_fre.ogg" volume="2.0" bus="voices"]
+interfly: Cela signifie que votre souris peut faire glisser ces fenêtres.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_04_fre.ogg" volume="2.0" bus="voices"]
+interfly: En les faisant glisser, vous pouvez déplacer et repositionner les plateformes disponibles.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_05_fre.ogg" volume="2.0" bus="voices"]
+interfly: Essayons. Cliquez sur la fenêtre avec le bouton gauche de la souris et utilisez le curseur pour la positionner correctement, comme indiqué par le point.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part2_06_fre.ogg" volume="2.0" bus="voices"]
+interfly: C'est parti !
+[signal arg="end_cutscene"]

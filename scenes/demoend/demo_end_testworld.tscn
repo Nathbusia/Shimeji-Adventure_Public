@@ -171,10 +171,10 @@ autoplay = true
 bus = &"bgm"
 
 [node name="Continue_Button" type="TextureButton" parent="."]
-offset_left = 848.0
-offset_top = 560.0
-offset_right = 1099.0
-offset_bottom = 690.0
+offset_left = 915.0
+offset_top = 573.0
+offset_right = 1157.0
+offset_bottom = 665.0
 texture_normal = SubResource("AnimatedTexture_jfdcm")
 texture_pressed = SubResource("AnimatedTexture_27aol")
 texture_hover = SubResource("AnimatedTexture_icwei")

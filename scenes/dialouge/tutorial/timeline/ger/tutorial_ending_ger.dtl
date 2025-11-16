@@ -1,0 +1,28 @@
+friend: Gut gemacht! Sie haben den letzten Kurs abgeschlossen!
+[signal arg="normaltalk"]
+friend: Nun, ich denke, das war's.
+[signal arg="greatest"]
+friend: Sie haben das Tutorial erfolgreich abgeschlossen. Jetzt sind Sie bereit, mehr vom Desktop selbst zu erkunden und Ihr Abenteuer zu beginnen.
+[signal arg="talking"]
+friend: Ich hoffe, dass alles, was du hier lernst, dir wirklich nützlich sein wird und dich stark genug macht, um Shimeji Adventure selbst durchzuspielen.
+[signal arg="greatest"]
+friend: Du warst ein guter Schüler, mein Freund. Und ich war ein guter Lehrer! Oder etwa nicht?
+[signal arg="normaltalk"]
+friend: Aber nun zum letzten Punkt.
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: Um das Level abzuschließen, berühre diesen Stern. Das ist ein fertiger Stern.
+[signal arg="talking"]
+friend: Sobald man es berührt hat, ist das Level beendet, und man gelangt zum nächsten Level oder kann ein beliebiges anderes Level auswählen.
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend: So, ich denke, das war's.
+[signal arg="talking"]
+friend: Es war mir eine Freude, mit Ihnen zusammenzuarbeiten, und ich hoffe sehr, Sie bald wiederzusehen.
+[signal arg="talking"]
+friend: Falls Sie die Lektion wiederholen möchten, wissen Sie ja, wo Sie hingehen müssen. Richtig? Es ist die Lektion mit dem Titel „Tutorial\: Die Grundlagen lernen“.
+[signal arg="greatest"]
+friend: So, das war’s von mir. Berühren Sie den Stern und beginnen Sie Ihr Abenteuer von dort aus!
+[signal arg="waving"]
+friend: VIEL GLÜCK, KUMPEL!!
+[signal arg="end_cutscene"]

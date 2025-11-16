@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://de4h7j61b6ssd"]
+
+[ext_resource type="Script" uid="uid://cxi4x7r8espqb" path="res://scenes/levelmanager/world2_level1.gd" id="1_4ohwj"]
+[ext_resource type="Texture2D" uid="uid://b1sxqtfu8nitx" path="res://sprites/menu/levelselect/world2/levelselect_thumbnail_w2level1.png" id="2_hk6ab"]
+
+[node name="World2_Level1" type="Node2D"]
+script = ExtResource("1_4ohwj")
+levelname = "Knowing the Internet"
+levelname_spa = "Conocer Internet"
+levelname_fre = "Connaître Internet"
+levelname_ita = "Conoscere Internet"
+levelname_ger = "Das Internet kennenlernen"
+levelname_jpn = "インターネットを知る"
+levelcreator = "By FlameOut56"
+levelthumb = ExtResource("2_hk6ab")

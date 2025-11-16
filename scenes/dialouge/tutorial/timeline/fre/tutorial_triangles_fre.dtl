@@ -1,0 +1,14 @@
+friend: Hé, tu as vu ce Triangle que tu viens d'acheter ?
+[signal arg="talking"]
+friend: Ces triangles que vous venez de choisir sont appelés les « triangles secrets ».
+[signal arg="talking"]
+friend: Je ne sais pas grand-chose à leur sujet, car j'avais généralement du mal à les trouver...
+[signal arg="greatest"]
+friend: Mais ce que je sais, c'est qu'ils ont joué un rôle très important tout au long de votre aventure.
+[signal arg="talking"]
+friend: Il y a quatre triangles secrets dans chaque niveau (à l'exception des boss, bien sûr...).
+[signal arg="pointing"]
+friend: Alors, ne manquez pas de tous les attraper lorsque vous les apercevez. Qui sait quelles surprises ou récompenses spéciales vous attendent si vous les trouvez ?
+[signal arg="greatest"]
+friend: Bon, assez discuté. Passons à autre chose !
+[signal arg="end_cutscene"]

@@ -1,0 +1,382 @@
+[gd_scene load_steps=55 format=3 uid="uid://emhk2y1ibox7"]
+
+[ext_resource type="Texture2D" uid="uid://c5bd67bp6c7eh" path="res://sprites/characters/npc/interfly/interfly_greet0001.png" id="1_52a46"]
+[ext_resource type="Script" uid="uid://bojwr6lefjso7" path="res://scenes/characters/npc/interfly_cutscene.gd" id="1_eyfrc"]
+[ext_resource type="Texture2D" uid="uid://dyo0auydnjsdu" path="res://sprites/characters/npc/interfly/interfly_greet0002.png" id="2_5nxnn"]
+[ext_resource type="Texture2D" uid="uid://dy05yuwed85qc" path="res://sprites/characters/npc/interfly/interfly_greet0003.png" id="3_3005a"]
+[ext_resource type="Texture2D" uid="uid://12xsdol5177" path="res://sprites/characters/npc/interfly/interfly_greet0004.png" id="4_4ydcw"]
+[ext_resource type="Texture2D" uid="uid://cbv0k3s4y4s7g" path="res://sprites/characters/npc/interfly/interfly_greet0005.png" id="5_ib15c"]
+[ext_resource type="Texture2D" uid="uid://saoheh4reo2r" path="res://sprites/characters/npc/interfly/interfly_greet0006.png" id="6_3fy8u"]
+[ext_resource type="Texture2D" uid="uid://bw4k3vmcdy5ty" path="res://sprites/characters/npc/interfly/interfly_greet0007.png" id="7_qt15y"]
+[ext_resource type="Texture2D" uid="uid://diyjowycegk34" path="res://sprites/characters/npc/interfly/interfly_greet0008.png" id="8_2dhdl"]
+[ext_resource type="Texture2D" uid="uid://cs013de8ptrtl" path="res://sprites/characters/npc/interfly/interfly_greet0009.png" id="9_75bfy"]
+[ext_resource type="Texture2D" uid="uid://xa157kdjob78" path="res://sprites/characters/npc/interfly/interfly_greet0010.png" id="10_r8rko"]
+[ext_resource type="Texture2D" uid="uid://cldn5n2uemmtg" path="res://sprites/characters/npc/interfly/interfly_greet0011.png" id="11_vefa2"]
+[ext_resource type="Texture2D" uid="uid://p1vgtc13c3df" path="res://sprites/characters/npc/interfly/interfly_greet0012.png" id="12_dcj7y"]
+[ext_resource type="Texture2D" uid="uid://cthqnwk28kgdy" path="res://sprites/characters/npc/interfly/interfly_greet0013.png" id="13_0gsbn"]
+[ext_resource type="Texture2D" uid="uid://cca5u2if05jjd" path="res://sprites/characters/npc/interfly/interfly_greet0014.png" id="14_yb7eo"]
+[ext_resource type="Texture2D" uid="uid://bwb6m1nkfuvac" path="res://sprites/characters/npc/interfly/interfly_greet0015.png" id="15_y3k25"]
+[ext_resource type="Texture2D" uid="uid://cj7jiavttmjaw" path="res://sprites/characters/npc/interfly/interfly_greet0016.png" id="16_2dsnf"]
+[ext_resource type="Texture2D" uid="uid://csu7rmprenura" path="res://sprites/characters/npc/interfly/interfly_idle0001.png" id="17_eyfrc"]
+[ext_resource type="Texture2D" uid="uid://cngl8cto8o4dv" path="res://sprites/characters/npc/interfly/interfly_idle0002.png" id="18_ts1ei"]
+[ext_resource type="Texture2D" uid="uid://bnae3h3e7o1kq" path="res://sprites/characters/npc/interfly/interfly_idle0003.png" id="19_df1yv"]
+[ext_resource type="Texture2D" uid="uid://cw5q2mqcudxkl" path="res://sprites/characters/npc/interfly/interfly_idle0004.png" id="20_8qov8"]
+[ext_resource type="Texture2D" uid="uid://dwsqkau5yc3m0" path="res://sprites/characters/npc/interfly/interfly_idle0005.png" id="21_qwhbw"]
+[ext_resource type="Texture2D" uid="uid://deketctkj3pn1" path="res://sprites/characters/npc/interfly/interfly_idle0006.png" id="22_3a0kp"]
+[ext_resource type="AudioStream" uid="uid://do4nd43x0pe3i" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_01.ogg" id="23_3h8a6"]
+[ext_resource type="AudioStream" uid="uid://ff6o54m3mjug" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_02.ogg" id="24_ncj1j"]
+[ext_resource type="AudioStream" uid="uid://bj1ovrmgbfaeb" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_03.ogg" id="25_nm5p8"]
+[ext_resource type="AudioStream" uid="uid://bdi622gvrbu0m" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_04.ogg" id="26_ftawa"]
+[ext_resource type="AudioStream" uid="uid://dbqx228lpiytr" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_05.ogg" id="27_vayw7"]
+[ext_resource type="AudioStream" uid="uid://bpyu3fx7qst3n" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_06.ogg" id="28_5nxnn"]
+[ext_resource type="AudioStream" uid="uid://c3fyt80nidlct" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_01_multi.ogg" id="28_6fptd"]
+[ext_resource type="AudioStream" uid="uid://cfeeibc8ux5hj" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_07.ogg" id="29_2dsnf"]
+[ext_resource type="AudioStream" uid="uid://dou5dkk0d42p1" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_03_multi.ogg" id="29_6jikl"]
+[ext_resource type="AudioStream" uid="uid://hv4jweg6wl0e" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_08.ogg" id="30_eyfrc"]
+[ext_resource type="AudioStream" uid="uid://c3maq1weyv08l" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_04_multi.ogg" id="30_kuncp"]
+[ext_resource type="AudioStream" uid="uid://bt78bvyncyhhu" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_05_multi.ogg" id="31_lxlke"]
+[ext_resource type="AudioStream" uid="uid://bs8tmniupdxt2" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_09.ogg" id="31_ts1ei"]
+[ext_resource type="AudioStream" uid="uid://dggt6tjysm3kb" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_10.ogg" id="32_df1yv"]
+[ext_resource type="Texture2D" uid="uid://thqsf1axqj8y" path="res://sprites/characters/npc/interfly/interfly_sparkles.png" id="32_viehv"]
+[ext_resource type="AudioStream" uid="uid://cxbiph3q6e8ww" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_11.ogg" id="33_8qov8"]
+[ext_resource type="AudioStream" uid="uid://bk1b5wncekjdp" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_12.ogg" id="34_qwhbw"]
+[ext_resource type="AudioStream" uid="uid://ku4pbjqb61y4" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_13.ogg" id="35_3a0kp"]
+[ext_resource type="AudioStream" uid="uid://hes0b3ehwsu6" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_14.ogg" id="36_3h8a6"]
+[ext_resource type="AudioStream" uid="uid://b0taopql6nps2" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_15.ogg" id="37_ncj1j"]
+[ext_resource type="AudioStream" uid="uid://xv8r3qgfy2vs" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_16.ogg" id="38_nm5p8"]
+[ext_resource type="AudioStream" uid="uid://cj5feyd1g0dg8" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_17.ogg" id="39_ftawa"]
+[ext_resource type="AudioStream" uid="uid://bt8wh3erko4jw" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_18.ogg" id="40_vayw7"]
+[ext_resource type="AudioStream" uid="uid://ckjoxxiibrgdb" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_19.ogg" id="41_6fptd"]
+[ext_resource type="AudioStream" uid="uid://yljvrmiq1plu" path="res://sfx/characters/npc/butterfly/en/intro/sfx_butterfly_intro_17_multi.ogg" id="42_6jikl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wqcd8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_52a46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5nxnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3005a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ydcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ib15c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3fy8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2dhdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_75bfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2dhdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_75bfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2dhdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_75bfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_2dhdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_75bfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qt15y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_r8rko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_vefa2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dcj7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0gsbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yb7eo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_y3k25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2dsnf")
+}],
+"loop": false,
+"name": &"greet",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_eyfrc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ts1ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_df1yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8qov8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_qwhbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_3a0kp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 16.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_tp6lk"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_eyfrc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2dsnf"]
+resource_name = "fly_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(450, -291), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ts1ei"]
+resource_name = "intro_boss"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-500, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ts1ei"]
+_data = {
+&"RESET": SubResource("Animation_eyfrc"),
+&"fly_in": SubResource("Animation_2dsnf"),
+&"intro_boss": SubResource("Animation_ts1ei")
+}
+
+[node name="Interfly_Cutscene" type="Node2D"]
+script = ExtResource("1_eyfrc")
+
+[node name="Friend" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wqcd8")
+animation = &"greet"
+autoplay = "idle"
+flip_h = true
+
+[node name="Sparkles" type="CPUParticles2D" parent="Friend"]
+texture_filter = 1
+position = Vector2(1, 1)
+texture = ExtResource("32_viehv")
+lifetime = 0.15
+randomness = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(20.815, 18.355)
+gravity = Vector2(0, 0)
+scale_amount_min = 0.0
+scale_amount_max = 1.2
+color_ramp = SubResource("Gradient_tp6lk")
+
+[node name="Voicelines" type="Node2D" parent="."]
+
+[node name="Level1" type="Node2D" parent="Voicelines"]
+
+[node name="English" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="w1lv1_Intro01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("23_3h8a6")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("24_ncj1j")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("25_nm5p8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("26_ftawa")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("27_vayw7")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("28_5nxnn")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("29_2dsnf")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro08" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("30_eyfrc")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro09" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("31_ts1ei")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro10" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("32_df1yv")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro11" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("33_8qov8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro12" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("34_qwhbw")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro13" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("35_3a0kp")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro14" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("36_3h8a6")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro15" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("37_ncj1j")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro16" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("38_nm5p8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro17" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("39_ftawa")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro18" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("40_vayw7")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro19" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("41_6fptd")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro01_Multi" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("28_6fptd")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro03_Multi" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("29_6jikl")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro04_Multi" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("30_kuncp")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro05_Multi" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("31_lxlke")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="w1lv1_Intro17_Multi" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("42_6jikl")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="Spanish" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="French" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="Italian" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="German" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="Japanese" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="InterflyAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ts1ei")
+}
+
+[connection signal="animation_finished" from="Friend" to="." method="_on_friend_animation_finished"]

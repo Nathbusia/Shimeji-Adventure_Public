@@ -1,0 +1,53 @@
+[signal arg="welcome"]
+friend: ¡¡BRAVO!! ¡Lo lograste!
+[signal arg="playerflipon"]
+[signal arg="talking"]
+friend: ¡Has conseguido derrotar al Monstequare! Ahora el escritorio debería volver a estar en paz.
+[signal arg="greatest"]
+friend: No creas que tu aventura termina aquí, ni que es demasiado corta... Esto es solo el principio.
+[signal arg="welcome"]
+friend: Hay muchos más mundos que explorar además del escritorio...
+[signal arg="normaltalk"]
+friend: ¡Ya sabes! Internet, sitios web, etc., etc. Lo verás por ti mismo.
+[signal arg="pointing"]
+friend: Pero bueno, para empezar con el siguiente paso, tienes que acceder a Internet.
+[signal arg="normaltalk"]
+friend: Este será tu próximo mundo al que ir.
+[signal arg="talking"]
+friend: Ahora bien, he oído algunos rumores sobre próximos cambios en nuestras tecnologías.
+[signal arg="greatest"]
+friend: Algo relacionado con esos... Snaps Snaps, Robo Arts, o esos relojes que hacen tictac...
+[signal arg="normaltalk"]
+friend: Sea lo que sea. Puede sonar bueno o malo ...
+[signal arg="normaltalk"]
+friend: Pero por las críticas que he escuchado, es bastante malo...
+[signal arg="talking"]
+friend: Vas a adentrarte en Internet e investigar tú mismo estas nuevas tecnologías. Y averiguar quién es el responsable de ello.
+[signal arg="welcome"]
+friend: Y no te preocupes por hacer esto solo. Estoy seguro de que conocerás nuevos amigos como yo a lo largo de tu aventura.
+[signal arg="normaltalk"]
+friend: Les deseo mucha suerte a todos.
+[signal arg="shimep1_jumptwo"]
+[signal arg="shimemodp1_specialanim_1"]
+[wait time="1.3"]
+[signal arg="shocked"]
+friend: ¿¡QUÉ?! ¿Quieres que vaya yo también?
+[signal arg="talking"]
+friend: Mira, me encantaría acompañarte en esta aventura... Pero alguien tiene que encargarse del ordenador de sobremesa mientras no estás.
+[signal arg="pointing"]
+friend: Además, todavía hay mucha gente nueva que es igual que tú a la que necesito enseñar a jugar a este juego.
+[signal arg="normaltalk"]
+friend: Así que yo tengo que quedarme atrás. Pero tú tienes que irte.
+[signal arg="waving"]
+friend: Muy bien, buena charla. Ahora ve a internet, ¡y mucha suerte con tu aventura!
+[signal arg="leaving"]
+[signal arg="flippedoff"]
+friend: Mantente seguro !!!
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_special2"]
+[wait time="1.0"]
+[signal arg="playerflipoff"]
+[wait time="1.0"]
+[signal arg="playermoveon"]
+[wait time="3.0"]
+[signal arg="blackscreen"]

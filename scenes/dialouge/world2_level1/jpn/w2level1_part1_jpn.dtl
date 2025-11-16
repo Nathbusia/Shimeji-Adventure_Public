@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_01_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: よし。では、基本から始めよう。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_02_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: インターネットでは、様々なインタラクションやエンターテイメントを体験できます！ここではよくあることです。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_03_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: そして、これらの魔法をうまく機能させるには、小さな空飛ぶ仲間が必要です…
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_04_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: マウスカーソルです！
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_05_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: この小さなツールが、この旅の間ずっとあなたを助けてくれます。
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_06_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: では、試乗してみましょう。いいですか？
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_07_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: 大きなボタンをクリックして、左クリックでドアを開けてください。
+[voice path="res://sfx/characters/npc/butterfly/jp/level1/sfx_butterfly_level1_part1_08_jpn.ogg" volume="2.0" bus="voices"]
+interfly_jpn: さあ、やってみましょう！
+[signal arg="end_cutscene"]

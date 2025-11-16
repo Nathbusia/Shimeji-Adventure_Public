@@ -1,0 +1,241 @@
+[gd_scene load_steps=25 format=3 uid="uid://bcrxgfe3nky4o"]
+
+[ext_resource type="Script" uid="uid://csda1o7thc8am" path="res://scenes/characters/enemy/laserbeam_projectile.gd" id="1_lpg0k"]
+[ext_resource type="Texture2D" uid="uid://bthod8fdxpbdr" path="res://sprites/characters/enemy/userbeam/userbeam_beam0001.png" id="2_lpg0k"]
+[ext_resource type="Texture2D" uid="uid://d25otgma5gy15" path="res://sprites/characters/enemy/userbeam/userbeam_beam0002.png" id="3_xnq63"]
+[ext_resource type="Texture2D" uid="uid://dnayv2hhhwabh" path="res://sprites/characters/enemy/userbeam/userbeam_beam0003.png" id="4_8uy1q"]
+[ext_resource type="Texture2D" uid="uid://h8u6v1324qco" path="res://sprites/characters/enemy/userbeam/userbeam_beam0004.png" id="5_u6l8n"]
+[ext_resource type="Texture2D" uid="uid://dmrlma4pfbg6r" path="res://sprites/characters/enemy/userbeam/userbeam_beam0005.png" id="6_tq43g"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="7_h24a2"]
+[ext_resource type="Texture2D" uid="uid://mag1iy3q53uc" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0001.png" id="7_lrqvx"]
+[ext_resource type="Texture2D" uid="uid://cnisl7cnyg3fn" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0002.png" id="8_l0qdq"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="8_lpg0k"]
+[ext_resource type="Texture2D" uid="uid://dh2n0b1lxvhvs" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0003.png" id="9_o4ume"]
+[ext_resource type="Texture2D" uid="uid://cvvenmttwqfyx" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0004.png" id="10_nxv3y"]
+[ext_resource type="Texture2D" uid="uid://bqyn63638t7e5" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0005.png" id="11_g7r3j"]
+[ext_resource type="Texture2D" uid="uid://b0elw07kirheh" path="res://sprites/characters/enemy/userbeam/userbeam_beam_hit0006.png" id="12_1ku5w"]
+[ext_resource type="AudioStream" uid="uid://841o2ulv0oti" path="res://sfx/characters/enemy/userbeam/sfx_userbeam_laser_hit.ogg" id="13_xnq63"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pxa8j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lpg0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xnq63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8uy1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u6l8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tq43g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_lrqvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_l0qdq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_o4ume")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nxv3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_g7r3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1ku5w")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 15.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2uob2"]
+size = Vector2(61, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjbgy"]
+size = Vector2(63, 17)
+
+[sub_resource type="Animation" id="Animation_w7dvw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Laserbeam:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Laserbeam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Laserbeam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1iihc"]
+resource_name = "defeat"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Laserbeam:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.353554, 2.63902),
+"update": 0,
+"values": [-1.5708, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Laserbeam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Laserbeam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.307786, 3.36358),
+"update": 0,
+"values": [Vector2(0.44, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fb3yh"]
+_data = {
+&"RESET": SubResource("Animation_w7dvw"),
+&"defeat": SubResource("Animation_1iihc")
+}
+
+[sub_resource type="Animation" id="Animation_kicg0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Laserbeam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_wthvk"]
+resource_name = "default"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Laserbeam:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3yw0k"]
+_data = {
+&"RESET": SubResource("Animation_kicg0"),
+&"default": SubResource("Animation_wthvk")
+}
+
+[node name="LaserbeamProjectile" type="CharacterBody2D"]
+script = ExtResource("1_lpg0k")
+
+[node name="Laserbeam" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_pxa8j")
+autoplay = "default"
+
+[node name="MainHitBox" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_2uob2")
+
+[node name="ProjectileBox" type="Area2D" parent="."]
+
+[node name="ProjectileHitBox" type="CollisionShape2D" parent="ProjectileBox"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_qjbgy")
+
+[node name="ArrowAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fb3yh")
+}
+
+[node name="DefeatSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_xnq63")
+volume_db = 5.0
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h24a2")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lpg0k")
+bus = &"sfx"
+
+[node name="Lifespan" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="ArrowLife" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_3yw0k")
+}
+autoplay = "default"
+
+[connection signal="body_entered" from="ProjectileBox" to="." method="_on_projectile_box_body_entered"]
+[connection signal="timeout" from="Lifespan" to="." method="_on_lifespan_timeout"]

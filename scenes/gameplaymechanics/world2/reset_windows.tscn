@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://mnxdypcbpfl2"]
+
+[ext_resource type="Texture2D" uid="uid://bwhrnel52lle7" path="res://sprites/levels/world2/world2_draggablereset0001.png" id="1_wmu2d"]
+[ext_resource type="Texture2D" uid="uid://decgpqnx6x52w" path="res://sprites/levels/world2/world2_draggablereset0003.png" id="2_6rcrt"]
+[ext_resource type="Texture2D" uid="uid://b6ajr6udpypwi" path="res://sprites/levels/world2/world2_draggablereset0002.png" id="3_4g5td"]
+[ext_resource type="Script" uid="uid://csg7leoe7adfp" path="res://scenes/gameplaymechanics/world2/reset_windows.gd" id="4_66ecf"]
+[ext_resource type="AudioStream" uid="uid://bkhnmrwx78usd" path="res://sfx/gameplay/button/sfx_mousebutton_click.ogg" id="5_4g5td"]
+[ext_resource type="AudioStream" uid="uid://b3plrixbwl7vr" path="res://sfx/gameplay/button/sfx_button_resetwindows.ogg" id="6_66ecf"]
+
+[node name="ResetWindows" type="TextureButton"]
+texture_filter = 1
+focus_mode = 0
+texture_normal = ExtResource("1_wmu2d")
+texture_pressed = ExtResource("2_6rcrt")
+texture_hover = ExtResource("3_4g5td")
+script = ExtResource("4_66ecf")
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4g5td")
+volume_db = 8.0
+
+[node name="ButtonActivate" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_66ecf")
+volume_db = 8.0
+bus = &"sfx"
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdw1qg5dm5rmo"]
+
+[ext_resource type="Texture2D" uid="uid://dqumnb3sc6g64" path="res://sprites/levels/world2/world2_windows_ground.png" id="1_fsy3u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpfqo"]
+size = Vector2(4238, 312)
+
+[node name="World2_Ground" type="AnimatableBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="Ground" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 4239.0
+offset_bottom = 312.0
+texture = ExtResource("1_fsy3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2119, 156)
+shape = SubResource("RectangleShape2D_bpfqo")

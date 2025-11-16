@@ -1,0 +1,64 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_01_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Hola, recién llegado! ¡Bienvenido a Internet!
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_02_spa.ogg" volume="0.0" bus="voices"]
+interfly: Soy Interfly. Tu útil compañero y guía en este mundo virtual.
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_03_spa.ogg" volume="0.0"]
+interfly: Entonces, ¿qué te trae por aquí, viajero?
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_1"]
+[wait time="1.0"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_04_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Oh! ¡Entonces tú debes ser el héroe de los ordenadores de sobremesa del que todo el mundo habla!
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_05_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Sí! Hemos oído hablar de ti. Eres el tipo que derrotó a ese Monstequare.
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_06_spa.ogg" volume="0.0" bus="voices"]
+interfly: Ese pequeño hombrecito de palitos nos lo contó todo mientras venías hacia aquí.
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_07_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Y me alegro de que lo hayas hecho! Porque nosotros... también necesitamos ayuda.
+[signal arg="allshime_sit"]
+[signal arg="adjustcamera_shime"]
+[wait time="1.0"]
+[signal arg="adjustcamera_default"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_08_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¿Quieres saber qué pasó? Muy bien, entonces.
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_09_spa.ogg" volume="0.0" bus="voices"]
+interfly: Déjame explicarte...
+[signal arg="flashback_start"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_10_spa.ogg" volume="0.0" bus="voices"]
+interfly: Verás... antes del incidente, Internet era un lugar agradable y todo eso. Era tranquilo. Empezaba con todos sus navegadores y sitios web por todas partes.
+[signal arg="flashback_part2"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_11_spa.ogg" volume="0.0" bus="voices"]
+interfly: Hasta que... aparecen las ventanas emergentes. Créeme, no son nada agradables...
+[signal arg="flashback_part3"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_12_spa.ogg" volume="0.0" bus="voices"]
+interfly: Muchas estafas, virus dañinos e incluso algunos tipos tacaños empiezan a causar estragos en Internet.
+[signal arg="flashback_part4"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_13_spa.ogg" volume="0.0" bus="voices"]
+interfly: Y si hay alguien que empezó todo esto, ese no es otro que el malvado Pop-Out Pete.
+[signal arg="flashback_end"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_14_spa.ogg" volume="0.0" bus="voices"]
+interfly: Así que vamos a necesitar toda tu ayuda para poner fin a su locura. ¡Y parece que llegas en el momento justo!
+[signal arg="allshime_stand"]
+[signal arg="adjustcamera_shime"]
+[wait time="1.0"]
+[signal arg="adjustcamera_default"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_15_spa.ogg" volume="0.0" bus="voices"]
+interfly: No te preocupes por las novedades que aparecen en Internet...
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_16_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Estaré encantado de ayudarte y guiarte en todo lo que pueda!
+[signal arg="adjustcamera_focusdoor"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_17_spa.ogg" volume="0.0" bus="voices"]
+interfly: Entonces, por ahora, ¿qué tal si empezamos a acostumbrarnos a Internet? Quiero decir, eres nuevo aquí. Así que sé que necesitarás aprender algunas cosas...
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_18_spa.ogg" volume="0.0" bus="voices"]
+interfly: Bien, síganme hasta la entrada y comenzaremos desde aquí.
+[signal arg="flyright"]
+[voice path="res://sfx/characters/npc/butterfly/es/intro/sfx_butterfly_intro_19_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Vamos, vámonos!
+[signal arg="playermoveon"]
+[signal arg="adjustcamera_moveup"]
+[wait time="3.0"]
+[signal arg="blackscreen"]

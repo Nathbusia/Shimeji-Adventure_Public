@@ -1,0 +1,27 @@
+friend_jpn: よくできました！最後のコースを修了しましたね！
+[signal arg="normaltalk"]
+friend_jpn: まあ、これで終わりかな。
+[signal arg="greatest"]
+friend_jpn: チュートリアルが正常に完了しました。これで、デスクトップ自体をさらに探索し、冒険を始める準備が整いました。
+[signal arg="talking"]
+friend_jpn: ここで学んだことがすべて、きっと役に立つことを願っています。そして、しめじアドベンチャーを最後までプレイできるほど、あなたを強くしてくれるでしょう。
+[signal arg="greatest"]
+friend_jpn: 君は優秀な生徒だったよ、相棒。そして私は良い教師でした！そうだろ？
+[signal arg="normaltalk"]
+friend_jpn: さて、最後に一つだけ。
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend_jpn: このレベルをクリアするには、あの星に触れるだけです。あれがゴールスターです。
+[signal arg="talking"]
+friend_jpn: 一度触れると、そのレベルはクリアとなり、次のレベルに進むか、他のレベルを選択することができます。
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend_jpn: ということで、これですべてだと思います。
+[signal arg="talking"]
+friend_jpn: あなたと一緒に仕事ができて本当に楽しかったです。またお会いできることを楽しみにしています。
+[signal arg="talking"]
+friend_jpn: それから、もしレッスンをもう一度受けたいと思ったら、どこに来ればいいか分かりますよね？「チュートリアル\: 基本を学ぶ」と書いてあるところです。
+[signal arg="greatest"]
+friend_jpn: さて、私からは以上です。あの星をタッチして、そこから冒険を始めましょう！
+[signal arg="waving"]
+friend_jpn: 頑張ってください！！

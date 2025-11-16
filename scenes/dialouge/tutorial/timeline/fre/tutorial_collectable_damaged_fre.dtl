@@ -1,0 +1,31 @@
+friend: Oh, zut alors ! On dirait qu'ils t'ont tabassé...
+[signal arg="talking"]
+friend: Mais ne vous inquiétez pas, vous pouvez toucher ces cercles blancs flottants ici.
+[signal arg="normaltalk"]
+[signal arg="signhealth"]
+friend: Ce sont des soins. Ils régénèrent votre santé, évidemment.
+[signal arg="pointing"]
+[signal arg="signhealthbar"]
+friend: Et votre état de santé, situé en haut à gauche, est assez important...
+[signal arg="talking"]
+[signal arg="signhealthbar_empty"]
+friend: Vous n'avez que 5 points de vie tout au long de ce jeu, et si ces points de vie descendent à 0, alors vous êtes fichu ! Vous perdrez une vie.
+[signal arg="greatest"]
+[signal arg="signlives"]
+friend: Vous commencez avec 3 vies à chaque niveau (bien que votre nombre de vies soit sauvegardé en mode Histoire).
+[signal arg="talking"]
+friend: Si tu as épuisé tes vies, alors tu devrais probablement savoir ce qui s'est passé ensuite maintenant... N'est-ce pas ?
+[signal arg="talking"]
+[signal arg="sign1up"]
+friend: Il y a ces 1-up autour de l'endroit. Cela te ressemble. Comme ça.
+[signal arg="greatest"]
+friend: Si vous en repérez un, assurez-vous de le prendre. Ceux-ci sont très utiles. Surtout quand les choses deviennent difficiles !
+[signal arg="normaltalk"]
+[signal arg="signsquare"]
+friend: Et pour ces carrés amusants, ce ne sont que... des carrés amusants.
+[signal arg="talking"]
+friend: Vous pouvez en collecter autant que vous le pouvez. Ou les ignorer. Ouais.
+[signal arg="talking"]
+[signal arg="signempty"]
+friend: Très bien. Ramassez chacun de ces objets à collectionner, et nous passerons à la suite. Cette leçon est presque terminée.
+[signal arg="end_cutscene"]

@@ -1,0 +1,20 @@
+friend: ¡Aquí estamos! El último paso.
+[signal arg="talking"]
+friend: A lo largo de este proceso, realizarás un curso sencillo para poner a prueba todo lo que aprenderás en este tutorial.
+[signal arg="talking"]
+friend: Dentro de esto, verás dos mecánicas más que podrían aparecer en el juego normal...
+[signal arg="greatest"]
+friend: Una de ellas son los manantiales. Ya sabes, donde brota el agua de los manantiales, y los manantiales hacen... lo que sea que hagan.
+[signal arg="talking"]
+friend: Pero bueno, sí. Esos muelles blancos te ayudarán a impulsarte hacia arriba y a restablecer tu límite de salto, lo que te permitirá permanecer más tiempo en el aire.
+[signal arg="welcome"]
+friend: ¡No lo olvides! Si usas el ataque Slam Dash sobre los muelles, rebotarás tan alto como de costumbre. Esto te resultará muy útil en superficies y plataformas muy elevadas. (Esto también se aplica al usar Slam Dash contra los enemigos).
+[signal arg="normaltalk"]
+friend: Y por último, están las púas.
+[signal arg="talking"]
+friend: Estos son uno de los obstáculos peligrosos. Y créeme, no querrás tocarlos...
+[signal arg="pointing"]
+friend: Son puntiagudos y cosas así, y te hacen perder salud si los tocas. Así que ten cuidado.
+[signal arg="talking"]
+friend: De acuerdo, no hace falta decirlo. Termina este último plato y nos vemos al final.
+[signal arg="end_cutscene"]

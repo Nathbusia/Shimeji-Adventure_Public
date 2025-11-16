@@ -8,3 +8,21 @@ func _on_body_entered(body: Node2D) -> void:
 		body.play_death_effect("death")
 		if body.is_fastfalling:
 			body.shime_animation_player_slam_dash.stop()
+	if (body.name == "ShimejiCharacter_Playable_Player2"):
+		game_manager.onehit_death_player2()
+		body.death()
+		body.play_death_effect("death")
+		if body.is_fastfalling:
+			body.shime_animation_player_slam_dash.stop()
+	if (body.name == "ShimejiCharacter_Playable_Player3"):
+		game_manager.onehit_death_player3()
+		body.death()
+		body.play_death_effect("death")
+		if body.is_fastfalling:
+			body.shime_animation_player_slam_dash.stop()
+	if (body.name == "ShimejiCharacter_Playable_Player4"):
+		game_manager.onehit_death_player4()
+		body.death()
+		body.play_death_effect("death")
+		if body.is_fastfalling:
+			body.shime_animation_player_slam_dash.stop()

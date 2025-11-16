@@ -5,7 +5,18 @@
 
 [node name="TemplateLevel" type="Node2D"]
 script = ExtResource("1_vacc5")
+multilingual = true
 levelname = "Template Level"
+levelname_spa = "Nivel de Plantilla"
+levelname_fre = "Niveau de modèle"
+levelname_ita = "Livello del modello"
+levelname_ger = "Vorlagenebene"
+levelname_jpn = "テンプレートレベル"
 levelcreator = "By Unknown"
-leveldesc = "A simple Template Level Mod for you to get started on creating your very own level! It has all the bits and bops that you'll need to make a level that you always wanted to make. Check the Level Guide on the Source Code for more info about making levels."
+leveldesc = "A simple Template Level Mod for you to get started on creating your very own level! It has all the bits and bops that you'll need to make a level that you've always wanted to make. Check the Level Guide in the Source Code for more info about making levels."
+leveldesc_spa = "¡Un simple Mod de Nivel Plantilla para que comiences a crear tu propio nivel! Tiene todos los elementos y detalles que necesitarás para hacer el nivel que siempre has querido. Consulta la Guía de Niveles en el Código Fuente para más información sobre cómo hacer niveles."
+leveldesc_fre = "Un simple mod de modèle de niveau pour vous aider à commencer à créer votre propre niveau ! Il contient tous les éléments nécessaires pour concevoir le niveau de vos rêves. Consultez le guide de niveau dans le code source pour plus d'informations sur la création de niveaux."
+leveldesc_ita = "Un semplice Mod di Template Level per iniziare a creare il tuo livello! Ha tutti i pezzi e i dettagli di cui avrai bisogno per realizzare un livello che hai sempre desiderato creare. Controlla la Guida al Livello nel Codice Sorgente per ulteriori informazioni su come creare livelli."
+leveldesc_ger = "Ein einfaches Vorlagen-Level-Mod, mit dem du mit der Erstellung deines eigenen Levels beginnen kannst! Es enthält all die Teile und Elemente, die du benötigst, um ein Level zu erstellen, das du schon immer machen wolltest. Überprüfen Sie den Level Guide im Source Code für weitere Informationen zum Erstellen von Levels."
+leveldesc_jpn = "あなたのレベルを自作し始めるための、シンプルなテンプレートレベルModです！ずっと作りたかったレベルを作るために必要なものが全て揃っています。ソースコード内のレベルガイドを参照して、レベル作成についてさらに詳しく知ることができます。"
 levelthumb = ExtResource("2_s30mp")

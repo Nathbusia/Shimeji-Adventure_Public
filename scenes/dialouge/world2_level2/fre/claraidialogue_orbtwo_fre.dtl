@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Incroyable ! Tu es vraiment un bon chasseur de trésors, n'est-ce pas ?
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Il n'en reste plus qu'un. Allez-y, récupérez cette dernière Orb Ball !
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Merci beaucoup encore une fois !
+[signal arg="normal"]
+[signal arg="end_cutscene"]

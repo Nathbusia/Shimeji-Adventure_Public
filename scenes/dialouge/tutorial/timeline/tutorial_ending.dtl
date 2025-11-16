@@ -20,8 +20,9 @@ friend: So, I guess that's all.
 [signal arg="talking"]
 friend: It's been a pleasure working with ya, and I'm sure hope to see ya again.
 [signal arg="talking"]
-friend: Also, if you ever wanted to take the lesson again, you know where come and visit. Right? It's the one that says "Tutorial\: Learning the Basic".
+friend: Also, if you ever wanted to retake the lesson, you know where to come and visit. Right? It's the one that says "Tutorial\: Learning the Basic".
 [signal arg="greatest"]
 friend: Well, that's all from me. Touch that star, and begin your adventure from there!
 [signal arg="waving"]
 friend: GOOD LUCK PAL!!
+[signal arg="end_cutscene"]

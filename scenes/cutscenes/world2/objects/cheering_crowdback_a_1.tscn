@@ -1,0 +1,76 @@
+[gd_scene load_steps=15 format=3 uid="uid://b5w3d08jrtymx"]
+
+[ext_resource type="Texture2D" uid="uid://3w8hmtdo41f4" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0001.png" id="1_tbxwd"]
+[ext_resource type="Script" uid="uid://cj6by0kt46ao3" path="res://scenes/cutscenes/world2/objects/cheering_crowds.gd" id="1_u1rop"]
+[ext_resource type="Texture2D" uid="uid://b3juje841ckmm" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0002.png" id="2_u1rop"]
+[ext_resource type="Texture2D" uid="uid://bat6ocq46xnk7" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0003.png" id="3_sjha0"]
+[ext_resource type="Texture2D" uid="uid://c40t5kv5ujp31" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0004.png" id="4_kq45r"]
+[ext_resource type="Texture2D" uid="uid://bn884nw80a1l0" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0005.png" id="5_now7o"]
+[ext_resource type="Texture2D" uid="uid://cxq4r06axuhso" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0006.png" id="6_j72sx"]
+[ext_resource type="Texture2D" uid="uid://ddchu6sefp214" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0009.png" id="7_7jn88"]
+[ext_resource type="Texture2D" uid="uid://cy1m82v07am8i" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0007.png" id="8_6m60l"]
+[ext_resource type="Texture2D" uid="uid://b0xmi5bg2s6gt" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0008.png" id="9_nsas1"]
+[ext_resource type="Texture2D" uid="uid://xjyos6sfyx8d" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0010.png" id="10_x35bb"]
+[ext_resource type="Texture2D" uid="uid://c8glg3aj6rp41" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0011.png" id="11_ew00g"]
+[ext_resource type="Texture2D" uid="uid://bhqyh7qrg41jr" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowdback_A0012.png" id="12_vi5v0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vtikr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tbxwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u1rop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sjha0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kq45r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_now7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j72sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7jn88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6m60l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nsas1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7jn88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_x35bb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ew00g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vi5v0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sjha0")
+}],
+"loop": true,
+"name": &"cheer",
+"speed": 12.0
+}]
+
+[node name="CheeringCrowdBackA1" type="Node2D"]
+script = ExtResource("1_u1rop")
+
+[node name="CrowdSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vtikr")
+animation = &"cheer"
+autoplay = "cheer"
+frame_progress = 0.56742084
+offset = Vector2(0, -64)

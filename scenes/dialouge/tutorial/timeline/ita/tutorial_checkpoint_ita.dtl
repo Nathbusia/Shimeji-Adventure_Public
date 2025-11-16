@@ -1,0 +1,8 @@
+friend: Ehi! Hai notato quella bandiera che è apparsa dopo che ci sei passato attraverso?
+[signal arg="talking"]
+friend: Questi sono punti di controllo. Diventano davvero utili una volta attivati.
+[signal arg="talking"]
+friend: Quindi, se perdi una vita a causa di un nemico, un ostacolo pericoloso o persino cadendo fuori dalla mappa, ricomparirai nel punto in cui hai attivato l'ultimo checkpoint. Ti aiuta a riprendere esattamente da dove eri rimasto (a meno che tu non preferisca ricominciare dall'inizio, in quel caso puoi semplicemente saltarlo).
+[signal arg="greatest"]
+friend: Bene, andiamo avanti e passiamo al passaggio finale.
+[signal arg="end_cutscene"]

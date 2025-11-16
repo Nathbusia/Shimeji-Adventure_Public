@@ -1,6 +1,6 @@
-[gd_scene load_steps=338 format=3 uid="uid://bej10ocwbf6yl"]
+[gd_scene load_steps=456 format=3 uid="uid://bej10ocwbf6yl"]
 
-[ext_resource type="Script" uid="uid://pliq0y52oqpe" path="res://scenes/levels/testlevel/testlevel_1_print.gd" id="1_e5h7j"]
+[ext_resource type="Script" uid="uid://b7g247ltwik14" path="res://scenes/levels/world1/level2_print.gd" id="1_kyasy"]
 [ext_resource type="Texture2D" uid="uid://cfrglyaplyq7n" path="res://sprites/levels/world1/world1_background.png" id="2_vmin0"]
 [ext_resource type="Texture2D" uid="uid://b3vgq6a6vbu7p" path="res://sprites/levels/world1/world1_clouds.png" id="3_aqu84"]
 [ext_resource type="Texture2D" uid="uid://qktig673t85u" path="res://sprites/levels/world1/world1_bg_hills.png" id="4_lv51a"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cifskgb0mf0v1" path="res://sprites/levels/world1/windows_searchbar.png" id="11_7p8i7"]
 [ext_resource type="Texture2D" uid="uid://dlccltej87xrs" path="res://sprites/levels/world1/windows_button_search.png" id="12_27i16"]
 [ext_resource type="Texture2D" uid="uid://bxkc7cpclgvh" path="res://sprites/levels/world1/stickynote.png" id="13_owamj"]
-[ext_resource type="Texture2D" uid="uid://bkpoqk15tevr4" path="res://sprites/levels/world1/stickynote_pink.png" id="14_o0cpv"]
 [ext_resource type="Texture2D" uid="uid://co3h83lv7prgw" path="res://sprites/levels/world1/stickynote_green.png" id="15_prx2h"]
 [ext_resource type="Texture2D" uid="uid://cywpthcvapqqv" path="res://sprites/levels/falling_hazarad_sign.png" id="16_u5nwd"]
 [ext_resource type="Script" uid="uid://dknnn1fqrpt13" path="res://managers/game_manager.gd" id="17_tly4y"]
@@ -32,7 +31,6 @@
 [ext_resource type="PackedScene" uid="uid://da8wdw6e234pt" path="res://scenes/gameplaymechanics/world1/windows_square.tscn" id="27_0gp4o"]
 [ext_resource type="PackedScene" uid="uid://blnu5akqpu2md" path="res://scenes/gameplaymechanics/world1/windows_minesweep.tscn" id="28_1uchp"]
 [ext_resource type="PackedScene" uid="uid://dr5bf6k8kdmwv" path="res://scenes/gameplaymechanics/climbable.tscn" id="29_5c516"]
-[ext_resource type="Script" uid="uid://b73fy6dr08pq6" path="res://scenes/gameplaymechanics/climbable.gd" id="30_5btje"]
 [ext_resource type="PackedScene" uid="uid://nqvvrv7sci1a" path="res://scenes/collectable/funny_sqaure_collectable.tscn" id="32_x5xu1"]
 [ext_resource type="PackedScene" uid="uid://xxaxy7m1f3w" path="res://scenes/characters/enemy/enemy_mean_ball.tscn" id="33_mn1dn"]
 [ext_resource type="PackedScene" uid="uid://cesfk1tmep1sm" path="res://scenes/characters/enemy/enemy_voltslam.tscn" id="36_ck3i1"]
@@ -46,7 +44,6 @@
 [ext_resource type="PackedScene" uid="uid://dxyxnd3ltlsqo" path="res://scenes/collectable/health_circle.tscn" id="41_dux2x"]
 [ext_resource type="PackedScene" uid="uid://d0sdinf1qyies" path="res://scenes/collectable/secret_triangle.tscn" id="42_30ehq"]
 [ext_resource type="PackedScene" uid="uid://bfqjrqpsx2na1" path="res://scenes/gameplaymechanics/checkpoint.tscn" id="44_jriff"]
-[ext_resource type="PackedScene" uid="uid://ccobfi3h6i8h" path="res://scenes/characters/playable/shimeji_ignore/shimeji_character_playable.tscn" id="45_oatl6"]
 [ext_resource type="PackedScene" uid="uid://cp3rtdmah26kk" path="res://scenes/gameplaymechanics/moving_windows.tscn" id="46_3m5lt"]
 [ext_resource type="PackedScene" uid="uid://dpve5ojkvykgh" path="res://scenes/gameplaymechanics/world1/windows_man.tscn" id="46_vsnu0"]
 [ext_resource type="PackedScene" uid="uid://bb5qqd43cnitt" path="res://scenes/gameplaymechanics/moving_windows_D.tscn" id="48_8tihl"]
@@ -62,13 +59,14 @@
 [ext_resource type="PackedScene" uid="uid://junusy4txfsi" path="res://scenes/gameplaymechanics/world1/windows_goggles.tscn" id="54_jww2i"]
 [ext_resource type="Texture2D" uid="uid://p1g4ke48flw0" path="res://sprites/ui/gameplay/score_dark/ScoreNameBG0002.png" id="54_wbm1k"]
 [ext_resource type="Texture2D" uid="uid://cac2ob3dotl7f" path="res://sprites/ui/gameplay/score_dark/ScoreNameBG0003.png" id="55_0ef1p"]
-[ext_resource type="FontFile" uid="uid://bxhpix5tod03j" path="res://fonts/DK Harimau Dua.otf" id="56_iwm5y"]
+[ext_resource type="PackedScene" uid="uid://b2fm27vyeo80y" path="res://scenes/characters/playable/shimeji/shimeji_character_playable.tscn" id="55_vw8dk"]
 [ext_resource type="Texture2D" uid="uid://cxidoraba6aht" path="res://sprites/ui/gameplay/score/ScoreBG0001.png" id="57_fy0c1"]
 [ext_resource type="Texture2D" uid="uid://bjwk460rjwk5y" path="res://sprites/ui/gameplay/score/ScoreBG0002.png" id="58_xophl"]
 [ext_resource type="Texture2D" uid="uid://1ivnt2s8lw6v" path="res://sprites/ui/gameplay/score/ScoreBG0003.png" id="59_jpg3n"]
 [ext_resource type="Texture2D" uid="uid://bwba4om6ajexl" path="res://sprites/ui/gameplay/score_dark/ScoreBG0001.png" id="60_awxs5"]
 [ext_resource type="Texture2D" uid="uid://fvoqw04evscd" path="res://sprites/ui/gameplay/score_dark/ScoreBG0002.png" id="61_064x1"]
 [ext_resource type="Texture2D" uid="uid://bwtn4t12yd1vd" path="res://sprites/ui/gameplay/score_dark/ScoreBG0003.png" id="62_eek3f"]
+[ext_resource type="FontFile" uid="uid://j7u55jwbh8sy" path="res://fonts/けいなんポップ体.ttf" id="62_kyasy"]
 [ext_resource type="Texture2D" uid="uid://djj2qxif2su2q" path="res://sprites/ui/gameplay/score/ScoreSquareIco0001.png" id="63_nbk4p"]
 [ext_resource type="Texture2D" uid="uid://c43thyjit6y1n" path="res://sprites/ui/gameplay/score/ScoreSquareIco0002.png" id="64_jrf83"]
 [ext_resource type="Texture2D" uid="uid://dodkvonrjwip5" path="res://sprites/ui/gameplay/score/ScoreSquareIco0003.png" id="65_qtrh2"]
@@ -159,101 +157,219 @@
 [ext_resource type="Texture2D" uid="uid://diy12w5d4n4xx" path="res://sprites/ui/pause/PauseBG0003.png" id="150_5m4f0"]
 [ext_resource type="Texture2D" uid="uid://hs1pem0vpesd" path="res://sprites/ui/pause/PauseText0001.png" id="151_lrjmh"]
 [ext_resource type="Texture2D" uid="uid://bas8a8y6vuao3" path="res://sprites/ui/pause/PauseText0002.png" id="152_8wqm3"]
+[ext_resource type="Texture2D" uid="uid://dgj5rhui6qk03" path="res://sprites/ui/gameplay/multiplayer/playertags_p10001.png" id="152_vw8dk"]
 [ext_resource type="Texture2D" uid="uid://byww7sdu06wo" path="res://sprites/ui/pause/PauseText0003.png" id="153_bdnkn"]
+[ext_resource type="Texture2D" uid="uid://dj2v78sm2ivcw" path="res://sprites/ui/gameplay/multiplayer/playertags_p10002.png" id="153_nrg4i"]
 [ext_resource type="Texture2D" uid="uid://gpraxs1oljpu" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume0001.png" id="154_anspc"]
+[ext_resource type="Texture2D" uid="uid://box68vwq4sohh" path="res://sprites/ui/gameplay/multiplayer/playertags_p10003.png" id="154_b14hx"]
+[ext_resource type="Texture2D" uid="uid://dhq11bo0m22y1" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p10001.png" id="155_1mos8"]
 [ext_resource type="Texture2D" uid="uid://bef7uibo8v5o0" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume0002.png" id="155_047sk"]
 [ext_resource type="Texture2D" uid="uid://de0h42tntyexa" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume0003.png" id="156_f78dw"]
+[ext_resource type="Texture2D" uid="uid://du3thmff1f1of" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p10002.png" id="156_sjj3t"]
+[ext_resource type="Texture2D" uid="uid://k7gb54uhgis7" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p10003.png" id="157_37kj4"]
 [ext_resource type="Texture2D" uid="uid://bo8i6ajpkufn2" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Select0001.png" id="157_ix76w"]
+[ext_resource type="Texture2D" uid="uid://ddl0ysotkbwsm" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p10001.png" id="158_3oku3"]
 [ext_resource type="Texture2D" uid="uid://ouwf6rh06ax" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Select0002.png" id="158_y3dlp"]
 [ext_resource type="Texture2D" uid="uid://bd1c7qw8t4ace" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Select0003.png" id="159_hsld7"]
+[ext_resource type="Texture2D" uid="uid://bh08yxxwdv1ib" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p10002.png" id="159_vif1i"]
 [ext_resource type="Texture2D" uid="uid://dqilrqd80ick" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Hover0001.png" id="160_d2sn4"]
+[ext_resource type="Texture2D" uid="uid://dwjwctw34h5nh" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p10003.png" id="160_ko4a5"]
+[ext_resource type="Texture2D" uid="uid://b40h1klvneprj" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p10001.png" id="161_nc1hv"]
 [ext_resource type="Texture2D" uid="uid://ry13npcyu8ib" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Hover0002.png" id="161_ua1j0"]
 [ext_resource type="Texture2D" uid="uid://c6logquwk8oqf" path="res://sprites/ui/pause/buttons/resume/PauseButton_Resume_Hover0003.png" id="162_dusc8"]
-[ext_resource type="Texture2D" uid="uid://di04w0e8ufven" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0001.png" id="163_et4wb"]
-[ext_resource type="Texture2D" uid="uid://bmedvekyv7ftq" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0002.png" id="164_5h6rc"]
-[ext_resource type="Texture2D" uid="uid://dnu3us0qy48sv" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0003.png" id="165_11y36"]
-[ext_resource type="Texture2D" uid="uid://td201l10gyb3" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0001.png" id="166_pmwsy"]
-[ext_resource type="Texture2D" uid="uid://rkutk4ppr1oe" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0002.png" id="167_o7636"]
-[ext_resource type="Texture2D" uid="uid://eft0t37v0xjk" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0003.png" id="168_sm2mp"]
-[ext_resource type="Texture2D" uid="uid://bi2h4gswgxd3u" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0001.png" id="169_ce02c"]
-[ext_resource type="Texture2D" uid="uid://biv1x4lwhrw7b" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0002.png" id="170_aa86j"]
-[ext_resource type="Texture2D" uid="uid://cvij1v7428adr" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0003.png" id="171_fa4m4"]
-[ext_resource type="Texture2D" uid="uid://ti4jxb2do2cp" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0001.png" id="172_dqeuq"]
-[ext_resource type="Texture2D" uid="uid://bhqsdyqn281if" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0002.png" id="173_jwhg4"]
-[ext_resource type="Texture2D" uid="uid://cbxkclp2gy2jt" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0003.png" id="174_in14d"]
-[ext_resource type="Texture2D" uid="uid://dj6cdalexbvxf" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0001.png" id="175_nd37s"]
-[ext_resource type="Texture2D" uid="uid://5n5wso7rppwl" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0002.png" id="176_j3k0v"]
-[ext_resource type="Texture2D" uid="uid://bdmauwut7w6yw" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0003.png" id="177_0j210"]
-[ext_resource type="Texture2D" uid="uid://dhav44qqltlol" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0001.png" id="178_vimyk"]
-[ext_resource type="Texture2D" uid="uid://d2qtfolgdipxt" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0002.png" id="179_scobs"]
-[ext_resource type="Texture2D" uid="uid://bqjk4y6pwf5jg" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0003.png" id="180_8hfcy"]
-[ext_resource type="Texture2D" uid="uid://dtcbllo0inqwb" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0001.png" id="181_2eaut"]
-[ext_resource type="Texture2D" uid="uid://dt5dm3cmubuq6" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0002.png" id="182_e85ih"]
-[ext_resource type="Texture2D" uid="uid://c5eayduhs76oc" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0003.png" id="183_p05m6"]
-[ext_resource type="Texture2D" uid="uid://bfiaf13qwixd1" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0001.png" id="184_vfens"]
-[ext_resource type="Texture2D" uid="uid://q0v58cx0n80c" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0002.png" id="185_w234f"]
-[ext_resource type="Texture2D" uid="uid://dfd4yj07s7ab8" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0003.png" id="186_ty4if"]
-[ext_resource type="Texture2D" uid="uid://d1uppm0a0gtyk" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0001.png" id="187_qyhen"]
-[ext_resource type="Texture2D" uid="uid://5rfcboon3c17" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0002.png" id="188_tal6j"]
-[ext_resource type="Texture2D" uid="uid://c1yjo7txvpby0" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0003.png" id="189_em8s6"]
+[ext_resource type="Texture2D" uid="uid://6yaxm7kr374" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p10002.png" id="162_qgp6q"]
+[ext_resource type="Texture2D" uid="uid://bv4orqmkoqpbv" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p10003.png" id="163_e6whg"]
+[ext_resource type="Texture2D" uid="uid://d3vib33a6caqn" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0001.png" id="163_et4wb"]
+[ext_resource type="Texture2D" uid="uid://ctokj75el8urw" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0002.png" id="164_5h6rc"]
+[ext_resource type="Texture2D" uid="uid://ygbkpegb83xo" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p10001.png" id="164_arepd"]
+[ext_resource type="Texture2D" uid="uid://bmny2jxxbab26" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart0003.png" id="165_11y36"]
+[ext_resource type="Texture2D" uid="uid://m0jklpdsdftm" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p10002.png" id="165_f37w5"]
+[ext_resource type="Texture2D" uid="uid://dixhg12f4jayy" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p10003.png" id="166_lk8xd"]
+[ext_resource type="Texture2D" uid="uid://bthg1hr2wfq8q" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0001.png" id="166_pmwsy"]
+[ext_resource type="Texture2D" uid="uid://clj13m0l1l8t6" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0002.png" id="167_o7636"]
+[ext_resource type="Texture2D" uid="uid://bnqnises02huv" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p10001.png" id="167_uodsx"]
+[ext_resource type="Texture2D" uid="uid://8w3vq11nhw3v" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p10002.png" id="168_8irsq"]
+[ext_resource type="Texture2D" uid="uid://sjw7ghs1cu5s" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Select0003.png" id="168_sm2mp"]
+[ext_resource type="Texture2D" uid="uid://bmgnwayv7ncir" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0001.png" id="169_ce02c"]
+[ext_resource type="Texture2D" uid="uid://dh4bbh3cw48vc" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p10003.png" id="169_g6fbw"]
+[ext_resource type="Texture2D" uid="uid://ci64utrm45ve0" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0002.png" id="170_aa86j"]
+[ext_resource type="Texture2D" uid="uid://diax1ab1148xi" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p10001.png" id="170_jnorf"]
+[ext_resource type="Texture2D" uid="uid://jyqypni2h7xb" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p10002.png" id="171_c3tyd"]
+[ext_resource type="Texture2D" uid="uid://c7hokeev52567" path="res://sprites/ui/pause/buttons/restart/PauseButton_Restart_Hover0003.png" id="171_fa4m4"]
+[ext_resource type="Texture2D" uid="uid://x1hwk1rxp65x" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0001.png" id="172_dqeuq"]
+[ext_resource type="Texture2D" uid="uid://b531e4bqu4ecg" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p10003.png" id="172_imnrm"]
+[ext_resource type="Texture2D" uid="uid://bak3k3djjki0a" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p10001.png" id="173_f2qts"]
+[ext_resource type="Texture2D" uid="uid://mslvt7n8isfl" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0002.png" id="173_jwhg4"]
+[ext_resource type="Texture2D" uid="uid://dgyg121pjmi5s" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p10002.png" id="174_ielb8"]
+[ext_resource type="Texture2D" uid="uid://cymy5tghah5m0" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings0003.png" id="174_in14d"]
+[ext_resource type="Texture2D" uid="uid://cmk6vedd48fex" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p10003.png" id="175_4pvfj"]
+[ext_resource type="Texture2D" uid="uid://cc2ogab85oqq3" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0001.png" id="175_nd37s"]
+[ext_resource type="Texture2D" uid="uid://ki5juf7rq6ip" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0002.png" id="176_j3k0v"]
+[ext_resource type="Texture2D" uid="uid://xov3b66bdh8o" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p10001.png" id="176_nsufl"]
+[ext_resource type="Texture2D" uid="uid://c2fxiidcbwnul" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Select0003.png" id="177_0j210"]
+[ext_resource type="Texture2D" uid="uid://c280lck6iuy81" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p10002.png" id="177_gjg5m"]
+[ext_resource type="Texture2D" uid="uid://1lrh250ouj1t" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p10003.png" id="178_esh87"]
+[ext_resource type="Texture2D" uid="uid://cp8som41o6qi2" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0001.png" id="178_vimyk"]
+[ext_resource type="Texture2D" uid="uid://bownm7rjmtkdl" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p10001.png" id="179_krndi"]
+[ext_resource type="Texture2D" uid="uid://b7kum2qyfb8cv" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0002.png" id="179_scobs"]
+[ext_resource type="Texture2D" uid="uid://ceu50x0qdp4nr" path="res://sprites/ui/pause/buttons/settings/PauseButton_Settings_Hover0003.png" id="180_8hfcy"]
+[ext_resource type="Texture2D" uid="uid://42cx8tel8uo4" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p10002.png" id="180_33sl6"]
+[ext_resource type="Texture2D" uid="uid://c7qd44dort2t7" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0001.png" id="181_2eaut"]
+[ext_resource type="Texture2D" uid="uid://dq0dxa5x33jbr" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p10003.png" id="181_ah75n"]
+[ext_resource type="Texture2D" uid="uid://1ewjt3igp2i4" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0002.png" id="182_e85ih"]
+[ext_resource type="Texture2D" uid="uid://bq8vca8gk4wme" path="res://sprites/ui/gameplay/multiplayer/playertags_p20001.png" id="182_inmw0"]
+[ext_resource type="Texture2D" uid="uid://cpta37htspqdg" path="res://sprites/ui/gameplay/multiplayer/playertags_p20002.png" id="183_e1t5y"]
+[ext_resource type="Texture2D" uid="uid://drqnjr8bxcbn6" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit0003.png" id="183_p05m6"]
+[ext_resource type="Texture2D" uid="uid://c6wv6xucaipol" path="res://sprites/ui/gameplay/multiplayer/playertags_p20003.png" id="184_5myye"]
+[ext_resource type="Texture2D" uid="uid://bkbf3soxcfkif" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0001.png" id="184_vfens"]
+[ext_resource type="Texture2D" uid="uid://c88jytnyoymct" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p20001.png" id="185_m0gmt"]
+[ext_resource type="Texture2D" uid="uid://dn0rjhegrakt8" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0002.png" id="185_w234f"]
+[ext_resource type="Texture2D" uid="uid://b2w8owyp8ocgk" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p20002.png" id="186_5fnav"]
+[ext_resource type="Texture2D" uid="uid://bpsjnau2c0tc8" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Select0003.png" id="186_ty4if"]
+[ext_resource type="Texture2D" uid="uid://ce2mn627rlyee" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p20003.png" id="187_jqel6"]
+[ext_resource type="Texture2D" uid="uid://bhhk6kt26dscb" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0001.png" id="187_qyhen"]
+[ext_resource type="Texture2D" uid="uid://f1y0y2nbfvx5" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p20001.png" id="188_o65vq"]
+[ext_resource type="Texture2D" uid="uid://die57an11m3kt" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0002.png" id="188_tal6j"]
+[ext_resource type="Texture2D" uid="uid://b76untcnxmt37" path="res://sprites/ui/pause/buttons/quit/PauseButton_Quit_Hover0003.png" id="189_em8s6"]
+[ext_resource type="Texture2D" uid="uid://bvoknhcfgigf1" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p20002.png" id="189_wapvl"]
+[ext_resource type="Texture2D" uid="uid://cei710povhm75" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p20003.png" id="190_22h0c"]
 [ext_resource type="AudioStream" uid="uid://sr4thpymlxlb" path="res://sfx/menu/sfx_pauseopen.ogg" id="190_gs6ce"]
 [ext_resource type="Script" uid="uid://sg4vddoakxmk" path="res://scenes/ui/clear/clear.gd" id="191_3savt"]
+[ext_resource type="Texture2D" uid="uid://di4ioogkc6ysk" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p20001.png" id="191_o02fo"]
 [ext_resource type="Texture2D" uid="uid://d18lsduhhyged" path="res://sprites/ui/gameplay/clear/clearbg0001.png" id="192_1dg3h"]
+[ext_resource type="Texture2D" uid="uid://cqwangay1oj2d" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p20002.png" id="192_qwgco"]
+[ext_resource type="Texture2D" uid="uid://c8d3xm42qgthu" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p20003.png" id="193_4qvq5"]
 [ext_resource type="Texture2D" uid="uid://dbi2lfs2p6opo" path="res://sprites/ui/gameplay/clear/clearbg0002.png" id="193_6kw68"]
 [ext_resource type="Texture2D" uid="uid://cw1wcwfbudnbt" path="res://sprites/ui/gameplay/clear/clearbg0003.png" id="194_8xrey"]
+[ext_resource type="Texture2D" uid="uid://8rtyl044ck08" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p20001.png" id="194_lysa8"]
+[ext_resource type="Texture2D" uid="uid://cvg68dlkvy7bl" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p20002.png" id="195_7kj0x"]
 [ext_resource type="Texture2D" uid="uid://6u8luessbsc4" path="res://sprites/ui/gameplay/clear/levelclear_text0001.png" id="195_nw68p"]
+[ext_resource type="Texture2D" uid="uid://d3l1jrl2mwqem" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p20003.png" id="196_2xn72"]
 [ext_resource type="Texture2D" uid="uid://l7r7u8kbyybb" path="res://sprites/ui/gameplay/clear/levelclear_text0002.png" id="196_ulv23"]
 [ext_resource type="Texture2D" uid="uid://cwuno627co2mr" path="res://sprites/ui/gameplay/clear/levelclear_text0003.png" id="197_02mcm"]
+[ext_resource type="Texture2D" uid="uid://dh7tdbshrhkgd" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p20001.png" id="197_bptnt"]
 [ext_resource type="AudioStream" uid="uid://cf0jvk8okxoci" path="res://sfx/gameplay/clear/sfx_levelclear.ogg" id="198_c4aoq"]
+[ext_resource type="Texture2D" uid="uid://cvqw5kip7kmy3" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p20002.png" id="198_hcyct"]
 [ext_resource type="Script" uid="uid://b8nd1cjokmpot" path="res://scenes/ui/clear/results.gd" id="199_froyw"]
+[ext_resource type="Texture2D" uid="uid://dj4suf5mqog1u" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p20003.png" id="199_y77im"]
 [ext_resource type="Texture2D" uid="uid://dtc1jmy0ivl04" path="res://sprites/ui/gameplay/results/ResultsBG0001.png" id="200_j517i"]
+[ext_resource type="Texture2D" uid="uid://5dyc5oj101p8" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p20001.png" id="200_tpr8f"]
+[ext_resource type="Texture2D" uid="uid://1kemmdon1bni" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p20002.png" id="201_3amn1"]
 [ext_resource type="Texture2D" uid="uid://bvpx037c3sw74" path="res://sprites/ui/gameplay/results/ResultsBG0002.png" id="201_ywoj2"]
 [ext_resource type="Texture2D" uid="uid://mtqd5cn0bdk" path="res://sprites/ui/gameplay/results/ResultsBG0003.png" id="202_6nngh"]
+[ext_resource type="Texture2D" uid="uid://c3ljv0qyf1y66" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p20003.png" id="202_fg01g"]
 [ext_resource type="Texture2D" uid="uid://bk8ybxdjrldo0" path="res://sprites/ui/gameplay/results/ResultsText0001.png" id="203_2gllq"]
+[ext_resource type="Texture2D" uid="uid://dpq0m2ap4qhr8" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p20001.png" id="203_iara6"]
 [ext_resource type="Texture2D" uid="uid://b3v4ynn04de7f" path="res://sprites/ui/gameplay/results/ResultsText0002.png" id="204_m4jss"]
+[ext_resource type="Texture2D" uid="uid://bu4o6wflowxdx" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p20002.png" id="204_xpxy6"]
 [ext_resource type="Texture2D" uid="uid://8sh7vck40713" path="res://sprites/ui/gameplay/results/ResultsText0003.png" id="205_51t2p"]
+[ext_resource type="Texture2D" uid="uid://dua2aib55uxbg" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p20003.png" id="205_a7j3h"]
 [ext_resource type="Texture2D" uid="uid://cylgvepwo4po3" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue0001.png" id="206_5pxx4"]
+[ext_resource type="Texture2D" uid="uid://codphle1dspyg" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p20001.png" id="206_i42cx"]
+[ext_resource type="Texture2D" uid="uid://kmhrvcv2h6sv" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p20002.png" id="207_2imgy"]
 [ext_resource type="Texture2D" uid="uid://cjd62lg2iju88" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue0002.png" id="207_hkma8"]
 [ext_resource type="Texture2D" uid="uid://jtpsc5qc8ock" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue0003.png" id="208_1gahh"]
+[ext_resource type="Texture2D" uid="uid://dl45kg0xa44ua" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p20003.png" id="208_8htj2"]
+[ext_resource type="Texture2D" uid="uid://bs7b2pcdra780" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p20001.png" id="209_ghddk"]
 [ext_resource type="Texture2D" uid="uid://psc5n46q6maf" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Select0001.png" id="209_rslkw"]
 [ext_resource type="Texture2D" uid="uid://c22bca5toh43c" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Select0002.png" id="210_b2dbi"]
+[ext_resource type="Texture2D" uid="uid://hs11oyyh5ttm" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p20002.png" id="210_ejvxu"]
+[ext_resource type="Texture2D" uid="uid://bkp70dgkcymb2" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p20003.png" id="211_plv55"]
 [ext_resource type="Texture2D" uid="uid://c1k0skraqd8da" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Select0003.png" id="211_u6vqi"]
+[ext_resource type="Texture2D" uid="uid://hotiqqt6kqox" path="res://sprites/ui/gameplay/multiplayer/playertags_p30001.png" id="212_737st"]
 [ext_resource type="Texture2D" uid="uid://iq12sdm6sv3d" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Hover0001.png" id="212_lt62k"]
 [ext_resource type="Texture2D" uid="uid://pyphf27h0x51" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Hover0002.png" id="213_6e0o2"]
+[ext_resource type="Texture2D" uid="uid://cbjvspnbi6med" path="res://sprites/ui/gameplay/multiplayer/playertags_p30002.png" id="213_fhtjy"]
 [ext_resource type="Texture2D" uid="uid://y1vnjk1bkq0t" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Continue_Hover0003.png" id="214_1i2r3"]
+[ext_resource type="Texture2D" uid="uid://criika2qftrid" path="res://sprites/ui/gameplay/multiplayer/playertags_p30003.png" id="214_lttuy"]
 [ext_resource type="Texture2D" uid="uid://dp121fl5lw27j" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel0001.png" id="215_1hxlo"]
+[ext_resource type="Texture2D" uid="uid://cek7l054bctrq" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p30001.png" id="215_gqvyg"]
 [ext_resource type="Texture2D" uid="uid://dn3mxurxr0cny" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel0002.png" id="216_seadv"]
+[ext_resource type="Texture2D" uid="uid://v7droad2jxu6" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p30002.png" id="216_xengj"]
 [ext_resource type="Texture2D" uid="uid://baf65yrlfxolf" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel0003.png" id="217_cfv25"]
+[ext_resource type="Texture2D" uid="uid://bf0bs7joyvhfo" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p30003.png" id="217_n0uc3"]
 [ext_resource type="Texture2D" uid="uid://bailc85j4fn2p" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Select0001.png" id="218_cv8es"]
+[ext_resource type="Texture2D" uid="uid://caos6xm4rhjk1" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p30001.png" id="218_hpknq"]
 [ext_resource type="Texture2D" uid="uid://s3h00xejn0tt" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Select0002.png" id="219_0qf2p"]
+[ext_resource type="Texture2D" uid="uid://che3pqe1occlp" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p30002.png" id="219_atdrf"]
 [ext_resource type="Texture2D" uid="uid://cjuwdfcqpuec7" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Select0003.png" id="220_702x2"]
+[ext_resource type="Texture2D" uid="uid://dtbvq1x5ultv2" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p30003.png" id="220_odnae"]
 [ext_resource type="Texture2D" uid="uid://35ujy0vh4oxe" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Hover0001.png" id="221_25yxy"]
+[ext_resource type="Texture2D" uid="uid://bqmqp3ubr5ec6" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p30001.png" id="221_loqw4"]
 [ext_resource type="Texture2D" uid="uid://bjrsmhbtr480e" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Hover0002.png" id="222_n5dtd"]
+[ext_resource type="Texture2D" uid="uid://dyaxeowttp3r8" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p30002.png" id="222_oq2tw"]
 [ext_resource type="Texture2D" uid="uid://dubs6ebajbeqx" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_ChangeLevel_Hover0003.png" id="223_by281"]
+[ext_resource type="Texture2D" uid="uid://dwfepnihqo60u" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p30003.png" id="223_c2hen"]
 [ext_resource type="Texture2D" uid="uid://fn5117ks1osq" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit0001.png" id="224_7opyv"]
+[ext_resource type="Texture2D" uid="uid://b8r3s6h2vyexx" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p30001.png" id="224_aqorq"]
 [ext_resource type="Texture2D" uid="uid://nbq58iw2ijc5" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit0002.png" id="225_3yb6e"]
+[ext_resource type="Texture2D" uid="uid://bq0r4q4nltic8" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p30002.png" id="225_tqu5q"]
 [ext_resource type="Texture2D" uid="uid://8cda8p8r0b6x" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit0003.png" id="226_8k0ej"]
+[ext_resource type="Texture2D" uid="uid://b5yw7mgi0wafp" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p30003.png" id="226_licvd"]
+[ext_resource type="Texture2D" uid="uid://cdsydrpl4qfps" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p30001.png" id="227_jau6p"]
 [ext_resource type="Texture2D" uid="uid://dvg5uevjp00cl" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Select0001.png" id="227_yvjhb"]
 [ext_resource type="Texture2D" uid="uid://bfiim4187qil8" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Select0002.png" id="228_008p6"]
+[ext_resource type="Texture2D" uid="uid://b5h5retuxj88x" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p30002.png" id="228_44dor"]
 [ext_resource type="Texture2D" uid="uid://dqeppc54upegr" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Select0003.png" id="229_icycw"]
+[ext_resource type="Texture2D" uid="uid://c2efte0j0g2s7" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p30003.png" id="229_jwegj"]
 [ext_resource type="Texture2D" uid="uid://dotmrbb85kfy4" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Hover0001.png" id="230_hxavn"]
+[ext_resource type="Texture2D" uid="uid://bsxexjrs5pmhh" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p30001.png" id="230_xbyx3"]
+[ext_resource type="Texture2D" uid="uid://bmnvmhxf5rjtj" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p30002.png" id="231_k7r3l"]
 [ext_resource type="Texture2D" uid="uid://bs5etfqehfh4l" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Hover0002.png" id="231_kn1lw"]
 [ext_resource type="Texture2D" uid="uid://55koxpiml3tr" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Quit_Hover0003.png" id="232_3v1w3"]
+[ext_resource type="Texture2D" uid="uid://r6nrwhukgfvq" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p30003.png" id="232_g1b7n"]
 [ext_resource type="Texture2D" uid="uid://cfa28232qrcm3" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay0001.png" id="233_cyadq"]
+[ext_resource type="Texture2D" uid="uid://dsjysd10skp1y" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p30001.png" id="233_w1qa5"]
 [ext_resource type="Texture2D" uid="uid://bscpi5xtukx6" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay0002.png" id="234_2ysa7"]
+[ext_resource type="Texture2D" uid="uid://dv3doi68obl4" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p30002.png" id="234_p3vv4"]
+[ext_resource type="Texture2D" uid="uid://cmdj8o6wdq36o" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p30003.png" id="235_2b8vt"]
 [ext_resource type="Texture2D" uid="uid://crrypbm7gpf1k" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay0003.png" id="235_bg2du"]
 [ext_resource type="Texture2D" uid="uid://iu80n0p67mim" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Select0001.png" id="236_2qj74"]
+[ext_resource type="Texture2D" uid="uid://d3o2ld6qu2dpv" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p30001.png" id="236_ktktd"]
+[ext_resource type="Texture2D" uid="uid://7shyms24n27q" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p30002.png" id="237_c88pd"]
 [ext_resource type="Texture2D" uid="uid://cl307gtr3o22u" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Select0002.png" id="237_sy5v4"]
+[ext_resource type="Texture2D" uid="uid://b28v2h774qa7p" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p30003.png" id="238_fya7r"]
 [ext_resource type="Texture2D" uid="uid://c56osck2a6rvn" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Select0003.png" id="238_lth46"]
+[ext_resource type="Texture2D" uid="uid://c0wj62ms62w8r" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p30001.png" id="239_42hwx"]
 [ext_resource type="Texture2D" uid="uid://n0v3rkow0ts5" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Hover0001.png" id="239_j8abk"]
 [ext_resource type="Texture2D" uid="uid://vnpvxvhavao7" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Hover0002.png" id="240_e2cbw"]
+[ext_resource type="Texture2D" uid="uid://bpwef2j2erqtb" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p30002.png" id="240_vp85n"]
+[ext_resource type="Texture2D" uid="uid://ky4y6qkd1hcf" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p30003.png" id="241_hhm3p"]
 [ext_resource type="Texture2D" uid="uid://df1l7n5o3vnas" path="res://sprites/ui/gameplay/results/buttons/ResultsButton_Replay_Hover0003.png" id="241_q66aj"]
+[ext_resource type="Texture2D" uid="uid://pcrkcwfvhhh8" path="res://sprites/ui/gameplay/multiplayer/playertags_p40001.png" id="242_33ots"]
 [ext_resource type="PackedScene" uid="uid://ug1qkpstsbb8" path="res://scenes/gameplaymechanics/levelbuilding/characterspawn.tscn" id="242_gretq"]
+[ext_resource type="Texture2D" uid="uid://eutuadtbofh3" path="res://sprites/ui/gameplay/multiplayer/playertags_p40002.png" id="243_yainu"]
+[ext_resource type="Texture2D" uid="uid://dolay61hmxcdw" path="res://sprites/ui/gameplay/multiplayer/playertags_p40003.png" id="244_mfn6p"]
+[ext_resource type="Texture2D" uid="uid://dq1mddjtksowc" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p40001.png" id="245_syowh"]
+[ext_resource type="Texture2D" uid="uid://7bfb5rwecu5h" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p40002.png" id="246_a3ta2"]
+[ext_resource type="Texture2D" uid="uid://b6xionnoyeagf" path="res://sprites/ui/gameplay/multiplayer/playertagsdark_p40003.png" id="247_xicy0"]
+[ext_resource type="Texture2D" uid="uid://b3llhwarn4p0w" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p40001.png" id="248_ycak3"]
+[ext_resource type="Texture2D" uid="uid://dfwj3nc2pd1gs" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p40002.png" id="249_pvg4p"]
+[ext_resource type="Texture2D" uid="uid://dxl7ikiuahfkp" path="res://sprites/ui/gameplay/multiplayer/german/playertagsdark_p40003.png" id="250_n8s8m"]
+[ext_resource type="Texture2D" uid="uid://giwx5pspm3mg" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p40001.png" id="251_ergaj"]
+[ext_resource type="Texture2D" uid="uid://b07n7old4woij" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p40002.png" id="252_5rpr0"]
+[ext_resource type="Texture2D" uid="uid://cwttknw8f6x84" path="res://sprites/ui/gameplay/multiplayer/italian/playertagsdark_p40003.png" id="253_am6ch"]
+[ext_resource type="Texture2D" uid="uid://dtay3mgtlj8iv" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p40001.png" id="254_rxbwe"]
+[ext_resource type="Texture2D" uid="uid://daxw7mt46r6ts" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p40002.png" id="255_a7d1r"]
+[ext_resource type="Texture2D" uid="uid://bhtpqbxtrf0ew" path="res://sprites/ui/gameplay/multiplayer/japanese/playertagsdark_p40003.png" id="256_rau68"]
+[ext_resource type="Texture2D" uid="uid://b0xbtppu1rh4q" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p40001.png" id="257_vxwud"]
+[ext_resource type="Texture2D" uid="uid://0a5k62xdhbnq" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p40002.png" id="258_743wi"]
+[ext_resource type="Texture2D" uid="uid://bkkrcw0wc3o24" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertagsdark_p40003.png" id="259_f5627"]
+[ext_resource type="Texture2D" uid="uid://ceaw8c3gh742" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p40001.png" id="260_ekn7f"]
+[ext_resource type="Texture2D" uid="uid://brfb7sb6g30ar" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p40002.png" id="261_yc1x0"]
+[ext_resource type="Texture2D" uid="uid://cqoj54vvr7cim" path="res://sprites/ui/gameplay/multiplayer/german/playertags_p40003.png" id="262_r38uk"]
+[ext_resource type="Texture2D" uid="uid://5k3qsxwglyrq" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p40001.png" id="263_bn1js"]
+[ext_resource type="Texture2D" uid="uid://bo2fq6xphkg5d" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p40002.png" id="264_j7pdl"]
+[ext_resource type="Texture2D" uid="uid://dg6w0h3dq1km4" path="res://sprites/ui/gameplay/multiplayer/italian/playertags_p40003.png" id="265_cedhb"]
+[ext_resource type="Texture2D" uid="uid://ghg0trurs0m5" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p40001.png" id="266_ppjna"]
+[ext_resource type="Texture2D" uid="uid://bv6ielxsdy81m" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p40002.png" id="267_ponls"]
+[ext_resource type="Texture2D" uid="uid://bo7yuv5fpdqog" path="res://sprites/ui/gameplay/multiplayer/japanese/playertags_p40003.png" id="268_ruu0j"]
+[ext_resource type="Texture2D" uid="uid://ek0u6qijc0ta" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p40001.png" id="269_ewql0"]
+[ext_resource type="Texture2D" uid="uid://b77aplgl7r2te" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p40002.png" id="270_0j8dg"]
+[ext_resource type="Texture2D" uid="uid://wrmc00txjy0b" path="res://sprites/ui/gameplay/multiplayer/spanish-french/playertags_p40003.png" id="271_qttot"]
+[ext_resource type="PackedScene" uid="uid://bjf6iem5t36sd" path="res://scenes/gameplaymechanics/multiplayer/multiplayer_cam.tscn" id="370_sh7w0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wcgcf"]
-
-[sub_resource type="SystemFont" id="SystemFont_mixr7"]
-font_names = PackedStringArray("MV Boli")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hgoia"]
 texture = ExtResource("18_yav4e")
@@ -371,13 +487,13 @@ sources/2 = SubResource("TileSetAtlasSource_3wu6l")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qacrp"]
 distance = 49.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_317ao"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyasy"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7tsh0"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vw8dk"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hq3jj"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nrg4i"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_eo870"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_b14hx"]
 frames = 3
 speed_scale = 5.0
 frame_0/texture = ExtResource("50_ruvpp")
@@ -386,7 +502,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("52_dcma8")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_hc5fr"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_1mos8"]
 frames = 3
 speed_scale = 5.0
 frame_0/texture = ExtResource("53_gykxq")
@@ -395,14 +511,14 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("55_0ef1p")
 frame_2/duration = 1.0
 
-[sub_resource type="SystemFont" id="SystemFont_do770"]
+[sub_resource type="SystemFont" id="SystemFont_sjj3t"]
 font_names = PackedStringArray("DK Harimau Dua")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ehtn"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_37kj4"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbs1v"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3oku3"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_bafj3"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vif1i"]
 frames = 3
 speed_scale = 9.0
 frame_0/texture = ExtResource("57_fy0c1")
@@ -411,7 +527,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("59_jpg3n")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_x5u1v"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ko4a5"]
 frames = 3
 speed_scale = 9.0
 frame_0/texture = ExtResource("60_awxs5")
@@ -420,9 +536,9 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("62_eek3f")
 frame_2/duration = 1.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lrf3h"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nc1hv"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_uqd14"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_qgp6q"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("63_nbk4p")
@@ -431,9 +547,9 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("65_qtrh2")
 frame_2/duration = 1.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mup0q"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e6whg"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_36be6"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_arepd"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("66_6yy1v")
@@ -442,7 +558,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("68_11n3l")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_lcv32"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_f37w5"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("69_d506t")
@@ -451,9 +567,9 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("71_dra88")
 frame_2/duration = 1.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_71b4p"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lk8xd"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_550xw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_uodsx"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -596,7 +712,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wklj1"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_8irsq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -739,9 +855,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_btaqj"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g6fbw"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_6heqk"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jnorf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -884,9 +1000,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u1yk0"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3tyd"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_owkhe"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_imnrm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -937,7 +1053,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_pm52e"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_f2qts"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -988,7 +1104,570 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_po1km"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_ielb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("155_1mos8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_sjj3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_37kj4")
+}],
+"loop": true,
+"name": &"player1_dark_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("158_3oku3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_vif1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_ko4a5")
+}],
+"loop": true,
+"name": &"player1_dark_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("161_nc1hv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_qgp6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_e6whg")
+}],
+"loop": true,
+"name": &"player1_dark_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("164_arepd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_f37w5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_lk8xd")
+}],
+"loop": true,
+"name": &"player1_dark_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("167_uodsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_8irsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_g6fbw")
+}],
+"loop": true,
+"name": &"player1_dark_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("152_vw8dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_nrg4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_b14hx")
+}],
+"loop": true,
+"name": &"player1_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("170_jnorf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_c3tyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_imnrm")
+}],
+"loop": true,
+"name": &"player1_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("173_f2qts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_ielb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_4pvfj")
+}],
+"loop": true,
+"name": &"player1_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("176_nsufl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_gjg5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_esh87")
+}],
+"loop": true,
+"name": &"player1_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("179_krndi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_33sl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_ah75n")
+}],
+"loop": true,
+"name": &"player1_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("185_m0gmt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_5fnav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_jqel6")
+}],
+"loop": true,
+"name": &"player2_dark_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("188_o65vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_wapvl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_22h0c")
+}],
+"loop": true,
+"name": &"player2_dark_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("191_o02fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_qwgco")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_4qvq5")
+}],
+"loop": true,
+"name": &"player2_dark_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("194_lysa8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_7kj0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_2xn72")
+}],
+"loop": true,
+"name": &"player2_dark_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("197_bptnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_hcyct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_y77im")
+}],
+"loop": true,
+"name": &"player2_dark_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("182_inmw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_e1t5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_5myye")
+}],
+"loop": true,
+"name": &"player2_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("200_tpr8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_3amn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_fg01g")
+}],
+"loop": true,
+"name": &"player2_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("203_iara6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_xpxy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_a7j3h")
+}],
+"loop": true,
+"name": &"player2_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("206_i42cx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_2imgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_8htj2")
+}],
+"loop": true,
+"name": &"player2_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("209_ghddk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_ejvxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_plv55")
+}],
+"loop": true,
+"name": &"player2_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("215_gqvyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_xengj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_n0uc3")
+}],
+"loop": true,
+"name": &"player3_dark_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("218_hpknq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_atdrf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_odnae")
+}],
+"loop": true,
+"name": &"player3_dark_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("221_loqw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_oq2tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_c2hen")
+}],
+"loop": true,
+"name": &"player3_dark_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("224_aqorq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_tqu5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_licvd")
+}],
+"loop": true,
+"name": &"player3_dark_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("227_jau6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_44dor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_jwegj")
+}],
+"loop": true,
+"name": &"player3_dark_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("212_737st")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_fhtjy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_lttuy")
+}],
+"loop": true,
+"name": &"player3_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("230_xbyx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_k7r3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_g1b7n")
+}],
+"loop": true,
+"name": &"player3_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("233_w1qa5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_p3vv4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_2b8vt")
+}],
+"loop": true,
+"name": &"player3_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("236_ktktd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_c88pd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_fya7r")
+}],
+"loop": true,
+"name": &"player3_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("239_42hwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_vp85n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_hhm3p")
+}],
+"loop": true,
+"name": &"player3_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("245_syowh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_a3ta2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_xicy0")
+}],
+"loop": true,
+"name": &"player4_dark_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("248_ycak3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_pvg4p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_n8s8m")
+}],
+"loop": true,
+"name": &"player4_dark_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("251_ergaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_5rpr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_am6ch")
+}],
+"loop": true,
+"name": &"player4_dark_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("254_rxbwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_a7d1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_rau68")
+}],
+"loop": true,
+"name": &"player4_dark_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("257_vxwud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_743wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_f5627")
+}],
+"loop": true,
+"name": &"player4_dark_spa-fre",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("242_33ots")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_yainu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_mfn6p")
+}],
+"loop": true,
+"name": &"player4_eng",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("260_ekn7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_yc1x0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_r38uk")
+}],
+"loop": true,
+"name": &"player4_ger",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("263_bn1js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_j7pdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_cedhb")
+}],
+"loop": true,
+"name": &"player4_ita",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("266_ppjna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_ponls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_ruu0j")
+}],
+"loop": true,
+"name": &"player4_jpn",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("269_ewql0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_0j8dg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_qttot")
+}],
+"loop": true,
+"name": &"player4_spa-fre",
+"speed": 8.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pvfj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -1044,7 +1723,7 @@ _data = {
 &"popin_out": SubResource("Animation_5ip5a")
 }
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_apvdu"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_nsufl"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("148_y27uy")
@@ -1053,7 +1732,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("150_5m4f0")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ltyyk"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_gjg5m"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("151_lrjmh")
@@ -1062,7 +1741,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("153_bdnkn")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_21lbx"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_esh87"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("154_anspc")
@@ -1071,7 +1750,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("156_f78dw")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_6at7m"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_krndi"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("157_ix76w")
@@ -1080,7 +1759,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("159_hsld7")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_5hxyo"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_33sl6"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("160_d2sn4")
@@ -1089,7 +1768,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("162_dusc8")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_076c3"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_ah75n"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("163_et4wb")
@@ -1098,7 +1777,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("165_11y36")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_bp88i"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_inmw0"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("166_pmwsy")
@@ -1107,7 +1786,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("168_sm2mp")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_gxq3v"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_e1t5y"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("169_ce02c")
@@ -1116,7 +1795,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("171_fa4m4")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_yju2p"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5myye"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("172_dqeuq")
@@ -1125,7 +1804,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("174_in14d")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_pmpli"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_m0gmt"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("175_nd37s")
@@ -1134,7 +1813,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("177_0j210")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ckaa1"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_5fnav"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("178_vimyk")
@@ -1143,7 +1822,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("180_8hfcy")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_cigd7"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_jqel6"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("181_2eaut")
@@ -1152,7 +1831,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("183_p05m6")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_syw1l"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_o65vq"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("184_vfens")
@@ -1161,7 +1840,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("186_ty4if")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_x83ik"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_wapvl"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("187_qyhen")
@@ -1169,25 +1848,6 @@ frame_1/texture = ExtResource("188_tal6j")
 frame_1/duration = 1.0
 frame_2/texture = ExtResource("189_em8s6")
 frame_2/duration = 1.0
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_1fx8o"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("145_p2axs")
-}],
-"loop": true,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("146_6nsh5")
-}],
-"loop": true,
-"name": &"found",
-"speed": 5.0
-}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ih6o3"]
 
@@ -1327,7 +1987,7 @@ tracks/1/keys = {
 tracks/2/type = "method"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("%ClearPanel/..")
+tracks/2/path = NodePath("../..")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -1345,7 +2005,7 @@ _data = {
 &"cleardrop": SubResource("Animation_ctbbx")
 }
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_hjk3j"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_22h0c"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("200_j517i")
@@ -1401,9 +2061,9 @@ _data = {
 &"bgpopin": SubResource("Animation_0sast")
 }
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5yn6"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o02fo"]
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_t145b"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_qwgco"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("203_2gllq")
@@ -1449,7 +2109,7 @@ _data = {
 &"resultspopin": SubResource("Animation_gmqt8")
 }
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_3plre"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_4qvq5"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("206_5pxx4")
@@ -1458,7 +2118,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("208_1gahh")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_yysri"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_lysa8"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("209_rslkw")
@@ -1467,7 +2127,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("211_u6vqi")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_psu17"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_7kj0x"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("212_lt62k")
@@ -1476,7 +2136,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("214_1i2r3")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_o5fk5"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2xn72"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("215_1hxlo")
@@ -1485,7 +2145,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("217_cfv25")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_cwh5l"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_bptnt"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("218_cv8es")
@@ -1494,7 +2154,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("220_702x2")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_m4krm"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_hcyct"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("221_25yxy")
@@ -1503,7 +2163,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("223_by281")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_2mrw0"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_y77im"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("224_7opyv")
@@ -1512,7 +2172,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("226_8k0ej")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_p3l5f"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_tpr8f"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("227_yvjhb")
@@ -1521,7 +2181,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("229_icycw")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ceb22"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_3amn1"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("230_hxavn")
@@ -1530,7 +2190,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("232_3v1w3")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_vyjmf"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fg01g"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("233_cyadq")
@@ -1539,7 +2199,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("235_bg2du")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_6wiup"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_iara6"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("236_2qj74")
@@ -1548,7 +2208,7 @@ frame_1/duration = 1.0
 frame_2/texture = ExtResource("238_lth46")
 frame_2/duration = 1.0
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_ihxuu"]
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xpxy6"]
 frames = 3
 speed_scale = 6.0
 frame_0/texture = ExtResource("239_j8abk")
@@ -1837,7 +2497,7 @@ _data = {
 }
 
 [node name="Node" type="Node"]
-script = ExtResource("1_e5h7j")
+script = ExtResource("1_kyasy")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -11184.0
@@ -1886,6 +2546,7 @@ theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
 text = "Skyzone"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Folders2" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -1908,6 +2569,7 @@ theme_override_constants/shadow_outline_size = 3
 text = "Games
 "
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Folders3" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -1931,6 +2593,7 @@ text = "Springs Action:
 The Video Game
 "
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Folders4" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -1954,6 +2617,7 @@ text = "Climb Action:
 The Video Game
 "
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="File" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -1977,6 +2641,7 @@ theme_override_constants/shadow_outline_size = 3
 text = "EnemyAreKey.bin
 "
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="File2" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -1999,6 +2664,7 @@ theme_override_constants/shadow_offset_y = 1
 theme_override_constants/shadow_outline_size = 3
 text = "AlmostThere.bin"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="UnavailableWindows" type="TextureRect" parent="Background"]
 layout_mode = 0
@@ -2255,38 +2921,10 @@ offset_top = 13.0
 offset_right = 250.0
 offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 12
 text = "WELCOME BACK!!
 You're now in Level 2!"
-autowrap_mode = 2
-
-[node name="StickyNotes2" type="TextureRect" parent="Background"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 13472.0
-offset_top = 8849.0
-offset_right = 13808.0
-offset_bottom = 9069.0
-texture = ExtResource("13_owamj")
-
-[node name="TextFit" type="Panel" parent="Background/StickyNotes2"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 35.0
-offset_right = 212.0
-offset_bottom = 191.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wcgcf")
-
-[node name="Label" type="Label" parent="Background/StickyNotes2/TextFit"]
-layout_mode = 0
-offset_top = 13.0
-offset_right = 284.0
-offset_bottom = 140.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
-text = "This Window cannot be climb. 
--->
-Slam Dash on the Spring, and then perform a double jump to reach that height!"
 autowrap_mode = 2
 
 [node name="StickyNotes4" type="TextureRect" parent="Background"]
@@ -2312,40 +2950,11 @@ offset_top = 13.0
 offset_right = 284.0
 offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 12
 text = "Someone is waiting to see you.
 Let's go and see who it is!
 Good Luck!"
-autowrap_mode = 2
-
-[node name="StickyNotesPink" type="TextureRect" parent="Background"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 14464.0
-offset_top = 8337.0
-offset_right = 14800.0
-offset_bottom = 8593.0
-texture = ExtResource("14_o0cpv")
-
-[node name="TextFit" type="Panel" parent="Background/StickyNotesPink"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 35.0
-offset_right = 212.0
-offset_bottom = 191.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_wcgcf")
-
-[node name="Label" type="Label" parent="Background/StickyNotesPink/TextFit"]
-layout_mode = 0
-offset_top = 13.0
-offset_right = 284.0
-offset_bottom = 140.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
-text = "This Window can be climb under. 
--->
-Jump onto to it and use the left or right arrow keys to move! And then use Slam Dash to get off.
-WATCH OUT FOR SPIKES!"
 autowrap_mode = 2
 
 [node name="StickyNotesPink2" type="TextureRect" parent="Background"]
@@ -2371,7 +2980,8 @@ offset_top = 13.0
 offset_right = 284.0
 offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 12
 text = "BOING BOING AGAIN!!
 "
 autowrap_mode = 2
@@ -2399,8 +3009,9 @@ offset_top = 13.0
 offset_right = 284.0
 offset_bottom = 140.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_mixr7")
-text = "There's a lot of moving platforms around here.
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 12
+text = "There are numerous moving platforms around here.
 Some of which can help you give you some momentum!"
 autowrap_mode = 2
 
@@ -2465,7 +3076,7 @@ offset_bottom = 872.0
 texture = ExtResource("21_8njvj")
 
 [node name="FlameAdvert" parent="SceneObjects" instance=ExtResource("22_q1ewd")]
-position = Vector2(317, -15)
+position = Vector2(150, -14)
 
 [node name="PRRAdvert" parent="SceneObjects" instance=ExtResource("23_3pqou")]
 position = Vector2(704, -112)
@@ -2501,7 +3112,7 @@ position = Vector2(5520, -2416)
 position = Vector2(2928, -1256)
 
 [node name="FNFPNM" parent="SceneObjects" instance=ExtResource("23_tf1ug")]
-position = Vector2(-3, -328)
+position = Vector2(-220, -334)
 
 [node name="Spring" parent="SceneObjects" instance=ExtResource("24_jmi0h")]
 position = Vector2(1392, -544)
@@ -2528,13 +3139,11 @@ position = Vector2(10320, -1069)
 visible = false
 position = Vector2(1859, -1296)
 scale = Vector2(0.884242, 6.68358)
-script = ExtResource("30_5btje")
 
 [node name="Climbable2" parent="SceneObjects" instance=ExtResource("29_5c516")]
 visible = false
 position = Vector2(10636, -1707)
 scale = Vector2(1, 6.11999)
-script = ExtResource("30_5btje")
 
 [node name="TheCollectables" type="Node" parent="SceneObjects"]
 
@@ -2939,9 +3548,6 @@ scale = Vector2(0.159999, 0.159999)
 position = Vector2(7328, -1573)
 scale = Vector2(0.159999, 0.159999)
 
-[node name="ShimejiCharacter_Playable" parent="SceneObjects" instance=ExtResource("45_oatl6")]
-position = Vector2(303, -264)
-
 [node name="AdvertiseMent_Man2" parent="SceneObjects" instance=ExtResource("46_vsnu0")]
 position = Vector2(1408, -1424)
 
@@ -3042,6 +3648,18 @@ position = Vector2(13872, -2256)
 [node name="AdvertiseMent_Mohawk4" parent="SceneObjects" instance=ExtResource("24_rixro")]
 position = Vector2(14304, -1824)
 
+[node name="ShimejiCharacter_Playable" parent="SceneObjects" instance=ExtResource("55_vw8dk")]
+position = Vector2(277, -261)
+
+[node name="ShimejiCharacter_Playable_Player2" parent="SceneObjects" instance=ExtResource("55_vw8dk")]
+position = Vector2(183, -261)
+
+[node name="ShimejiCharacter_Playable_Player3" parent="SceneObjects" instance=ExtResource("55_vw8dk")]
+position = Vector2(88, -261)
+
+[node name="ShimejiCharacter_Playable_Player4" parent="SceneObjects" instance=ExtResource("55_vw8dk")]
+position = Vector2(-7, -261)
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="GUI" type="Control" parent="UI"]
@@ -3056,7 +3674,7 @@ offset_left = 12.0
 offset_top = 11.0
 offset_right = 166.0
 offset_bottom = 128.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_317ao")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kyasy")
 
 [node name="CharPanel" type="Panel" parent="UI/GUI/CharUIBase"]
 layout_mode = 1
@@ -3066,7 +3684,7 @@ anchor_bottom = 1.0
 offset_right = -45.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_7tsh0")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vw8dk")
 
 [node name="Score_CharPortrait" type="TextureRect" parent="UI/GUI/CharUIBase/CharPanel"]
 texture_filter = 1
@@ -3090,7 +3708,7 @@ offset_right = 73.0
 offset_bottom = 78.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_hq3jj")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nrg4i")
 
 [node name="TextureRect" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutNameBG"]
 texture_filter = 1
@@ -3098,7 +3716,7 @@ layout_mode = 0
 offset_left = -3.0
 offset_right = 127.0
 offset_bottom = 28.0
-texture = SubResource("AnimatedTexture_eo870")
+texture = SubResource("AnimatedTexture_b14hx")
 
 [node name="TextureRectDark" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutNameBG"]
 visible = false
@@ -3107,7 +3725,7 @@ layout_mode = 0
 offset_left = -3.0
 offset_right = 127.0
 offset_bottom = 28.0
-texture = SubResource("AnimatedTexture_hc5fr")
+texture = SubResource("AnimatedTexture_1mos8")
 
 [node name="CharName" type="Label" parent="UI/GUI/CharUIBase/LayoutNameBG"]
 texture_filter = 1
@@ -3118,16 +3736,18 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -63.0
-offset_top = -7.5
+offset_top = -8.5
 offset_right = 55.0
-offset_bottom = 13.5
+offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("56_iwm5y")
-theme_override_font_sizes/font_size = 17
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 11
 text = "Shimeji"
 horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="CharNameDark" type="Label" parent="UI/GUI/CharUIBase/LayoutNameBG"]
 visible = false
@@ -3145,7 +3765,7 @@ offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = SubResource("SystemFont_do770")
+theme_override_fonts/font = SubResource("SystemFont_sjj3t")
 theme_override_font_sizes/font_size = 17
 text = "Shimeji"
 horizontal_alignment = 1
@@ -3156,28 +3776,28 @@ offset_left = 11.0
 offset_top = 80.0
 offset_right = 152.0
 offset_bottom = 118.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_1ehtn")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_37kj4")
 
 [node name="Score_LayoutBG2" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain"]
 texture_filter = 1
-material = SubResource("ShaderMaterial_tbs1v")
+material = SubResource("ShaderMaterial_3oku3")
 layout_mode = 0
 offset_left = -1.0
 offset_top = 2.0
 offset_right = 142.0
 offset_bottom = 37.0
-texture = SubResource("AnimatedTexture_bafj3")
+texture = SubResource("AnimatedTexture_vif1i")
 
 [node name="Score_LayoutBGDark" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain"]
 visible = false
 texture_filter = 1
-material = SubResource("ShaderMaterial_tbs1v")
+material = SubResource("ShaderMaterial_3oku3")
 layout_mode = 0
 offset_left = -1.0
 offset_top = 2.0
 offset_right = 142.0
 offset_bottom = 37.0
-texture = SubResource("AnimatedTexture_x5u1v")
+texture = SubResource("AnimatedTexture_ko4a5")
 
 [node name="SquareIco" type="Panel" parent="UI/GUI/CharUIBase/LayoutMain"]
 layout_mode = 0
@@ -3185,7 +3805,7 @@ offset_left = 6.0
 offset_top = 11.0
 offset_right = 29.0
 offset_bottom = 31.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lrf3h")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nc1hv")
 
 [node name="Score_SquareIco" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/SquareIco"]
 texture_filter = 1
@@ -3194,7 +3814,7 @@ offset_left = 1.0
 offset_top = 2.0
 offset_right = 22.0
 offset_bottom = 19.0
-texture = SubResource("AnimatedTexture_uqd14")
+texture = SubResource("AnimatedTexture_qgp6q")
 
 [node name="Ex" type="Panel" parent="UI/GUI/CharUIBase/LayoutMain"]
 layout_mode = 1
@@ -3202,7 +3822,7 @@ offset_left = 23.0
 offset_top = 13.0
 offset_right = 42.0
 offset_bottom = 32.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mup0q")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
 
 [node name="Score_Ex" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/Ex"]
 texture_filter = 1
@@ -3211,7 +3831,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 20.0
 offset_bottom = 20.0
-texture = SubResource("AnimatedTexture_36be6")
+texture = SubResource("AnimatedTexture_arepd")
 expand_mode = 1
 
 [node name="Score_ExDark" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/Ex"]
@@ -3222,7 +3842,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 20.0
 offset_bottom = 20.0
-texture = SubResource("AnimatedTexture_lcv32")
+texture = SubResource("AnimatedTexture_f37w5")
 expand_mode = 1
 
 [node name="Numbers" type="Panel" parent="UI/GUI/CharUIBase/LayoutMain"]
@@ -3231,13 +3851,13 @@ offset_left = 34.0
 offset_top = 9.0
 offset_right = 56.0
 offset_bottom = 31.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_71b4p")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
 
 [node name="Score_NumbersH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBase/LayoutMain/Numbers"]
 texture_filter = 1
 position = Vector2(9, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"0"
 autoplay = "0"
 
@@ -3246,7 +3866,7 @@ visible = false
 texture_filter = 1
 position = Vector2(9, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_wklj1")
+sprite_frames = SubResource("SpriteFrames_8irsq")
 animation = &"0"
 autoplay = "0"
 
@@ -3254,7 +3874,7 @@ autoplay = "0"
 texture_filter = 1
 position = Vector2(20, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"1"
 autoplay = "0"
 
@@ -3263,7 +3883,7 @@ visible = false
 texture_filter = 1
 position = Vector2(20, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_wklj1")
+sprite_frames = SubResource("SpriteFrames_8irsq")
 animation = &"1"
 autoplay = "0"
 
@@ -3271,7 +3891,7 @@ autoplay = "0"
 texture_filter = 1
 position = Vector2(31, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"0"
 autoplay = "0"
 
@@ -3280,7 +3900,7 @@ visible = false
 texture_filter = 1
 position = Vector2(31, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_wklj1")
+sprite_frames = SubResource("SpriteFrames_8irsq")
 animation = &"0"
 autoplay = "0"
 
@@ -3291,7 +3911,7 @@ offset_left = 83.0
 offset_top = 12.0
 offset_right = 99.0
 offset_bottom = 28.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_btaqj")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g6fbw")
 
 [node name="Score_CharLife" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/CharLife"]
 texture_filter = 1
@@ -3307,7 +3927,7 @@ offset_left = 13.0
 offset_top = -1.0
 offset_right = 32.0
 offset_bottom = 18.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mup0q")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
 
 [node name="Score_ExLife" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/CharLife/ExLife"]
 texture_filter = 1
@@ -3316,7 +3936,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 20.0
 offset_bottom = 20.0
-texture = SubResource("AnimatedTexture_36be6")
+texture = SubResource("AnimatedTexture_arepd")
 expand_mode = 1
 
 [node name="Score_ExLifeDark" type="TextureRect" parent="UI/GUI/CharUIBase/LayoutMain/CharLife/ExLife"]
@@ -3327,7 +3947,7 @@ offset_left = -2.0
 offset_top = -2.0
 offset_right = 20.0
 offset_bottom = 20.0
-texture = SubResource("AnimatedTexture_lcv32")
+texture = SubResource("AnimatedTexture_f37w5")
 expand_mode = 1
 
 [node name="NumbersLife" type="Panel" parent="UI/GUI/CharUIBase/LayoutMain/CharLife"]
@@ -3336,13 +3956,13 @@ offset_left = 29.0
 offset_top = -4.0
 offset_right = 51.0
 offset_bottom = 18.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_71b4p")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
 
 [node name="Score_NumbersLifeT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBase/LayoutMain/CharLife/NumbersLife"]
 texture_filter = 1
 position = Vector2(6, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"0"
 autoplay = "0"
 
@@ -3351,7 +3971,7 @@ visible = false
 texture_filter = 1
 position = Vector2(6, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_6heqk")
+sprite_frames = SubResource("SpriteFrames_jnorf")
 animation = &"0"
 autoplay = "0"
 
@@ -3359,7 +3979,7 @@ autoplay = "0"
 texture_filter = 1
 position = Vector2(17, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"3"
 autoplay = "3"
 
@@ -3368,7 +3988,7 @@ visible = false
 texture_filter = 1
 position = Vector2(17, 11)
 scale = Vector2(0.6875, 0.6875)
-sprite_frames = SubResource("SpriteFrames_6heqk")
+sprite_frames = SubResource("SpriteFrames_jnorf")
 animation = &"3"
 autoplay = "3"
 
@@ -3378,12 +3998,12 @@ offset_left = 4.0
 offset_top = 47.0
 offset_right = 135.0
 offset_bottom = 68.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_u1yk0")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c3tyd")
 
 [node name="Score_CharHealth" type="AnimatedSprite2D" parent="UI/GUI/CharUIBase/LayoutMain/Health"]
 texture_filter = 1
 position = Vector2(62, 11)
-sprite_frames = SubResource("SpriteFrames_owkhe")
+sprite_frames = SubResource("SpriteFrames_imnrm")
 animation = &"5"
 autoplay = "5"
 
@@ -3391,9 +4011,1078 @@ autoplay = "5"
 visible = false
 texture_filter = 1
 position = Vector2(62, 11)
-sprite_frames = SubResource("SpriteFrames_pm52e")
+sprite_frames = SubResource("SpriteFrames_f2qts")
 animation = &"5"
 autoplay = "5"
+
+[node name="PlayerPosition" type="AnimatedSprite2D" parent="UI/GUI/CharUIBase"]
+position = Vector2(32, 81)
+scale = Vector2(0.171875, 0.171875)
+sprite_frames = SubResource("SpriteFrames_ielb8")
+animation = &"player1_eng"
+autoplay = "player1_eng"
+
+[node name="CharUIBasePlayer2" type="Panel" parent="UI/GUI"]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 11.0
+offset_right = 332.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kyasy")
+
+[node name="CharPanel" type="Panel" parent="UI/GUI/CharUIBasePlayer2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vw8dk")
+
+[node name="Score_CharPortrait" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/CharPanel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 120.0
+offset_bottom = 118.0
+texture = ExtResource("49_xpcmc")
+
+[node name="LayoutNameBG" type="Panel" parent="UI/GUI/CharUIBasePlayer2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = 47.5
+offset_right = 73.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nrg4i")
+
+[node name="TextureRect" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_b14hx")
+
+[node name="TextureRectDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_1mos8")
+
+[node name="CharName" type="Label" parent="UI/GUI/CharUIBasePlayer2/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -8.5
+offset_right = 55.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 11
+text = "Shimeji"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CharNameDark" type="Label" parent="UI/GUI/CharUIBasePlayer2/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -7.5
+offset_right = 55.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_sjj3t")
+theme_override_font_sizes/font_size = 17
+text = "Shimeji"
+horizontal_alignment = 1
+
+[node name="LayoutMain" type="Panel" parent="UI/GUI/CharUIBasePlayer2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 80.0
+offset_right = 152.0
+offset_bottom = 118.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_37kj4")
+
+[node name="Score_LayoutBG2" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_vif1i")
+
+[node name="Score_LayoutBGDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+visible = false
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_ko4a5")
+
+[node name="SquareIco" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 29.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nc1hv")
+
+[node name="Score_SquareIco" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/SquareIco"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 19.0
+texture = SubResource("AnimatedTexture_qgp6q")
+
+[node name="Ex" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+layout_mode = 1
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 42.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_Ex" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Ex"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Ex"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="Numbers" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 9.0
+offset_right = 56.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="CharLife" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 83.0
+offset_top = 12.0
+offset_right = 99.0
+offset_bottom = 28.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g6fbw")
+
+[node name="Score_CharLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("132_tyr1v")
+stretch_mode = 2
+
+[node name="ExLife" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife"]
+layout_mode = 1
+offset_left = 13.0
+offset_top = -1.0
+offset_right = 32.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_ExLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/ExLife"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExLifeDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/ExLife"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="NumbersLife" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -4.0
+offset_right = 51.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersLifeT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"3"
+autoplay = "3"
+
+[node name="Score_NumbersLifeDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"3"
+autoplay = "3"
+
+[node name="Health" type="Panel" parent="UI/GUI/CharUIBasePlayer2/LayoutMain"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 135.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c3tyd")
+
+[node name="Score_CharHealth" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Health"]
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_imnrm")
+animation = &"5"
+autoplay = "5"
+
+[node name="Score_CharHealthDark" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2/LayoutMain/Health"]
+visible = false
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_f2qts")
+animation = &"5"
+autoplay = "5"
+
+[node name="PlayerPosition" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer2"]
+position = Vector2(33.6133, 82.0273)
+scale = Vector2(0.205596, 0.205596)
+sprite_frames = SubResource("SpriteFrames_ielb8")
+animation = &"player2_eng"
+autoplay = "player2_eng"
+
+[node name="CharUIBasePlayer3" type="Panel" parent="UI/GUI"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 11.0
+offset_right = 494.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kyasy")
+
+[node name="CharPanel" type="Panel" parent="UI/GUI/CharUIBasePlayer3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vw8dk")
+
+[node name="Score_CharPortrait" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/CharPanel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 120.0
+offset_bottom = 118.0
+texture = ExtResource("49_xpcmc")
+
+[node name="LayoutNameBG" type="Panel" parent="UI/GUI/CharUIBasePlayer3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = 47.5
+offset_right = 73.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nrg4i")
+
+[node name="TextureRect" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_b14hx")
+
+[node name="TextureRectDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_1mos8")
+
+[node name="CharName" type="Label" parent="UI/GUI/CharUIBasePlayer3/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -8.5
+offset_right = 55.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 11
+text = "Shimeji"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CharNameDark" type="Label" parent="UI/GUI/CharUIBasePlayer3/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -7.5
+offset_right = 55.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_sjj3t")
+theme_override_font_sizes/font_size = 17
+text = "Shimeji"
+horizontal_alignment = 1
+
+[node name="LayoutMain" type="Panel" parent="UI/GUI/CharUIBasePlayer3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 80.0
+offset_right = 152.0
+offset_bottom = 118.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_37kj4")
+
+[node name="Score_LayoutBG2" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_vif1i")
+
+[node name="Score_LayoutBGDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+visible = false
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_ko4a5")
+
+[node name="SquareIco" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 29.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nc1hv")
+
+[node name="Score_SquareIco" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/SquareIco"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 19.0
+texture = SubResource("AnimatedTexture_qgp6q")
+
+[node name="Ex" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+layout_mode = 1
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 42.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_Ex" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Ex"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Ex"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="Numbers" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 9.0
+offset_right = 56.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="CharLife" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 83.0
+offset_top = 12.0
+offset_right = 99.0
+offset_bottom = 28.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g6fbw")
+
+[node name="Score_CharLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("132_tyr1v")
+stretch_mode = 2
+
+[node name="ExLife" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife"]
+layout_mode = 1
+offset_left = 13.0
+offset_top = -1.0
+offset_right = 32.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_ExLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/ExLife"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExLifeDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/ExLife"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="NumbersLife" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -4.0
+offset_right = 51.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersLifeT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"3"
+autoplay = "3"
+
+[node name="Score_NumbersLifeDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"3"
+autoplay = "3"
+
+[node name="Health" type="Panel" parent="UI/GUI/CharUIBasePlayer3/LayoutMain"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 135.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c3tyd")
+
+[node name="Score_CharHealth" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Health"]
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_imnrm")
+animation = &"5"
+autoplay = "5"
+
+[node name="Score_CharHealthDark" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3/LayoutMain/Health"]
+visible = false
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_f2qts")
+animation = &"5"
+autoplay = "5"
+
+[node name="PlayerPosition" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer3"]
+position = Vector2(32.7391, 82.6836)
+scale = Vector2(0.196029, 0.196029)
+sprite_frames = SubResource("SpriteFrames_ielb8")
+animation = &"player3_eng"
+autoplay = "player3_eng"
+
+[node name="CharUIBasePlayer4" type="Panel" parent="UI/GUI"]
+layout_mode = 0
+offset_left = 503.0
+offset_top = 11.0
+offset_right = 657.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_kyasy")
+
+[node name="CharPanel" type="Panel" parent="UI/GUI/CharUIBasePlayer4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_vw8dk")
+
+[node name="Score_CharPortrait" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/CharPanel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -8.0
+offset_top = -10.0
+offset_right = 120.0
+offset_bottom = 118.0
+texture = ExtResource("49_xpcmc")
+
+[node name="LayoutNameBG" type="Panel" parent="UI/GUI/CharUIBasePlayer4"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = 47.5
+offset_right = 73.0
+offset_bottom = 78.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nrg4i")
+
+[node name="TextureRect" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_b14hx")
+
+[node name="TextureRectDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -3.0
+offset_right = 127.0
+offset_bottom = 28.0
+texture = SubResource("AnimatedTexture_1mos8")
+
+[node name="CharName" type="Label" parent="UI/GUI/CharUIBasePlayer4/LayoutNameBG"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -8.5
+offset_right = 55.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = -3
+theme_override_fonts/font = ExtResource("62_kyasy")
+theme_override_font_sizes/font_size = 11
+text = "Shimeji"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CharNameDark" type="Label" parent="UI/GUI/CharUIBasePlayer4/LayoutNameBG"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -63.0
+offset_top = -7.5
+offset_right = 55.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_sjj3t")
+theme_override_font_sizes/font_size = 17
+text = "Shimeji"
+horizontal_alignment = 1
+
+[node name="LayoutMain" type="Panel" parent="UI/GUI/CharUIBasePlayer4"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 80.0
+offset_right = 152.0
+offset_bottom = 118.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_37kj4")
+
+[node name="Score_LayoutBG2" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_vif1i")
+
+[node name="Score_LayoutBGDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+visible = false
+texture_filter = 1
+material = SubResource("ShaderMaterial_3oku3")
+layout_mode = 0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = 142.0
+offset_bottom = 37.0
+texture = SubResource("AnimatedTexture_ko4a5")
+
+[node name="SquareIco" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 11.0
+offset_right = 29.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nc1hv")
+
+[node name="Score_SquareIco" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/SquareIco"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 22.0
+offset_bottom = 19.0
+texture = SubResource("AnimatedTexture_qgp6q")
+
+[node name="Ex" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+layout_mode = 1
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 42.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_Ex" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Ex"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Ex"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="Numbers" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 9.0
+offset_right = 56.0
+offset_bottom = 31.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkH" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(9, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(20, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"1"
+autoplay = "0"
+
+[node name="Score_NumbersU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Numbers"]
+visible = false
+texture_filter = 1
+position = Vector2(31, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_8irsq")
+animation = &"0"
+autoplay = "0"
+
+[node name="CharLife" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 83.0
+offset_top = 12.0
+offset_right = 99.0
+offset_bottom = 28.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_g6fbw")
+
+[node name="Score_CharLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("132_tyr1v")
+stretch_mode = 2
+
+[node name="ExLife" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife"]
+layout_mode = 1
+offset_left = 13.0
+offset_top = -1.0
+offset_right = 32.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
+
+[node name="Score_ExLife" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/ExLife"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_arepd")
+expand_mode = 1
+
+[node name="Score_ExLifeDark" type="TextureRect" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/ExLife"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 20.0
+offset_bottom = 20.0
+texture = SubResource("AnimatedTexture_f37w5")
+expand_mode = 1
+
+[node name="NumbersLife" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife"]
+layout_mode = 0
+offset_left = 29.0
+offset_top = -4.0
+offset_right = 51.0
+offset_bottom = 18.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
+
+[node name="Score_NumbersLifeT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeDarkT" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(6, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"0"
+autoplay = "0"
+
+[node name="Score_NumbersLifeU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/NumbersLife"]
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_uodsx")
+animation = &"3"
+autoplay = "3"
+
+[node name="Score_NumbersLifeDarkU" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/CharLife/NumbersLife"]
+visible = false
+texture_filter = 1
+position = Vector2(17, 11)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_jnorf")
+animation = &"3"
+autoplay = "3"
+
+[node name="Health" type="Panel" parent="UI/GUI/CharUIBasePlayer4/LayoutMain"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 135.0
+offset_bottom = 68.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_c3tyd")
+
+[node name="Score_CharHealth" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Health"]
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_imnrm")
+animation = &"5"
+autoplay = "5"
+
+[node name="Score_CharHealthDark" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4/LayoutMain/Health"]
+visible = false
+texture_filter = 1
+position = Vector2(62, 11)
+sprite_frames = SubResource("SpriteFrames_f2qts")
+animation = &"5"
+autoplay = "5"
+
+[node name="PlayerPosition" type="AnimatedSprite2D" parent="UI/GUI/CharUIBasePlayer4"]
+position = Vector2(32, 83)
+scale = Vector2(0.196029, 0.196029)
+sprite_frames = SubResource("SpriteFrames_ielb8")
+animation = &"player4_eng"
+autoplay = "player4_eng"
 
 [node name="SecretUIBase" type="Panel" parent="UI/GUI"]
 texture_filter = 1
@@ -3406,28 +5095,28 @@ offset_bottom = 201.0
 [node name="TriangleCounter1" type="AnimatedSprite2D" parent="UI/GUI/SecretUIBase"]
 texture_filter = 1
 position = Vector2(29, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter2" type="AnimatedSprite2D" parent="UI/GUI/SecretUIBase"]
 texture_filter = 1
 position = Vector2(82, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter3" type="AnimatedSprite2D" parent="UI/GUI/SecretUIBase"]
 texture_filter = 1
 position = Vector2(134, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter4" type="AnimatedSprite2D" parent="UI/GUI/SecretUIBase"]
 texture_filter = 1
 position = Vector2(186, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
@@ -3454,7 +5143,7 @@ offset_left = 211.0
 offset_top = 65.0
 offset_right = 911.0
 offset_bottom = 556.0
-texture = SubResource("AnimatedTexture_apvdu")
+texture = SubResource("AnimatedTexture_nsufl")
 
 [node name="PauseText" type="TextureRect" parent="UI/Pause/PausePanel/PauseBG"]
 layout_mode = 0
@@ -3462,19 +5151,19 @@ offset_left = 198.0
 offset_top = 51.0
 offset_right = 509.0
 offset_bottom = 138.0
-texture = SubResource("AnimatedTexture_ltyyk")
+texture = SubResource("AnimatedTexture_gjg5m")
 
 [node name="Resume" type="TextureButton" parent="UI/Pause/PausePanel"]
 process_mode = 3
-layout_mode = 2
+layout_mode = 0
 offset_left = 431.0
 offset_top = 220.0
 offset_right = 679.0
 offset_bottom = 284.0
 size_flags_vertical = 2
-texture_normal = SubResource("AnimatedTexture_21lbx")
-texture_pressed = SubResource("AnimatedTexture_6at7m")
-texture_hover = SubResource("AnimatedTexture_5hxyo")
+texture_normal = SubResource("AnimatedTexture_esh87")
+texture_pressed = SubResource("AnimatedTexture_krndi")
+texture_hover = SubResource("AnimatedTexture_33sl6")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -3486,9 +5175,9 @@ offset_top = 293.0
 offset_right = 679.0
 offset_bottom = 357.0
 size_flags_vertical = 2
-texture_normal = SubResource("AnimatedTexture_076c3")
-texture_pressed = SubResource("AnimatedTexture_bp88i")
-texture_hover = SubResource("AnimatedTexture_gxq3v")
+texture_normal = SubResource("AnimatedTexture_ah75n")
+texture_pressed = SubResource("AnimatedTexture_inmw0")
+texture_hover = SubResource("AnimatedTexture_e1t5y")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -3500,9 +5189,9 @@ offset_top = 371.0
 offset_right = 674.0
 offset_bottom = 435.0
 size_flags_vertical = 2
-texture_normal = SubResource("AnimatedTexture_yju2p")
-texture_pressed = SubResource("AnimatedTexture_pmpli")
-texture_hover = SubResource("AnimatedTexture_ckaa1")
+texture_normal = SubResource("AnimatedTexture_5myye")
+texture_pressed = SubResource("AnimatedTexture_m0gmt")
+texture_hover = SubResource("AnimatedTexture_5fnav")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -3512,11 +5201,11 @@ layout_mode = 0
 offset_left = 431.0
 offset_top = 444.0
 offset_right = 679.0
-offset_bottom = 508.0
+offset_bottom = 488.0
 size_flags_vertical = 2
-texture_normal = SubResource("AnimatedTexture_cigd7")
-texture_pressed = SubResource("AnimatedTexture_syw1l")
-texture_hover = SubResource("AnimatedTexture_x83ik")
+texture_normal = SubResource("AnimatedTexture_jqel6")
+texture_pressed = SubResource("AnimatedTexture_o65vq")
+texture_hover = SubResource("AnimatedTexture_wapvl")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -3535,28 +5224,28 @@ offset_bottom = 108.0
 [node name="TriangleCounter1" type="AnimatedSprite2D" parent="UI/Pause/PausePanel/SecretUIPause"]
 texture_filter = 1
 position = Vector2(29, 21)
-sprite_frames = SubResource("SpriteFrames_1fx8o")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter2" type="AnimatedSprite2D" parent="UI/Pause/PausePanel/SecretUIPause"]
 texture_filter = 1
 position = Vector2(82, 21)
-sprite_frames = SubResource("SpriteFrames_1fx8o")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter3" type="AnimatedSprite2D" parent="UI/Pause/PausePanel/SecretUIPause"]
 texture_filter = 1
 position = Vector2(134, 21)
-sprite_frames = SubResource("SpriteFrames_1fx8o")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter4" type="AnimatedSprite2D" parent="UI/Pause/PausePanel/SecretUIPause"]
 texture_filter = 1
 position = Vector2(186, 21)
-sprite_frames = SubResource("SpriteFrames_1fx8o")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
@@ -3625,7 +5314,7 @@ offset_left = 1755.0
 offset_top = -116.0
 offset_right = 2371.0
 offset_bottom = 779.0
-texture = SubResource("AnimatedTexture_hjk3j")
+texture = SubResource("AnimatedTexture_22h0c")
 
 [node name="BGAnim" type="AnimationPlayer" parent="UI/Results/ResultsPanel/ResultsBG"]
 libraries = {
@@ -3639,7 +5328,7 @@ offset_left = 802.0
 offset_top = 31.0
 offset_right = 1151.0
 offset_bottom = 124.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_p5yn6")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_o02fo")
 
 [node name="ResultsText" type="TextureRect" parent="UI/Results/ResultsPanel/ResultsText"]
 texture_filter = 1
@@ -3648,7 +5337,8 @@ offset_left = 661.0
 offset_top = 2.0
 offset_right = 989.0
 offset_bottom = 103.0
-texture = SubResource("AnimatedTexture_t145b")
+texture = SubResource("AnimatedTexture_qwgco")
+expand_mode = 1
 
 [node name="ResultsAnim" type="AnimationPlayer" parent="UI/Results/ResultsPanel/ResultsText"]
 libraries = {
@@ -3661,11 +5351,11 @@ texture_filter = 1
 layout_mode = 0
 offset_left = 1908.0
 offset_top = 511.0
-offset_right = 2066.0
+offset_right = 2066.0002
 offset_bottom = 577.0
-texture_normal = SubResource("AnimatedTexture_3plre")
-texture_pressed = SubResource("AnimatedTexture_yysri")
-texture_hover = SubResource("AnimatedTexture_psu17")
+texture_normal = SubResource("AnimatedTexture_4qvq5")
+texture_pressed = SubResource("AnimatedTexture_lysa8")
+texture_hover = SubResource("AnimatedTexture_7kj0x")
 ignore_texture_size = true
 
 [node name="ChangeLevel" type="TextureButton" parent="UI/Results/ResultsPanel"]
@@ -3675,31 +5365,31 @@ offset_left = 1989.0
 offset_top = 581.0
 offset_right = 2144.0
 offset_bottom = 637.0
-texture_normal = SubResource("AnimatedTexture_o5fk5")
-texture_pressed = SubResource("AnimatedTexture_cwh5l")
-texture_hover = SubResource("AnimatedTexture_m4krm")
+texture_normal = SubResource("AnimatedTexture_2xn72")
+texture_pressed = SubResource("AnimatedTexture_bptnt")
+texture_hover = SubResource("AnimatedTexture_hcyct")
 ignore_texture_size = true
 
 [node name="Quit" type="TextureButton" parent="UI/Results/ResultsPanel"]
 layout_mode = 0
 offset_left = 1830.0
 offset_top = 585.0
-offset_right = 1978.0
+offset_right = 1978.0002
 offset_bottom = 642.0
-texture_normal = SubResource("AnimatedTexture_2mrw0")
-texture_pressed = SubResource("AnimatedTexture_p3l5f")
-texture_hover = SubResource("AnimatedTexture_ceb22")
+texture_normal = SubResource("AnimatedTexture_y77im")
+texture_pressed = SubResource("AnimatedTexture_tpr8f")
+texture_hover = SubResource("AnimatedTexture_3amn1")
 ignore_texture_size = true
 
 [node name="Replay" type="TextureButton" parent="UI/Results/ResultsPanel"]
 layout_mode = 0
 offset_left = 1824.0
 offset_top = 515.0
-offset_right = 1992.0
+offset_right = 1992.0001
 offset_bottom = 578.0
-texture_normal = SubResource("AnimatedTexture_vyjmf")
-texture_pressed = SubResource("AnimatedTexture_6wiup")
-texture_hover = SubResource("AnimatedTexture_ihxuu")
+texture_normal = SubResource("AnimatedTexture_fg01g")
+texture_pressed = SubResource("AnimatedTexture_iara6")
+texture_hover = SubResource("AnimatedTexture_xpxy6")
 
 [node name="SquareIco" type="Panel" parent="UI/Results/ResultsPanel"]
 layout_mode = 0
@@ -3707,7 +5397,7 @@ offset_left = 6.0
 offset_top = 11.0
 offset_right = 29.0
 offset_bottom = 31.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_lrf3h")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_nc1hv")
 
 [node name="Score_SquareIco" type="TextureRect" parent="UI/Results/ResultsPanel/SquareIco"]
 texture_filter = 1
@@ -3716,7 +5406,7 @@ offset_left = 1808.0
 offset_top = 241.0
 offset_right = 1851.0
 offset_bottom = 276.0
-texture = SubResource("AnimatedTexture_uqd14")
+texture = SubResource("AnimatedTexture_qgp6q")
 
 [node name="Ex" type="Panel" parent="UI/Results/ResultsPanel"]
 layout_mode = 0
@@ -3724,7 +5414,7 @@ offset_left = 23.0
 offset_top = 13.0
 offset_right = 42.0
 offset_bottom = 32.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mup0q")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_e6whg")
 
 [node name="Score_Ex" type="TextureRect" parent="UI/Results/ResultsPanel/Ex"]
 texture_filter = 1
@@ -3733,7 +5423,7 @@ offset_left = 1825.0
 offset_top = 238.0
 offset_right = 1860.0
 offset_bottom = 273.0
-texture = SubResource("AnimatedTexture_36be6")
+texture = SubResource("AnimatedTexture_arepd")
 expand_mode = 1
 
 [node name="Numbers" type="Panel" parent="UI/Results/ResultsPanel"]
@@ -3742,12 +5432,12 @@ offset_left = 34.0
 offset_top = 9.0
 offset_right = 56.0
 offset_bottom = 31.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_71b4p")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lk8xd")
 
 [node name="Score_NumbersH" type="AnimatedSprite2D" parent="UI/Results/ResultsPanel/Numbers"]
 texture_filter = 1
 position = Vector2(1852, 259.5)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"0"
 autoplay = "0"
 
@@ -3755,7 +5445,7 @@ autoplay = "0"
 texture_filter = 1
 position = Vector2(1870, 258.5)
 scale = Vector2(1.09375, 1.09375)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"1"
 autoplay = "0"
 
@@ -3763,7 +5453,7 @@ autoplay = "0"
 texture_filter = 1
 position = Vector2(1890, 258.5)
 scale = Vector2(1.0625, 1.0625)
-sprite_frames = SubResource("SpriteFrames_550xw")
+sprite_frames = SubResource("SpriteFrames_uodsx")
 animation = &"1"
 autoplay = "0"
 
@@ -3791,28 +5481,28 @@ offset_bottom = 393.0
 [node name="TriangleCounter1" type="AnimatedSprite2D" parent="UI/Results/ResultsPanel/SecretUIBase"]
 texture_filter = 1
 position = Vector2(29, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter2" type="AnimatedSprite2D" parent="UI/Results/ResultsPanel/SecretUIBase"]
 texture_filter = 1
 position = Vector2(82, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter3" type="AnimatedSprite2D" parent="UI/Results/ResultsPanel/SecretUIBase"]
 texture_filter = 1
 position = Vector2(134, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
 [node name="TriangleCounter4" type="AnimatedSprite2D" parent="UI/Results/ResultsPanel/SecretUIBase"]
 texture_filter = 1
 position = Vector2(186, 21)
-sprite_frames = SubResource("SpriteFrames_po1km")
+sprite_frames = SubResource("SpriteFrames_4pvfj")
 animation = &"empty"
 autoplay = "empty"
 
@@ -3828,10 +5518,22 @@ autoplay = "RESET"
 visible = false
 position = Vector2(303, -264)
 
-[connection signal="body_entered" from="SceneObjects/Climbable" to="SceneObjects/Climbable" method="_on_body_entered"]
-[connection signal="body_exited" from="SceneObjects/Climbable" to="SceneObjects/Climbable" method="_on_body_exited"]
-[connection signal="body_entered" from="SceneObjects/Climbable2" to="SceneObjects/Climbable2" method="_on_body_entered"]
-[connection signal="body_exited" from="SceneObjects/Climbable2" to="SceneObjects/Climbable2" method="_on_body_exited"]
+[node name="CharacterSpawn_Player2" parent="." instance=ExtResource("242_gretq")]
+visible = false
+position = Vector2(205, -264)
+
+[node name="CharacterSpawn_Player3" parent="." instance=ExtResource("242_gretq")]
+visible = false
+position = Vector2(106, -264)
+
+[node name="CharacterSpawn_Player4" parent="." instance=ExtResource("242_gretq")]
+visible = false
+position = Vector2(5, -264)
+
+[node name="MultiplayerCam" parent="." instance=ExtResource("370_sh7w0")]
+visible = false
+position = Vector2(256, -401)
+
 [connection signal="body_entered" from="SceneObjects/FallTrigger" to="SceneObjects/FallTrigger" method="_on_body_entered"]
 [connection signal="body_entered" from="SceneObjects/FinishStar" to="GameManager" method="_on_finish_star_body_entered"]
 [connection signal="body_entered" from="SceneObjects/FinishStar" to="UI/Clear" method="_on_finish_star_body_entered"]

@@ -1,0 +1,17 @@
+[signal arg="greet"]
+[signal arg="vclip_p3_01"]
+interfly: Great job! You're becoming a professional already!
+[signal arg="vclip_p3_02"]
+interfly: Now with the draggables, some of those Windows can be climbed while you drag.
+[signal arg="vclip_p3_03"]
+interfly: This should give you a quick ride to the top. Able to reach areas that you originally couldn't.
+[signal arg="vclip_p3_04"]
+interfly: However, there are some limitations. Windows that allow you to climb up and down can only be dragged up and down...
+[signal arg="vclip_p3_05"]
+interfly: And windows that can be climbed below can only be dragged left and right.
+[signal arg="vclip_p3_06"]
+interfly: So, hop into one, and drag it up to the next draggable windows.
+[signal arg="greet"]
+[signal arg="vclip_p3_07"]
+interfly: Let's get on with it then.
+[signal arg="end_cutscene"]

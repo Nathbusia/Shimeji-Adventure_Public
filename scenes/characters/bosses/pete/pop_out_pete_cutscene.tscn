@@ -1,0 +1,1430 @@
+[gd_scene load_steps=57 format=3 uid="uid://dck4cyrgx0yti"]
+
+[ext_resource type="Script" uid="uid://3v3pe6whh42j" path="res://scenes/characters/bosses/pete/pop_out_pete_cutscene.gd" id="1_wlg18"]
+[ext_resource type="Texture2D" uid="uid://8i1r27hqgd17" path="res://sprites/characters/bosses/pete/pete_body.png" id="2_mhxqm"]
+[ext_resource type="Texture2D" uid="uid://dbv7vf8p5qwbo" path="res://sprites/characters/bosses/pete/pete_eyes0007.png" id="3_xkfbf"]
+[ext_resource type="Texture2D" uid="uid://c5wyw4e55fl4l" path="res://sprites/characters/bosses/pete/pete_eyes0008.png" id="4_pmdn4"]
+[ext_resource type="Texture2D" uid="uid://dodtiy2v1en52" path="res://sprites/characters/bosses/pete/pete_eyes0009.png" id="5_yq0ms"]
+[ext_resource type="Texture2D" uid="uid://dv1hw6aomh1yo" path="res://sprites/characters/bosses/pete/pete_eyes0010.png" id="6_h7yhd"]
+[ext_resource type="Texture2D" uid="uid://vs0hse5vw5cc" path="res://sprites/characters/bosses/pete/pete_eyes0011.png" id="7_r6grm"]
+[ext_resource type="Texture2D" uid="uid://ctrdygie2l61b" path="res://sprites/characters/bosses/pete/pete_eyes0012.png" id="8_38kdv"]
+[ext_resource type="Texture2D" uid="uid://cigxlx7135y6i" path="res://sprites/characters/bosses/pete/pete_eyes0013.png" id="9_kp6x5"]
+[ext_resource type="Texture2D" uid="uid://ctdyre5mfq876" path="res://sprites/characters/bosses/pete/pete_eyes0001.png" id="10_lq4jq"]
+[ext_resource type="Texture2D" uid="uid://bem11dudw6d5x" path="res://sprites/characters/bosses/pete/pete_eyes0002.png" id="11_q550w"]
+[ext_resource type="Texture2D" uid="uid://dygmjfs6hysm7" path="res://sprites/characters/bosses/pete/pete_eyes0003.png" id="12_ewliu"]
+[ext_resource type="Texture2D" uid="uid://bfc30om0srdps" path="res://sprites/characters/bosses/pete/pete_eyes0004.png" id="13_hkmpv"]
+[ext_resource type="Texture2D" uid="uid://csug2cyfmrb7s" path="res://sprites/characters/bosses/pete/pete_eyes0005.png" id="14_8k508"]
+[ext_resource type="Texture2D" uid="uid://b2x88nvmtqy25" path="res://sprites/characters/bosses/pete/pete_eyes0006.png" id="15_y6mix"]
+[ext_resource type="Texture2D" uid="uid://dtkpftriech0p" path="res://sprites/characters/bosses/pete/pete_eyes0018.png" id="16_00uwb"]
+[ext_resource type="Texture2D" uid="uid://cm3p72pgqbo6q" path="res://sprites/characters/bosses/pete/pete_eyes0019.png" id="17_tjw0k"]
+[ext_resource type="Texture2D" uid="uid://n3g4e4ynetp6" path="res://sprites/characters/bosses/pete/pete_eyes0020.png" id="18_nnw0i"]
+[ext_resource type="Texture2D" uid="uid://chfkugtmyn0w6" path="res://sprites/characters/bosses/pete/pete_eyes0014.png" id="20_37na6"]
+[ext_resource type="Texture2D" uid="uid://dcsmys7yq7eat" path="res://sprites/characters/bosses/pete/pete_eyes0015.png" id="21_hvlp3"]
+[ext_resource type="Texture2D" uid="uid://cbhglk3oh4wof" path="res://sprites/characters/bosses/pete/pete_eyes0016.png" id="22_whw4c"]
+[ext_resource type="Texture2D" uid="uid://bvirq16cos3b3" path="res://sprites/characters/bosses/pete/pete_eyes0017.png" id="23_mt2fc"]
+[ext_resource type="Texture2D" uid="uid://bqhdynmfooesq" path="res://sprites/characters/bosses/pete/pete_moustache0002.png" id="24_jr5wk"]
+[ext_resource type="Texture2D" uid="uid://dhjbjjjn3tmh" path="res://sprites/characters/bosses/pete/pete_moustache0003.png" id="25_21x7x"]
+[ext_resource type="Texture2D" uid="uid://baiy8tj3ydus4" path="res://sprites/characters/bosses/pete/pete_moustache0004.png" id="26_p48a8"]
+[ext_resource type="Texture2D" uid="uid://8ao08lyvhbmn" path="res://sprites/characters/bosses/pete/pete_moustache0001.png" id="27_ivhnt"]
+[ext_resource type="Texture2D" uid="uid://b3xdey20l50n3" path="res://sprites/characters/bosses/pete/pete_mouth0003.png" id="28_evqmh"]
+[ext_resource type="Texture2D" uid="uid://d3vb1wkxq380t" path="res://sprites/characters/bosses/pete/pete_mouth0007.png" id="29_4jaal"]
+[ext_resource type="Texture2D" uid="uid://bp2l7548m845l" path="res://sprites/characters/bosses/pete/pete_mouth0008.png" id="30_wxieb"]
+[ext_resource type="Texture2D" uid="uid://dvxvicr18ging" path="res://sprites/characters/bosses/pete/pete_mouth0010.png" id="31_5obur"]
+[ext_resource type="Texture2D" uid="uid://dgaqrexllrjtk" path="res://sprites/characters/bosses/pete/pete_mouth0009.png" id="32_r4qbd"]
+[ext_resource type="Texture2D" uid="uid://dmtyjjy6a8u11" path="res://sprites/characters/bosses/pete/pete_mouth0002.png" id="33_2i5jk"]
+[ext_resource type="Texture2D" uid="uid://dnpw1jn7xjnjc" path="res://sprites/characters/bosses/pete/pete_mouth0001.png" id="34_jx6nl"]
+[ext_resource type="Texture2D" uid="uid://coxg7u6n5tx63" path="res://sprites/characters/bosses/pete/pete_mouth0004.png" id="35_ul60r"]
+[ext_resource type="Texture2D" uid="uid://4ql07vk4v62b" path="res://sprites/characters/bosses/pete/pete_mouth0005.png" id="36_qexqm"]
+[ext_resource type="Texture2D" uid="uid://cx6jttx8ulno5" path="res://sprites/characters/bosses/pete/pete_mouth0006.png" id="37_y1kex"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arc8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xkfbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pmdn4")
+}],
+"loop": false,
+"name": &"attack_left",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_yq0ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_h7yhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yq0ms")
+}],
+"loop": false,
+"name": &"attack_right",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_r6grm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_38kdv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q550w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ewliu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hkmpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8k508")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_y6mix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_8k508")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hkmpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ewliu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q550w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_00uwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tjw0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}],
+"loop": false,
+"name": &"laugh",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q550w")
+}],
+"loop": false,
+"name": &"smirk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_00uwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_tjw0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nnw0i")
+}],
+"loop": false,
+"name": &"summon",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_37na6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hvlp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_whw4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mt2fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kp6x5")
+}],
+"loop": false,
+"name": &"teleport",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_lq4jq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_q550w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ewliu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hkmpv")
+}],
+"loop": false,
+"name": &"umimpress",
+"speed": 12.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oh12i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_jr5wk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_21x7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_p48a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_21x7x")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_ivhnt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7vgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_4jaal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_wxieb")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_4jaal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_5obur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_r4qbd")
+}],
+"loop": true,
+"name": &"defeat",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_ul60r")
+}],
+"loop": true,
+"name": &"laugh",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_jx6nl")
+}],
+"loop": true,
+"name": &"smile",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_jx6nl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_evqmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}],
+"loop": false,
+"name": &"summon",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_ul60r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qexqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qexqm")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_ul60r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qexqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y1kex")
+}],
+"loop": false,
+"name": &"teleport_in",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_y1kex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ul60r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qexqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_2i5jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jx6nl")
+}],
+"loop": false,
+"name": &"teleport_out",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_4jaal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_4jaal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y1kex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y1kex")
+}],
+"loop": false,
+"name": &"unimpress",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_b8kfj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.386689, 0.386689)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Moustache:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("PeteBody/Mouth:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PeteBody/Eyes:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PeteBody/Mouth:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_ksosk"]
+resource_name = "attack_left"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(0.329877, 1, 1, 0.35355344, 1, 0.329877),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14), Vector2(-69.792, -53.694), Vector2(-81, -58), Vector2(-81, -58), Vector2(-69.792, -53.694), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94), Vector2(23.958, 307.8), Vector2(-3.847, 327.07), Vector2(-3.847, 327.07), Vector2(23.958, 307.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685), Vector2(19.052, 530.815), Vector2(11.817, 539.05), Vector2(11.817, 539.05), Vector2(19.052, 530.815), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_left"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_idhr0"]
+resource_name = "attack_right"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(0.329877, 1, 1, 0.35355344, 1, 0.329877),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14), Vector2(15.993, -53.694), Vector2(48.83, -58), Vector2(48.83, -58), Vector2(15.993, -53.694), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4000001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94), Vector2(69.213, 307.8), Vector2(116.103, 327.07), Vector2(116.103, 327.07), Vector2(69.213, 307.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685), Vector2(36.122, 530.815), Vector2(77.072, 539.05), Vector2(77.072, 539.05), Vector2(36.122, 530.815), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_right"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack"]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_y6x7u"]
+resource_name = "damage"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-9.902, -169.32), Vector2(33.028, -105.445), Vector2(-33.457, -94.51), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.602, 297.535), Vector2(43.548, 316.85), Vector2(4.373, 322.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 559.735), Vector2(60.102, 489.33), Vector2(-12.448, 541.275), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Moustache:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.19198621771937624, 0.05759586531581307, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666668),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.685, 0.685), Vector2(1.315, 1.315), Vector2(1, 1)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_kgpo4"]
+resource_name = "defeat"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-9.902, -169.32), Vector2(33.028, -105.445), Vector2(-33.457, -94.51), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-11.602, 297.535), Vector2(43.548, 316.85), Vector2(4.373, 322.8), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 559.735), Vector2(60.102, 489.33), Vector2(-12.448, 541.275), Vector2(21.2822, 512.685)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Moustache:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.19198621771937624, 0.05759586531581307, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PeteBody/Mouth:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.685, 0.685), Vector2(1.315, 1.315), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5m6js"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.366022, 0.406126, 1),
+"update": 0,
+"values": [Vector2(-104.732, -113.14), Vector2(94.588, -113.14), Vector2(-104.732, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.267943, 1, 1),
+"update": 0,
+"values": [Vector2(23.868, 264.225), Vector2(23.868, 296.54), Vector2(23.868, 264.225)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(0.466516, 0.450625, 0.466516),
+"update": 0,
+"values": [Vector2(21.282, 491.55), Vector2(21.282, 562.905), Vector2(21.282, 491.55)]
+}
+
+[sub_resource type="Animation" id="Animation_irma4"]
+resource_name = "summon"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.992, -52.875), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.99226, -113.14)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.868, 307.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.8683, 279.94)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 535.65), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.2822, 512.685)]
+}
+
+[sub_resource type="Animation" id="Animation_56h3x"]
+resource_name = "teleport_in"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.18946461, 0.26794344, 1),
+"update": 0,
+"values": [Vector2(0.292, 0.292), Vector2(0.467, 0.467), Vector2(0.012, 0.012)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Eyes:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_in"]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"teleporting"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2eibr"]
+resource_name = "teleport_out"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999, 0.4),
+"transitions": PackedFloat32Array(0.18301077, 0.26794344, 1),
+"update": 0,
+"values": [Vector2(0.012, 0.012), Vector2(0.467, 0.467), Vector2(0.387, 0.387)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Eyes:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"summon"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"teleport_out"]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"startattack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_yndtl"]
+resource_name = "talk_cocky"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(0.329877, 1, 1),
+"update": 0,
+"values": [Vector2(-1.99226, -113.14), Vector2(-69.792, -53.694), Vector2(-81, -58)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(23.8683, 279.94), Vector2(23.958, 307.8), Vector2(-3.847, 327.07)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(21.2822, 512.685), Vector2(19.052, 530.815), Vector2(11.817, 539.05)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"attack_left"]
+}
+
+[sub_resource type="Animation" id="Animation_sx44s"]
+resource_name = "laughter"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6, 1.8000001, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.992, -52.875), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705), Vector2(-1.992, -166.375), Vector2(-1.992, -89.705)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6000001, 1.8000001, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(23.868, 307.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2), Vector2(23.868, 251.535), Vector2(23.868, 302.2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4000001, 1.6000001, 1.8000001, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(21.282, 535.65), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.282, 469.025), Vector2(21.282, 548.375), Vector2(21.282, 469.025), Vector2(21.282, 548.375)]
+}
+
+[sub_resource type="Animation" id="Animation_kbm5h"]
+resource_name = "talk_normal"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody/Eyes:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-81, -58)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PeteBody/Moustache:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3.847, 327.07)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("PeteBody/Mouth:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11.817, 539.05)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("PeteBody/Eyes:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 1,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ksosk"]
+_data = {
+&"RESET": SubResource("Animation_b8kfj"),
+&"attack_left": SubResource("Animation_ksosk"),
+&"attack_right": SubResource("Animation_idhr0"),
+&"damage": SubResource("Animation_y6x7u"),
+&"defeat": SubResource("Animation_kgpo4"),
+&"idle": SubResource("Animation_5m6js"),
+&"laughter": SubResource("Animation_sx44s"),
+&"summon": SubResource("Animation_irma4"),
+&"talk_cocky": SubResource("Animation_yndtl"),
+&"talk_normal": SubResource("Animation_kbm5h"),
+&"teleport_in": SubResource("Animation_56h3x"),
+&"teleport_out": SubResource("Animation_2eibr")
+}
+
+[sub_resource type="Animation" id="Animation_s0kn6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(407.77, 279.75)]
+}
+
+[sub_resource type="Animation" id="Animation_46rqy"]
+resource_name = "defeat"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PeteBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(407.77, 279.75), Vector2(430.15, 259.12), Vector2(391.47, 292.35), Vector2(415.83, 291.65)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qvnti"]
+_data = {
+&"RESET": SubResource("Animation_s0kn6"),
+&"defeat": SubResource("Animation_46rqy")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wlg18"]
+size = Vector2(794, 547)
+
+[node name="PopOutPete" type="AnimatableBody2D" groups=["pete_hurtbox", "popout_pete"]]
+collision_mask = 5
+script = ExtResource("1_wlg18")
+
+[node name="PeteBody" type="Sprite2D" parent="."]
+position = Vector2(407.77, 279.75)
+scale = Vector2(0.386689, 0.386689)
+texture = ExtResource("2_mhxqm")
+
+[node name="Eyes" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(-1.99226, -113.14)
+sprite_frames = SubResource("SpriteFrames_arc8k")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Moustache" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(23.8683, 279.94)
+sprite_frames = SubResource("SpriteFrames_oh12i")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="Mouth" type="AnimatedSprite2D" parent="PeteBody"]
+position = Vector2(21.2822, 512.685)
+sprite_frames = SubResource("SpriteFrames_f7vgn")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="PeteAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ksosk")
+}
+autoplay = "idle"
+
+[node name="PeteWindowsAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_qvnti")
+}
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="IdleWaitTimer" type="Timer" parent="Timers"]
+wait_time = 4.0
+
+[node name="IdleWaitTimerHalf" type="Timer" parent="Timers"]
+wait_time = 2.0
+
+[node name="TeleportTimer" type="Timer" parent="Timers"]
+
+[node name="TalkTimer" type="Timer" parent="Timers"]
+wait_time = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(407, 283.5)
+shape = SubResource("RectangleShape2D_wlg18")
+
+[connection signal="timeout" from="Timers/IdleWaitTimer" to="." method="_on_idle_wait_timer_timeout"]
+[connection signal="timeout" from="Timers/TeleportTimer" to="." method="_on_teleport_timer_timeout"]
+[connection signal="timeout" from="Timers/TalkTimer" to="." method="_on_talk_timer_timeout"]

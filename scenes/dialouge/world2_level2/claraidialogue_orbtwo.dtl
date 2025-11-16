@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Amazing! You really are a good treasure hunter aren't you?
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: That just leaves one more. Go ahead and get that last Orb Ball!
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Thank you very much again!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

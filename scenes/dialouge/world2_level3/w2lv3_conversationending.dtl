@@ -1,0 +1,39 @@
+[signal arg="greet"]
+[signal arg="vclip_lv3_01"]
+interfly: Oh, hey there, friends! Did you find anything unusual around here?
+[signal arg="vclip_lv3_02"]
+interfly: No? That's okay. Because I recently stumbled upon Pop-Out Pete's conversation.
+[signal arg="vclip_lv3_03"]
+[signal arg="flippedoff"]
+interfly: He's talking now! Take a listen.
+(Both of you and Interfly take a listen on what's going on at the other side. Here, you can hear Pop Out Pete talking to one of his workers about the Userbeam Converter.)
+[signal arg="pete_vc01"]
+pop_out_pete: So. How's the Userbeam Convertion going so far?
+[signal arg="pete_vc02"]
+"Worker Userbeam": Well, about that boss. We have some little bit of situation.
+[signal arg="pete_vc03"]
+pop_out_pete: What?! What's going on?
+[signal arg="pete_vc04"]
+"Worker Userbeam": It appears, sir, that we have an Intruder (or some Intruders) on our mits at the Dark Web.
+[signal arg="pete_vc05"]
+"Worker Userbeam": They're swiping each Userbeams out left and right.
+[signal arg="pete_vc06"]
+pop_out_pete: Graah!!! So this is Interfly doing! That no good bug. I guess I have to deal with it my own.
+[signal arg="pete_vc07"]
+"Worker Userbeam": You're going up there?
+[signal arg="pete_vc08"]
+pop_out_pete: Yup. And don't worry, I'll be waiting for that bug, and his swampy little twerps from there.
+[signal arg="pete_vc09"]
+"Worker Userbeam": Okay boss. Good luck!
+[signal arg="pete_vc10"]
+pop_out_pete: Time to give them a "pop-up" surprise. Mwhahahaha!
+[signal arg="vclip_lv3_04"]
+[signal arg="flippedon"]
+interfly: Uh oh! It seems that he know we're here.
+[signal arg="vclip_lv3_05"]
+interfly: Well, I guess we have no other choice but to fight him head-on.
+[signal arg="vclip_lv3_06"]
+interfly: I'll go and get the mailbox set up. At the same time, you climb up there and meet up with Pop-Out Pete. I'll catch up from there.
+[signal arg="vclip_lv3_07"]
+interfly: Let's do it, friends. THIS IS IT!!
+[signal arg="end_cutscene"]

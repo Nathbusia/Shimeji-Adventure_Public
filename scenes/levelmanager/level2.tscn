@@ -6,5 +6,10 @@
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_pdwgo")
 levelname = "Desktop to the Sky!"
+levelname_spa = "¡Del escritorio al cielo!"
+levelname_fre = "Du bureau au ciel !"
+levelname_ita = "Dal desktop al cielo!"
+levelname_ger = "Vom Desktop zum Himmel!"
+levelname_jpn = "デスクトップから空へ！"
 levelcreator = "By FlameOut56"
 levelthumb = ExtResource("2_f55q0")

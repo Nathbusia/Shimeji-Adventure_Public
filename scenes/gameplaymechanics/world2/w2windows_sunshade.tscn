@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpb8cv6snmdv2"]
+
+[ext_resource type="Texture2D" uid="uid://d4dimf1x3b2qm" path="res://sprites/levels/world2/world2_windowsB.png" id="1_8iwtl"]
+[ext_resource type="Texture2D" uid="uid://uasmq6hsdxkt" path="res://sprites/levels/world2/Advert/NewSunShade.png" id="2_8iwtl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqxrq"]
+size = Vector2(654, 461)
+
+[node name="SunshadeAdvert" type="Node2D"]
+
+[node name="WindowsPopUp" type="AnimatableBody2D" parent="."]
+collision_mask = 5
+
+[node name="WindowsBG" type="TextureRect" parent="WindowsPopUp"]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -322.0
+offset_top = -183.0
+offset_right = 322.0
+offset_bottom = 183.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8iwtl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Advert" type="TextureRect" parent="WindowsPopUp/WindowsBG"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 108.5
+offset_right = 628.0
+offset_bottom = 449.5
+texture = ExtResource("2_8iwtl")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WindowsPopUp"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_dqxrq")

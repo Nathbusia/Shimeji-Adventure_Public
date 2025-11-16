@@ -1,0 +1,14 @@
+friend: ¡Oye! ¿Viste ese triángulo que recogiste hace poco?
+[signal arg="talking"]
+friend: Esos triángulos que acabas de recoger se conocen como los "Triángulos Secretos".
+[signal arg="talking"]
+friend: No sé mucho sobre ellos porque normalmente me cuesta mucho encontrarlos...
+[signal arg="greatest"]
+friend: Pero lo que sí sé es que desempeñaron un papel muy importante a lo largo de tu aventura.
+[signal arg="talking"]
+friend: Hay cuatro Triángulos Secretos en cada nivel. (bueno, excepto en los jefes, obviamente...)
+[signal arg="pointing"]
+friend: Así que, asegúrate de encontrarlos todos cuando los tengas a la vista. ¿Quién sabe qué sorpresas o recompensas especiales obtendrás por encontrarlos?
+[signal arg="greatest"]
+friend: Bien, basta de charla. ¡Continuemos!
+[signal arg="end_cutscene"]

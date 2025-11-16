@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dubdaf6qykw25"]
+[gd_scene load_steps=12 format=3 uid="uid://dubdaf6qykw25"]
 
 [ext_resource type="Script" uid="uid://bkitq3cam3e2h" path="res://mods/characters/redtestball/scene/characterselect/characterslot_redtestball.gd" id="1_678mm"]
+[ext_resource type="Texture2D" uid="uid://cq387i5f03tlk" path="res://sprites/menu/charselect/CharacterSelect_current_bg.png" id="2_jpubh"]
 [ext_resource type="Texture2D" uid="uid://c8wqqh6gb0nuk" path="res://sprites/menu/charselect/CharacterSelect_hover_bg.png" id="2_jvumk"]
 [ext_resource type="Texture2D" uid="uid://3hga0dahx56y" path="res://sprites/menu/charselect/CharacterSelect_normal_bg.png" id="3_3ojo7"]
 [ext_resource type="Texture2D" uid="uid://cbnbk3djdrniw" path="res://sprites/menu/charselect/CharacterSelect_select_bg.png" id="4_miats"]
@@ -8,10 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://btv8r3lyna733" path="res://sprites/menu/charselect/CharacterSelect_normal_border.png" id="6_738ei"]
 [ext_resource type="Texture2D" uid="uid://7hbxhtwk16pt" path="res://sprites/menu/charselect/CharacterSelect_select_bolder.png" id="7_j5ex3"]
 [ext_resource type="Texture2D" uid="uid://cq8kfcxku5t1m" path="res://sprites/menu/charselect/CharacterSelect_hover_border.png" id="8_u0ti0"]
+[ext_resource type="Texture2D" uid="uid://b2wuvvgk1hcjq" path="res://sprites/menu/charselect/CharacterSelect_current_bolder.png" id="10_t4rmk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fklg4"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jpubh")
+}],
 "loop": true,
 "name": &"current",
 "speed": 5.0
@@ -75,6 +80,7 @@ offset_bottom = 64.0
 texture_normal = ExtResource("6_738ei")
 texture_pressed = ExtResource("7_j5ex3")
 texture_hover = ExtResource("8_u0ti0")
+texture_disabled = ExtResource("10_t4rmk")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton" to="." method="_on_slot_button_pressed"]

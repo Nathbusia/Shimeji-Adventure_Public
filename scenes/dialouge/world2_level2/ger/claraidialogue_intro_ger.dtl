@@ -1,0 +1,39 @@
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Oh, hallo kleiner Kerl. Kann ich dich kurz sprechen?
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Ich bin Clara! Schön, dich kennenzulernen!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Ich bin noch ziemlich neu in diesem ganzen Internet-Job. Deshalb bin ich mir bei all diesen technischen Dingen noch nicht so sicher.
+[signal arg="problem"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ger: Apropos... Ich habe vielleicht einen kleinen Fehler gemacht...
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Ich wollte die Ladentür aufschließen. Aber ähm... Ich glaube, ich habe die Shiny Orbs verloren, die man zum Aufschließen braucht.
+[signal arg="sad"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ger: Ich habe alle meine Taschen durchsucht, aber es war keine Spur von ihnen zu finden. Ich nehme an, ich habe sie versehentlich fallen lassen, als ich zur Bushaltestelle geeilt bin...
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_ger: Ich möchte wirklich nicht schon an meinem ersten Tag meinen Job verlieren. Also, kleiner Freund, könntest du mir einen großen Gefallen tun?
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Könnten Sie so nett sein und mir helfen, diese drei zu finden? Wenn Sie alle zurückbringen, gibt es bestimmt etwas Dreieckiges im Laden, das Sie suchen.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Na gut, ich überlasse es dir. Geh einfach los, finde sie und bring sie hierher.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_ger: Nochmals vielen Dank!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

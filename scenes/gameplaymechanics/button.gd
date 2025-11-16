@@ -9,23 +9,23 @@ var pressed = false
 func _on_button_trigger_area_entered(_area: Area2D) -> void:
 	pressed = true
 	button_pressed_on.play()
-	button_sprite.animation = "press"
+	button_sprite.play("press")
 
 
 func _on_button_trigger_area_exited(_area: Area2D) -> void:
 	pressed = false
 	button_pressed_off.play()
-	button_sprite.animation = "default"
+	button_sprite.play("default")
 
 
 func _on_button_trigger_body_entered(body: Node2D) -> void:
-	if (body.name == "ShimejiCharacter_Playable") or (body.name == "ThrowableObject2"):
+	if (body.name == "ShimejiCharacter_Playable") or (body.name == "ShimejiCharacter_Playable_Player2") or (body.name == "ShimejiCharacter_Playable_Player3") or (body.name == "ShimejiCharacter_Playable_Player4") or (body.name == "ThrowableObject2"):
 		var y_delta = position.y - body.position.y
 		print(y_delta)
 		if (y_delta > 50):
 			pressed = true
 			button_pressed_on.play()
-			button_sprite.animation = "press"
+			button_sprite.play("press")
 		else:
 			return
 
@@ -33,4 +33,4 @@ func _on_button_trigger_body_entered(body: Node2D) -> void:
 func _on_button_trigger_body_exited(_body: Node2D) -> void:
 	pressed = false
 	button_pressed_off.play()
-	button_sprite.animation = "default"
+	button_sprite.play("default")

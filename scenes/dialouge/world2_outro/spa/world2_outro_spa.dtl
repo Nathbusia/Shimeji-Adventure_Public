@@ -1,0 +1,55 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_01_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡GUAU!  ¡Lo hiciste!  ¡Realmente lo hiciste!
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_02_spa.ogg" volume="0.0" bus="voices"]
+interfly: Bueno, técnicamente, lo hicimos. Ya que yo cumplí con mi parte al enseñarte y darte ese E-mail Shooter y todo eso...
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_03_spa.ogg" volume="0.0" bus="voices"]
+interfly: Pero, de nuevo, tú hiciste la mayor parte del trabajo aquí. Por lo tanto, te mereces todo el mérito.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_04_spa.ogg" volume="0.0" bus="voices"]
+interfly: De todos modos, gracias a toda vuestra ayuda, Internet vuelve a funcionar perfectamente. ¡Como nuevo!
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_05_spa.ogg" volume="0.0" bus="voices"]
+interfly: Por tu heroica acción, ¡me gustaría recompensarte con el logro «Héroe de Internet»!
+[signal arg="shimep1_jumptwo"]
+[signal arg="shimemodp1_specialanim_6"]
+[signal arg="othershime_taunt"]
+[signal arg="crowdcheer"]
+[signal arg="cam_player"]
+[wait time="2.0"]
+[signal arg="cam_default"]
+[signal arg="othershime_backtoidle"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_06_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Oh! ¿Aún no has terminado tu trabajo? ¿A dónde vas esta vez?
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_1"]
+[wait time="1.0"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_07_spa.ogg" volume="0.0" bus="voices"]
+interfly: Ah, ya veo. Vas a visitar un sitio lleno de contenido creado por gente de todo el mundo. ¡Old Floors!
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_08_spa.ogg" volume="0.0" bus="voices"]
+interfly: El sitio está justo en esa dirección. Solo tienes que seguir adelante, girar a la derecha y llegarás.
+[signal arg="cam_movingplatform"]
+[signal arg="allshime_gotoplatform"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_09_spa.ogg" volume="0.0" bus="voices"]
+interfly: Súbete a esta plataforma móvil, ¡te llevará allí en un santiamén!
+[signal arg="greet"]
+[signal arg="playerflipon"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_10_spa.ogg" volume="0.0" bus="voices"]
+interfly: Pero, de nuevo, ¡muchas gracias por tu ayuda! Eres un amigo de verdad. ¡Caramba! Incluso podría llamarte compañero. Eso si te parece bien...
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_specialanim_2"]
+[wait time="1.0"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_11_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Genial! ¡Me alegro!
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_12_spa.ogg" volume="0.0" bus="voices"]
+interfly: Bien. ¡Dirígete a Old Floors y mantente a salvo durante todo el viaje!
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_13_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Y una cosa más! ¡Siempre serás bienvenido en Internet!
+[signal arg="movingplatform_move"]
+[signal arg="playerflipoff"]
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/outro/sfx_butterfly_outro_14_spa.ogg" volume="0.0" bus="voices"]
+interfly: ¡Hasta pronto, amigo!
+[signal arg="cam_ending"]
+[signal arg="movingplatform_moveon"]

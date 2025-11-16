@@ -1,0 +1,26 @@
+[signal arg="flippedoff"]
+[signal arg="vclip_p5_01"]
+interfly: Well now. It seems the Sticknodes are now sticking underneath those draggable Windows.
+[signal arg="vclip_p5_02"]
+[signal arg="flippedon"]
+interfly: Now is the perfect time for me to share another way to defeat them.
+[signal arg="vclip_p5_03"]
+[signal arg="greet"]
+interfly: If there's an enemy or an object on top that's impossible to interact with, you'll need our helpful box. The Email Shooter!
+[signal arg="vclip_p5_04"]
+interfly: Clicking on it with the left mouse click will send emails. It can only send one email at a time. So, you have to wait until the email has been launched, has been destroyed or has been flying for 3 seconds.
+[signal arg="vclip_p5_05"]
+interfly: You can pick them up with the Grab button and move them to another location. Heck! You can even shoot while you're holding it!
+[signal arg="greet"]
+[signal arg="vclip_p5_06"]
+interfly: Furthermore, you can even jump on them for a better height! That's if you're quicker than them, that is.
+[signal arg="vclip_p5_07"]
+interfly: Once you run out of email, it'll take at least 5 seconds for the new one to be sent in the box.
+[signal arg="vclip_p5_08"]
+interfly: Once so, then you can shoot them out yet again.
+[signal arg="vclip_p5_09"]
+interfly: Right, let's do it. Use the Email Shooter to shoot down those two Sticknodes, and then reposition the draggable window.
+[signal arg="vclip_p5_10"]
+[signal arg="greet"]
+interfly: We're almost done!
+[signal arg="end_cutscene"]

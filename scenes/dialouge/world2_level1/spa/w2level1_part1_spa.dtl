@@ -1,0 +1,20 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_01_spa.ogg" volume="2.0" bus="voices"]
+interfly: Muy bien. Vamos a lo básico.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_02_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡En Internet, disfrutarás de una amplia gama de interacciones y entretenimiento! Así es como suele ser aquí...
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_03_spa.ogg" volume="2.0" bus="voices"]
+interfly: Y para que estas obras mágicas funcionen, vas a necesitar a tu pequeño compañero volador...
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_04_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡El cursor del ratón!
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_05_spa.ogg" volume="2.0" bus="voices"]
+interfly: Esta pequeña herramienta te ayudará a lo largo de este viaje.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_06_spa.ogg" volume="2.0" bus="voices"]
+interfly: Entonces, probémoslo. ¿Qué te parece?
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_07_spa.ogg" volume="2.0" bus="voices"]
+interfly: Haz clic con el botón izquierdo del ratón en el botón grande para abrir la puerta.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part1_08_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Vamos! ¡Intentémoslo!
+[signal arg="end_cutscene"]

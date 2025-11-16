@@ -1,0 +1,18 @@
+friend: Oh là là ! Ce n'est pas bon... Un mur.
+[signal arg="normaltalkB"]
+friend: Mais il y a quelque chose là-haut. Cependant, un simple saut ne suffira pas.
+[signal arg="talkingB"]
+[signal arg="flippedoff"]
+friend: C'est à ce moment-là que vous devez utiliser votre double saut.
+[signal arg="talkingB"]
+friend: Appuyez sur la touche Espace pour sauter, puis appuyez à nouveau dessus pour effectuer un double saut.
+[signal arg="pointingB"]
+friend: N'oubliez pas \: une petite pression sur la touche Espace vous permettra de faire de petits sauts...
+[signal arg="welcomeB"]
+friend: Tandis que vous le maintenez enfoncé jusqu'à atteindre votre limite de saut pour un grand bond.\
+Comme une grenouille sautillante.
+[signal arg="talkingB"]
+friend: Alors pour cela. Maintenez la touche Espace enfoncée, puis appuyez à nouveau dessus pour atteindre le sommet !
+[signal arg="greatestB"]
+friend: Droit! Essayons !
+[signal arg="end_cutsceneB"]

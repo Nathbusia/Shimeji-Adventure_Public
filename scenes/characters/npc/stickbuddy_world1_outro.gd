@@ -27,7 +27,19 @@ func walk():
 	friend.play("move")
 	
 func start_dialogue():
-	run_dialogue("world1_outro")
+	match LanguageManager.language:
+		"spanish":
+			run_dialogue("world1_outro_" + LanguageManager.shortlang)
+		"french":
+			run_dialogue("world1_outro_" + LanguageManager.shortlang)
+		"italian":
+			run_dialogue("world1_outro_" + LanguageManager.shortlang)
+		"german":
+			run_dialogue("world1_outro_" + LanguageManager.shortlang)
+		"japanese":
+			run_dialogue("world1_outro_" + LanguageManager.shortlang)
+		_:
+			run_dialogue("world1_outro")
 
 func friend_leave():
 	is_leaving = true

@@ -4,8 +4,12 @@ class_name CharacterSelect extends Node2D
 @onready var windows_bg: TextureRect = $CharacterWindows/WindowsBG
 @onready var charactername: Label = $CharacterName/Name
 @onready var slot_button_shimeji: TextureButton = $CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton
+@onready var slot_button_kuro: TextureButton = $CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton
+@onready var slot_button_shiminter: TextureButton = $CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton
+@onready var slot_button_summeji: TextureButton = $CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG/CharSelect_Char/CharSelect_FG/SlotButton
+
 @onready var select_sound: AudioStreamPlayer2D = $SelectSound
-@onready var shimeji_character_playable: CharacterBody2D = $SceneObjects/ShimejiCharacter_Playable
+@onready var shimeji_character_playable: CharacterBody2D = $ShimejiCharacter_Playable
 @onready var go_button: TextureButton = $GO_Button
 @onready var back_button: TextureButton = $BACK_Button
 @onready var ground_shape: CollisionShape2D = $CharacterWindows/WindowsLayout/GroundandWall/GroundShape
@@ -14,17 +18,93 @@ class_name CharacterSelect extends Node2D
 @onready var deselect_sound: AudioStreamPlayer2D = $DeselectSound
 @onready var select: AudioStreamPlayer2D = $ButtonSounds/Select
 @onready var deselect: AudioStreamPlayer2D = $ButtonSounds/Deselect
+@onready var charmenu_text: AnimatedSprite2D = $CharmenuText
+
+#Multiplayer Stuff
+@onready var players_label: Label = $Multiplayers_Characters/PlayersLabel
+@onready var next_button: TextureButton = $NEXT_Button
+@onready var multiplayers_characters: Panel = $Multiplayers_Characters
+
+#Player1
+@onready var border_p1: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P1
+@onready var player_positions_p1: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P1/PlayerPositions_P1
+@onready var character_icon_p1: TextureRect = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P1/CharacterIcon_P1
+
+#Player2
+@onready var border_p2: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P2
+@onready var player_positions_p2: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P2/PlayerPositions_P2
+@onready var character_icon_p2: TextureRect = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P2/CharacterIcon_P2
+
+#Player3
+@onready var border_p3: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P3
+@onready var player_positions_p3: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P3/PlayerPositions_P3
+@onready var character_icon_p3: TextureRect = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P3/CharacterIcon_P3
+
+#Player4
+@onready var border_p4: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P4
+@onready var player_positions_p4: AnimatedSprite2D = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P4/PlayerPositions_P4
+@onready var character_icon_p4: TextureRect = $Multiplayers_Characters/Multiplayer_CharacterIconsBorder_P4/CharacterIcon_P4
 
 var curCharacter: String
+var curCharacter_player2: String
+var curCharacter_player3: String
+var curCharacter_player4: String
 var player_character_path: String
 
 var characterselected = false
+var allplayers_selected = false
 
 func _ready() -> void:
 	DiscordRPC.state = "Selecting a Character"
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
+	ModeManager.charselect_player1 = true
+	ModeManager.charselect_player2 = false
+	ModeManager.charselect_player3 = false
+	ModeManager.charselect_player4 = false
+	if ModeManager.is_multiplayer:
+		multiplayers_characters.show()
+		ModeManager.charselect_player1 = true
+		ModeManager.charselect_player2 = false
+		ModeManager.charselect_player3 = false
+		ModeManager.charselect_player4 = false
+		if ModeManager.multi_2players:
+			border_p2.show()
+		if ModeManager.multi_3players:
+			border_p2.show()
+			border_p3.show()
+		if ModeManager.multi_4players:
+			border_p2.show()
+			border_p3.show()
+			border_p4.show()
 	load_customcharacters()
+	
+	match LanguageManager.language:
+		"spanish":
+			players_label.text = "(Jugador 1)"
+		"french":
+			players_label.text = "(Joueur 1)"
+		"italian":
+			players_label.text = "(Giocatore 1)"
+		"german":
+			players_label.text = "(Spieler 1)"
+		"japanese":
+			players_label.text = "(1 Player)"
+		_:
+			return
+	
+	charmenu_text.play("default_" + LanguageManager.shortlang)
+	
+	if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+		player_positions_p1.play("player1_spa-fre")
+		player_positions_p2.play("player2_spa-fre")
+		player_positions_p3.play("player3_spa-fre")
+		player_positions_p4.play("player4_spa-fre")
+	else:
+		player_positions_p1.play("player1_" + LanguageManager.shortlang)
+		player_positions_p2.play("player2_" + LanguageManager.shortlang)
+		player_positions_p3.play("player3_" + LanguageManager.shortlang)
+		player_positions_p4.play("player4_" + LanguageManager.shortlang)
 
 func load_customcharacters():
 		#These are for the Mods (There's a lot of Numbers... Couldn't figure out an eaiser way without hecking up the code...)
@@ -353,18 +433,28 @@ func load_customcharacters():
 func _on_texture_button_pressed() -> void:
 	select.play()
 	CharactersManager.charactername = curCharacter
+	CharactersManager.charactername_player2 = curCharacter_player2
+	CharactersManager.charactername_player3 = curCharacter_player3
+	CharactersManager.charactername_player4 = curCharacter_player4
+	print("Player 1:" + str(CharactersManager.charactername))
+	print("Player 2:" + str(CharactersManager.charactername_player2))
+	print("Player 3:" + str(CharactersManager.charactername_player3))
+	print("Player 4:" + str(CharactersManager.charactername_player4))
+	
+	print("Player 1 Mod:" + str(CharactersManager.is_mod))
+	print("Player 2 Mod:" + str(CharactersManager.is_mod_p2))
+	print("Player 3 Mod:" + str(CharactersManager.is_mod_p3))
+	print("Player 4 Mod:" + str(CharactersManager.is_mod_p4))
 	ModeManager.in_gameplay = true
 	if ModeManager.is_story:
-		LoadManager.load_scene("res://scenes/worldmap/worldmap_world1.tscn")
+		if !FileAccess.file_exists("user://savefiles/shime_story_savefile1.tres") || StoryManager.making_newsave:
+			LoadManager.load_scene("res://scenes/worldmap/worldmap_world1.tscn")
+			StoryManager.making_newsave = false
+		else:
+			LoadManager.load_scene("res://scenes/worldmap/worldmap_"+ SaveFileManager.currentworld +".tscn")
 		if ModeManager.is_savefile1:
 			if FileAccess.file_exists("user://savefiles/shime_story_savefile1.tres"):
 				ResourceLoader.load("user://savefiles/shime_story_savefile1.tres").duplicate(true)
-		if ModeManager.is_savefile2:
-			if FileAccess.file_exists("user://savefiles/shime_story_savefile2.tres"):
-				ResourceLoader.load("user://savefiles/shime_story_savefile2.tres").duplicate(true)
-		if ModeManager.is_savefile3:
-			if FileAccess.file_exists("user://savefiles/shime_story_savefile3.tres"):
-				ResourceLoader.load("user://savefiles/shime_story_savefile3.tres").duplicate(true)
 	else:
 		if LevelsManager.is_mod:
 			LoadManager.load_scene("res://mods/levels-bosses/" + LevelsManager.levelname + "/scene/" + LevelsManager.levelname + ".tscn")
@@ -379,21 +469,148 @@ func characterchoose():
 func _on_back_button_pressed() -> void:
 	if characterselected:
 		characterselected = false
-		CharactersManager.is_mod = false
 		deselect_sound.play()
 		ground_shape.disabled = true
 		wall_shape_l.disabled = true
 		wall_shape_r.disabled = true
 		go_button.hide()
+		next_button.hide()
 		charactername.text = "???"
 		windows_bg.modulate = "#ffffff"
+		if ModeManager.is_multiplayer:
+			if ModeManager.charselect_player1:
+				match curCharacter:
+					"shimeji":
+						slot_button_shimeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("normal")
+					"kuroshimeji":
+						slot_button_kuro.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("normal")
+					"shiminter":
+						slot_button_shiminter.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("normal")
+					"summeji":
+						slot_button_summeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("normal")
+					_:
+						pass
+			if ModeManager.charselect_player2:
+				match curCharacter_player2:
+					"shimeji":
+						slot_button_shimeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("normal")
+					"kuroshimeji":
+						slot_button_kuro.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("normal")
+					"shiminter":
+						slot_button_shiminter.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("normal")
+					"summeji":
+						slot_button_summeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("normal")
+					_:
+						pass
+			if ModeManager.charselect_player3:
+				match curCharacter_player3:
+					"shimeji":
+						slot_button_shimeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("normal")
+					"kuroshimeji":
+						slot_button_kuro.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("normal")
+					"shiminter":
+						slot_button_shiminter.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("normal")
+					"summeji":
+						slot_button_summeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("normal")
+					_:
+						pass
+			if ModeManager.charselect_player4:
+				match curCharacter_player4:
+					"shimeji":
+						slot_button_shimeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("normal")
+					"kuroshimeji":
+						slot_button_kuro.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("normal")
+					"shiminter":
+						slot_button_shiminter.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("normal")
+					"summeji":
+						slot_button_summeji.disabled = false
+						$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("normal")
+					_:
+						pass
+		else:
+			match curCharacter:
+				"shimeji":
+					slot_button_shimeji.disabled = false
+					$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("normal")
+				"kuroshimeji":
+					slot_button_kuro.disabled = false
+					$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("normal")
+				"shiminter":
+					slot_button_shiminter.disabled = false
+					$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("normal")
+				"summeji":
+					slot_button_summeji.disabled = false
+					$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("normal")
+				_:
+					pass
+		if ModeManager.charselect_player1:
+			if border_p1.animation == "border_dark":
+				border_p1.animation = "border"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				if player_positions_p1.animation == "player1_dark_spa-fre":
+					player_positions_p1.play("player1_spa-fre")
+			else:
+				if player_positions_p1.animation == "player1_dark_" + LanguageManager.shortlang:
+					player_positions_p1.play("player1_" + LanguageManager.shortlang)
+			border_p1.modulate = "#ffffff"
+			character_icon_p1.texture = load("res://sprites/menu/charselect/multi/CharSelect_Icon_Question.png")
+		if ModeManager.charselect_player2:
+			if border_p2.animation == "border_dark":
+				border_p2.animation = "border"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				if player_positions_p2.animation == "player2_dark_spa-fre":
+					player_positions_p2.play("player2_spa-fre")
+			else:
+				if player_positions_p2.animation == "player2_dark_" + LanguageManager.shortlang:
+					player_positions_p2.play("player2_" + LanguageManager.shortlang)
+			border_p2.modulate = "#ffffff"
+			character_icon_p2.texture = load("res://sprites/menu/charselect/multi/CharSelect_Icon_Question.png")
+		if ModeManager.charselect_player3:
+			if border_p3.animation == "border_dark":
+				border_p3.animation = "border"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				if player_positions_p3.animation == "player3_dark_spa-fre":
+					player_positions_p3.play("player3_spa-fre")
+			else:
+				if player_positions_p3.animation == "player3_dark_" + LanguageManager.shortlang:
+					player_positions_p3.play("player3_" + LanguageManager.shortlang)
+			border_p3.modulate = "#ffffff"
+			character_icon_p3.texture = load("res://sprites/menu/charselect/multi/CharSelect_Icon_Question.png")
+		if ModeManager.charselect_player4:
+			if border_p4.animation == "border_dark":
+				border_p4.animation = "border"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				if player_positions_p4.animation == "player4_dark_spa-fre":
+					player_positions_p4.play("player4_spa-fre")
+			else:
+				if player_positions_p4.animation == "player4_dark_" + LanguageManager.shortlang:
+					player_positions_p4.play("player4_" + LanguageManager.shortlang)
+			border_p4.modulate = "#ffffff"
+			character_icon_p4.texture = load("res://sprites/menu/charselect/multi/CharSelect_Icon_Question.png")
 	else:
 		if ModeManager.is_story:
 			deselect.play()
 			LoadManager.load_scene("res://scenes/menu/story_save_file_select.tscn")
+			allplayers_selected = false
 		else:
 			deselect.play()
 			LoadManager.load_scene("res://scenes/menu/level_select.tscn")
+			allplayers_selected = false
 
 func _on_slot_button_pressed() -> void:
 	if characterselected:
@@ -403,18 +620,67 @@ func _on_slot_button_pressed() -> void:
 		ground_shape.disabled = false
 		wall_shape_l.disabled = false
 		wall_shape_r.disabled = false
-		CharactersManager.is_mod = false
-		curCharacter = "shimeji_"
-		player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
+		if ModeManager.is_multiplayer:
+			if ModeManager.charselect_player1:
+				CharactersManager.is_mod = false
+			if ModeManager.charselect_player2:
+				CharactersManager.is_mod_p2 = false
+			if ModeManager.charselect_player3:
+				CharactersManager.is_mod_p3 = false
+			if ModeManager.charselect_player4:
+				CharactersManager.is_mod_p4 = false
+		else:
+			CharactersManager.is_mod = false
+		if ModeManager.charselect_player2:
+			curCharacter_player2 = "shimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player2 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player3:
+			curCharacter_player3 = "shimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player3 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player4:
+			curCharacter_player4 = "shimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player4 + "/shimeji_character_playable.tscn"
+		else:
+			curCharacter = "shimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
 		var ShimejiCharacter_Playable = load(player_character_path).instantiate()
 		ShimejiCharacter_Playable.position.x = 944
 		ShimejiCharacter_Playable.position.y = 307
 		add_child(ShimejiCharacter_Playable)
 		select_sound.play()
+		if ModeManager.charselect_player1:
+			ShimejiCharacter_Playable.is_player1 = true
+		if ModeManager.charselect_player2:
+			ShimejiCharacter_Playable.is_player2 = true
+		if ModeManager.charselect_player3:
+			ShimejiCharacter_Playable.is_player3 = true
+		if ModeManager.charselect_player4:
+			ShimejiCharacter_Playable.is_player4 = true
 		CharactersManager.characterdisplay = ShimejiCharacter_Playable.charname
 		charactername.text = ShimejiCharacter_Playable.charname
 		windows_bg.modulate = Color(ShimejiCharacter_Playable.charcolour)
-		go_button.show()
+		slot_button_shimeji.disabled = true
+		$CharactersPanel/HBoxContainer/characterslot_shimeji/CharSelect_BG.play("current")
+		if ModeManager.charselect_player1 == true:
+			border_p1.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p1.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player2 == true:
+			border_p2.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p2.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player3 == true:
+			border_p3.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p3.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player4 == true:
+			border_p4.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p4.texture = ShimejiCharacter_Playable.charIcon
+		
+		if ModeManager.is_multiplayer:
+			if allplayers_selected:
+				go_button.show()
+			else:
+				next_button.show()
+		else:
+			go_button.show()
 		back_button.show()
 		print("Current Character is now " + CharactersManager.characterdisplay + "!")
 
@@ -426,18 +692,83 @@ func _on_slot_button_kuro_pressed() -> void:
 		ground_shape.disabled = false
 		wall_shape_l.disabled = false
 		wall_shape_r.disabled = false
-		CharactersManager.is_mod = false
-		curCharacter = "kuroshimeji"
-		player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
+		if ModeManager.is_multiplayer:
+			if ModeManager.charselect_player1:
+				CharactersManager.is_mod = false
+			if ModeManager.charselect_player2:
+				CharactersManager.is_mod_p2 = false
+			if ModeManager.charselect_player3:
+				CharactersManager.is_mod_p3 = false
+			if ModeManager.charselect_player4:
+				CharactersManager.is_mod_p4 = false
+		else:
+			CharactersManager.is_mod = false
+		if ModeManager.charselect_player2:
+			curCharacter_player2 = "kuroshimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player2 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player3:
+			curCharacter_player3 = "kuroshimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player3 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player4:
+			curCharacter_player4 = "kuroshimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player4 + "/shimeji_character_playable.tscn"
+		else:
+			curCharacter = "kuroshimeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
 		var ShimejiCharacter_Playable = load(player_character_path).instantiate()
 		ShimejiCharacter_Playable.position.x = 944
 		ShimejiCharacter_Playable.position.y = 307
 		add_child(ShimejiCharacter_Playable)
 		select_sound.play()
+		if ModeManager.charselect_player1:
+			ShimejiCharacter_Playable.is_player1 = true
+		if ModeManager.charselect_player2:
+			ShimejiCharacter_Playable.is_player2 = true
+		if ModeManager.charselect_player3:
+			ShimejiCharacter_Playable.is_player3 = true
+		if ModeManager.charselect_player4:
+			ShimejiCharacter_Playable.is_player4 = true
 		CharactersManager.characterdisplay = ShimejiCharacter_Playable.charname
 		charactername.text = ShimejiCharacter_Playable.charname
 		windows_bg.modulate = Color(ShimejiCharacter_Playable.charcolour)
-		go_button.show()
+		slot_button_kuro.disabled = true
+		$CharactersPanel/HBoxContainer/characterslot_kuroshimeji/CharSelect_BG.play("current")
+		if ModeManager.charselect_player1 == true:
+			border_p1.animation = "border_dark"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				player_positions_p1.play("player1_dark_spa-fre")
+			else:
+				player_positions_p1.play("player1_dark_" + LanguageManager.shortlang)
+			character_icon_p1.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player2 == true:
+			border_p2.animation = "border_dark"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				player_positions_p2.play("player2_dark_spa-fre")
+			else:
+				player_positions_p2.play("player2_dark_" + LanguageManager.shortlang)
+			character_icon_p2.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player3 == true:
+			border_p3.animation = "border_dark"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				player_positions_p3.play("player3_dark_spa-fre")
+			else:
+				player_positions_p3.play("player3_dark_" + LanguageManager.shortlang)
+			character_icon_p3.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player4 == true:
+			border_p4.animation = "border_dark"
+			if LanguageManager.language == "spanish" || LanguageManager.language == "french":
+				player_positions_p4.play("player4_dark_spa-fre")
+			else:
+				player_positions_p4.play("player4_dark_" + LanguageManager.shortlang)
+			character_icon_p4.texture = ShimejiCharacter_Playable.charIcon
+		
+		if ModeManager.is_multiplayer:
+			if allplayers_selected:
+				go_button.show()
+			else:
+				next_button.show()
+		else:
+			go_button.show()
 		back_button.show()
 		print("Current Character is now " + CharactersManager.characterdisplay + "!")
 
@@ -449,18 +780,67 @@ func _on_slot_button_shiminter_pressed() -> void:
 		ground_shape.disabled = false
 		wall_shape_l.disabled = false
 		wall_shape_r.disabled = false
-		CharactersManager.is_mod = false
-		curCharacter = "shiminter"
-		player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
+		if ModeManager.is_multiplayer:
+			if ModeManager.charselect_player1:
+				CharactersManager.is_mod = false
+			if ModeManager.charselect_player2:
+				CharactersManager.is_mod_p2 = false
+			if ModeManager.charselect_player3:
+				CharactersManager.is_mod_p3 = false
+			if ModeManager.charselect_player4:
+				CharactersManager.is_mod_p4 = false
+		else:
+			CharactersManager.is_mod = false
+		if ModeManager.charselect_player2:
+			curCharacter_player2 = "shiminter"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player2 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player3:
+			curCharacter_player3 = "shiminter"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player3 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player4:
+			curCharacter_player4 = "shiminter"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player4 + "/shimeji_character_playable.tscn"
+		else:
+			curCharacter = "shiminter"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
 		var ShimejiCharacter_Playable = load(player_character_path).instantiate()
 		ShimejiCharacter_Playable.position.x = 944
 		ShimejiCharacter_Playable.position.y = 307
 		add_child(ShimejiCharacter_Playable)
 		select_sound.play()
+		if ModeManager.charselect_player1:
+			ShimejiCharacter_Playable.is_player1 = true
+		if ModeManager.charselect_player2:
+			ShimejiCharacter_Playable.is_player2 = true
+		if ModeManager.charselect_player3:
+			ShimejiCharacter_Playable.is_player3 = true
+		if ModeManager.charselect_player4:
+			ShimejiCharacter_Playable.is_player4 = true
 		CharactersManager.characterdisplay = ShimejiCharacter_Playable.charname
 		charactername.text = ShimejiCharacter_Playable.charname
 		windows_bg.modulate = Color(ShimejiCharacter_Playable.charcolour)
-		go_button.show()
+		slot_button_shiminter.disabled = true
+		$CharactersPanel/HBoxContainer/characterslot_shiminter/CharSelect_BG.play("current")
+		if ModeManager.charselect_player1 == true:
+			border_p1.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p1.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player2 == true:
+			border_p2.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p2.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player3 == true:
+			border_p3.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p3.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player4 == true:
+			border_p4.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p4.texture = ShimejiCharacter_Playable.charIcon
+		
+		if ModeManager.is_multiplayer:
+			if allplayers_selected:
+				go_button.show()
+			else:
+				next_button.show()
+		else:
+			go_button.show()
 		back_button.show()
 		print("Current Character is now " + CharactersManager.characterdisplay + "!")
 
@@ -472,18 +852,67 @@ func _on_slot_button_summeji_pressed() -> void:
 		ground_shape.disabled = false
 		wall_shape_l.disabled = false
 		wall_shape_r.disabled = false
-		CharactersManager.is_mod = false
-		curCharacter = "summeji"
-		player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
+		if ModeManager.is_multiplayer:
+			if ModeManager.charselect_player1:
+				CharactersManager.is_mod = false
+			if ModeManager.charselect_player2:
+				CharactersManager.is_mod_p2 = false
+			if ModeManager.charselect_player3:
+				CharactersManager.is_mod_p3 = false
+			if ModeManager.charselect_player4:
+				CharactersManager.is_mod_p4 = false
+		else:
+			CharactersManager.is_mod = false
+		if ModeManager.charselect_player2:
+			curCharacter_player2 = "summeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player2 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player3:
+			curCharacter_player3 = "summeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player3 + "/shimeji_character_playable.tscn"
+		elif ModeManager.charselect_player4:
+			curCharacter_player4 = "summeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter_player4 + "/shimeji_character_playable.tscn"
+		else:
+			curCharacter = "summeji"
+			player_character_path = "res://scenes/characters/playable/" + curCharacter + "/shimeji_character_playable.tscn"
 		var ShimejiCharacter_Playable = load(player_character_path).instantiate()
 		ShimejiCharacter_Playable.position.x = 944
 		ShimejiCharacter_Playable.position.y = 307
 		add_child(ShimejiCharacter_Playable)
 		select_sound.play()
+		if ModeManager.charselect_player1:
+			ShimejiCharacter_Playable.is_player1 = true
+		if ModeManager.charselect_player2:
+			ShimejiCharacter_Playable.is_player2 = true
+		if ModeManager.charselect_player3:
+			ShimejiCharacter_Playable.is_player3 = true
+		if ModeManager.charselect_player4:
+			ShimejiCharacter_Playable.is_player4 = true
 		CharactersManager.characterdisplay = ShimejiCharacter_Playable.charname
 		charactername.text = ShimejiCharacter_Playable.charname
 		windows_bg.modulate = Color(ShimejiCharacter_Playable.charcolour)
-		go_button.show()
+		slot_button_summeji.disabled = true
+		$CharactersPanel/HBoxContainer/characterslot_summeji/CharSelect_BG.play("current")
+		if ModeManager.charselect_player1 == true:
+			border_p1.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p1.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player2 == true:
+			border_p2.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p2.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player3 == true:
+			border_p3.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p3.texture = ShimejiCharacter_Playable.charIcon
+		elif ModeManager.charselect_player4 == true:
+			border_p4.modulate = Color(ShimejiCharacter_Playable.charcolour)
+			character_icon_p4.texture = ShimejiCharacter_Playable.charIcon
+		
+		if ModeManager.is_multiplayer:
+			if allplayers_selected:
+				go_button.show()
+			else:
+				next_button.show()
+		else:
+			go_button.show()
 		back_button.show()
 		print("Current Character is now " + CharactersManager.characterdisplay + "!")
 
@@ -508,3 +937,85 @@ func _on_slot_button_summeji_pressed() -> void:
 		#go_button.show()
 		#back_button.show()
 		#print("Current Character is now " + curCharacter + "!")
+
+
+func _on_next_button_pressed() -> void:
+	if ModeManager.charselect_player1:
+		ModeManager.charselect_player1 = false
+		ModeManager.charselect_player2 = true
+		next_button.hide()
+		match LanguageManager.language:
+			"spanish":
+				players_label.text = "(Jugador 2)"
+			"french":
+				players_label.text = "(Joueur 2)"
+			"italian":
+				players_label.text = "(Giocatore 2)"
+			"german":
+				players_label.text = "(Spieler 2)"
+			"japanese":
+				players_label.text = "(2 Player)"
+			_:
+				players_label.text = "(Player 2)"
+		print("Choose a Character, Player 2!")
+		print("Player 1 Done!: " + str(ModeManager.charselect_player1))
+		print("Player 2 Time!: " + str(ModeManager.charselect_player2))
+		if ModeManager.multi_2players == true:
+			allplayers_selected = true
+			print("Last Player to Choose: " + str(allplayers_selected))
+	elif ModeManager.charselect_player2:
+		ModeManager.charselect_player2 = false
+		ModeManager.charselect_player3 = true
+		next_button.hide()
+		match LanguageManager.language:
+			"spanish":
+				players_label.text = "(Jugador 3)"
+			"french":
+				players_label.text = "(Joueur 3)"
+			"italian":
+				players_label.text = "(Giocatore 3)"
+			"german":
+				players_label.text = "(Spieler 3)"
+			"japanese":
+				players_label.text = "(3 Player)"
+			_:
+				players_label.text = "(Player 3)"
+		print("Choose a Character, Player 3!")
+		print("Player 2 Done!: " + str(ModeManager.charselect_player2))
+		print("Player 3 Time!: " + str(ModeManager.charselect_player3))
+		if ModeManager.multi_3players == true:
+			allplayers_selected = true
+			print("Last Player to Choose: " + str(allplayers_selected))
+	elif ModeManager.charselect_player3:
+		ModeManager.charselect_player3 = false
+		ModeManager.charselect_player4 = true
+		next_button.hide()
+		match LanguageManager.language:
+			"spanish":
+				players_label.text = "(Jugador 4)"
+			"french":
+				players_label.text = "(Joueur 4)"
+			"italian":
+				players_label.text = "(Giocatore 4)"
+			"german":
+				players_label.text = "(Spieler 4)"
+			"japanese":
+				players_label.text = "(4 Player)"
+			_:
+				players_label.text = "(Player 4)"
+		print("Choose a Character, Player 4!")
+		print("Player 3 Done!: " + str(ModeManager.charselect_player3))
+		print("Player 4 Time!: " + str(ModeManager.charselect_player4))
+		if ModeManager.multi_4players == true:
+			allplayers_selected = true
+			print("Last Player to Choose: " + str(allplayers_selected))
+	if characterselected:
+		characterselected = false
+		select.play()
+		ground_shape.disabled = true
+		wall_shape_l.disabled = true
+		wall_shape_r.disabled = true
+		go_button.hide()
+		charactername.text = "???"
+		windows_bg.modulate = "#ffffff"
+	

@@ -1,0 +1,8 @@
+friend: Yo ! As-tu remarqué ce drapeau qui apparaît après que tu es passé à travers ?
+[signal arg="talking"]
+friend: Ce sont des points de contrôle. Ils deviennent vraiment pratiques une fois activés.
+[signal arg="talking"]
+friend: Ainsi, si vous perdez une vie à cause d'un ennemi, d'un obstacle dangereux ou même en tombant hors de la carte, vous réapparaîtrez au dernier point de contrôle que vous avez activé. Cela vous permettra de reprendre la partie là où vous l'avez laissée. (Sauf si vous préférez recommencer depuis le début, auquel cas vous pouvez ignorer ce point de contrôle.)
+[signal arg="greatest"]
+friend: Très bien, passons à la dernière étape.
+[signal arg="end_cutscene"]

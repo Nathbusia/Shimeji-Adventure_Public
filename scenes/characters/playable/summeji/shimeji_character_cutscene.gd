@@ -5,6 +5,7 @@ extends Node2D
 @onready var footsteps_sounds: AudioStreamPlayer = $PlayerSFX/FootstepsSounds
 @onready var sprite_2d: AnimatedSprite2D = $Sprite2D
 @onready var shime_fall_anim: AnimationPlayer = $ShimeFallAnim
+@onready var taunt_sound: AudioStreamPlayer = $PlayerSFX/TauntSound
 
 var footsteps_frames : Array = [0, 2]
 var crouch_frames : Array = [0]
@@ -13,17 +14,24 @@ func _ready():
 	Dialogic.signal_event.connect(DialogicSignal)
 
 func falling():
-	sprite_2d.animation = "fall"
+	sprite_2d.play("fall")
 	shime_fall_anim.play("falloff")
 
 func walk():
-	sprite_2d.animation = "walk"
+	sprite_2d.play("walk")
 
 func jump():
-	sprite_2d.animation = "jump"
+	sprite_2d.play("jump")
 
 func idle():
-	sprite_2d.animation = "idle"
+	sprite_2d.play("idle")
+
+func sit():
+	sprite_2d.play("sit")
+
+func taunt():
+	sprite_2d.play("taunt")
+	taunt_sound.play()
 
 func DialogicSignal(argument:String):
 	if argument == "playerflipon":

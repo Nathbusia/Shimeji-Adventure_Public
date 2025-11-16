@@ -1,0 +1,75 @@
+[gd_scene load_steps=14 format=3 uid="uid://de1iam242oq1o"]
+
+[ext_resource type="Script" uid="uid://d3p5v3cugicql" path="res://scenes/characters/enemy/enemy_flownet.gd" id="1_ainen"]
+[ext_resource type="Texture2D" uid="uid://bfbq16tousojj" path="res://sprites/characters/enemy/flownet/flownet_idle0002.png" id="1_rn680"]
+[ext_resource type="Texture2D" uid="uid://y5c5hd7ahm4y" path="res://sprites/characters/enemy/flownet/flownet_idle0003.png" id="2_ainen"]
+[ext_resource type="Texture2D" uid="uid://mxi1ksuj2i5c" path="res://sprites/characters/enemy/flownet/flownet_idle0004.png" id="3_36mdn"]
+[ext_resource type="Texture2D" uid="uid://cycpt1khreq6n" path="res://sprites/characters/enemy/flownet/flownet_idle0005.png" id="4_jvbe1"]
+[ext_resource type="Texture2D" uid="uid://yhyjcpmnobuk" path="res://sprites/characters/enemy/flownet/flownet_idle0006.png" id="5_wj1up"]
+[ext_resource type="Texture2D" uid="uid://dmcl5550u06u1" path="res://sprites/characters/enemy/flownet/flownet_idle0007.png" id="6_v8ddk"]
+[ext_resource type="Texture2D" uid="uid://dy2hgld8w3vpa" path="res://sprites/characters/enemy/flownet/flownet_idle0008.png" id="7_a7twk"]
+[ext_resource type="Texture2D" uid="uid://vor2hp1rnn5v" path="res://sprites/characters/enemy/flownet/flownet_idle0009.png" id="8_37uk6"]
+[ext_resource type="Texture2D" uid="uid://dwmorpdfs7s7" path="res://sprites/characters/enemy/flownet/flownet_idle0010.png" id="9_71mdn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bkvxs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rn680")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ainen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_36mdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_jvbe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_wj1up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_v8ddk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_a7twk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_37uk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_71mdn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rn680"]
+size = Vector2(34, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ainen"]
+size = Vector2(36, 38)
+
+[node name="Flownet" type="AnimatableBody2D"]
+script = ExtResource("1_ainen")
+
+[node name="FlownetSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_bkvxs")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.762901
+
+[node name="MainHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_rn680")
+
+[node name="TriggerHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TriggerHitbox"]
+position = Vector2(-2, -2)
+shape = SubResource("RectangleShape2D_ainen")
+
+[connection signal="body_entered" from="TriggerHitbox" to="." method="_on_trigger_hitbox_body_entered"]

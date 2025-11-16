@@ -1,0 +1,52 @@
+[signal arg="pete_cockytalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_01.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Bene bene bene... Guarda cosa ha portato il gatto nel sacco.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_01_ita.ogg" volume="0.0" bus="voices"]
+interfly: Tu!
+[signal arg="playerjump"]
+[signal arg="specialanim_3"]
+[wait time="1.0"]
+[signal arg="pete_normaltalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_02.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Hai visto le modifiche che ho apportato su Internet? Sono piuttosto impressionanti, vero?
+[signal arg="pete_smirktalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_03.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: E poi, ora che i pop-up sono ovunque, perché non lasciamo perdere il passato e li lasciamo coesistere?
+[signal arg="greet"]
+[signal arg="pete_unimpress"]
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_02_ita.ogg" volume="0.0" bus="voices"]
+interfly: Col cavolo che non lo farò!
+[signal arg="inter_close"]
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_03_ita.ogg" volume="0.0" bus="voices"]
+interfly: Che ne dici di riportare quei pop-up nel tuo dark web e ANDARTENE A CASA!
+[signal arg="pete_surprisedtalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_04.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Caspita! Parole davvero forti per un insetto insignificante come te.
+[signal arg="pete_cockytalk"]
+[signal arg="inter_back"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_05_multi.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Ti dirò una cosa. Se tu e i tuoi piccoli idioti paludosi riusciste a sconfiggermi, potrei ordinare la ritirata.
+[signal arg="pete_eviltalk"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_06.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Il che è altamente improbabile perché non ho intenzione di andarci piano con nessuno dei due.
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_04_ita.ogg" volume="0.0" bus="voices"]
+interfly: Bene. Allora è deciso. Ci stai, Pop Out Pete!
+[signal arg="flippedon"]
+[signal arg="cam_players"]
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_05_ita.ogg" volume="0.0" bus="voices"]
+interfly: La Mailbox ha ricevuto un E-mail Shooter molto più potente per abbattere Pop Out Pete.
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_06_multi_ita.ogg" volume="0.0" bus="voices"]
+interfly: Vado a prenderlo mentre voi vi preparate ad affrontare quel buffone a testa alta!
+[signal arg="playerjump"]
+[signal arg="specialanim_4"]
+[wait time="1.0"]
+[signal arg="flyaway"]
+[signal arg="greet"]
+[signal arg="cam_default"]
+[voice path="res://sfx/characters/npc/butterfly/it/bossintro/sfx_butterfly_bossintro_07_multi_ita.ogg" volume="0.0" bus="voices"]
+interfly: Ok! Credo in tutti voi!
+[signal arg="pete_beginfight"]
+[voice path="res://sfx/characters/bosses/pete/cutscene/sfx_pete_bossintro_07.ogg" volume="-5.0" bus="voices"]
+pop_out_pete: Va bene. Che i giochi abbiano inizio!! Hahahahaha!
+[signal arg="beginboss"]

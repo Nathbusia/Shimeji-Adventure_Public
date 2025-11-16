@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[signal arg="vclip_p4_01"]
+interfly: Oh dear... It looks like we have trouble.
+[signal arg="flippedon"]
+[signal arg="vclip_p4_02"]
+interfly: Friend(s). Those green goos that are sticking into the windows as know as... "Stick Nodes".
+[signal arg="vclip_p4_03"]
+interfly: When they stick themselves onto a specific draggable window, they'll keep their grip and won't let the draggable window move a muscle until they're defeated.
+[signal arg="vclip_p4_04"]
+interfly: The only way to defeat them is by walking toward them, and squishing them (if they're on the side), or your usual stepping on their top.
+[signal arg="vclip_p4_05"]
+interfly: There's another way of dealing with them, but we'll get to that in a bit.
+[signal arg="vclip_p4_06"]
+interfly: But for now, squish these Sticknodes outta here, and reposition the draggable windows for us to move on.
+[signal arg="vclip_p4_07"]
+interfly: Let's get going!
+[signal arg="end_cutscene"]

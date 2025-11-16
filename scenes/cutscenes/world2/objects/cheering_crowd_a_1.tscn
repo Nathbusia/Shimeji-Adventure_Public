@@ -1,0 +1,76 @@
+[gd_scene load_steps=15 format=3 uid="uid://0d6rcu8bavme"]
+
+[ext_resource type="Texture2D" uid="uid://bl8bjadlbxv0p" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0001.png" id="1_eumqt"]
+[ext_resource type="Texture2D" uid="uid://b0ojua5i1dx3t" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0002.png" id="2_28umh"]
+[ext_resource type="Texture2D" uid="uid://b7un1ckyua81u" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0003.png" id="3_sf4e3"]
+[ext_resource type="Texture2D" uid="uid://bcrchj3q73ls5" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0004.png" id="4_61vv5"]
+[ext_resource type="Texture2D" uid="uid://co4elp20xpulm" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0005.png" id="5_ega7w"]
+[ext_resource type="Texture2D" uid="uid://t3nsdp64quit" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0006.png" id="6_1f3a6"]
+[ext_resource type="Texture2D" uid="uid://dc55xssws5iy8" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0009.png" id="7_qsefd"]
+[ext_resource type="Texture2D" uid="uid://5be0tnggepk7" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0007.png" id="8_j2t48"]
+[ext_resource type="Texture2D" uid="uid://dcjxkwnrgv1uw" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0008.png" id="9_ehmax"]
+[ext_resource type="Texture2D" uid="uid://cq0n6fpy3xgky" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0010.png" id="10_nx4i3"]
+[ext_resource type="Texture2D" uid="uid://b5sn3m2jssy6t" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0011.png" id="11_omthv"]
+[ext_resource type="Texture2D" uid="uid://8g30g0q6qnov" path="res://sprites/levels/world2/Cutscene/outro/world2_manager_crowd0012.png" id="12_oq3sk"]
+[ext_resource type="Script" uid="uid://dqux6apq6omws" path="res://scenes/cutscenes/world2/objects/crowd_sprite.gd" id="13_28umh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vtikr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_eumqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_28umh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sf4e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_61vv5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ega7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1f3a6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qsefd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_j2t48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ehmax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qsefd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nx4i3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_omthv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oq3sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_sf4e3")
+}],
+"loop": true,
+"name": &"cheer",
+"speed": 12.0
+}]
+
+[node name="CheeringCrowdA1" type="Node2D"]
+
+[node name="CrowdSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_vtikr")
+animation = &"cheer"
+autoplay = "cheer"
+frame_progress = 0.33033696
+offset = Vector2(0, -64)
+script = ExtResource("13_28umh")

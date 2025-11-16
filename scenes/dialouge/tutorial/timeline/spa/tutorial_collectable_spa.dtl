@@ -1,0 +1,31 @@
+friend: ¡Buen trabajo! ¡Y mira eso! ¡Ni siquiera un rasguño!
+[signal arg="talking"]
+friend: Ahora bien, si te has hecho daño, puedes tocar estos círculos blancos flotantes que hay aquí.
+[signal arg="normaltalk"]
+[signal arg="signhealth"]
+friend: Son salud. Obviamente, regeneran tu salud.
+[signal arg="pointing"]
+[signal arg="signhealthbar"]
+friend: Y tu salud, ahí arriba a la izquierda, es muy importante...
+[signal arg="talking"]
+[signal arg="signhealthbar_empty"]
+friend: Solo tienes 5 puntos de salud a lo largo del juego, y si esa salud baja hasta 0, ¡estás frito! Perderás una vida.
+[signal arg="greatest"]
+[signal arg="signlives"]
+friend: Empiezas con 3 vidas en cada nivel (aunque tu número de vidas se guardará durante el modo Historia).
+[signal arg="talking"]
+friend: Si te quedaste sin vidas, probablemente ya sepas lo que pasó después... ¿Verdad?
+[signal arg="talking"]
+[signal arg="sign1up"]
+friend: Hay unos 1-up por ahí. Se parecen a ti. Así.
+[signal arg="greatest"]
+friend: Si ves uno, no lo dejes escapar. Son muy útiles. ¡Especialmente cuando las cosas se ponen difíciles!
+[signal arg="normaltalk"]
+[signal arg="signsquare"]
+friend: Y en cuanto a esos cuadrados graciosos, son simplemente... cuadrados graciosos.
+[signal arg="talking"]
+friend: Puedes recoger todo lo que puedas. O ignorarlos. Sí.
+[signal arg="talking"]
+[signal arg="signempty"]
+friend: Bien. Recoge cada uno de esos objetos coleccionables y seguiremos adelante. Esta lección ya casi ha terminado.
+[signal arg="end_cutscene"]

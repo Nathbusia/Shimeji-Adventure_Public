@@ -146,22 +146,7 @@ func _physics_process(delta: float) -> void:
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "crouching_fast"
-						else:
-							stand_shape.disabled = true
-							crouch_shape.disabled = false
-							sit_shape.disabled = true
-							hori_climb_shape.disabled = true
-							slam_dash_shape.disabled = true
-							sprite_2d.animation = "crouching"
-					elif can_carry == false:
-						if is_running:
-							stand_shape.disabled = false
-							crouch_shape.disabled = true
-							sit_shape.disabled = true
-							hori_climb_shape.disabled = true
-							slam_dash_shape.disabled = true
-							sprite_2d.animation = "carry_fast"
+							sprite_2d.play("crouching_fast")
 							is_waitidling = false
 						else:
 							stand_shape.disabled = true
@@ -169,7 +154,24 @@ func _physics_process(delta: float) -> void:
 							sit_shape.disabled = true
 							hori_climb_shape.disabled = true
 							slam_dash_shape.disabled = true
-							sprite_2d.animation = "carry"
+							sprite_2d.play("crouching")
+							is_waitidling = false
+					elif can_carry == false:
+						if is_running:
+							stand_shape.disabled = false
+							crouch_shape.disabled = true
+							sit_shape.disabled = true
+							hori_climb_shape.disabled = true
+							slam_dash_shape.disabled = true
+							sprite_2d.play("carry_fast")
+							is_waitidling = false
+						else:
+							stand_shape.disabled = false
+							crouch_shape.disabled = true
+							sit_shape.disabled = true
+							hori_climb_shape.disabled = true
+							slam_dash_shape.disabled = true
+							sprite_2d.play("carry")
 							is_waitidling = false
 					else:
 						if is_running:
@@ -460,6 +462,7 @@ func _physics_process(delta: float) -> void:
 				sprite_2d.animation = "taunt"
 				taunt_sound.play()
 				shime_animation_player.play("sit_out")
+			
 			
 			# Get the input direction and handle the movement/deceleration.
 			# As good practice, you should replace UI actions with custom gameplay actions.

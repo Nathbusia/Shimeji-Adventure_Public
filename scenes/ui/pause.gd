@@ -9,11 +9,203 @@ extends Node
 @onready var triangle_counter_3: AnimatedSprite2D = $PausePanel/SecretUIPause/TriangleCounter3
 @onready var triangle_counter_4: AnimatedSprite2D = $PausePanel/SecretUIPause/TriangleCounter4
 
+@onready var ui: CanvasLayer = $".."
 
 @onready var Settings: Control
 
 var secretfound = 0
 var level_complete = false
+
+func _ready() -> void:
+	match LanguageManager.language:
+		"spanish":
+			$PausePanel/Resume.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume0001.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume0002.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume0003.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Hover0001.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Hover0002.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Hover0003.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Select0001.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Select0002.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/spa/PauseButton_Resume_Select0003.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart0001.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart0002.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart0003.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Hover0001.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Hover0002.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Hover0003.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Select0001.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Select0002.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/spa/PauseButton_Restart_Select0003.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings0001.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings0002.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings0003.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Hover0001.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Hover0002.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Hover0003.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Select0001.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Select0002.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/spa/PauseButton_Settings_Select0003.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit0001.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit0002.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit0003.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Hover0001.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Hover0002.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Hover0003.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Select0001.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Select0002.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/spa/PauseButton_Quit_Select0003.png"))
+		"french":
+			$PausePanel/Resume.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume0001.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume0002.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume0003.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Hover0001.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Hover0002.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Hover0003.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Select0001.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Select0002.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/fre/PauseButton_Resume_Select0003.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart0001.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart0002.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart0003.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Hover0001.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Hover0002.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Hover0003.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Select0001.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Select0002.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/fre/PauseButton_Restart_Select0003.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings0001.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings0002.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings0003.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Hover0001.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Hover0002.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Hover0003.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Select0001.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Select0002.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/fre/PauseButton_Settings_Select0003.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit0001.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit0002.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit0003.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Hover0001.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Hover0002.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Hover0003.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Select0001.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Select0002.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/fre/PauseButton_Quit_Select0003.png"))
+		"italian":
+			$PausePanel/Resume.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume0001.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume0002.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume0003.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Hover0001.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Hover0002.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Hover0003.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Select0001.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Select0002.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ita/PauseButton_Resume_Select0003.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart0001.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart0002.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart0003.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Hover0001.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Hover0002.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Hover0003.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Select0001.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Select0002.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ita/PauseButton_Restart_Select0003.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings0001.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings0002.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings0003.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Hover0001.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Hover0002.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Hover0003.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Select0001.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Select0002.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ita/PauseButton_Settings_Select0003.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit0001.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit0002.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit0003.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Hover0001.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Hover0002.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Hover0003.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Select0001.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Select0002.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ita/PauseButton_Quit_Select0003.png"))
+		"german":
+			$PausePanel/Resume.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume0001.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume0002.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume0003.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Hover0001.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Hover0002.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Hover0003.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Select0001.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Select0002.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/ger/PauseButton_Resume_Select0003.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart0001.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart0002.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart0003.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Hover0001.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Hover0002.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Hover0003.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Select0001.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Select0002.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/ger/PauseButton_Restart_Select0003.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings0001.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings0002.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings0003.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Hover0001.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Hover0002.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Hover0003.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Select0001.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Select0002.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/ger/PauseButton_Settings_Select0003.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit0001.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit0002.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit0003.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Hover0001.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Hover0002.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Hover0003.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Select0001.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Select0002.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/ger/PauseButton_Quit_Select0003.png"))
+		"japanese":
+			$PausePanel/Resume.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume0001.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume0002.png"))
+			$PausePanel/Resume.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume0003.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Hover0001.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Hover0002.png"))
+			$PausePanel/Resume.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Hover0003.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Select0001.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Select0002.png"))
+			$PausePanel/Resume.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/resume/jpn/PauseButton_Resume_Select0003.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart0001.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart0002.png"))
+			$PausePanel/Restart.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart0003.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Hover0001.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Hover0002.png"))
+			$PausePanel/Restart.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Hover0003.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Select0001.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Select0002.png"))
+			$PausePanel/Restart.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/restart/jpn/PauseButton_Restart_Select0003.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings0001.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings0002.png"))
+			$PausePanel/Settings.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings0003.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Hover0001.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Hover0002.png"))
+			$PausePanel/Settings.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Hover0003.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Select0001.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Select0002.png"))
+			$PausePanel/Settings.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/settings/jpn/PauseButton_Settings_Select0003.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit0001.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit0002.png"))
+			$PausePanel/Quit.texture_normal.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit0003.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Hover0001.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Hover0002.png"))
+			$PausePanel/Quit.texture_hover.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Hover0003.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(0, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Select0001.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(1, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Select0002.png"))
+			$PausePanel/Quit.texture_pressed.set_frame_texture(2, load("res://sprites/ui/pause/buttons/quit/jpn/PauseButton_Quit_Select0003.png"))
+		_:
+			return
+			#Just English
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -53,11 +245,12 @@ func secretfounded():
 
 func _on_quit_pressed() -> void:
 	pause_panel.hide()
+	ui.hide()
 	if ModeManager.is_story:
 		if ModeManager.isin_worldmap:
 			if ModeManager.is_savefile1:
 				SaveFileManager.update_data(
-				LevelsManager.worldname, 
+				SaveFileManager.currentworld, 
 				SaveFileManager.currentplayerlives,
 				SaveFileManager.currentplayerlivest,
 				SaveFileManager.maxcurrentlives,
@@ -66,6 +259,7 @@ func _on_quit_pressed() -> void:
 				SaveFileManager.trianglestotalh,
 				SaveFileManager.maxtrianglestotal)
 				
+				SaveFileManager.currentworld = LevelsManager.worldname
 				SaveFileManager.currentplayerlives = SaveFileManager.data_dic["currentlives"]
 				SaveFileManager.currentplayerlivest = SaveFileManager.data_dic["currentlivest"]
 				SaveFileManager.maxcurrentlives = SaveFileManager.data_dic["maxlives"]
@@ -100,107 +294,78 @@ func _on_quit_pressed() -> void:
 				SaveFileManager.update_w1_boss(
 				SaveFileManager.world1_boss_dic["unlocked"],
 				SaveFileManager.world1_boss_dic["hasbeencompleted"])
-			if ModeManager.is_savefile2:
-				SaveFileManager2.update_data(
-				LevelsManager.worldname, 
-				SaveFileManager2.currentplayerlives,
-				SaveFileManager2.currentplayerlivest,
-				SaveFileManager2.maxcurrentlives,
-				SaveFileManager2.trianglestotal,
-				SaveFileManager2.trianglestotalt,
-				SaveFileManager2.trianglestotalh,
-				SaveFileManager2.maxtrianglestotal)
-				
-				SaveFileManager2.currentplayerlives = SaveFileManager2.data_dic["currentlives"]
-				SaveFileManager2.currentplayerlivest = SaveFileManager2.data_dic["currentlivest"]
-				SaveFileManager2.maxcurrentlives = SaveFileManager2.data_dic["maxlives"]
-				SaveFileManager2.trianglestotal = SaveFileManager2.data_dic["trianglestotal"]
-				SaveFileManager2.trianglestotalt = SaveFileManager2.data_dic["trianglestotalt"]
-				SaveFileManager2.trianglestotalh = SaveFileManager2.data_dic["trianglestotalh"]
-				SaveFileManager2.maxtrianglestotal = SaveFileManager2.data_dic["maxtriangles"]
-				
-				SaveFileManager2.update_w1_tut(
-				SaveFileManager2.world1_tutorial_dic["trianglecollected1"], 
-				SaveFileManager2.world1_tutorial_dic["trianglecollected2"], 
-				SaveFileManager2.world1_tutorial_dic["trianglecollected3"],
-				SaveFileManager2.world1_tutorial_dic["trianglecollected4"],
-				SaveFileManager2.world1_tutorial_dic["hasbeencompleted"])
 
-				SaveFileManager2.update_w1_lv1(
-				SaveFileManager2.world1_level1_dic["unlocked"],
-				SaveFileManager2.world1_level1_dic["trianglecollected1"], 
-				SaveFileManager2.world1_level1_dic["trianglecollected2"], 
-				SaveFileManager2.world1_level1_dic["trianglecollected3"],
-				SaveFileManager2.world1_level1_dic["trianglecollected4"],
-				SaveFileManager2.world1_level1_dic["hasbeencompleted"])
+			SaveFileManager.update_w2_lv1(
+				SaveFileManager.world2_level1_dic["trianglecollected1"], 
+				SaveFileManager.world2_level1_dic["trianglecollected2"], 
+				SaveFileManager.world2_level1_dic["trianglecollected3"],
+				SaveFileManager.world2_level1_dic["trianglecollected4"],
+				SaveFileManager.world2_level1_dic["hasbeencompleted"])
 
-				SaveFileManager2.update_w1_lv2(
-				SaveFileManager2.world1_level2_dic["unlocked"],
-				SaveFileManager2.world1_level2_dic["trianglecollected1"], 
-				SaveFileManager2.world1_level2_dic["trianglecollected2"], 
-				SaveFileManager2.world1_level2_dic["trianglecollected3"],
-				SaveFileManager2.world1_level2_dic["trianglecollected4"],
-				SaveFileManager2.world1_level2_dic["hasbeencompleted"])
+			SaveFileManager.update_w2_lv2(
+				SaveFileManager.world2_level2_dic["unlocked"],
+				SaveFileManager.world2_level2_dic["trianglecollected1"], 
+				SaveFileManager.world2_level2_dic["trianglecollected2"], 
+				SaveFileManager.world2_level2_dic["trianglecollected3"],
+				SaveFileManager.world2_level2_dic["trianglecollected4"],
+				SaveFileManager.world2_level2_dic["hasbeencompleted"])
 
-				SaveFileManager2.update_w1_boss(
-				SaveFileManager2.world1_boss_dic["unlocked"],
-				SaveFileManager2.world1_boss_dic["hasbeencompleted"])
-			if ModeManager.is_savefile3:
-				SaveFileManager3.update_data(
-				LevelsManager.worldname, 
-				SaveFileManager3.currentplayerlives,
-				SaveFileManager3.currentplayerlivest,
-				SaveFileManager3.maxcurrentlives,
-				SaveFileManager3.trianglestotal,
-				SaveFileManager3.trianglestotalt,
-				SaveFileManager3.trianglestotalh,
-				SaveFileManager3.maxtrianglestotal)
-				
-				SaveFileManager3.currentplayerlives = SaveFileManager3.data_dic["currentlives"]
-				SaveFileManager3.currentplayerlivest = SaveFileManager3.data_dic["currentlivest"]
-				SaveFileManager3.maxcurrentlives = SaveFileManager3.data_dic["maxlives"]
-				SaveFileManager3.trianglestotal = SaveFileManager3.data_dic["trianglestotal"]
-				SaveFileManager3.trianglestotalt = SaveFileManager3.data_dic["trianglestotalt"]
-				SaveFileManager3.trianglestotalh = SaveFileManager3.data_dic["trianglestotalh"]
-				SaveFileManager3.maxtrianglestotal = SaveFileManager3.data_dic["maxtriangles"]
-				
-				SaveFileManager3.update_w1_tut(
-				SaveFileManager3.world1_tutorial_dic["trianglecollected1"], 
-				SaveFileManager3.world1_tutorial_dic["trianglecollected2"], 
-				SaveFileManager3.world1_tutorial_dic["trianglecollected3"],
-				SaveFileManager3.world1_tutorial_dic["trianglecollected4"],
-				SaveFileManager3.world1_tutorial_dic["hasbeencompleted"])
+			SaveFileManager.update_w2_lv3(
+				SaveFileManager.world2_level3_dic["unlocked"],
+				SaveFileManager.world2_level3_dic["trianglecollected1"], 
+				SaveFileManager.world2_level3_dic["trianglecollected2"], 
+				SaveFileManager.world2_level3_dic["trianglecollected3"],
+				SaveFileManager.world2_level3_dic["trianglecollected4"],
+				SaveFileManager.world2_level3_dic["hasbeencompleted"])
 
-				SaveFileManager3.update_w1_lv1(
-				SaveFileManager3.world1_level1_dic["unlocked"],
-				SaveFileManager3.world1_level1_dic["trianglecollected1"], 
-				SaveFileManager3.world1_level1_dic["trianglecollected2"], 
-				SaveFileManager3.world1_level1_dic["trianglecollected3"],
-				SaveFileManager3.world1_level1_dic["trianglecollected4"],
-				SaveFileManager3.world1_level1_dic["hasbeencompleted"])
+			SaveFileManager.update_w2_boss(
+				SaveFileManager.world2_boss_dic["unlocked"],
+				SaveFileManager.world2_boss_dic["hasbeencompleted"])
+			
+			SaveFileManager.update_world_unlocks_dic(
+				SaveFileManager.world_unlocks_dic["world2unlocked"],
+				SaveFileManager.world_unlocks_dic["recentlyunlocked_world2"],
+				SaveFileManager.world_unlocks_dic["world3unlocked"],
+				SaveFileManager.world_unlocks_dic["world4unlocked"],
+				SaveFileManager.world_unlocks_dic["world5unlocked"],
+				SaveFileManager.world_unlocks_dic["world6unlocked"],
+				SaveFileManager.world_unlocks_dic["world7unlocked"],
+				SaveFileManager.world_unlocks_dic["world8unlocked"])
 
-				SaveFileManager3.update_w1_lv2(
-				SaveFileManager3.world1_level2_dic["unlocked"],
-				SaveFileManager3.world1_level2_dic["trianglecollected1"], 
-				SaveFileManager3.world1_level2_dic["trianglecollected2"], 
-				SaveFileManager3.world1_level2_dic["trianglecollected3"],
-				SaveFileManager3.world1_level2_dic["trianglecollected4"],
-				SaveFileManager3.world1_level2_dic["hasbeencompleted"])
-
-				SaveFileManager3.update_w1_boss(
-				SaveFileManager3.world1_boss_dic["unlocked"],
-				SaveFileManager3.world1_boss_dic["hasbeencompleted"])
 			SaveGame.save_game()
 			ModeManager.is_savefile1 = false
-			ModeManager.is_savefile2 = false
-			ModeManager.is_savefile3 = false
 			ModeManager.in_gameplay = false
 			ModeManager.isin_worldmap = false
 			LoadManager.load_scene("res://scenes/menu/story_save_file_select.tscn")
 		else:
+			SaveGame.save_game()
 			ModeManager.isin_worldmap = true
-			LoadManager.load_scene("res://scenes/worldmap/worldmap_world1.tscn")
+			LoadManager.load_scene("res://scenes/worldmap/worldmap_"+ SaveFileManager.currentworld +".tscn")
 	else:
+		if ModeManager.is_multiplayer:
+			ModeManager.is_multiplayer = false
+			ModeManager.multi_2players = false
+			ModeManager.multi_3players = false
+			ModeManager.multi_4players = false
+			if CharactersManager.is_mod:
+				game_manager.ShimejiCharacter_PlayableMod.is_player1 = false
+			else:
+				game_manager.ShimejiCharacter_Playable.is_player1 = false
+			if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
+				if CharactersManager.is_mod_p2:
+					game_manager.ShimejiCharacter_PlayableMod_p2.is_player2 = false
+				else:
+					game_manager.ShimejiCharacter_Playable_p2.is_player2 = false
+			if ModeManager.multi_3players || ModeManager.multi_4players:
+				if CharactersManager.is_mod_p3:
+					game_manager.ShimejiCharacter_PlayableMod_p3.is_player3 = false
+				else:
+					game_manager.ShimejiCharacter_Playable_p3.is_player3 = false
+			if ModeManager.multi_4players:
+				if CharactersManager.is_mod_p4:
+					game_manager.ShimejiCharacter_PlayableMod_p4.is_player4 = false
+				else:
+					game_manager.ShimejiCharacter_Playable_p4.is_player4 = false
 		LevelsManager.is_mod = false
 		ModeManager.in_gameplay = false
 		LoadManager.load_scene("res://scenes/menu/level_select.tscn")

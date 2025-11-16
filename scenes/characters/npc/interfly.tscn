@@ -1,0 +1,892 @@
+[gd_scene load_steps=113 format=3 uid="uid://clq7f8smx5r24"]
+
+[ext_resource type="Script" uid="uid://bg4jlbixxrtqw" path="res://scenes/characters/npc/interfly.gd" id="1_kdcu4"]
+[ext_resource type="Texture2D" uid="uid://c5bd67bp6c7eh" path="res://sprites/characters/npc/interfly/interfly_greet0001.png" id="2_ma21r"]
+[ext_resource type="Texture2D" uid="uid://dyo0auydnjsdu" path="res://sprites/characters/npc/interfly/interfly_greet0002.png" id="3_1r03x"]
+[ext_resource type="Texture2D" uid="uid://dy05yuwed85qc" path="res://sprites/characters/npc/interfly/interfly_greet0003.png" id="4_kdcu4"]
+[ext_resource type="Texture2D" uid="uid://12xsdol5177" path="res://sprites/characters/npc/interfly/interfly_greet0004.png" id="5_3kpeu"]
+[ext_resource type="Texture2D" uid="uid://cbv0k3s4y4s7g" path="res://sprites/characters/npc/interfly/interfly_greet0005.png" id="6_keg5j"]
+[ext_resource type="Texture2D" uid="uid://saoheh4reo2r" path="res://sprites/characters/npc/interfly/interfly_greet0006.png" id="7_8vig3"]
+[ext_resource type="Texture2D" uid="uid://bw4k3vmcdy5ty" path="res://sprites/characters/npc/interfly/interfly_greet0007.png" id="8_rsx6v"]
+[ext_resource type="Texture2D" uid="uid://diyjowycegk34" path="res://sprites/characters/npc/interfly/interfly_greet0008.png" id="9_kckgy"]
+[ext_resource type="Texture2D" uid="uid://cs013de8ptrtl" path="res://sprites/characters/npc/interfly/interfly_greet0009.png" id="10_jblrd"]
+[ext_resource type="Texture2D" uid="uid://xa157kdjob78" path="res://sprites/characters/npc/interfly/interfly_greet0010.png" id="11_5ggl5"]
+[ext_resource type="Texture2D" uid="uid://cldn5n2uemmtg" path="res://sprites/characters/npc/interfly/interfly_greet0011.png" id="12_emaeg"]
+[ext_resource type="Texture2D" uid="uid://p1vgtc13c3df" path="res://sprites/characters/npc/interfly/interfly_greet0012.png" id="13_v6cdx"]
+[ext_resource type="Texture2D" uid="uid://cthqnwk28kgdy" path="res://sprites/characters/npc/interfly/interfly_greet0013.png" id="14_xgeer"]
+[ext_resource type="Texture2D" uid="uid://cca5u2if05jjd" path="res://sprites/characters/npc/interfly/interfly_greet0014.png" id="15_c2dy1"]
+[ext_resource type="Texture2D" uid="uid://bwb6m1nkfuvac" path="res://sprites/characters/npc/interfly/interfly_greet0015.png" id="16_063mc"]
+[ext_resource type="Texture2D" uid="uid://cj7jiavttmjaw" path="res://sprites/characters/npc/interfly/interfly_greet0016.png" id="17_nkk2f"]
+[ext_resource type="Texture2D" uid="uid://csu7rmprenura" path="res://sprites/characters/npc/interfly/interfly_idle0001.png" id="18_75vmj"]
+[ext_resource type="Texture2D" uid="uid://cngl8cto8o4dv" path="res://sprites/characters/npc/interfly/interfly_idle0002.png" id="19_6c1lv"]
+[ext_resource type="Texture2D" uid="uid://bnae3h3e7o1kq" path="res://sprites/characters/npc/interfly/interfly_idle0003.png" id="20_lnv2o"]
+[ext_resource type="Texture2D" uid="uid://cw5q2mqcudxkl" path="res://sprites/characters/npc/interfly/interfly_idle0004.png" id="21_yq6ag"]
+[ext_resource type="Texture2D" uid="uid://dwsqkau5yc3m0" path="res://sprites/characters/npc/interfly/interfly_idle0005.png" id="22_su47u"]
+[ext_resource type="Texture2D" uid="uid://deketctkj3pn1" path="res://sprites/characters/npc/interfly/interfly_idle0006.png" id="23_g1r6j"]
+[ext_resource type="Texture2D" uid="uid://pt1mxcn75la4" path="res://sprites/gameplay/controls/VKey_Button0001.png" id="27_3vavs"]
+[ext_resource type="Texture2D" uid="uid://bjen4f3bog8dn" path="res://sprites/gameplay/controls/VKey_Button0002.png" id="28_fx4hq"]
+[ext_resource type="Texture2D" uid="uid://csoveagvtmvfn" path="res://sprites/gameplay/controls/VKey_Button0003.png" id="29_dbte1"]
+[ext_resource type="AudioStream" uid="uid://db1s6y5jlhji1" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_01.ogg" id="34_jblrd"]
+[ext_resource type="AudioStream" uid="uid://sgscmug0aoy" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_02.ogg" id="35_5ggl5"]
+[ext_resource type="Texture2D" uid="uid://thqsf1axqj8y" path="res://sprites/characters/npc/interfly/interfly_sparkles.png" id="35_kdcu4"]
+[ext_resource type="AudioStream" uid="uid://beqyep4veleil" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_01.ogg" id="35_keg5j"]
+[ext_resource type="AudioStream" uid="uid://gbw1kil8jay7" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_02.ogg" id="36_8vig3"]
+[ext_resource type="AudioStream" uid="uid://buh24dyo3rpt4" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_03.ogg" id="36_emaeg"]
+[ext_resource type="AudioStream" uid="uid://d2sqg24oajla6" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_03.ogg" id="37_jblrd"]
+[ext_resource type="AudioStream" uid="uid://bu8yk8wtg7hpy" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_04.ogg" id="37_v6cdx"]
+[ext_resource type="AudioStream" uid="uid://c3qhevgn8j5h" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_04.ogg" id="38_5ggl5"]
+[ext_resource type="AudioStream" uid="uid://bsn27nypa462m" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_05.ogg" id="38_xgeer"]
+[ext_resource type="AudioStream" uid="uid://drp1osl8dk6dj" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_06.ogg" id="39_c2dy1"]
+[ext_resource type="AudioStream" uid="uid://chiyuxyy613ke" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_05.ogg" id="39_emaeg"]
+[ext_resource type="AudioStream" uid="uid://2akb12ldbsi2" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_07.ogg" id="40_063mc"]
+[ext_resource type="AudioStream" uid="uid://brkyuhk4ymymu" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part2_06.ogg" id="40_v6cdx"]
+[ext_resource type="AudioStream" uid="uid://6448m01r2nku" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_01.ogg" id="41_75vmj"]
+[ext_resource type="AudioStream" uid="uid://djr3pyt6meyf6" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part1_08.ogg" id="41_nkk2f"]
+[ext_resource type="AudioStream" uid="uid://b2lk3d4olscfs" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_02.ogg" id="42_6c1lv"]
+[ext_resource type="AudioStream" uid="uid://qffy1muakr0" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_03.ogg" id="43_lnv2o"]
+[ext_resource type="AudioStream" uid="uid://c5yj7tjohplu5" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_04.ogg" id="44_yq6ag"]
+[ext_resource type="AudioStream" uid="uid://bo0uhoms0rclh" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_05.ogg" id="45_su47u"]
+[ext_resource type="AudioStream" uid="uid://b2qs7yp2qrr0i" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_06.ogg" id="46_g1r6j"]
+[ext_resource type="AudioStream" uid="uid://xpyxryo5o11u" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part3_07.ogg" id="47_gdr2p"]
+[ext_resource type="AudioStream" uid="uid://x2udo8mx3g0p" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_01.ogg" id="48_gdr2p"]
+[ext_resource type="AudioStream" uid="uid://dyhukjvq6fdtt" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_02.ogg" id="49_sm2ng"]
+[ext_resource type="AudioStream" uid="uid://f8qvwwyu2qt0" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_03.ogg" id="50_wnwl8"]
+[ext_resource type="AudioStream" uid="uid://cfxbwfsqehe1g" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_04.ogg" id="51_8jabu"]
+[ext_resource type="AudioStream" uid="uid://duvfiifqxwr5l" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_05.ogg" id="52_4n5k8"]
+[ext_resource type="AudioStream" uid="uid://dghkashh767xo" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_06.ogg" id="53_jgog7"]
+[ext_resource type="AudioStream" uid="uid://3xbywwy8ew0c" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part4_07.ogg" id="54_5b4ud"]
+[ext_resource type="AudioStream" uid="uid://buurj35huhpao" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_01.ogg" id="55_8jabu"]
+[ext_resource type="AudioStream" uid="uid://d060psm4hmkj8" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_02.ogg" id="56_4n5k8"]
+[ext_resource type="AudioStream" uid="uid://bsrigvsbuqcmy" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_03.ogg" id="57_jgog7"]
+[ext_resource type="AudioStream" uid="uid://bgd7c28mnsdoq" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_04.ogg" id="58_3inw1"]
+[ext_resource type="AudioStream" uid="uid://bvj1klhpo1qvm" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_05.ogg" id="59_mp78w"]
+[ext_resource type="AudioStream" uid="uid://b0pjfnwoerwc2" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_06.ogg" id="60_vuesy"]
+[ext_resource type="AudioStream" uid="uid://dyvq5271nrb1l" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_07.ogg" id="61_s742r"]
+[ext_resource type="AudioStream" uid="uid://yrdgdw3awngk" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_08.ogg" id="62_qktnl"]
+[ext_resource type="AudioStream" uid="uid://cxaojn0ymw67j" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_09.ogg" id="63_oh3h5"]
+[ext_resource type="AudioStream" uid="uid://di34cjju6475m" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part5_10.ogg" id="64_qd7ax"]
+[ext_resource type="AudioStream" uid="uid://d2uxj16mgev3p" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_01.ogg" id="65_formn"]
+[ext_resource type="AudioStream" uid="uid://5ujcuvisbgjh" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_02.ogg" id="66_4i4bd"]
+[ext_resource type="AudioStream" uid="uid://b6w5fhm8pyev8" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_03.ogg" id="67_1uq4b"]
+[ext_resource type="AudioStream" uid="uid://beat5gcknffb5" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_04.ogg" id="68_fgo1l"]
+[ext_resource type="AudioStream" uid="uid://d1rxht5n3muwl" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_05.ogg" id="69_6db2m"]
+[ext_resource type="AudioStream" uid="uid://cch3iy1sd7w3d" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_06.ogg" id="70_gxxfw"]
+[ext_resource type="AudioStream" uid="uid://cduhaa4gdibx1" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_07.ogg" id="71_clble"]
+[ext_resource type="AudioStream" uid="uid://catsdfm7tsut4" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part6_08.ogg" id="72_qhbff"]
+[ext_resource type="AudioStream" uid="uid://cfatbuin0lgwt" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_01.ogg" id="73_clble"]
+[ext_resource type="AudioStream" uid="uid://xwsk5eh5tetb" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_02.ogg" id="74_qhbff"]
+[ext_resource type="AudioStream" uid="uid://bqlct56xwifvs" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_03.ogg" id="75_g0xet"]
+[ext_resource type="AudioStream" uid="uid://3qbruhy7yq1s" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_04.ogg" id="76_3vavs"]
+[ext_resource type="AudioStream" uid="uid://bdgvdlcuh86o" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_05.ogg" id="77_fx4hq"]
+[ext_resource type="AudioStream" uid="uid://d2kwa3tf6tfdm" path="res://sfx/characters/npc/butterfly/en/level1/sfx_butterfly_level1_part7_06.ogg" id="78_dbte1"]
+[ext_resource type="AudioStream" uid="uid://cwhbhcul8qqa8" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_01.ogg" id="82_dbte1"]
+[ext_resource type="AudioStream" uid="uid://b2a07f82xrm63" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_02.ogg" id="83_8myqr"]
+[ext_resource type="AudioStream" uid="uid://cyhcx8vh5tdlf" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_03.ogg" id="84_n8l2u"]
+[ext_resource type="AudioStream" uid="uid://caex2oxelv87x" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_04.ogg" id="85_3vqkm"]
+[ext_resource type="AudioStream" uid="uid://dq0sphfar7e1" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_05.ogg" id="86_ndlwx"]
+[ext_resource type="AudioStream" uid="uid://b0p5wavcsy4d0" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_06.ogg" id="87_6ihpn"]
+[ext_resource type="AudioStream" uid="uid://ddha1s3uuly0c" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_07.ogg" id="88_ndlwx"]
+[ext_resource type="AudioStream" uid="uid://b6bs5edl07esa" path="res://sfx/characters/npc/butterfly/en/level2/sfx_butterfly_level2_08.ogg" id="89_6ihpn"]
+[ext_resource type="AudioStream" uid="uid://dhcgvjtsm0bup" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_01.ogg" id="90_rxcyw"]
+[ext_resource type="AudioStream" uid="uid://dfvi7gmb7hl0o" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_02.ogg" id="91_5okuu"]
+[ext_resource type="AudioStream" uid="uid://bsgea75mct0md" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_03.ogg" id="92_bh0ki"]
+[ext_resource type="AudioStream" uid="uid://b0ktpgjs3t2j0" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_04.ogg" id="93_i2otv"]
+[ext_resource type="AudioStream" uid="uid://bos4rmy3w0lu4" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_05.ogg" id="94_tqc22"]
+[ext_resource type="AudioStream" uid="uid://hi2rvnvc2f17" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_06.ogg" id="95_gguky"]
+[ext_resource type="AudioStream" uid="uid://ck3pwkx0i0kmt" path="res://sfx/characters/npc/butterfly/en/level3/sfx_butterfly_level3_07.ogg" id="96_p433n"]
+[ext_resource type="Texture2D" uid="uid://bkmgr3qp3pu6h" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0001.png" id="159_0n6ud"]
+[ext_resource type="Texture2D" uid="uid://cljue88nd8n8q" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0002.png" id="160_ou2fm"]
+[ext_resource type="Texture2D" uid="uid://dty3vvkikjlvf" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0003.png" id="161_eyrbj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gdr2p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ma21r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1r03x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kdcu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3kpeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_keg5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_8vig3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsx6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kckgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jblrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsx6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kckgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jblrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsx6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kckgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jblrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsx6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_kckgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jblrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rsx6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_5ggl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_emaeg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_v6cdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_xgeer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c2dy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_063mc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_nkk2f")
+}],
+"loop": false,
+"name": &"greet",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_75vmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6c1lv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_lnv2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_yq6ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_su47u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g1r6j")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 16.0
+}]
+
+[sub_resource type="Animation" id="Animation_msv02"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Friend:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_pq22p"]
+resource_name = "exit"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"exit"]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"time_to_go"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ao6uf"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+
+[sub_resource type="Animation" id="Animation_5rt7e"]
+resource_name = "intro"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Friend:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(0.233258, 8.57418, 0.120742),
+"update": 0,
+"values": [Vector2(0, 1200), Vector2(0, -90), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"jumping"
+}, {
+"args": [],
+"method": &"idle"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop_jumping"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_intro_dialogue"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vjiea"]
+_data = {
+&"RESET": SubResource("Animation_msv02"),
+&"exit": SubResource("Animation_pq22p"),
+&"idle": SubResource("Animation_ao6uf"),
+&"intro": SubResource("Animation_5rt7e")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umqun"]
+size = Vector2(68, 116)
+
+[sub_resource type="Animation" id="Animation_2s4su"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-27, -71)]
+}
+
+[sub_resource type="Animation" id="Animation_sm0ha"]
+resource_name = "base"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u5ijg"]
+resource_name = "popin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.392292, 2.82843),
+"update": 0,
+"values": [Vector2(-27, -45), Vector2(-27, -71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vunq6"]
+resource_name = "popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2.82843, 0.392292),
+"update": 0,
+"values": [Vector2(-27, -71), Vector2(-27, -45)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2km46"]
+_data = {
+&"RESET": SubResource("Animation_2s4su"),
+&"base": SubResource("Animation_sm0ha"),
+&"popin": SubResource("Animation_u5ijg"),
+&"popout": SubResource("Animation_vunq6")
+}
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_wq4f5"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("159_0n6ud")
+frame_1/texture = ExtResource("160_ou2fm")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("161_eyrbj")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_8myqr"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("27_3vavs")
+frame_1/texture = ExtResource("28_fx4hq")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("29_dbte1")
+frame_2/duration = 1.0
+
+[sub_resource type="Gradient" id="Gradient_kdcu4"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Interfly" type="Node2D"]
+script = ExtResource("1_kdcu4")
+
+[node name="Friend" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_gdr2p")
+animation = &"idle"
+autoplay = "idle"
+flip_h = true
+
+[node name="FriendAmin" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vjiea")
+}
+
+[node name="chatDetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatDetection"]
+position = Vector2(-97, 5)
+shape = SubResource("RectangleShape2D_umqun")
+
+[node name="SpeechOption" type="AnimationPlayer" parent="."]
+root_node = NodePath("../FriendAmin")
+libraries = {
+&"": SubResource("AnimationLibrary_2km46")
+}
+autoplay = "base"
+
+[node name="InteractiveSpeakBubble" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -27.0
+offset_top = -71.0
+offset_right = 29.0
+offset_bottom = -39.0
+texture = SubResource("AnimatedTexture_wq4f5")
+expand_mode = 1
+
+[node name="Vkey" type="TextureRect" parent="InteractiveSpeakBubble"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 31.0
+texture = SubResource("AnimatedTexture_8myqr")
+expand_mode = 1
+
+[node name="Voicelines" type="Node2D" parent="."]
+
+[node name="Level1" type="Node2D" parent="Voicelines"]
+
+[node name="English" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="level1_part1_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("34_jblrd")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("35_5ggl5")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("36_emaeg")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("37_v6cdx")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("38_xgeer")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("39_c2dy1")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("40_063mc")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part1_08" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("41_nkk2f")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("35_keg5j")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("36_8vig3")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("37_jblrd")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("38_5ggl5")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("39_emaeg")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part2_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("40_v6cdx")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("41_75vmj")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("42_6c1lv")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("43_lnv2o")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("44_yq6ag")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("45_su47u")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("46_g1r6j")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part3_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("47_gdr2p")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("48_gdr2p")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("49_sm2ng")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("50_wnwl8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("51_8jabu")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("52_4n5k8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("53_jgog7")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part4_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("54_5b4ud")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("55_8jabu")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("56_4n5k8")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("57_jgog7")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("58_3inw1")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("59_mp78w")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("60_vuesy")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("61_s742r")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_08" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("62_qktnl")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_09" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("63_oh3h5")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part5_10" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("64_qd7ax")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("65_formn")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("66_4i4bd")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("67_1uq4b")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("68_fgo1l")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("69_6db2m")
+volume_db = 7.923
+bus = &"voices"
+
+[node name="level1_part6_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("70_gxxfw")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("71_clble")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part6_08" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("72_qhbff")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("73_clble")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("74_qhbff")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("75_g0xet")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("76_3vavs")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("77_fx4hq")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level1_part7_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("78_dbte1")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level2_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("82_dbte1")
+volume_db = 9.904
+bus = &"voices"
+
+[node name="level2_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("83_8myqr")
+volume_db = 14.856
+bus = &"voices"
+
+[node name="level2_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("84_n8l2u")
+volume_db = 11.885
+bus = &"voices"
+
+[node name="level2_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("85_3vqkm")
+volume_db = 15.847
+bus = &"voices"
+
+[node name="level2_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("86_ndlwx")
+volume_db = 15.847
+bus = &"voices"
+
+[node name="level2_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("87_6ihpn")
+volume_db = 14.856
+bus = &"voices"
+
+[node name="level2_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("88_ndlwx")
+volume_db = 10.895
+bus = &"voices"
+
+[node name="level2_08" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("89_6ihpn")
+volume_db = 9.904
+bus = &"voices"
+
+[node name="level3_01" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("90_rxcyw")
+volume_db = 6.0
+bus = &"voices"
+
+[node name="level3_02" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("91_5okuu")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level3_03" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("92_bh0ki")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level3_04" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("93_i2otv")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level3_05" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("94_tqc22")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level3_06" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("95_gguky")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="level3_07" type="AudioStreamPlayer2D" parent="Voicelines/Level1/English"]
+stream = ExtResource("96_p433n")
+volume_db = 4.952
+bus = &"voices"
+
+[node name="Spanish" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="French" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="Italian" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="German" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="Japanese" type="Node2D" parent="Voicelines/Level1"]
+
+[node name="Sparkles" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(1, 1)
+texture = ExtResource("35_kdcu4")
+lifetime = 0.15
+randomness = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(20.815, 18.355)
+gravity = Vector2(0, 0)
+scale_amount_min = 0.0
+scale_amount_max = 1.2
+color_ramp = SubResource("Gradient_kdcu4")
+
+[connection signal="animation_finished" from="Friend" to="." method="_on_friend_animation_finished"]
+[connection signal="body_entered" from="chatDetection" to="." method="_on_chat_detection_body_entered"]
+[connection signal="body_exited" from="chatDetection" to="." method="_on_chat_detection_body_exited"]

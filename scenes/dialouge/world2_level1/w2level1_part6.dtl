@@ -1,0 +1,20 @@
+[signal arg="vclip_p6_01"]
+[signal arg="greet"]
+interfly: Great! Now we're onto our last step.
+[signal arg="vclip_p6_02"]
+interfly: As you can see, there are 3 coloured holes on the wall. Blue, Red, and Green.
+[signal arg="vclip_p6_03"]
+interfly: And you might be wondering, "What goes insides these holes?"
+[signal arg="vclip_p6_04"]
+interfly: To put it simply friends, throughout these maps, three Orb Balls are rolling around here. All 3 of them match their respective colours.
+[signal arg="vclip_p6_05"]
+interfly: All you need to do is find them and insert them into the correct colour holes.
+[signal arg="vclip_p6_06"]
+[signal arg="greet"]
+interfly: Once all of them are inserted, the door is unlocked, and then you're ready to explore further on the internet!
+[signal arg="vclip_p6_07"]
+interfly: Right, without said, go ahead and find those 3 Orb Balls!
+[signal arg="vclip_p6_08"]
+[signal arg="greet"]
+interfly: Good luck! I'm counting on you.
+[signal arg="end_cutscene"]

@@ -11,6 +11,22 @@ func _ready():
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 
+	match LanguageManager.language:
+		"spanish":
+			$Start.text = "Pulse el botón ENTER/Inicio"
+		"french":
+			$Start.text = "Appuyez sur ENTRÉE/Démarrer"
+		"italian":
+			$Start.text = "Premere il pulsante INVIO/Avvio"
+		"german":
+			$Start.text = "Drücken Sie die ENTER-/Starttaste."
+		"japanese":
+			$GameLogo.texture = load("res://sprites/menu/title/Logo_New_Final3_JPN.png")
+			$Start.text = "ENTER/スタートボタンを押します"
+		_:
+			return
+			#It's just English
+
 func _process(delta):
 	if has_pressed:
 		return

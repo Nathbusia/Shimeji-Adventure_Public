@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_01_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Enhorabuena, amigos! ¡Habéis conseguido superar todas las pruebas e instrucciones de Internet!
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_02_spa.ogg" volume="2.0" bus="voices"]
+interfly: Con todo lo que has aprendido con el cursor del ratón, las ventanas arrastrables, el lanzador de correos electrónicos, etc., creo que ya estás listo para adentrarte en Internet.
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_03_spa.ogg" volume="2.0" bus="voices"]
+interfly: Disculpa mi entusiasmo... Bueno, en fin.
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_04_spa.ogg" volume="2.0" bus="voices"]
+interfly: Ahora acércate a esta ventana tocando esa estrella deslumbrante para comenzar tu viaje por Internet.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_05_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Entremos y detengamos el plan de Pop-Out Pete de una vez por todas!
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/es/level1/sfx_butterfly_level1_part7_06_spa.ogg" volume="2.0" bus="voices"]
+interfly: ¡Nos vemos allí, amigos!
+[signal arg="end_cutscene"]

@@ -56,6 +56,13 @@ var summonenemyframe : Array = [3]
 var endsummoneffect : Array = [6]
 
 #Summon Stuff
+@onready var whitebox = preload("res://scenes/characters/bosses/monstequare/whitesquare_projectile.tscn")
+@onready var greenbox = preload("res://scenes/characters/bosses/monstequare/greensquare_projectile.tscn")
+@onready var meanball = preload("res://scenes/characters/enemy/enemy_mean_ball.tscn")
+@onready var meansquare = preload("res://scenes/characters/enemy/enemy_mean_square.tscn")
+@onready var voltslam = preload("res://scenes/characters/enemy/enemy_voltslam.tscn")
+@onready var shooter = preload("res://scenes/characters/enemy/enemy_shooter.tscn")
+
 var whitebox_path = ""
 var greenbox_path = ""
 var meanball_path = ""
@@ -79,43 +86,37 @@ func startattack():
 	
 func spitattack():
 	var scene = get_node("../MeanBalls") 
-	whitebox_path = "res://scenes/characters/bosses/monstequare/whitesquare_projectile.tscn"
-	var Box = load(whitebox_path).instantiate()
+	var Box = whitebox.instantiate()
 	Box.global_position = projectile_spawner.global_position
 	scene.add_child(Box)
 
 func spitattackgreen():
 	var scene = get_node("..") 
-	greenbox_path = "res://scenes/characters/bosses/monstequare/greensquare_projectile.tscn"
-	var GreenBox = load(greenbox_path).instantiate()
+	var GreenBox = greenbox.instantiate()
 	GreenBox.global_position = projectile_spawner.global_position
 	scene.add_child(GreenBox)
 
 func summonenemy_meanball():
 	var scene = get_node("../MeanBalls") 
-	meanball_path = "res://scenes/characters/enemy/enemy_mean_ball.tscn"
-	var MeanBall = load(meanball_path).instantiate()
+	var MeanBall = meanball.instantiate()
 	MeanBall.global_position = enemy_spawner.global_position
 	scene.add_child(MeanBall)
 
 func summonenemy_meansquare():
 	var scene = get_node("../MeanBalls") 
-	meansquare_path = "res://scenes/characters/enemy/enemy_mean_square.tscn"
-	var MeanSquare = load(meansquare_path).instantiate()
+	var MeanSquare = meansquare.instantiate()
 	MeanSquare.global_position = enemy_spawner.global_position
 	scene.add_child(MeanSquare)
 
 func summonenemy_voltslam():
 	var scene = get_node("../MeanBalls") 
-	voltslam_path = "res://scenes/characters/enemy/enemy_voltslam.tscn"
-	var VoltSlam = load(voltslam_path).instantiate()
+	var VoltSlam = voltslam.instantiate()
 	VoltSlam.global_position = enemy_spawner.global_position
 	scene.add_child(VoltSlam)
 
 func summonenemy_shooter():
 	var scene = get_node("../MeanBalls") 
-	shooter_path = "res://scenes/characters/enemy/enemy_shooter.tscn"
-	var Shooter = load(shooter_path).instantiate()
+	var Shooter = shooter.instantiate()
 	Shooter.global_position = enemy_spawner.global_position
 	scene.add_child(Shooter)
 
@@ -232,6 +233,51 @@ func _on_boss_hitbox_body_entered(body: Node2D) -> void:
 				return
 			else:
 				game_manager.lose_health()
+				body.get_hurt()
+				body.hurt_invincible()
+				body.play_damaged_effect("blink")
+
+	if (body.name == "ShimejiCharacter_Playable_Player2"):
+		if game_manager.health_p2 < 0:
+			game_manager.lose_health_player2()
+			game_manager.lives_p2 -= 1
+			body.death()
+			body.play_death_effect("death")
+		else:
+			if body.is_invincible == true:
+				return
+			else:
+				game_manager.lose_health_player2()
+				body.get_hurt()
+				body.hurt_invincible()
+				body.play_damaged_effect("blink")
+
+	if (body.name == "ShimejiCharacter_Playable_Player3"):
+		if game_manager.health_p3 < 0:
+			game_manager.lose_health_player3()
+			game_manager.lives_p3 -= 1
+			body.death()
+			body.play_death_effect("death")
+		else:
+			if body.is_invincible == true:
+				return
+			else:
+				game_manager.lose_health_player3()
+				body.get_hurt()
+				body.hurt_invincible()
+				body.play_damaged_effect("blink")
+				
+	if (body.name == "ShimejiCharacter_Playable_Player4"):
+		if game_manager.health_p4 < 0:
+			game_manager.lose_health_player4()
+			game_manager.lives_p4 -= 1
+			body.death()
+			body.play_death_effect("death")
+		else:
+			if body.is_invincible == true:
+				return
+			else:
+				game_manager.lose_health_player4()
 				body.get_hurt()
 				body.hurt_invincible()
 				body.play_damaged_effect("blink")

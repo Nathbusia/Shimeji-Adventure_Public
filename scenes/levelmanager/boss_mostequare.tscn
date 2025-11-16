@@ -6,5 +6,10 @@
 [node name="World1Boss" type="Node2D"]
 script = ExtResource("1_8beoy")
 levelname = "MONSTEQUARE ATTACK!!"
+levelname_spa = "¡ATAQUE DE MONSTEQUARE!"
+levelname_fre = "ATTAQUE MONSTQUARE !!"
+levelname_ita = "ATTACCO MONSTEQUARE!!"
+levelname_ger = "MONSTEQUARE-ANGRIFF!!"
+levelname_jpn = "モンスタースクエアアタック！！"
 levelcreator = "By FlameOut56"
 levelthumb = ExtResource("2_s41yd")

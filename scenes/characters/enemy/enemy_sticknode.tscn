@@ -1,0 +1,382 @@
+[gd_scene load_steps=53 format=3 uid="uid://cdvrool3a6qjl"]
+
+[ext_resource type="Texture2D" uid="uid://ce0apn81p3v5o" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0001.png" id="1_ksxal"]
+[ext_resource type="Script" uid="uid://oy2mbevh1hfo" path="res://scenes/characters/enemy/enemy_sticknode.gd" id="1_oinf3"]
+[ext_resource type="Shader" uid="uid://b1cpnu7t0bets" path="res://scenes/characters/enemy/flash_damage_fast.gdshader" id="1_w4w2u"]
+[ext_resource type="Texture2D" uid="uid://bp7dsmfr22lbv" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0002.png" id="2_1wdnv"]
+[ext_resource type="Texture2D" uid="uid://djhjqx16daa67" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0003.png" id="3_jd1a7"]
+[ext_resource type="Texture2D" uid="uid://dh4jop6rg7yxd" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0004.png" id="4_w4w2u"]
+[ext_resource type="Texture2D" uid="uid://bh0xojp0mfuqd" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0005.png" id="5_oinf3"]
+[ext_resource type="Texture2D" uid="uid://cfy3t7wdcjmub" path="res://sprites/characters/enemy/sticknode/sticknode_defeat0006.png" id="6_byjiw"]
+[ext_resource type="Texture2D" uid="uid://bj140n6d0e8y6" path="res://sprites/characters/enemy/sticknode/sticknode_idle0001.png" id="7_hnd1t"]
+[ext_resource type="Texture2D" uid="uid://clamv150aoeqa" path="res://sprites/characters/enemy/sticknode/sticknode_idle0003.png" id="8_i6w4b"]
+[ext_resource type="Texture2D" uid="uid://dekpn7i1g5tfx" path="res://sprites/characters/enemy/sticknode/sticknode_idle0004.png" id="9_l43ya"]
+[ext_resource type="Texture2D" uid="uid://bbq50bbf0555q" path="res://sprites/characters/enemy/sticknode/sticknode_idle0005.png" id="10_phlt6"]
+[ext_resource type="Texture2D" uid="uid://bep1bfofmx7wd" path="res://sprites/characters/enemy/sticknode/sticknode_idle0006.png" id="11_svgur"]
+[ext_resource type="Texture2D" uid="uid://pxhxpfvw855v" path="res://sprites/characters/enemy/sticknode/sticknode_idle0007.png" id="12_vqje8"]
+[ext_resource type="Texture2D" uid="uid://cqmeojkrj32o8" path="res://sprites/characters/enemy/sticknode/sticknode_idle0008.png" id="13_w7dmq"]
+[ext_resource type="Texture2D" uid="uid://qco17reaqqdt" path="res://sprites/characters/enemy/sticknode/sticknode_idle0009.png" id="14_vso35"]
+[ext_resource type="Texture2D" uid="uid://ctdyt2ju7s0kp" path="res://sprites/characters/enemy/sticknode/sticknode_idle0010.png" id="15_fljg1"]
+[ext_resource type="Texture2D" uid="uid://cgnqjh6wdbhpj" path="res://sprites/characters/enemy/sticknode/sticknode_idle0011.png" id="16_kn8as"]
+[ext_resource type="Texture2D" uid="uid://6k1l4j576cbo" path="res://sprites/characters/enemy/sticknode/sticknode_idle0012.png" id="17_ixen3"]
+[ext_resource type="Texture2D" uid="uid://bbndi24kd0005" path="res://sprites/characters/enemy/sticknode/sticknode_idle0013.png" id="18_x4vii"]
+[ext_resource type="Texture2D" uid="uid://dfa20lnlud5wb" path="res://sprites/characters/enemy/sticknode/sticknode_idle0014.png" id="19_4jdmc"]
+[ext_resource type="Texture2D" uid="uid://bf4kahhba3aok" path="res://sprites/characters/enemy/sticknode/sticknode_idle0015.png" id="20_4g8k8"]
+[ext_resource type="Texture2D" uid="uid://exletg1i45ox" path="res://sprites/characters/enemy/sticknode/sticknode_idle0016.png" id="21_g7b8j"]
+[ext_resource type="Texture2D" uid="uid://carbrsv4pmmx1" path="res://sprites/characters/enemy/sticknode/sticknode_idle0017.png" id="22_uvnlo"]
+[ext_resource type="Texture2D" uid="uid://cfmfl3mubbx7e" path="res://sprites/characters/enemy/sticknode/sticknode_idle0018.png" id="23_rcc0x"]
+[ext_resource type="Texture2D" uid="uid://jjarb8h217do" path="res://sprites/characters/enemy/sticknode/sticknode_idle0019.png" id="24_y4jbg"]
+[ext_resource type="Texture2D" uid="uid://b2f60sqecm375" path="res://sprites/characters/enemy/sticknode/sticknode_idle0020.png" id="25_s5bue"]
+[ext_resource type="Texture2D" uid="uid://k8xeuc2t4fl6" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0001.png" id="26_yg4rj"]
+[ext_resource type="Texture2D" uid="uid://u2vvby3m80u8" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0002.png" id="27_qxkc5"]
+[ext_resource type="Texture2D" uid="uid://ccacx0q2a2tw4" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0003.png" id="28_8m8sp"]
+[ext_resource type="Texture2D" uid="uid://d12cod67fvw7u" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0004.png" id="29_ujbvq"]
+[ext_resource type="Texture2D" uid="uid://x1hlfkc47x57" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0005.png" id="30_tjptc"]
+[ext_resource type="Texture2D" uid="uid://bs0kcdgk7hqw1" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0006.png" id="31_sbeb8"]
+[ext_resource type="Texture2D" uid="uid://dnsssi65b6ko8" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0007.png" id="32_m6hv1"]
+[ext_resource type="Texture2D" uid="uid://livet4yso6dt" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0008.png" id="33_6qf5f"]
+[ext_resource type="Texture2D" uid="uid://cx6h8h5m7wfym" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0009.png" id="34_o76vg"]
+[ext_resource type="Texture2D" uid="uid://bkibo00pkhgcp" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0010.png" id="35_a6nbr"]
+[ext_resource type="Texture2D" uid="uid://73elqvh1l1u0" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0011.png" id="36_vph0t"]
+[ext_resource type="Texture2D" uid="uid://g7dbpmqh8rxc" path="res://sprites/characters/enemy/sticknode/sticknode_refuse0012.png" id="37_2g8bw"]
+[ext_resource type="AudioStream" uid="uid://bjgiiws1vo0kd" path="res://sfx/characters/enemy/sticknode/sfx_sticknode_refuse.ogg" id="38_jd1a7"]
+[ext_resource type="AudioStream" uid="uid://dihtxt8hckerj" path="res://sfx/characters/enemy/sticknode/sfx_sticknode_defeat.ogg" id="39_w4w2u"]
+[ext_resource type="AudioStream" uid="uid://bjdmdc8hl6e7n" path="res://sfx/characters/enemy/sfx_enemy_stepon.ogg" id="42_hnd1t"]
+[ext_resource type="AudioStream" uid="uid://bu6l335yng1t" path="res://sfx/characters/enemy/sfx_enemy_stepon_slamdash.ogg" id="43_i6w4b"]
+
+[sub_resource type="Animation" id="Animation_w4w2u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sticknode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 19)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sticknode:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Sticknode:material:shader_parameter/flash_value")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sticknode:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oinf3"]
+resource_name = "defeat"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sticknode:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.16, 0.49), Vector2(0.88, 1.27), Vector2(1.055, 0.865), Vector2(0.93, 1.065), Vector2(1, 1), Vector2(1, 1), Vector2(0.69, 1.57)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Sticknode:material:shader_parameter/flash_value")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6, 0.6099, 0.61),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 1.0, 0.0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"particlesspawn"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sticknode:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 0.61),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jd1a7"]
+resource_name = "refuse"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Sticknode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(0.241484, 1.6245, 0.535887, 1.62451, 1),
+"update": 0,
+"values": [Vector2(3.575, 19), Vector2(-2.825, 19), Vector2(1.81, 19), Vector2(-1.875, 19), Vector2(0, 19)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_byjiw"]
+_data = {
+&"RESET": SubResource("Animation_w4w2u"),
+&"defeat": SubResource("Animation_oinf3"),
+&"refuse": SubResource("Animation_jd1a7")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oinf3"]
+shader = ExtResource("1_w4w2u")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_value = 0.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6nacp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ksxal")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1wdnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jd1a7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_w4w2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_oinf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_byjiw")
+}],
+"loop": false,
+"name": &"defeat",
+"speed": 14.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_hnd1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i6w4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l43ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_phlt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_svgur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vqje8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w7dmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vso35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_fljg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kn8as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ixen3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_x4vii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4jdmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_4g8k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_g7b8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_uvnlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_rcc0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_y4jbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_s5bue")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_yg4rj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qxkc5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_8m8sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_ujbvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_tjptc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sbeb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_m6hv1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_6qf5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_o76vg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_a6nbr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_vph0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_2g8bw")
+}],
+"loop": false,
+"name": &"refuse",
+"speed": 18.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_to1ra"]
+size = Vector2(66, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a6pkr"]
+size = Vector2(66, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnd1t"]
+size = Vector2(66, 11)
+
+[node name="Enemy_Sticknode" type="RigidBody2D" groups=["Enemies", "sticknode_group"]]
+collision_mask = 5
+freeze = true
+script = ExtResource("1_oinf3")
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Refuse" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("38_jd1a7")
+volume_db = 8.0
+bus = &"sfx"
+
+[node name="Defeat" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("39_w4w2u")
+volume_db = 8.0
+bus = &"sfx"
+
+[node name="Animation" type="Node2D" parent="."]
+
+[node name="Sticknode_Animations" type="AnimationPlayer" parent="Animation"]
+libraries = {
+&"": SubResource("AnimationLibrary_byjiw")
+}
+
+[node name="EnemyStepOnSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_hnd1t")
+bus = &"sfx"
+
+[node name="EnemyStepOnHard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_i6w4b")
+bus = &"sfx"
+
+[node name="EnemyDeathTimer" type="Timer" parent="."]
+
+[node name="Sticknode" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_oinf3")
+position = Vector2(0, 19)
+sprite_frames = SubResource("SpriteFrames_6nacp")
+animation = &"defeat"
+autoplay = "idle"
+offset = Vector2(0, -19)
+
+[node name="MainHitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_to1ra")
+
+[node name="TriggerHitbox" type="Area2D" parent="."]
+collision_mask = 5
+
+[node name="TriggerHitbox" type="CollisionShape2D" parent="TriggerHitbox"]
+position = Vector2(0, -20.5)
+shape = SubResource("RectangleShape2D_a6pkr")
+
+[node name="StickTrigger" type="Area2D" parent="." groups=["sticknode_group"]]
+collision_mask = 5
+
+[node name="StickTrigger" type="CollisionShape2D" parent="StickTrigger" groups=["sticknode_group"]]
+position = Vector2(0, 21.5)
+shape = SubResource("RectangleShape2D_hnd1t")
+
+[node name="ParticlesSpawn" type="Marker2D" parent="."]
+
+[connection signal="timeout" from="EnemyDeathTimer" to="." method="_on_enemy_death_timer_timeout"]
+[connection signal="frame_changed" from="Sticknode" to="." method="_on_sticknode_frame_changed"]
+[connection signal="body_entered" from="TriggerHitbox" to="." method="_on_trigger_hitbox_body_entered"]
+[connection signal="area_entered" from="StickTrigger" to="." method="_on_stick_trigger_area_entered"]

@@ -1,0 +1,14 @@
+friend: Hey jetzt! Hast du gerade das Dreieck gesehen, das du kürzlich aufgehoben hast?
+[signal arg="talking"]
+friend: Die Dreiecke, die du gerade aufgehoben hast, sind als „Geheime Dreiecke“ bekannt.
+[signal arg="talking"]
+friend: Ich weiß nicht viel darüber, weil ich sie normalerweise nur schwer finden konnte...
+[signal arg="greatest"]
+friend: Was ich aber sicher weiß, ist, dass sie während deines gesamten Abenteuers eine sehr wichtige Rolle gespielt haben.
+[signal arg="talking"]
+friend: In jedem Level gibt es vier Geheime Dreiecke. (Na ja, außer natürlich den Chefs...)
+[signal arg="pointing"]
+friend: Also, haltet die Augen offen, wenn ihr sie im Blick habt. Wer weiß, welche Leckereien oder besondere Belohnungen man für das Finden dieser Schätze erhält.
+[signal arg="greatest"]
+friend: So, genug geredet. Machen wir weiter!
+[signal arg="end_cutscene"]

@@ -24,7 +24,19 @@ func _ready():
 
 func _process(delta: float) -> void:
 	if game_manager.play_cutscene_doublejump == true:
-		run_dialogue("tutorial_doublejump")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_doublejump_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_doublejump_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_doublejump_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_doublejump_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_doublejump_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_doublejump")
 		game_manager.play_cutscene_doublejump = false
 		play_doublejump_anim = true
 		friend.animation = "shock"
@@ -33,7 +45,19 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_triangles == true:
-		run_dialogue("tutorial_triangles")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_triangles_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_triangles_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_triangles_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_triangles_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_triangles_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_triangles")
 		game_manager.play_cutscene_triangles = false
 		play_triangles_anim = true
 		friend.animation = "point"
@@ -41,7 +65,19 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_crouch == true:
-		run_dialogue("tutorial_crouch")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_crouch_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_crouch_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_crouch_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_crouch_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_crouch_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_crouch")
 		game_manager.play_cutscene_crouch = false
 		play_crouch_anim = true
 		friend.animation = "greatest"
@@ -50,7 +86,19 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_enemy == true:
-		run_dialogue("tutorial_enemy")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_enemy_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_enemy_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_enemy_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_enemy_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_enemy_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_enemy")
 		game_manager.play_cutscene_enemy = false
 		play_enemy_anim = true
 		friend.animation = "shock"
@@ -59,15 +107,39 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_collectable == true:
-		if game_manager.health <= 4:
-			run_dialogue("tutorial_collectable_damaged")
+		if game_manager.health <= 4 || game_manager.health_p2 <= 4 || game_manager.health_p3 <= 4 || game_manager.health_p4 <= 4:
+			match LanguageManager.language:
+				"spanish":
+					run_dialogue("tutorial_collectable_damaged_" + LanguageManager.shortlang)
+				"french":
+					run_dialogue("tutorial_collectable_damaged_" + LanguageManager.shortlang)
+				"italian":
+					run_dialogue("tutorial_collectable_damaged_" + LanguageManager.shortlang)
+				"german":
+					run_dialogue("tutorial_collectable_damaged_" + LanguageManager.shortlang)
+				"japanese":
+					run_dialogue("tutorial_collectable_damaged_" + LanguageManager.shortlang)
+				_:
+					run_dialogue("tutorial_collectable_damaged")
 			game_manager.play_cutscene_collectable = false
 			play_collectable_anim = true
 			friend.animation = "shock"
 			friend_vox.play()
 			game_manager.cutscenemode_on()
 		else:
-			run_dialogue("tutorial_collectable")
+			match LanguageManager.language:
+				"spanish":
+					run_dialogue("tutorial_collectable_" + LanguageManager.shortlang)
+				"french":
+					run_dialogue("tutorial_collectable_" + LanguageManager.shortlang)
+				"italian":
+					run_dialogue("tutorial_collectable_" + LanguageManager.shortlang)
+				"german":
+					run_dialogue("tutorial_collectable_" + LanguageManager.shortlang)
+				"japanese":
+					run_dialogue("tutorial_collectable_" + LanguageManager.shortlang)
+				_:
+					run_dialogue("tutorial_collectable")
 			game_manager.play_cutscene_collectable = false
 			play_collectable_anim = true
 			friend.animation = "welcome"
@@ -75,7 +147,19 @@ func _process(delta: float) -> void:
 			game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_checkpoint == true:
-		run_dialogue("tutorial_checkpoint")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_checkpoint_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_checkpoint_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_checkpoint_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_checkpoint_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_checkpoint_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_checkpoint")
 		game_manager.play_cutscene_checkpoint = false
 		play_checkpoint_anim = true
 		friend.animation = "point"
@@ -83,7 +167,19 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_others == true:
-		run_dialogue("tutorial_othermechanics")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_othermechanics_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_othermechanics_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_othermechanics_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_othermechanics_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_othermechanics_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_othermechanics")
 		game_manager.play_cutscene_others = false
 		play_others_anim = true
 		friend.animation = "greatest"
@@ -91,7 +187,19 @@ func _process(delta: float) -> void:
 		game_manager.cutscenemode_on()
 
 	if game_manager.play_cutscene_ending == true:
-		run_dialogue("tutorial_ending")
+		match LanguageManager.language:
+			"spanish":
+				run_dialogue("tutorial_ending_" + LanguageManager.shortlang)
+			"french":
+				run_dialogue("tutorial_ending_" + LanguageManager.shortlang)
+			"italian":
+				run_dialogue("tutorial_ending_" + LanguageManager.shortlang)
+			"german":
+				run_dialogue("tutorial_ending_" + LanguageManager.shortlang)
+			"japanese":
+				run_dialogue("tutorial_ending_" + LanguageManager.shortlang)
+			_:
+				run_dialogue("tutorial_ending")
 		game_manager.play_cutscene_ending = false
 		play_ending_anim = true
 		friend.animation = "welcome"

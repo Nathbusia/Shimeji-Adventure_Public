@@ -1,0 +1,39 @@
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_01_ita.ogg" volume="2.0" bus="voices"]
+interfly: Oh, ciao amici! Avete trovato qualcosa di insolito da queste parti?
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_02_ita.ogg" volume="2.0" bus="voices"]
+interfly: No? Va bene. Perché recentemente mi sono imbattuto nella conversazione di Pop-Out Pete.
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_03_ita.ogg" volume="2.0" bus="voices"]
+interfly: Sta parlando adesso! Ascoltalo.
+(Sia voi che Interfly ascoltate cosa sta succedendo dall'altra parte. Qui potete sentire Pop Out Pete che parla con uno dei suoi collaboratori del Convertitore di Raggi Utente.)
+[signal arg="pete_vc01"]
+pop_out_pete: Allora, come sta andando finora la conversione di Userbeam?
+[signal arg="pete_vc02"]
+"Worker Userbeam": Beh, a proposito di quel capo. Abbiamo un piccolo problema.
+[signal arg="pete_vc03"]
+pop_out_pete: Cosa?! Che sta succedendo?
+[signal arg="pete_vc04"]
+"Worker Userbeam": Sembra, signore, che abbiamo un intruso (o alcuni intrusi) tra le mani nel Dark Web.
+[signal arg="pete_vc05"]
+"Worker Userbeam": Stanno eliminando tutti gli Userbeam a destra e a manca.
+[signal arg="pete_vc06"]
+pop_out_pete: Graah!!! Quindi è questo che sta facendo Interfly! Quel maledetto insetto. Immagino che dovrò occuparmene da solo.
+[signal arg="pete_vc07"]
+"Worker Userbeam": Stai andando lassù?
+[signal arg="pete_vc08"]
+pop_out_pete: Sì. E non preoccuparti, aspetterò quell'insetto e i suoi piccoli idioti paludosi da lì.
+[signal arg="pete_vc09"]
+"Worker Userbeam": Va bene, capo. Buona fortuna!
+[signal arg="pete_vc10"]
+pop_out_pete: È ora di fare loro una sorpresa “a sorpresa”. Mwhahahaha!
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_04_ita.ogg" volume="2.0" bus="voices"]
+interfly: Oh oh! Sembra che sappia che siamo qui.
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_05_ita.ogg" volume="2.0" bus="voices"]
+interfly: Beh, immagino che non abbiamo altra scelta che affrontarlo a testa alta.
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_06_ita.ogg" volume="2.0" bus="voices"]
+interfly: Vado a preparare la cassetta della posta. Nel frattempo, tu sali lassù e incontra Pop-Out Pete. Ti raggiungo lì.
+[voice path="res://sfx/characters/npc/butterfly/it/level3/sfx_butterfly_level3_07_ita.ogg" volume="2.0" bus="voices"]
+interfly: Facciamolo, amici. CI SIAMO!!
+[signal arg="end_cutscene"]

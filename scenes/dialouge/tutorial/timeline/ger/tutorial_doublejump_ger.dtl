@@ -1,0 +1,17 @@
+friend: Oh je! Das ist nicht gut... Eine Wand.
+[signal arg="normaltalkB"]
+friend: Aber da oben ist etwas. Allerdings wird ein einzelner Sprung dafür nicht ausreichen.
+[signal arg="talkingB"]
+[signal arg="flippedoff"]
+friend: Jetzt kommt der Teil, in dem du deinen Doppelsprung einsetzen musst.
+[signal arg="talkingB"]
+friend: Drücken Sie die Leertaste, um zu springen, und drücken Sie sie dann erneut, um einen Doppelsprung auszuführen.
+[signal arg="pointingB"]
+friend: Denken Sie daran\: Ein kurzes Antippen der Leertaste lässt Sie kleine Sprünge machen...
+[signal arg="welcomeB"]
+friend: Wohingegen man die Taste gedrückt hält, bis man die maximale Sprunghöhe erreicht hat, um einen riesigen Sprung auszuführen. Wie ein springender Frosch.
+[signal arg="talkingB"]
+friend: Also, dafür müsst ihr die Leertaste gedrückt halten und sie dann erneut drücken, um ganz nach oben zu gelangen!
+[signal arg="greatestB"]
+friend: Recht! Versuchen wir es mal!
+[signal arg="end_cutsceneB"]

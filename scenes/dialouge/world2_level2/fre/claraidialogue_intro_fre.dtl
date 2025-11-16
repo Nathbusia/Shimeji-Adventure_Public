@@ -1,0 +1,39 @@
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Oh, bonjour petit bonhomme. Je peux te parler une minute ?
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Je m'appelle Clara ! Enchantée !
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Je suis assez novice dans ce domaine du travail sur Internet. Je ne maîtrise donc pas encore très bien toutes ces technologies.
+[signal arg="problem"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_fre: À propos... J'ai peut-être fait une petite erreur...
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: J'allais déverrouiller la porte du magasin. Mais euh... Je crois que j'ai perdu les Orbes brillants nécessaires pour la déverrouiller.
+[signal arg="sad"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_fre: J'ai fouillé toutes mes poches, mais je n'en ai trouvé aucune trace. Je suppose que je les ai laissées tomber par accident en me précipitant vers l'arrêt de bus...
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara_fre: Je ne veux vraiment pas perdre mon emploi dès mon premier jour. Alors, mon petit, tu pourrais me rendre un grand service ?
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Pourriez-vous avoir la gentillesse de m'aider à retrouver ces trois objets ? Si vous me les rapportez tous, je suis sûr que vous trouverez dans le magasin quelque chose de triangulaire qui vous intéresse.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Très bien, je vous laisse vous en occuper. Allez les chercher et ramenez-les ici.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_fre: Merci encore !
+[signal arg="normal"]
+[signal arg="end_cutscene"]

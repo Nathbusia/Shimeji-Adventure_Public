@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_01_fre.ogg" volume="2.0" bus="voices"]
+interfly: Oh là là... On dirait qu'on a un problème.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_02_fre.ogg" volume="2.0" bus="voices"]
+interfly: Ami(s). Ces boules vertes qui collent aux fenêtres, connues sous le nom de... « Stick Nodes ».
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_03_fre.ogg" volume="2.0" bus="voices"]
+interfly: Lorsqu'ils se collent à une fenêtre spécifique pouvant être déplacée, ils maintiennent leur prise et empêchent la fenêtre de bouger d'un pouce jusqu'à ce qu'ils soient vaincus.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_04_fre.ogg" volume="2.0" bus="voices"]
+interfly: La seule façon de les vaincre est de marcher vers eux et de les écraser (s'ils sont sur le côté), ou de leur marcher dessus comme d'habitude.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_05_fre.ogg" volume="2.0" bus="voices"]
+interfly: Il existe une autre façon de les traiter, mais nous y reviendrons dans un instant.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_06_fre.ogg" volume="2.0" bus="voices"]
+interfly: Mais pour l'instant, supprimez ces Sticknodes et repositionnez les fenêtres déplaçables pour que nous puissions continuer.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part4_07_fre.ogg" volume="2.0" bus="voices"]
+interfly: Allons-y !
+[signal arg="end_cutscene"]

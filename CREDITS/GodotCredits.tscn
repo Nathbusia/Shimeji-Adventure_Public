@@ -1,10 +1,10 @@
 [gd_scene load_steps=22 format=3 uid="uid://cmmk31d282i46"]
 
 [ext_resource type="Script" uid="uid://dl6ig51er74pk" path="res://CREDITS/GodotCredits.gd" id="1"]
-[ext_resource type="FontFile" uid="uid://bxhpix5tod03j" path="res://fonts/DK Harimau Dua.otf" id="2_jukqo"]
 [ext_resource type="Texture2D" uid="uid://by2gvpcpso762" path="res://sprites/loading/loading_background.png" id="2_wke5r"]
 [ext_resource type="Texture2D" uid="uid://bo7i4rewk7giw" path="res://sprites/menu/credits/credits_background_shading.png" id="3_eaope"]
 [ext_resource type="AudioStream" uid="uid://dn6qw81kfdvnv" path="res://bgm/menu/bgm_credits_settings.ogg" id="3_fse5f"]
+[ext_resource type="FontFile" uid="uid://csvraqt5qhr8u" path="res://fonts/MochiyPopOne-Regular.ttf" id="4_uiwot"]
 [ext_resource type="Texture2D" uid="uid://di6x5dt3du6yx" path="res://sprites/menu/charselect/button/CharSelect_Back0001.png" id="6_uiwot"]
 [ext_resource type="Texture2D" uid="uid://bx786hbhhwsof" path="res://sprites/menu/charselect/button/CharSelect_Back0002.png" id="7_aahvf"]
 [ext_resource type="Texture2D" uid="uid://bp26cwhocex8r" path="res://sprites/menu/charselect/button/CharSelect_Back0003.png" id="8_x47v0"]
@@ -100,8 +100,8 @@ grow_horizontal = 2
 size_flags_horizontal = 3
 theme_override_constants/paragraph_spacing = 140
 theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("2_jukqo")
-theme_override_font_sizes/font_size = 30
+theme_override_fonts/font = ExtResource("4_uiwot")
+theme_override_font_sizes/font_size = 25
 horizontal_alignment = 1
 
 [node name="CreditsTheme" type="AudioStreamPlayer2D" parent="."]

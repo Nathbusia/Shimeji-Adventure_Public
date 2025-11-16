@@ -1,0 +1,284 @@
+[gd_scene load_steps=20 format=3 uid="uid://cxgbxppsv5opc"]
+
+[ext_resource type="Script" uid="uid://cbfo8oo3gahxm" path="res://scenes/characters/bosses/pete/pete_windows_beam_cannon.gd" id="1_ogfnc"]
+[ext_resource type="Texture2D" uid="uid://cj1ll7ffjuid1" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_windowsbg.png" id="2_ogfnc"]
+[ext_resource type="Texture2D" uid="uid://cyrp0k04oiu5o" path="res://sprites/levels/world2/world2_windowsC.png" id="2_qxpgl"]
+[ext_resource type="Texture2D" uid="uid://bgkg221chc0xa" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_back.png" id="3_ncbf8"]
+[ext_resource type="Texture2D" uid="uid://bqqwprdp2wvjh" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_cannon.png" id="4_qur0p"]
+[ext_resource type="Texture2D" uid="uid://dbojyqq2xskfi" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_front.png" id="5_pcx7b"]
+[ext_resource type="AudioStream" uid="uid://c18x8mh4ts2m0" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_appear.ogg" id="7_ncbf8"]
+[ext_resource type="AudioStream" uid="uid://by8sat2w5dwi" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_adjust.ogg" id="8_qur0p"]
+[ext_resource type="AudioStream" uid="uid://dxvv1r2avcg2h" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_set.ogg" id="9_pcx7b"]
+[ext_resource type="AudioStream" uid="uid://dv2gbk0wc8a5" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ready.ogg" id="10_hvveg"]
+[ext_resource type="AudioStream" uid="uid://b511cacyk8u6j" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_shoot.ogg" id="11_p4xfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc20q"]
+size = Vector2(654, 772)
+
+[sub_resource type="Animation" id="Animation_lr728"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_o6eqs"]
+resource_name = "popin"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.210224, 3.86375),
+"update": 0,
+"values": [Vector2(0.095, 0.095), Vector2(1, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"start_attack"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_uvqgy"]
+resource_name = "popout"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.176777, 2),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.095, 0.095)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disappear"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5nk87"]
+_data = {
+&"RESET": SubResource("Animation_lr728"),
+&"popin": SubResource("Animation_o6eqs"),
+&"popout": SubResource("Animation_uvqgy")
+}
+
+[sub_resource type="Animation" id="Animation_ncbf8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window/CannonBack:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.736544, 0.736544)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Window/CannonBack/PeteBeamcannonCannon:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.57079]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Window/CannonBack/PeteBeamcannonCannon:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ogfnc"]
+resource_name = "cannon"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Window/CannonBack:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.737, 0.387), Vector2(0.737, 0.937), Vector2(0.737, 0.697), Vector2(0.736544, 0.736544)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Window/CannonBack/PeteBeamcannonCannon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8, 2.2, 2.6, 2.8, 3, 3.2),
+"transitions": PackedFloat32Array(0.378929, 1, 1, 2.82843, 0.466517, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.685, 1), Vector2(0.685, 1), Vector2(1.24, 1), Vector2(0.92, 1), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Window/CannonBack/PeteBeamcannonCannon:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5, 1.2, 1.4),
+"transitions": PackedFloat32Array(0.406126, 0.466516, 1),
+"update": 0,
+"values": [-1.57079, 0.113446, 0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.2, 1.8, 2.8, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"play_appear"
+}, {
+"args": [],
+"method": &"play_adjust"
+}, {
+"args": [],
+"method": &"play_set"
+}, {
+"args": [],
+"method": &"play_ready"
+}, {
+"args": [],
+"method": &"play_shoot"
+}, {
+"args": [],
+"method": &"close_window"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncbf8"]
+_data = {
+&"RESET": SubResource("Animation_ncbf8"),
+&"cannon": SubResource("Animation_ogfnc")
+}
+
+[node name="PeteWindows_BeamCannon" type="AnimatableBody2D"]
+position = Vector2(408, 433)
+collision_layer = 16
+collision_mask = 1041
+script = ExtResource("1_ogfnc")
+
+[node name="Window" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_qxpgl")
+
+[node name="Background" type="Sprite2D" parent="Window"]
+texture_filter = 1
+position = Vector2(-1, 81)
+texture = ExtResource("2_ogfnc")
+
+[node name="CannonBack" type="Sprite2D" parent="Window"]
+position = Vector2(-145, 367)
+scale = Vector2(0.736544, 0.736544)
+texture = ExtResource("3_ncbf8")
+offset = Vector2(25.7961, -229.45)
+
+[node name="PeteBeamcannonCannon" type="Sprite2D" parent="Window/CannonBack"]
+position = Vector2(-6.78845, -304.123)
+rotation = -1.57079
+texture = ExtResource("4_qur0p")
+offset = Vector2(202.585, 0.673035)
+
+[node name="PeteBeamcannonFront" type="Sprite2D" parent="Window/CannonBack"]
+position = Vector2(-7.20383, -227.45)
+texture = ExtResource("5_pcx7b")
+
+[node name="BallSpawn" type="Marker2D" parent="."]
+position = Vector2(371.00003, 157)
+scale = Vector2(0.99999845, 0.99999845)
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Appear" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("7_ncbf8")
+bus = &"sfx"
+
+[node name="Adjust" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("8_qur0p")
+bus = &"sfx"
+
+[node name="Set" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("9_pcx7b")
+bus = &"sfx"
+
+[node name="Ready" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("10_hvveg")
+bus = &"sfx"
+
+[node name="Shoot" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("11_p4xfp")
+bus = &"sfx"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_xc20q")
+
+[node name="WindowsAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5nk87")
+}
+autoplay = "popin"
+
+[node name="CannonAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ncbf8")
+}

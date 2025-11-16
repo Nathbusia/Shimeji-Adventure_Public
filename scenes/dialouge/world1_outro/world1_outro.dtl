@@ -6,11 +6,11 @@ friend: You've managed to defeat the Monstequare! Now the Desktop should be back
 [signal arg="greatest"]
 friend: Now don't you think that your adventure ends here, or it's too short... This is only just the beginning.
 [signal arg="welcome"]
-friend: There's a lot more worlds to experience on than just the Desktop...
+friend: There are many more worlds to experience than just the Desktop...
 [signal arg="normaltalk"]
 friend: You know! Internet, Websites, so on, and so forth. You'll see it for yourself.
 [signal arg="pointing"]
-friend: But anyways to begin with your next step, You have to head onto the Internet itself.
+friend: But anyway, to begin with, your next step is to head onto the Internet itself.
 [signal arg="normaltalk"]
 friend: This will be your next world to go.
 [signal arg="talking"]
@@ -27,7 +27,8 @@ friend: You're going to head into the Internet and investigate these new technol
 friend: And don't you worry about doing this alone. I'm sure you'll meet new friends like me throughout your Adventure.
 [signal arg="normaltalk"]
 friend: I wish you all the good luck.
-[signal arg="playerjumptwo"]
+[signal arg="shimep1_jumptwo"]
+[signal arg="shimemodp1_special1"]
 [wait time="1.3"]
 [signal arg="shocked"]
 friend: WHAT?! You want me to come too?
@@ -42,7 +43,8 @@ friend: Alright, good talk. Now head over to the Internet, and good luck with yo
 [signal arg="leaving"]
 [signal arg="flippedoff"]
 friend: Stay Safe!!!
-[signal arg="playerjump"]
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_special2"]
 [wait time="1.0"]
 [signal arg="playerflipoff"]
 [wait time="1.0"]

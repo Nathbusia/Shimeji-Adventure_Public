@@ -1,0 +1,168 @@
+[gd_scene load_steps=16 format=3 uid="uid://deoqw20ik2817"]
+
+[ext_resource type="Script" uid="uid://e30mce1llrqp" path="res://scenes/characters/npc/chat_detection.gd" id="1_1atwu"]
+[ext_resource type="Texture2D" uid="uid://pt1mxcn75la4" path="res://sprites/gameplay/controls/VKey_Button0001.png" id="5_bqskc"]
+[ext_resource type="Texture2D" uid="uid://bjen4f3bog8dn" path="res://sprites/gameplay/controls/VKey_Button0002.png" id="6_1o806"]
+[ext_resource type="Texture2D" uid="uid://csoveagvtmvfn" path="res://sprites/gameplay/controls/VKey_Button0003.png" id="7_p6f48"]
+[ext_resource type="Texture2D" uid="uid://bkmgr3qp3pu6h" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0001.png" id="24_n2gpo"]
+[ext_resource type="Texture2D" uid="uid://cljue88nd8n8q" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0002.png" id="25_upb7o"]
+[ext_resource type="Texture2D" uid="uid://dty3vvkikjlvf" path="res://sprites/gameplay/interact_speak/InteractiveSpeak0003.png" id="26_tnp1x"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_wq4f5"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("24_n2gpo")
+frame_1/texture = ExtResource("25_upb7o")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("26_tnp1x")
+frame_2/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_b8dl0"]
+frames = 3
+speed_scale = 6.0
+frame_0/texture = ExtResource("5_bqskc")
+frame_1/texture = ExtResource("6_1o806")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("7_p6f48")
+frame_2/duration = 1.0
+
+[sub_resource type="Animation" id="Animation_3r2hq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractiveSpeakBubble:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-124, -92)]
+}
+
+[sub_resource type="Animation" id="Animation_1atwu"]
+resource_name = "base"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractiveSpeakBubble:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2uuco"]
+resource_name = "popin"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(0.258817, 2.82843),
+"update": 0,
+"values": [Vector2(-124, -71), Vector2(-124, -92)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bqskc"]
+resource_name = "popout"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InteractiveSpeakBubble:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(2.82843, 0.258817),
+"update": 0,
+"values": [Vector2(-124, -92), Vector2(-124, -71)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InteractiveSpeakBubble:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1o806"]
+_data = {
+&"RESET": SubResource("Animation_3r2hq"),
+&"base": SubResource("Animation_1atwu"),
+&"popin": SubResource("Animation_2uuco"),
+&"popout": SubResource("Animation_bqskc")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umqun"]
+size = Vector2(68, 116)
+
+[node name="ChatDetection" type="Area2D"]
+script = ExtResource("1_1atwu")
+
+[node name="InteractiveSpeakBubble" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture_filter = 1
+offset_left = -124.0
+offset_top = -92.0
+offset_right = -68.0
+offset_bottom = -60.0
+texture = SubResource("AnimatedTexture_wq4f5")
+expand_mode = 1
+
+[node name="Vkey" type="TextureRect" parent="InteractiveSpeakBubble"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 31.0
+texture = SubResource("AnimatedTexture_b8dl0")
+expand_mode = 1
+
+[node name="SpeechOption" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1o806")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-97, 5)
+shape = SubResource("RectangleShape2D_umqun")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

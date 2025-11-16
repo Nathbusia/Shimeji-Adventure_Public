@@ -1,0 +1,26 @@
+friend: Vale. Entonces tenemos esto aquí.
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Ahora, para mí, puedo entrar fácilmente sin ningún esfuerzo.
+[signal arg="pointing"]
+friend: Sin embargo, para un tamaño como el tuyo, se requiere cierto esfuerzo.
+[signal arg="welcome"]
+friend: Para huecos como estos, esta es la parte donde usas tu movimiento de agacharte.
+[signal arg="talking"]
+friend: Asimismo, al moverte con las teclas de flecha Izquierda y Derecha, mantén presionada la tecla de flecha Abajo para, bueno... sentarte.
+[signal arg="normaltalk"]
+friend: También puedes hacerlo con un controlador moviendo tu joystick hacia abajo (si lo has configurado en la asignación de teclas).
+[signal arg="talking"]
+friend: Mientras estás sentado, usa la izquierda y la derecha de nuevo para agacharte. Es útil para caber en lugares pequeños como este.
+[signal arg="talking"]
+friend: Siempre puedes soltar la tecla de flecha hacia abajo para dejar de agacharte. (Aunque no puedes hacer eso mientras estés debajo de un área estrecha. Tienes que esperar hasta que haya espacio para que te levantes.)
+[signal arg="pointing"]
+friend: Ah, sí, una cosa más que olvidé decirte al principio.
+[signal arg="welcome"]
+friend: Con todo el tema de moverse, también puedes mantener presionada la tecla Shift para moverte/agacharte más rápido.\
+Es solo para aquellos que no tienen tiempo y quieren adelantarse.
+[signal arg="talking"]
+friend: Sin embargo, no te apresures demasiado. Úsalo solo cuando sea necesario.
+[signal arg="greatest"]
+friend: Bien. Adelante, agáchate y pasa por este hueco.
+[signal arg="end_cutscene"]

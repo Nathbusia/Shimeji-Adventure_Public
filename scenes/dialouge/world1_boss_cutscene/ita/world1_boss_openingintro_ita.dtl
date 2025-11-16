@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare: BWUEAH-HAHAHAHA!
+[signal arg="talking"]
+monstequare: QUINDI! Sei tu quello che ha causato tutto questo scompiglio ai miei piccoli Mean Balls e Mean Squares.
+[signal arg="talkingB"]
+monstequare: Questi poveri piccoli amici mi hanno raccontato tutto di te e ora devi vedertela con me!
+[signal arg="short"]
+monstequare: Ti darò la possibilità di scappare, oppure di essere picchiato da me!
+[wait time="2.0"]
+[signal arg="question"]
+monstequare: Nessuna risposta? Allora immagino che non mi resti altro che picchiarti!
+[signal arg="short"]
+monstequare: Fatti avanti, Eroe del Desktop...
+[signal arg="battlestart"]
+monstequare: DAMMI IL PEGGIO DI TE!!
+[signal arg="beginboss"]

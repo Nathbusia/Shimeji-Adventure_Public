@@ -1,0 +1,20 @@
+friend: Eccoci arrivati! L'ultimo passo.
+[signal arg="talking"]
+friend: Ora, nel corso di questa lezione, affronterete un semplice percorso per mettere alla prova tutto ciò che vi verrà insegnato in questo tutorial.
+[signal arg="talking"]
+friend: All'interno di questo, vedrete altre due meccaniche che potrebbero apparire nel gameplay normale...
+[signal arg="greatest"]
+friend: Uno di questi sono le molle. Sapete, quei posti dove la primavera è sbocciata, e la primavera ha... beh, quello che fa di solito.
+[signal arg="talking"]
+friend: Ma comunque sì. Quelle molle bianche ti aiuteranno a rimbalzare verso l'alto e a ripristinare il tuo limite di salto, dandoti più tempo in aria.
+[signal arg="welcome"]
+friend: Non dimenticare che, se usi la mossa Slam Dash sulle molle, rimbalzerai più in alto del solito! Questo ti sarà utile su superfici e piattaforme molto alte. (Questo vale anche per l'utilizzo di Slam Dash contro i nemici.)
+[signal arg="normaltalk"]
+friend: E infine, ci sono le punte.
+[signal arg="talking"]
+friend: Questi sono alcuni degli ostacoli pericolosi. E credetemi, non vorrete toccarli...
+[signal arg="pointing"]
+friend: Sono appuntiti e cose del genere, e ti fanno perdere punti salute se li tocchi. Quindi, fai attenzione.
+[signal arg="talking"]
+friend: Bene, non c'è bisogno di dirlo. Finite quest'ultima portata e ci vediamo alla fine!
+[signal arg="end_cutscene"]

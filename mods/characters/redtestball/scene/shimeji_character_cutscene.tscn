@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dpc54ssl1mmf0"]
+[gd_scene load_steps=66 format=3 uid="uid://dpc54ssl1mmf0"]
 
 [ext_resource type="Script" uid="uid://b4ot5d7ppsfjl" path="res://mods/characters/redtestball/scene/shimeji_character_cutscene.gd" id="1_kdt1u"]
 [ext_resource type="Texture2D" uid="uid://csgvx17dus3hp" path="res://mods/characters/redtestball/sprites/mainsprite/shime35.png" id="2_yqkr2"]
@@ -28,9 +28,15 @@
 [ext_resource type="Texture2D" uid="uid://ccqj2lhjw7ai1" path="res://mods/characters/redtestball/sprites/mainsprite/shime3.png" id="26_2a8ph"]
 [ext_resource type="Texture2D" uid="uid://dboj8esw55p3a" path="res://mods/characters/redtestball/sprites/mainsprite/shime11.png" id="27_ttgm3"]
 [ext_resource type="Texture2D" uid="uid://bk6e0bk8m8d4o" path="res://mods/characters/redtestball/sprites/mainsprite/shime37.png" id="28_6bxwt"]
+[ext_resource type="Texture2D" uid="uid://c2uf6kx672dl6" path="res://mods/characters/redtestball/sprites/mainsprite/shime26.png" id="28_yede5"]
 [ext_resource type="AudioStream" uid="uid://covs3dxgqketi" path="res://sfx/characters/shimeji/sfx_player_jump.ogg" id="29_0i5dh"]
+[ext_resource type="Texture2D" uid="uid://lopqc5kaavpe" path="res://mods/characters/redtestball/sprites/mainsprite/shime27.png" id="29_d1eqo"]
+[ext_resource type="Texture2D" uid="uid://nchpayfdmt7s" path="res://mods/characters/redtestball/sprites/mainsprite/shime28.png" id="30_vlepd"]
 [ext_resource type="AudioStream" uid="uid://cbp0fhmolydt4" path="res://sfx/characters/shimeji/sfx_player_slamdash_end.ogg" id="30_whkbd"]
+[ext_resource type="AudioStream" uid="uid://do2lgwmcv3sbb" path="res://sfx/characters/shimeji/sfx_player_sit_out.ogg" id="30_x4fft"]
+[ext_resource type="AudioStream" uid="uid://v14o43u6od8w" path="res://sfx/characters/shimeji/sfx_player_sit_in.ogg" id="31_kd8jj"]
 [ext_resource type="AudioStream" uid="uid://d2vwhdvavfght" path="res://sfx/characters/shimeji/sfx_player_slamdash_start.ogg" id="31_kodcg"]
+[ext_resource type="Texture2D" uid="uid://vvgghe3c50lp" path="res://mods/characters/redtestball/sprites/mainsprite/shime29.png" id="31_sgdrk"]
 [ext_resource type="AudioStream" uid="uid://c4wrrlsv3vqti" path="res://sfx/characters/shimeji/sfx_player_crouching.ogg" id="32_uvx2p"]
 [ext_resource type="AudioStream" uid="uid://biyd8hsfrqxk" path="res://sfx/characters/shimeji/sfx_player_footstep_01.ogg" id="33_5d6kx"]
 [ext_resource type="AudioStream" uid="uid://bu6m4p6s2j3vs" path="res://sfx/characters/shimeji/sfx_player_footstep_02.ogg" id="34_c1ks8"]
@@ -44,6 +50,7 @@
 [ext_resource type="AudioStream" uid="uid://bfyw1mf8ix1lq" path="res://sfx/characters/shimeji/sfx_player_grabwall.ogg" id="42_57eai"]
 [ext_resource type="AudioStream" uid="uid://c4aeu0f71o0p8" path="res://sfx/characters/shimeji/sfx_player_climbing_01.ogg" id="43_fqg5x"]
 [ext_resource type="AudioStream" uid="uid://f7i35pprewg0" path="res://sfx/characters/shimeji/sfx_player_climbing_02.ogg" id="44_5pehb"]
+[ext_resource type="AudioStream" uid="uid://b2o1xwh03a87e" path="res://sfx/characters/shimeji/sfx_player_taunt.ogg" id="51_0dxew"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ej1rp"]
 animations = [{
@@ -341,6 +348,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("28_yede5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_d1eqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vlepd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sgdrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sgdrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sgdrk")
+}],
+"loop": false,
+"name": &"taunt",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("28_6bxwt")
 }, {
 "duration": 1.0,
@@ -405,6 +435,38 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(1, 1)]
 }
+
+[sub_resource type="Animation" id="Animation_rag7l"]
+resource_name = "end_sit"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"idle"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSFX/Sit_In")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("30_x4fft")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_shvpm"]
 resource_name = "jump"
@@ -536,6 +598,38 @@ tracks/3/keys = {
 "values": [Vector2(1, 0.87), Vector2(1, 1.1), Vector2(1, 1), Vector2(1, 0.87), Vector2(1, 1.1), Vector2(1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_ftxlr"]
+resource_name = "start_sit"
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"sit"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PlayerSFX/Sit_In")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("31_kd8jj")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/1/use_blend = true
+
 [sub_resource type="Animation" id="Animation_qhqo8"]
 resource_name = "walk_boss1"
 length = 2.0
@@ -602,13 +696,49 @@ tracks/1/keys = {
 "values": [Vector2(0, 0), Vector2(400, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_1j8ar"]
+resource_name = "walk_w2lv1"
+length = 4.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"walk"
+}, {
+"args": [],
+"method": &"idle"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-600, 0), Vector2(0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qy1tn"]
 _data = {
 &"RESET": SubResource("Animation_5kctw"),
+&"end_sit": SubResource("Animation_rag7l"),
 &"jump": SubResource("Animation_shvpm"),
 &"jump_two": SubResource("Animation_3ew0j"),
+&"start_sit": SubResource("Animation_ftxlr"),
 &"walk_boss1": SubResource("Animation_qhqo8"),
-&"walk_movingon": SubResource("Animation_k17s0")
+&"walk_movingon": SubResource("Animation_k17s0"),
+&"walk_w2lv1": SubResource("Animation_1j8ar")
 }
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_heldw"]
@@ -639,7 +769,7 @@ script = ExtResource("1_kdt1u")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_ej1rp")
-animation = &"throw"
+animation = &"taunt"
 autoplay = "idle"
 flip_h = true
 
@@ -706,6 +836,10 @@ bus = &"sfx"
 
 [node name="ClimbingSounds" type="AudioStreamPlayer" parent="PlayerSFX"]
 stream = SubResource("AudioStreamRandomizer_pv3xm")
+bus = &"sfx"
+
+[node name="TauntSound" type="AudioStreamPlayer" parent="PlayerSFX"]
+stream = ExtResource("51_0dxew")
 bus = &"sfx"
 
 [node name="ShimeFallAnim" type="AnimationPlayer" parent="."]

@@ -1,0 +1,53 @@
+[signal arg="welcome"]
+friend: Juhu!! Du hast es geschafft!
+[signal arg="playerflipon"]
+[signal arg="talking"]
+friend: Es ist dir gelungen, das Monstequare zu besiegen! Nun sollte auf dem Desktop wieder Frieden herrschen.
+[signal arg="greatest"]
+friend: Glauben Sie bloß nicht, dass Ihr Abenteuer hier endet, oder ist es Ihnen etwa zu kurz? Das ist erst der Anfang.
+[signal arg="welcome"]
+friend: Es gibt noch viel mehr Welten zu entdecken als nur den Desktop...
+[signal arg="normaltalk"]
+friend: Sie wissen schon! Internet, Webseiten und so weiter und so fort. Sie werden es selbst sehen.
+[signal arg="pointing"]
+friend: Aber um mit Ihrem nächsten Schritt zu beginnen, müssen Sie zunächst ins Internet gehen.
+[signal arg="normaltalk"]
+friend: Dies wird deine nächste Welt sein, in die du reisen wirst.
+[signal arg="talking"]
+friend: Ich habe nun einige Gerüchte über bevorstehende Änderungen an unseren Technologien gehört.
+[signal arg="greatest"]
+friend: Irgendwas mit diesen... Snaps Snaps, Robo Arts oder diesen tickenden Uhren...
+[signal arg="normaltalk"]
+friend: Was auch immer es ist. Es mag gut oder schlecht klingen...
+[signal arg="normaltalk"]
+friend: Aber den Rezensionen zufolge, die ich gehört habe, ist es ziemlich schlecht...
+[signal arg="talking"]
+friend: Du wirst ins Internet gehen und diese neuen Technologien selbst erforschen. Und herausfinden, wer dafür verantwortlich ist.
+[signal arg="welcome"]
+friend: Und machen Sie sich keine Sorgen, dass Sie das alleine schaffen müssen. Ich bin sicher, Sie werden auf Ihrem Abenteuer neue Freunde wie mich kennenlernen.
+[signal arg="normaltalk"]
+friend: Ich wünsche euch allen viel Glück.
+[signal arg="shimep1_jumptwo"]
+[signal arg="shimemodp1_special1"]
+[wait time="1.3"]
+[signal arg="shocked"]
+friend: WAS?! Ihr wollt, dass ich auch mitkomme?
+[signal arg="talking"]
+friend: Schau, ich würde dich ja gerne auf diesem Abenteuer begleiten... Aber irgendjemand muss sich ja um den Desktop-Computer kümmern, während du weg bist.
+[signal arg="pointing"]
+friend: Und außerdem gibt es noch viele weitere neue Leute, die genauso sind wie du, denen ich beibringen muss, wie man dieses Spiel spielt.
+[signal arg="normaltalk"]
+friend: Ich muss also hierbleiben. Aber du musst gehen.
+[signal arg="waving"]
+friend: Alles klar, das war ein gutes Gespräch. Jetzt ab ins Internet, und viel Erfolg bei deinem Abenteuer!
+[signal arg="leaving"]
+[signal arg="flippedoff"]
+friend: Bleib sicher!!!
+[signal arg="shimep1_jump"]
+[signal arg="shimemodp1_special2"]
+[wait time="1.0"]
+[signal arg="playerflipoff"]
+[wait time="1.0"]
+[signal arg="playermoveon"]
+[wait time="3.0"]
+[signal arg="blackscreen"]

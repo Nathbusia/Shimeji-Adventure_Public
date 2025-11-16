@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: 素晴らしい！見つかったようですね。お手伝いできて本当に嬉しいです。
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: あと2つだけだ。
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: 頑張れ、小さな相棒！
+[signal arg="normal"]
+[signal arg="end_cutscene"]

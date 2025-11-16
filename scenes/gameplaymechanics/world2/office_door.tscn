@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyxlq4m1egmqt"]
+
+[ext_resource type="Texture2D" uid="uid://8g6qkn6exmjn" path="res://sprites/levels/world2/world2_officedoor.png" id="1_ahpj6"]
+[ext_resource type="Script" uid="uid://b51b5spayptfa" path="res://scenes/gameplaymechanics/world2/office_door.gd" id="1_umiip"]
+[ext_resource type="AudioStream" uid="uid://cfjspa6vj8rh3" path="res://sfx/gameplay/common/sfx_puzzleclear.ogg" id="3_82lvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_umiip"]
+size = Vector2(51, 359)
+
+[node name="OfficeDoor" type="RigidBody2D"]
+script = ExtResource("1_umiip")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ahpj6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.5, -64.5)
+shape = SubResource("RectangleShape2D_umiip")
+
+[node name="DoorOpenSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_82lvw")
+volume_db = 8.0
+
+[node name="Lifetime" type="Timer" parent="."]
+wait_time = 4.0
+
+[connection signal="timeout" from="Lifetime" to="." method="_on_lifetime_timeout"]

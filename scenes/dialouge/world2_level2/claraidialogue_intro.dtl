@@ -1,0 +1,39 @@
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Oh, hello there small fella. Can I take your minute here?
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: I'm Clara! Nice to meet you!
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: I'm kind of new to this whole Internet job. So, I'm not too sure on all of this technology stuff yet.
+[signal arg="problem"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara: Speaking of that... I may have made a bit of a mistake...
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: I was going to unlock the store's door. But err... I believe I lost the Shiny Orbs required to unlock them.
+[signal arg="sad"]
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara: I searched each of my pockets, and there was not a trace of them. I suppose I dropped them by accident while rushing to the bus stop...
+[signal arg="talk"]
+[signal arg="talksound_sad"]
+clara: I really don't want to lose my job on my first day. So, little fella, could you do me a major favour?
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Could you be a nice soul and help me find those three? If you return all of them, I'm sure there's something triangular inside the store that you're looking for.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Alright, I'll leave you to it. Just go and find them, and bring them here.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Thanks again!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

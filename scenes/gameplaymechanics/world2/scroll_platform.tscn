@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cysoljnef2y25"]
+
+[node name="ScrollPlatform" type="AnimatableBody2D"]

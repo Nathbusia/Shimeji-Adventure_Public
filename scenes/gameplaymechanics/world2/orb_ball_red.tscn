@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://ndnxloeiuwl1"]
+
+[ext_resource type="Script" uid="uid://bacgyaw20db3o" path="res://scenes/gameplaymechanics/world2/orb_ball_red.gd" id="1_d2wej"]
+[ext_resource type="Texture2D" uid="uid://l43g7ien6u84" path="res://sprites/levels/world2/world2_orb_red0001.png" id="2_u3w30"]
+[ext_resource type="Texture2D" uid="uid://begp0kcy4vux7" path="res://sprites/levels/world2/world2_orb_red0002.png" id="3_mr1w0"]
+[ext_resource type="Texture2D" uid="uid://225hi7vc5lin" path="res://sprites/levels/world2/world2_orb_red0003.png" id="4_ynjtk"]
+[ext_resource type="Texture2D" uid="uid://crv7hlbrdiekv" path="res://sprites/levels/world2/world2_orb_red0004.png" id="5_5u2es"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ew4ji"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u3w30")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mr1w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ynjtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5u2es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ynjtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mr1w0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_re68y"]
+radius = 24.3311
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7aun"]
+size = Vector2(50, 48)
+
+[node name="OrbBall_Red" type="RigidBody2D" groups=["orb_red"]]
+collision_layer = 4
+collision_mask = 5
+center_of_mass_mode = 1
+script = ExtResource("1_d2wej")
+
+[node name="Ball" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ew4ji")
+autoplay = "default"
+frame = 5
+frame_progress = 0.885571
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+light_mask = 4
+visibility_layer = 5
+position = Vector2(-2, 3)
+shape = SubResource("CircleShape2D_re68y")
+
+[node name="GrabHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabHitbox"]
+position = Vector2(-2, 3)
+shape = SubResource("RectangleShape2D_v7aun")

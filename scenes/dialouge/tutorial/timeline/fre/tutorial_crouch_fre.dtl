@@ -1,0 +1,25 @@
+friend: D'accord. Alors, nous avons ceci ici.
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Pour ma part, je peux y entrer facilement, sans aucun effort.
+[signal arg="pointing"]
+friend: Cependant, pour une taille comme la vôtre, un certain effort est nécessaire.
+[signal arg="welcome"]
+friend: Pour franchir ce genre d'obstacles, c'est à ce moment-là que vous devez utiliser votre mouvement accroupi.
+[signal arg="talking"]
+friend: De même, pour vous déplacer avec les touches fléchées gauche et droite, maintenez la touche flèche du bas enfoncée pour... vous asseoir.
+[signal arg="normaltalk"]
+friend: Vous pouvez également effectuer cette action avec une manette en inclinant votre joystick vers le bas (si vous l'avez configuré dans les paramètres de configuration des touches).
+[signal arg="talking"]
+friend: Lorsque vous êtes assis, utilisez à nouveau les touches gauche et droite pour ramper. C'est pratique pour se faufiler dans des petits espaces comme celui-ci.
+[signal arg="talking"]
+friend: Vous pouvez à tout moment relâcher la flèche vers le bas pour arrêter de ramper. (Cependant, vous ne pouvez pas le faire lorsque vous vous trouvez dans un espace restreint. Vous devez attendre d'avoir suffisamment de place pour vous relever.)
+[signal arg="pointing"]
+friend: Ah oui, encore une chose que j'ai oublié de vous dire au début.
+[signal arg="welcome"]
+friend: Lors des déplacements, vous pouvez également maintenir la touche Maj enfoncée pour vous déplacer/ramper plus rapidement. C'est pratique pour ceux qui manquent de temps et veulent avancer plus vite.
+[signal arg="talking"]
+friend: Cependant, ne soyez pas trop pressé. Utilisez-le uniquement lorsque c'est nécessaire.
+[signal arg="greatest"]
+friend: Très bien. Alors, allez-y, rampez à travers cet espace.
+[signal arg="end_cutscene"]

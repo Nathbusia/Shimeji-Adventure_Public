@@ -1,0 +1,17 @@
+friend_jpn: なんてこった！それは意地悪なボールだ!!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend_jpn: よし。慌てるな。ここからが君の戦闘能力の見せ所だ。
+[signal arg="greatest"]
+friend_jpn: このような敵は簡単に倒せます。頭の上にジャンプするだけで、彼らは消えてしまいます!
+[signal arg="talking"]
+friend_jpn: しかし、他の敵はそれぞれ異なる能力や攻撃方法を持っています。ですから、注意してください。
+[signal arg="welcome"]
+friend_jpn: ちなみに、空中ではスラムダッシュも可能です。これは、空中で下方向キーを押すことで発動します。
+[signal arg="greatest"]
+friend_jpn: これで事情が理解できたでしょう…
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend_jpn: あいつらを叩きのめせ！！
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

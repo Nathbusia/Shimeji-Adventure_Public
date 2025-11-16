@@ -1,0 +1,16 @@
+[signal arg="laughing"]
+monstequare: BWUEAH-HAHAHAHA!
+[signal arg="talking"]
+monstequare: Also! Du bist also derjenige, der all dieses Chaos mit meinen kleinen gemeinen Kugeln und gemeinen Quadraten angerichtet hat.
+[signal arg="talkingB"]
+monstequare: Diese armen kleinen Kerle haben mir alles über dich erzählt, und jetzt musst du dich mit mir auseinandersetzen!
+[signal arg="short"]
+monstequare: Ich gebe dir die Chance wegzulaufen, oder von mir verprügelt zu werden!
+[wait time="2.0"]
+[signal arg="question"]
+monstequare: Keine Antwort? Dann werde ich dich wohl verprügeln!
+[signal arg="short"]
+monstequare: Komm nur her, Desktop-Held...
+[signal arg="battlestart"]
+monstequare: ZEIG MIR DEIN SCHLIMMSTES!!
+[signal arg="beginboss"]

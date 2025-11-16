@@ -1,0 +1,26 @@
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_01_fre.ogg" volume="2.0" bus="voices"]
+interfly: Bon, eh bien. Il semble que les Sticknodes collent désormais sous ces fenêtres déplaçables.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_02_fre.ogg" volume="2.0" bus="voices"]
+interfly: C'est le moment idéal pour moi de partager une autre façon de les vaincre.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_03_fre.ogg" volume="2.0" bus="voices"]
+interfly: S'il y a un ennemi ou un objet au-dessus avec lequel il est impossible d'interagir, vous aurez besoin de notre boîte utile. Le lanceur d'e-mails !
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_04_fre.ogg" volume="2.0" bus="voices"]
+interfly: En cliquant dessus avec le bouton gauche de la souris, vous envoyez des e-mails. Vous ne pouvez envoyer qu'un seul e-mail à la fois. Vous devez donc attendre que l'e-mail ait été lancé, détruit ou qu'il ait volé pendant 3 secondes.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_05_fre.ogg" volume="2.0" bus="voices"]
+interfly: Vous pouvez les ramasser à l'aide du bouton Grab et les déplacer vers un autre endroit. Vous pouvez même tirer tout en les tenant !
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_06_fre.ogg" volume="2.0" bus="voices"]
+interfly: De plus, vous pouvez même leur sauter dessus pour gagner en hauteur ! À condition d'être plus rapide qu'eux, bien sûr.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_07_fre.ogg" volume="2.0" bus="voices"]
+interfly: Une fois que vous n'avez plus d'e-mails, il faudra au moins 5 secondes pour que le nouveau soit envoyé dans la boîte.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_08_fre.ogg" volume="2.0" bus="voices"]
+interfly: Une fois que c'est fait, vous pouvez les tirer à nouveau.
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_09_fre.ogg" volume="2.0" bus="voices"]
+interfly: Bon, allons-y. Utilisez le tireur d'e-mails pour abattre ces deux Sticknodes, puis repositionnez la fenêtre déplaçable.
+[signal arg="greet"]
+[voice path="res://sfx/characters/npc/butterfly/fr/level1/sfx_butterfly_level1_part5_10_fre.ogg" volume="2.0" bus="voices"]
+interfly: Nous avons presque terminé !
+[signal arg="end_cutscene"]

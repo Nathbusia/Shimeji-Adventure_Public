@@ -1,0 +1,18 @@
+[signal arg="greet"]
+[signal arg="flippedoff"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_01_ger.ogg" volume="2.0" bus="voices"]
+interfly: Oh je... Es sieht so aus, als hätten wir ein Problem.
+[signal arg="flippedon"]
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_02_ger.ogg" volume="2.0" bus="voices"]
+interfly: Freund(e). Diese grünen Kleckse, die an den Fenstern kleben und als „Stick Nodes“ bekannt sind.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_03_ger.ogg" volume="2.0" bus="voices"]
+interfly: Wenn sie sich an einem bestimmten verschiebbaren Fenster festsetzen, behalten sie ihren Halt und lassen das verschiebbare Fenster keinen Millimeter von der Stelle weichen, bis sie besiegt sind.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_04_ger.ogg" volume="2.0" bus="voices"]
+interfly: Die einzige Möglichkeit, sie zu besiegen, besteht darin, auf sie zuzugehen und sie zu zerquetschen (wenn sie sich an der Seite befinden) oder wie gewohnt auf sie zu treten.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_05_ger.ogg" volume="2.0" bus="voices"]
+interfly: Es gibt noch eine andere Möglichkeit, mit ihnen umzugehen, aber darauf kommen wir gleich noch zu sprechen.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_06_ger.ogg" volume="2.0" bus="voices"]
+interfly: Aber jetzt erst einmal diese Sticknodes hier wegschieben und die verschiebbaren Fenster neu positionieren, damit wir weitermachen können.
+[voice path="res://sfx/characters/npc/butterfly/ge/level1/sfx_butterfly_level1_part4_07_ger.ogg" volume="2.0" bus="voices"]
+interfly: Lass uns loslegen!
+[signal arg="end_cutscene"]

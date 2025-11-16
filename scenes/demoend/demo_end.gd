@@ -12,6 +12,66 @@ func _ready():
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 
+	match LanguageManager.language:
+		"spanish":
+			$Text.texture = load("res://sprites/demoend/demoend_main_text_spa.png")
+			$Continue_Button.texture_normal.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_spa0001.png"))
+			$Continue_Button.texture_normal.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_spa0002.png"))
+			$Continue_Button.texture_normal.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_spa0003.png"))
+			$Continue_Button.texture_hover.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_spa0004.png"))
+			$Continue_Button.texture_hover.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_spa0005.png"))
+			$Continue_Button.texture_hover.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_spa0006.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_spa0007.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_spa0008.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_spa0009.png"))
+		"french":
+			$Text.texture = load("res://sprites/demoend/demoend_main_text_fre.png")
+			$Continue_Button.texture_normal.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_fre0001.png"))
+			$Continue_Button.texture_normal.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_fre0002.png"))
+			$Continue_Button.texture_normal.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_fre0003.png"))
+			$Continue_Button.texture_hover.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_fre0004.png"))
+			$Continue_Button.texture_hover.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_fre0005.png"))
+			$Continue_Button.texture_hover.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_fre0006.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_fre0007.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_fre0008.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_fre0009.png"))
+		"italian":
+			$Text.texture = load("res://sprites/demoend/demoend_main_text_ita.png")
+			$Continue_Button.texture_normal.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ita0001.png"))
+			$Continue_Button.texture_normal.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ita0002.png"))
+			$Continue_Button.texture_normal.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ita0003.png"))
+			$Continue_Button.texture_hover.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ita0004.png"))
+			$Continue_Button.texture_hover.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ita0005.png"))
+			$Continue_Button.texture_hover.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ita0006.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ita0007.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ita0008.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ita0009.png"))
+		"german":
+			$Text.texture = load("res://sprites/demoend/demoend_main_text_ger.png")
+			$Continue_Button.texture_normal.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ger0001.png"))
+			$Continue_Button.texture_normal.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ger0002.png"))
+			$Continue_Button.texture_normal.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ger0003.png"))
+			$Continue_Button.texture_hover.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ger0004.png"))
+			$Continue_Button.texture_hover.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ger0005.png"))
+			$Continue_Button.texture_hover.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ger0006.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_ger0007.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_ger0008.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_ger0009.png"))
+		"japanese":
+			$Text.texture = load("res://sprites/demoend/demoend_main_text_jpn.png")
+			$Continue_Button.texture_normal.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_jpn0001.png"))
+			$Continue_Button.texture_normal.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_jpn0002.png"))
+			$Continue_Button.texture_normal.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_jpn0003.png"))
+			$Continue_Button.texture_hover.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_jpn0004.png"))
+			$Continue_Button.texture_hover.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_jpn0005.png"))
+			$Continue_Button.texture_hover.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_jpn0006.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(0, load("res://sprites/demoend/demoend_continue_jpn0007.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(1, load("res://sprites/demoend/demoend_continue_jpn0008.png"))
+			$Continue_Button.texture_pressed.set_frame_texture(2, load("res://sprites/demoend/demoend_continue_jpn0009.png"))
+		_:
+			return
+			#English as usual.
+
 func _process(_delta):
 	if continue_button.is_hovered() && !haschoosed:
 		if !has_hoverplayed:
@@ -24,6 +84,7 @@ func _process(_delta):
 func _on_continue_button_pressed() -> void:
 	if ModeManager.is_story:
 		if ModeManager.is_savefile1:
+			SaveFileManager.currentworld = LevelsManager.worldname
 			SaveFileManager.currentplayerlives = SaveFileManager.data_dic["currentlives"]
 			SaveFileManager.currentplayerlivest = SaveFileManager.data_dic["currentlivest"]
 			SaveFileManager.maxcurrentlives = SaveFileManager.data_dic["maxlives"]
@@ -67,100 +128,8 @@ func _on_continue_button_pressed() -> void:
 		SaveFileManager.update_w1_boss(
 			SaveFileManager.world1_boss_dic["unlocked"],
 			SaveFileManager.world1_boss_dic["hasbeencompleted"])
-		
-		if ModeManager.is_savefile2:
-			SaveFileManager2.currentplayerlives = SaveFileManager2.data_dic["currentlives"]
-			SaveFileManager2.currentplayerlivest = SaveFileManager2.data_dic["currentlivest"]
-			SaveFileManager2.maxcurrentlives = SaveFileManager2.data_dic["maxlives"]
-			SaveFileManager2.trianglestotal = SaveFileManager2.data_dic["trianglestotal"]
-			SaveFileManager2.trianglestotalt = SaveFileManager2.data_dic["trianglestotalt"]
-			SaveFileManager2.trianglestotalh = SaveFileManager2.data_dic["trianglestotalh"]
-			SaveFileManager2.maxtrianglestotal = SaveFileManager2.data_dic["maxtriangles"]
-			SaveFileManager2.update_data(
-			LevelsManager.worldname, 
-			SaveFileManager2.currentplayerlives,
-			SaveFileManager2.currentplayerlivest,
-			SaveFileManager2.maxcurrentlives,
-			SaveFileManager2.trianglestotal,
-			SaveFileManager2.trianglestotalt,
-			SaveFileManager2.trianglestotalh,
-			SaveFileManager2.maxtrianglestotal)
-		
-		SaveFileManager2.update_w1_tut(
-			SaveFileManager2.world1_tutorial_dic["trianglecollected1"], 
-			SaveFileManager2.world1_tutorial_dic["trianglecollected2"], 
-			SaveFileManager2.world1_tutorial_dic["trianglecollected3"],
-			SaveFileManager2.world1_tutorial_dic["trianglecollected4"],
-			SaveFileManager2.world1_tutorial_dic["hasbeencompleted"])
-
-		SaveFileManager2.update_w1_lv1(
-			SaveFileManager2.world1_level1_dic["unlocked"],
-			SaveFileManager2.world1_level1_dic["trianglecollected1"], 
-			SaveFileManager2.world1_level1_dic["trianglecollected2"], 
-			SaveFileManager2.world1_level1_dic["trianglecollected3"],
-			SaveFileManager2.world1_level1_dic["trianglecollected4"],
-			SaveFileManager2.world1_level1_dic["hasbeencompleted"])
-
-		SaveFileManager2.update_w1_lv2(
-			SaveFileManager2.world1_level2_dic["unlocked"],
-			SaveFileManager2.world1_level2_dic["trianglecollected1"], 
-			SaveFileManager2.world1_level2_dic["trianglecollected2"], 
-			SaveFileManager2.world1_level2_dic["trianglecollected3"],
-			SaveFileManager2.world1_level2_dic["trianglecollected4"],
-			SaveFileManager2.world1_level2_dic["hasbeencompleted"])
-
-		SaveFileManager2.update_w1_boss(
-			SaveFileManager2.world1_boss_dic["unlocked"],
-			SaveFileManager2.world1_boss_dic["hasbeencompleted"])
-		
-		if ModeManager.is_savefile3:
-			SaveFileManager3.currentplayerlives = SaveFileManager3.data_dic["currentlives"]
-			SaveFileManager3.currentplayerlivest = SaveFileManager3.data_dic["currentlivest"]
-			SaveFileManager3.maxcurrentlives = SaveFileManager3.data_dic["maxlives"]
-			SaveFileManager3.trianglestotal = SaveFileManager3.data_dic["trianglestotal"]
-			SaveFileManager3.trianglestotalt = SaveFileManager3.data_dic["trianglestotalt"]
-			SaveFileManager3.trianglestotalh = SaveFileManager3.data_dic["trianglestotalh"]
-			SaveFileManager3.maxtrianglestotal = SaveFileManager3.data_dic["maxtriangles"]
-			SaveFileManager3.update_data(
-			LevelsManager.worldname, 
-			SaveFileManager3.currentplayerlives,
-			SaveFileManager3.currentplayerlivest,
-			SaveFileManager3.maxcurrentlives,
-			SaveFileManager3.trianglestotal,
-			SaveFileManager3.trianglestotalt,
-			SaveFileManager3.trianglestotalh,
-			SaveFileManager3.maxtrianglestotal)
-		
-		SaveFileManager3.update_w1_tut(
-			SaveFileManager3.world1_tutorial_dic["trianglecollected1"], 
-			SaveFileManager3.world1_tutorial_dic["trianglecollected2"], 
-			SaveFileManager3.world1_tutorial_dic["trianglecollected3"],
-			SaveFileManager3.world1_tutorial_dic["trianglecollected4"],
-			SaveFileManager3.world1_tutorial_dic["hasbeencompleted"])
-
-		SaveFileManager3.update_w1_lv1(
-			SaveFileManager3.world1_level1_dic["unlocked"],
-			SaveFileManager3.world1_level1_dic["trianglecollected1"], 
-			SaveFileManager3.world1_level1_dic["trianglecollected2"], 
-			SaveFileManager3.world1_level1_dic["trianglecollected3"],
-			SaveFileManager3.world1_level1_dic["trianglecollected4"],
-			SaveFileManager3.world1_level1_dic["hasbeencompleted"])
-
-		SaveFileManager3.update_w1_lv2(
-			SaveFileManager3.world1_level2_dic["unlocked"],
-			SaveFileManager3.world1_level2_dic["trianglecollected1"], 
-			SaveFileManager3.world1_level2_dic["trianglecollected2"], 
-			SaveFileManager3.world1_level2_dic["trianglecollected3"],
-			SaveFileManager3.world1_level2_dic["trianglecollected4"],
-			SaveFileManager3.world1_level2_dic["hasbeencompleted"])
-
-		SaveFileManager3.update_w1_boss(
-			SaveFileManager3.world1_boss_dic["unlocked"],
-			SaveFileManager3.world1_boss_dic["hasbeencompleted"])
 		SaveGame.save_game()
 		ModeManager.is_savefile1 = false
-		ModeManager.is_savefile2 = false
-		ModeManager.is_savefile3 = false
 	select.play()
 	ModeManager.in_gameplay = false
 	LoadManager.load_scene("res://scenes/menu/title_screen.tscn")

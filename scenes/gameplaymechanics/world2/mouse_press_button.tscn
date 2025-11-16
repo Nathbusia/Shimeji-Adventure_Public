@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://weg1gm1etuhn"]
+
+[ext_resource type="Texture2D" uid="uid://bbadqex8qv3tf" path="res://sprites/levels/world2/MouseButton/world2_mousebutton0001.png" id="1_6bvda"]
+[ext_resource type="Texture2D" uid="uid://brd0ogrv83mej" path="res://sprites/levels/world2/MouseButton/world2_mousebutton0003.png" id="2_qkr5d"]
+[ext_resource type="Texture2D" uid="uid://dm51f3ys0lg5i" path="res://sprites/levels/world2/MouseButton/world2_mousebutton0002.png" id="3_7kwtv"]
+[ext_resource type="Texture2D" uid="uid://cfdd2ou226c6r" path="res://sprites/levels/world2/MouseButton/world2_mousebutton0004.png" id="4_7kwtv"]
+[ext_resource type="Script" uid="uid://c7voj5lfux6sc" path="res://scenes/gameplaymechanics/world2/mouse_press_button.gd" id="4_qkr5d"]
+[ext_resource type="AudioStream" uid="uid://bkhnmrwx78usd" path="res://sfx/gameplay/button/sfx_mousebutton_click.ogg" id="6_veqtq"]
+
+[node name="MousePressButton" type="TextureButton"]
+offset_right = 1344.0
+offset_bottom = 1344.0
+texture_normal = ExtResource("1_6bvda")
+texture_pressed = ExtResource("2_qkr5d")
+texture_hover = ExtResource("3_7kwtv")
+texture_disabled = ExtResource("4_7kwtv")
+script = ExtResource("4_qkr5d")
+
+[node name="ButtonClick" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_veqtq")
+volume_db = 8.0
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: すごい！君って本当に優秀なトレジャーハンターなんだね？
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: あと一つだけだ。さあ、最後のオーブボールをゲットしよう！
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara_jpn: 改めて、どうもありがとうございました！
+[signal arg="normal"]
+[signal arg="end_cutscene"]

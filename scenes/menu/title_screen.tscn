@@ -4,8 +4,8 @@
 [ext_resource type="Script" uid="uid://cwyqkv6o1f5au" path="res://scenes/menu/title_screen.gd" id="1_mq2rk"]
 [ext_resource type="Texture2D" uid="uid://dn25wdlibklbn" path="res://sprites/menu/title/Logo_New_Final3.png" id="3_ffid2"]
 [ext_resource type="Texture2D" uid="uid://cq6cvnpds2eaf" path="res://sprites/menu/title/Title_MouseCursor.png" id="3_rp40j"]
+[ext_resource type="FontFile" uid="uid://csvraqt5qhr8u" path="res://fonts/MochiyPopOne-Regular.ttf" id="4_0daku"]
 [ext_resource type="AudioStream" uid="uid://dkjpbnvdo1fer" path="res://sfx/menu/title/sfx_title_mouseclick.ogg" id="4_atgxa"]
-[ext_resource type="FontFile" uid="uid://du43hv6y8bbqs" path="res://fonts/DK Garden Gnome.otf" id="4_w4m54"]
 [ext_resource type="AudioStream" uid="uid://bm1astdj3r4f2" path="res://bgm/menu/bgm_titlescreen.ogg" id="5_btwcm"]
 [ext_resource type="FontFile" uid="uid://chmsxxhquc4fw" path="res://fonts/DkCoolCrayon-xJyV.ttf" id="5_jg8bg"]
 [ext_resource type="AudioStream" uid="uid://dco0v5w1c5cg0" path="res://bgm/menu/bgm_titlescreen_confirmed.ogg" id="6_a1c2y"]
@@ -134,7 +134,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 6.76667, 8),
 "transitions": PackedFloat32Array(1, 0.25, 7.21),
 "update": 0,
-"values": [Vector2(368, 960), Vector2(368, 960), Vector2(352, 496)]
+"values": [Vector2(368, 960), Vector2(292, 960), Vector2(292, 484)]
 }
 tracks/5/type = "audio"
 tracks/5/imported = false
@@ -214,7 +214,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1.2, 2.2),
 "transitions": PackedFloat32Array(1, 5.85634, 0.170755),
 "update": 0,
-"values": [Vector2(352, 496), Vector2(352, 496), Vector2(352, 1200)]
+"values": [Vector2(292, 496), Vector2(292, 496), Vector2(292, 1200)]
 }
 tracks/3/type = "method"
 tracks/3/imported = false
@@ -402,12 +402,13 @@ texture = ExtResource("3_ffid2")
 [node name="Start" type="Label" parent="."]
 offset_left = 352.0
 offset_top = 448.0
-offset_right = 794.0
-offset_bottom = 498.0
+offset_right = 921.0
+offset_bottom = 501.00012
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_w4m54")
+theme_override_fonts/font = ExtResource("4_0daku")
 theme_override_font_sizes/font_size = 36
 text = "Press ENTER/Start Button"
+horizontal_alignment = 1
 
 [node name="DemoVersion" type="Label" parent="."]
 offset_left = 1008.0
@@ -417,7 +418,7 @@ offset_bottom = 634.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_jg8bg")
 theme_override_font_sizes/font_size = 18
-text = "Demo v1.0.1"
+text = "Demo v1.1"
 
 [node name="MouseCursor" type="Sprite2D" parent="."]
 position = Vector2(560, 368)

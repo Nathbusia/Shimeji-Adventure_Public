@@ -24,3 +24,66 @@ func _on_spike_trigger_body_entered(body: Node2D) -> void:
 					body.play_damaged_effect("blink")
 		else:
 			return
+	if (body.name == "ShimejiCharacter_Playable_Player2"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 30):
+			if game_manager.health_p2 == 1:
+				game_manager.lose_health_player2()
+				game_manager.lives_p2 -= 1
+				body.death()
+				spike_sound.play()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player2()
+					body.get_hurt()
+					body.hurt_invincible()
+					spike_sound.play()
+					body.play_damaged_effect("blink")
+		else:
+			return
+	if (body.name == "ShimejiCharacter_Playable_Player3"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 30):
+			if game_manager.health_p3 == 1:
+				game_manager.lose_health_player3()
+				game_manager.lives_p3 -= 1
+				body.death()
+				spike_sound.play()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player3()
+					body.get_hurt()
+					body.hurt_invincible()
+					spike_sound.play()
+					body.play_damaged_effect("blink")
+		else:
+			return
+	if (body.name == "ShimejiCharacter_Playable_Player4"):
+		var y_delta = position.y - body.position.y
+		print(y_delta)
+		if (y_delta > 30):
+			if game_manager.health_p4 == 1:
+				game_manager.lose_health_player4()
+				game_manager.lives_p4 -= 1
+				body.death()
+				spike_sound.play()
+				body.play_death_effect("death")
+			else:
+				if body.is_invincible == true:
+					return
+				else:
+					game_manager.lose_health_player4()
+					body.get_hurt()
+					body.hurt_invincible()
+					spike_sound.play()
+					body.play_damaged_effect("blink")
+		else:
+			return

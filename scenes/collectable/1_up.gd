@@ -15,6 +15,30 @@ func _on_body_entered(body: Node2D) -> void:
 		is_collected = true
 		game_manager.add_lives()
 		self.modulate = Color(body.charcolour)
+
+	if (body.name == "ShimejiCharacter_Playable_Player2") && not is_collected:
+		_1_up_sprite.animation = "collecttext"
+		animation_player.play("1uptext")
+		_1_up_sfx.play()
+		is_collected = true
+		game_manager.add_lives_player2()
+		self.modulate = Color(body.charcolour)
+
+	if (body.name == "ShimejiCharacter_Playable_Player3") && not is_collected:
+		_1_up_sprite.animation = "collecttext"
+		animation_player.play("1uptext")
+		_1_up_sfx.play()
+		is_collected = true
+		game_manager.add_lives_player3()
+		self.modulate = Color(body.charcolour)
+
+	if (body.name == "ShimejiCharacter_Playable_Player4") && not is_collected:
+		_1_up_sprite.animation = "collecttext"
+		animation_player.play("1uptext")
+		_1_up_sfx.play()
+		is_collected = true
+		game_manager.add_lives_player4()
+		self.modulate = Color(body.charcolour)
 	
 func anim_end():
 	is_collected = false

@@ -1,0 +1,25 @@
+friend: Okay. Also, wir haben das hier.
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Jetzt kann ich für mich leicht ohne jede Anstrengung hineingehen.
+[signal arg="pointing"]
+friend: Aber für jemanden mit Ihrer Körpergröße ist ein gewisser Aufwand erforderlich.
+[signal arg="welcome"]
+friend: Bei Lücken wie diesen ist dies der Bereich, in dem Sie Ihre Krabbelbewegung verwenden.
+[signal arg="talking"]
+friend: Ebenso verhält es sich mit der Bewegung mithilfe der linken und rechten Pfeiltasten\: Halten Sie die Abwärtspfeiltaste gedrückt, um sich hinzusetzen.
+[signal arg="normaltalk"]
+friend: Sie können dies auch mit einem Controller tun, indem Sie Ihren Joystick nach unten bewegen (sofern Sie dies auf der Tastenbelegung eingerichtet haben).
+[signal arg="talking"]
+friend: Während Sie sitzen, benutzen Sie dann wieder die linke und rechte Taste, um zu kriechen. Das ist nützlich, um in enge Stellen wie diese zu gelangen.
+[signal arg="talking"]
+friend: Sie können jederzeit die Abwärtspfeiltaste loslassen, um das Kriechen zu beenden. (Das ist jedoch nicht möglich, solange Sie sich unter einem engen Bereich befinden. Sie müssen warten, bis genügend Platz zum Aufstehen vorhanden ist.)
+[signal arg="pointing"]
+friend: Ach ja, eine Sache habe ich noch vergessen, die ich euch am Anfang hätte erzählen sollen.
+[signal arg="welcome"]
+friend: Beim Bewegen der Figur kann man auch die Umschalttaste gedrückt halten, um sich schneller zu bewegen/kriechen. Das ist praktisch für alle, die wenig Zeit haben und schneller vorankommen möchten.
+[signal arg="talking"]
+friend: Seien Sie aber nicht zu übereifrig. Verwenden Sie es nur, wenn es unbedingt notwendig ist.
+[signal arg="greatest"]
+friend: Richtig. Also, mach weiter und krieche durch diese Lücke.
+[signal arg="end_cutscene"]

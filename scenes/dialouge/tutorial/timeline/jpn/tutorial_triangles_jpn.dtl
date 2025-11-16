@@ -1,0 +1,14 @@
+friend_jpn: おいおい！君が最近手に入れたあの三角形、見たかい？
+[signal arg="talking"]
+friend_jpn: あなたが今手に取ったそれらの三角形は、「秘密の三角形」として知られています。
+[signal arg="talking"]
+friend_jpn: たいてい見つけるのが難しいので、それらについてはあまり知りません...
+[signal arg="greatest"]
+friend_jpn: しかし、私が知っていることの1つは、彼らがあなたの冒険を通して非常に重要な役割を果たしたということです。
+[signal arg="talking"]
+friend_jpn: 各レベルには 4 つの秘密の三角形があります。（もちろん、ボス戦は例外ですが…）
+[signal arg="pointing"]
+friend_jpn: ですから、見つけたら必ず全部手に入れましょう。それらを見つけると、どんなグッズや特別な報酬がもらえるかは誰にもわかりません。
+[signal arg="greatest"]
+friend_jpn: よし、おしゃべりはこれくらいにして、先に進みましょう！
+[signal arg="end_cutscene"]

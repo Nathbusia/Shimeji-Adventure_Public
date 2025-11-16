@@ -1,25 +1,25 @@
 friend: Okay. So we got this here.
 [signal arg="talking"]
 [signal arg="flippedoff"]
-friend: Now for me, I can easily go in without any effort.
+friend: Now, for me, I can easily go in without any effort.
 [signal arg="pointing"]
 friend: But for a size like yourself however, there are some effort to put in.
 [signal arg="welcome"]
-friend: For gaps like these, this is the part where you use your crouching move.
+friend: For gaps like these, this is the part where you use your crawling move.
 [signal arg="talking"]
-friend: Likewise with moving around with the Left and Right arrow keys, hold down the Down arrow key to well... sit down.
+friend: Likewise, with moving around with the Left and Right arrow keys, hold down the Down arrow key to well... sit down.
 [signal arg="normaltalk"]
 friend: You can also perform this with a controller by moving your joystick down (if you have set it up on the keybinding).
 [signal arg="talking"]
-friend: While you're sitting, then use the left and right again to crouch. It's useful to fit in small places like this one here.
+friend: While you're sitting, then use the left and right again to crawl. It's useful to fit in small places like this one here.
 [signal arg="talking"]
-friend: You can always let go of the down arrow key to stop crouching. (Though you can't do that while you're underneath a tight area. You have to wait until there's room for you to stand.)
+friend: You can always let go of the down arrow key to stop crawling. (Though you can't do that while you're underneath a tight area. You have to wait until there's room for you to stand.)
 [signal arg="pointing"]
 friend: Oh yeah, One more thing that I forgot to tell you at the beginning.
 [signal arg="welcome"]
-friend: With the whole moving thing, you can also hold down the Shift key to move/crouch faster. It's just for those who doesn't have time, and want to get head on.
+friend: With the whole moving thing, you can also hold down the Shift key to move/crawl faster. It's just for those who doesn't have time, and want to get head on.
 [signal arg="talking"]
 friend: Though, don't be too much of a rushy pickle. Only use it when it's necessary.
 [signal arg="greatest"]
-friend: Right. So, go ahead and crouch through this gap.
+friend: Right. So, go ahead and crawl through this gap.
 [signal arg="end_cutscene"]

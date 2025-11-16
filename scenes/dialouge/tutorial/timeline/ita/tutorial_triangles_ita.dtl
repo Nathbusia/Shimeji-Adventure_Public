@@ -1,0 +1,14 @@
+friend: Ehi, adesso! Hai visto quel triangolo che hai preso di recente?
+[signal arg="talking"]
+friend: Quei triangoli che hai appena raccolto sono conosciuti come i "Triangoli Segreti".
+[signal arg="talking"]
+friend: Non ne so molto perché di solito facevo fatica a trovarli...
+[signal arg="greatest"]
+friend: Ma quello che so per certo è che hanno svolto un ruolo molto importante durante tutta la tua avventura.
+[signal arg="talking"]
+friend: Ci sono quattro Triangoli Segreti in ogni livello. (beh, ovviamente tranne i capi...)
+[signal arg="pointing"]
+friend: Quindi, assicuratevi di trovarli tutti quando li avrete sotto gli occhi. Chissà quali sorprese o ricompense speciali riceverete per averli trovati.
+[signal arg="greatest"]
+friend: Bene, basta chiacchiere. Andiamo avanti!
+[signal arg="end_cutscene"]

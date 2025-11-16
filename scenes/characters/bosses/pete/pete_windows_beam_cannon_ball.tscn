@@ -1,0 +1,127 @@
+[gd_scene load_steps=22 format=3 uid="uid://dajbjcyf31rww"]
+
+[ext_resource type="Texture2D" uid="uid://cw08hc6prno6" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beatburst0001.png" id="1_h14x6"]
+[ext_resource type="Script" uid="uid://g11f1v7buuwi" path="res://scenes/characters/bosses/pete/pete_windows_beam_cannon_ball.gd" id="1_twd3c"]
+[ext_resource type="Texture2D" uid="uid://cn3hnuxs2bq10" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beatburst0002.png" id="2_wjewd"]
+[ext_resource type="Texture2D" uid="uid://c0yrwsugi42ye" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beatburst0003.png" id="3_n8are"]
+[ext_resource type="Texture2D" uid="uid://bc765tqq56jsi" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beamball0001.png" id="4_7l50u"]
+[ext_resource type="Texture2D" uid="uid://bl8n234pehgka" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beamball0002.png" id="5_ffs8c"]
+[ext_resource type="Texture2D" uid="uid://dyuxc3uhasryw" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beamball0003.png" id="6_66qr4"]
+[ext_resource type="Texture2D" uid="uid://by5lnvtauasxo" path="res://sprites/characters/bosses/pete/windowsattack/pete_beamcannon_beamball0004.png" id="7_hp8rr"]
+[ext_resource type="AudioStream" uid="uid://b04mdxg24yeyf" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_loop.ogg" id="8_hp8rr"]
+[ext_resource type="AudioStream" uid="uid://ditkxc04eiwak" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_hit01.ogg" id="9_twd3c"]
+[ext_resource type="AudioStream" uid="uid://d0l064xcr7hwd" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_hit02.ogg" id="10_vey36"]
+[ext_resource type="AudioStream" uid="uid://doxsnwu6kjlfq" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_hit03.ogg" id="11_5mq26"]
+[ext_resource type="AudioStream" uid="uid://c47hlbhtrgf34" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_damage01.ogg" id="12_d7dv3"]
+[ext_resource type="AudioStream" uid="uid://bto1lyy5qrgmc" path="res://sfx/characters/bosses/pete/sfx_pete_beamcannon_ball_damage02.ogg" id="13_fnv8y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twd3c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h14x6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wjewd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n8are")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n8are")
+}],
+"loop": false,
+"name": &"burst",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7l50u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ffs8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_66qr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hp8rr")
+}],
+"loop": true,
+"name": &"static",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfoxc"]
+size = Vector2(99, 99)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_t0ni3"]
+streams_count = 3
+stream_0/stream = ExtResource("9_twd3c")
+stream_1/stream = ExtResource("10_vey36")
+stream_2/stream = ExtResource("11_5mq26")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_0aa2e"]
+streams_count = 2
+stream_0/stream = ExtResource("12_d7dv3")
+stream_1/stream = ExtResource("13_fnv8y")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xftck"]
+size = Vector2(100, 99)
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_vey36"]
+length = 56.0
+
+[sub_resource type="SeparationRayShape2D" id="SeparationRayShape2D_5mq26"]
+length = 60.0
+
+[node name="Beamcannon_Ball" type="CharacterBody2D" groups=["attackhitbox"]]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource("1_twd3c")
+
+[node name="BallAnim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_twd3c")
+animation = &"static"
+autoplay = "static"
+
+[node name="MainCollision" type="CollisionShape2D" parent="."]
+position = Vector2(-3.5, -4.5)
+shape = SubResource("RectangleShape2D_xfoxc")
+
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Active" type="AudioStreamPlayer2D" parent="SFX"]
+stream = ExtResource("8_hp8rr")
+autoplay = true
+bus = &"sfx"
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_t0ni3")
+bus = &"sfx"
+
+[node name="Damage" type="AudioStreamPlayer2D" parent="SFX"]
+stream = SubResource("AudioStreamRandomizer_0aa2e")
+bus = &"sfx"
+
+[node name="TriggerHitbox" type="Area2D" parent="."]
+
+[node name="TriggerCollision" type="CollisionShape2D" parent="TriggerHitbox"]
+position = Vector2(-3, -3.5)
+shape = SubResource("RectangleShape2D_xftck")
+
+[node name="WallTrigger" type="Area2D" parent="."]
+
+[node name="WallDestory" type="CollisionShape2D" parent="WallTrigger"]
+rotation = -1.5708
+shape = SubResource("SeparationRayShape2D_vey36")
+
+[node name="WallDestoryL" type="CollisionShape2D" parent="WallTrigger"]
+rotation = 1.5708
+shape = SubResource("SeparationRayShape2D_5mq26")
+
+[node name="HitTimer" type="Timer" parent="."]
+
+[connection signal="frame_changed" from="BallAnim" to="." method="_on_ball_anim_frame_changed"]
+[connection signal="body_entered" from="TriggerHitbox" to="." method="_on_trigger_hitbox_body_entered"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_hit_timer_timeout"]

@@ -1,0 +1,17 @@
+friend: HEILIGE BUTTERBLUME BLAU!! ES SIND DIE BÖSEN BALLS!!
+[signal arg="talking"]
+[signal arg="flippedoff"]
+friend: Alles klar. Keine Panik. Hier kommt dein Kampf zum Tragen.
+[signal arg="greatest"]
+friend: Solche Gegner sind ganz einfach auszuschalten. Du musst ihnen nur auf den Kopf springen, und schon sind sie weg!
+[signal arg="talking"]
+friend: Allerdings verfügen andere Gegner über unterschiedliche Fähigkeiten und greifen dich auf andere Weise an. Sei also vorsichtig.
+[signal arg="welcome"]
+friend: Übrigens könnt ihr an ihnen auch den Slam Dash ausführen. Dieser wird ausgeführt, indem man in der Luft die Abwärtstaste drückt.
+[signal arg="greatest"]
+friend: So, jetzt, wo du es kapiert hast...
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: NIEDER MIT DENEN!!
+[signal arg="end_cutscene"]
+[signal arg="flippedoff"]

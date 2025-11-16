@@ -1,0 +1,14 @@
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Great! You seem to find one. I'm so happy for your help.
+[signal arg="normal"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Now there are just two more to go.
+[signal arg="happy"]
+[signal arg="talk"]
+[signal arg="talksound"]
+clara: Keep at it small fella!
+[signal arg="normal"]
+[signal arg="end_cutscene"]

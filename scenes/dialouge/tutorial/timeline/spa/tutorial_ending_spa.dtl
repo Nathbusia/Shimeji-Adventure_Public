@@ -1,0 +1,27 @@
+friend: ¡Bien hecho! ¡Completaste el último curso!
+[signal arg="normaltalk"]
+friend: Bueno, supongo que eso es todo.
+[signal arg="greatest"]
+friend: Has completado el tutorial con éxito. Ahora estás listo para explorar más a fondo el Escritorio y comenzar tu aventura.
+[signal arg="talking"]
+friend: Espero que todo lo que aprendas aquí te sea realmente útil y te haga lo suficientemente fuerte para jugar a Shimeji Adventure.
+[signal arg="greatest"]
+friend: Has sido un buen estudiante, amigo. ¡Y yo he sido un buen profesor! ¿No es así?
+[signal arg="normaltalk"]
+friend: Pero de todos modos, última cosa.
+[signal arg="pointing"]
+[signal arg="flippedon"]
+friend: Para terminar el nivel, solo toca esa Estrella. Esa es una estrella de finalización.
+[signal arg="talking"]
+friend: Una vez tocado, el nivel está terminado, y pasas al siguiente nivel, o eliges cualquier otro nivel.
+[signal arg="greatest"]
+[signal arg="flippedoff"]
+friend: Bueno, supongo que eso es todo.
+[signal arg="talking"]
+friend: Ha sido un placer trabajar contigo, y espero verte de nuevo.
+[signal arg="talking"]
+friend: Además, si alguna vez quieres volver a repasar la lección, ya sabes dónde venir a visitarnos. ¿Derecho? Es la que dice "Tutorial\: Aprendiendo lo básico".
+[signal arg="greatest"]
+friend: Bueno, eso es todo por mi parte. ¡Toca esa estrella y comienza tu aventura desde ahí!
+[signal arg="waving"]
+friend: ¡¡BUENA SUERTE, AMIGO!!

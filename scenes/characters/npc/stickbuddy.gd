@@ -66,7 +66,19 @@ func time_to_go():
 
 func start_intro_dialogue():
 	intro_played  = false
-	run_dialogue("tutorial_intro")
+	match LanguageManager.language:
+		"spanish":
+			run_dialogue("tutorial_intro_" + LanguageManager.shortlang)
+		"french":
+			run_dialogue("tutorial_intro_" + LanguageManager.shortlang)
+		"italian":
+			run_dialogue("tutorial_intro_" + LanguageManager.shortlang)
+		"german":
+			run_dialogue("tutorial_intro_" + LanguageManager.shortlang)
+		"japanese":
+			run_dialogue("tutorial_intro_" + LanguageManager.shortlang)
+		_:
+			run_dialogue("tutorial_intro")
 	friend.animation = "wave"
 	friend_vox.play()
 	game_manager.cutscenemode_on()

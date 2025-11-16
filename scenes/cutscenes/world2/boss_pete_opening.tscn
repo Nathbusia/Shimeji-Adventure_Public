@@ -1,0 +1,305 @@
+[gd_scene load_steps=28 format=3 uid="uid://c6xjyl1l2gux"]
+
+[ext_resource type="Texture2D" uid="uid://dpnut3s1xnd5o" path="res://sprites/levels/world2/world2_background.png" id="1_m5jit"]
+[ext_resource type="Script" uid="uid://b85bl7su87mbu" path="res://scenes/cutscenes/world2/boss_pete_opening.gd" id="1_pc851"]
+[ext_resource type="Shader" uid="uid://dlp2a0e1tuhti" path="res://scenes/levels/world2/world2_patternmove2.gdshader" id="2_ll06e"]
+[ext_resource type="Texture2D" uid="uid://48lf62bcbm66" path="res://sprites/levels/world2/world2_background_hexpattern_white.png" id="3_g8uqt"]
+[ext_resource type="Shader" uid="uid://bxwf84yaqeo47" path="res://scenes/levels/world2/world2_patternmove.gdshader" id="4_jvulc"]
+[ext_resource type="Texture2D" uid="uid://hm8gavqlv2o4" path="res://sprites/levels/world2/world2_background_tech.png" id="5_pc851"]
+[ext_resource type="Texture2D" uid="uid://cm1ydaervuomq" path="res://sprites/levels/world2/world2_floatingwindows_PackA.png" id="6_060hf"]
+[ext_resource type="Shader" uid="uid://c0b3syfifbvpb" path="res://scenes/levels/world2/world2_patternmove_left.gdshader" id="7_d3hvg"]
+[ext_resource type="Texture2D" uid="uid://cservyuqkdtds" path="res://sprites/levels/world2/world2_floatingwindows_PackB.png" id="8_53aag"]
+[ext_resource type="AudioStream" uid="uid://b1dls2fj07ng5" path="res://bgm/levels/world2/bgm_world2_boss_cutscene.ogg" id="9_egf8u"]
+[ext_resource type="PackedScene" uid="uid://cdw1qg5dm5rmo" path="res://scenes/gameplaymechanics/world2/world_2_ground.tscn" id="10_nnehi"]
+[ext_resource type="PackedScene" uid="uid://dck4cyrgx0yti" path="res://scenes/characters/bosses/pete/pop_out_pete_cutscene.tscn" id="11_jvulc"]
+[ext_resource type="PackedScene" uid="uid://emhk2y1ibox7" path="res://scenes/characters/npc/interfly_cutscene.tscn" id="14_060hf"]
+[ext_resource type="PackedScene" uid="uid://06y64v51e68l" path="res://scenes/characters/playable/shimeji_ignore/shimeji_character_cutscene.tscn" id="15_egd64"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6q33a"]
+shader = ExtResource("2_ll06e")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2cfwo"]
+shader = ExtResource("4_jvulc")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f8pua"]
+shader = ExtResource("7_d3hvg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q41ao"]
+size = Vector2(132.5, 636)
+
+[sub_resource type="Animation" id="Animation_d3hvg"]
+resource_name = "cam_default"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.81, 0.81)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(628, 158)]
+}
+
+[sub_resource type="Animation" id="Animation_53aag"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.81, 0.81)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(628, 158)]
+}
+
+[sub_resource type="Animation" id="Animation_egf8u"]
+resource_name = "cam_players"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(172, 409)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2.225, 2.225)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nnehi"]
+_data = {
+&"RESET": SubResource("Animation_53aag"),
+&"cam_default": SubResource("Animation_d3hvg"),
+&"cam_players": SubResource("Animation_egf8u")
+}
+
+[sub_resource type="Animation" id="Animation_jvulc"]
+resource_name = "moveclose"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Interfly_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.27739242, 2.73208),
+"update": 0,
+"values": [Vector2(286, 299), Vector2(306, 204)]
+}
+
+[sub_resource type="Animation" id="Animation_pc851"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Interfly_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(286, 299)]
+}
+
+[sub_resource type="Animation" id="Animation_060hf"]
+resource_name = "moveback"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Interfly_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.2588163, 3.2490098),
+"update": 0,
+"values": [Vector2(306, 204), Vector2(286, 299)]
+}
+
+[sub_resource type="Animation" id="Animation_nnehi"]
+resource_name = "interleave"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Interfly_Cutscene:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(286, 299), Vector2(-837, 299)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6q33a"]
+_data = {
+&"RESET": SubResource("Animation_pc851"),
+&"interleave": SubResource("Animation_nnehi"),
+&"moveback": SubResource("Animation_060hf"),
+&"moveclose": SubResource("Animation_jvulc")
+}
+
+[node name="PeteIntroCutscene" type="Node2D"]
+script = ExtResource("1_pc851")
+
+[node name="BackgroundBegin" type="TextureRect" parent="."]
+offset_left = -1434.0
+offset_top = -1029.0
+offset_right = 2706.0
+offset_bottom = 1371.0
+texture = ExtResource("1_m5jit")
+
+[node name="PatternB" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(0.289063, 0.883362, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_6q33a")
+layout_mode = 0
+offset_left = -3532.0
+offset_top = -2045.0
+offset_right = 15407.0
+offset_bottom = 3906.0
+texture = ExtResource("3_g8uqt")
+stretch_mode = 1
+
+[node name="PatternTech" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(0.316406, 0.839783, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_2cfwo")
+layout_mode = 0
+offset_left = -3532.0
+offset_top = -2045.0
+offset_right = 15393.0
+offset_bottom = 3906.0
+texture = ExtResource("5_pc851")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsA" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.403922)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_2cfwo")
+layout_mode = 0
+offset_left = -3532.0
+offset_top = -2045.0
+offset_right = 15393.0
+offset_bottom = 3906.0
+texture = ExtResource("6_060hf")
+stretch_mode = 1
+
+[node name="PatternFloatingWindowsB" type="TextureRect" parent="BackgroundBegin"]
+modulate = Color(1, 1, 1, 0.270588)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_f8pua")
+layout_mode = 0
+offset_left = -3532.0
+offset_top = -2045.0
+offset_right = 15393.0
+offset_bottom = 3906.0
+texture = ExtResource("8_53aag")
+stretch_mode = 1
+
+[node name="Level_BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_egf8u")
+volume_db = -2.0
+autoplay = true
+bus = &"bgm"
+
+[node name="World2_Ground" parent="." instance=ExtResource("10_nnehi")]
+position = Vector2(-1241, 520)
+collision_layer = 1
+collision_mask = 5
+
+[node name="InvisibleWall" type="CollisionShape2D" parent="World2_Ground"]
+position = Vector2(713, -266)
+shape = SubResource("RectangleShape2D_q41ao")
+
+[node name="InvisibleWall2" type="CollisionShape2D" parent="World2_Ground"]
+position = Vector2(2873, -196)
+shape = SubResource("RectangleShape2D_q41ao")
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="PopOutPete_Cutscene" parent="Characters" instance=ExtResource("11_jvulc")]
+position = Vector2(271, -221)
+
+[node name="ShimejiCharacter_Cutscene" parent="Characters" instance=ExtResource("15_egd64")]
+position = Vector2(216, 457)
+
+[node name="ShimejiCharacter_Cutscene_Playable2" parent="Characters" instance=ExtResource("15_egd64")]
+position = Vector2(130, 457)
+
+[node name="ShimejiCharacter_Cutscene_Playable3" parent="Characters" instance=ExtResource("15_egd64")]
+position = Vector2(48, 457)
+
+[node name="ShimejiCharacter_Cutscene_Playable4" parent="Characters" instance=ExtResource("15_egd64")]
+position = Vector2(-39, 457)
+
+[node name="Interfly_Cutscene" parent="Characters" instance=ExtResource("14_060hf")]
+position = Vector2(286, 299)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(628, 158)
+zoom = Vector2(0.81, 0.81)
+
+[node name="CameraAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_nnehi")
+}
+
+[node name="InterflyAnim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6q33a")
+}
+
+[node name="BeginTalkTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="BeginTalkTimer" to="." method="_on_begin_talk_timer_timeout"]
