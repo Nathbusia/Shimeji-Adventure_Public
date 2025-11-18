@@ -55,6 +55,13 @@ func _ready():
 	DiscordRPC.state = "In a Cutscene"
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
+	
+	if AltBgmManager.enabled:
+		$BGM.stream = load("res://bgm/levels/world2/bgm_world2_outro_cutscene_ytsafe.ogg")
+		$BGM.play()
+	else:
+		pass
+	
 	if CharactersManager.is_mod:
 		ShimejiCharacter_PlayableMod = load(player_charactermod_path).instantiate()
 	else:

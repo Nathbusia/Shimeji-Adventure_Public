@@ -1070,6 +1070,7 @@ position = Vector2(11448, 268)
 stream = ExtResource("18_2imnn")
 volume_db = -5.0
 autoplay = true
+bus = &"bgm"
 
 [node name="CutsceneAnimations" type="Node2D" parent="."]
 

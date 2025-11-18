@@ -39,6 +39,12 @@ func _ready():
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 	
+	if AltBgmManager.enabled:
+		$Level_BGM.stream = load("res://bgm/levels/world2/bgm_world2_boss_cutscene_ytsafe.ogg")
+		$Level_BGM.play()
+	else:
+		pass
+	
 	if CharactersManager.is_mod:
 		ShimejiCharacter_PlayableMod = load(player_charactermod_path).instantiate()
 	else:

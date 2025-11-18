@@ -71,6 +71,13 @@ var level_path = ""
 
 func _ready() -> void:
 	print_tree_pretty()
+	
+	if AltBgmManager.enabled:
+		$SceneObjects/World_BGM.stream = load("res://bgm/worldmap/bgm_world2_worldmap_ytsafe.ogg")
+		$SceneObjects/World_BGM.play()
+	else:
+		pass
+	
 	LevelsManager.worldname = curWorld
 	ModeManager.isin_worldmap = true
 	if ModeManager.is_savefile1:

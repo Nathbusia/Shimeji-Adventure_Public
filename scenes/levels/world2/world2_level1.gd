@@ -60,6 +60,13 @@ extends Node
 
 func _ready() -> void:
 	print_tree_pretty()
+	
+	if AltBgmManager.enabled:
+		$SceneObjects/Level_BGM.stream = load("res://bgm/levels/world2/bgm_world2_level1_ytsafe.ogg")
+		$SceneObjects/Level_BGM.play()
+	else:
+		pass
+	
 	advertise_ment_fnfpnm.global_position = Vector2(3075,470)
 	ModeManager.isin_worldmap = false
 	if ModeManager.is_story:

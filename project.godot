@@ -44,6 +44,7 @@ DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
 MultiplayerManager="*res://managers/MultiplayerManager.gd"
 LanguageManager="*res://managers/LanguageManager.gd"
 StoryManager="*res://managers/StoryManager.gd"
+AltBgmManager="*res://managers/AltBGMManager.gd"
 
 [dialogic]
 
@@ -542,6 +543,10 @@ teleport_p4={
 "events": []
 }
 
+[internationalization]
+
+locale/include_text_server_data=true
+
 [layer_names]
 
 2d_physics/layer_1="Player"
@@ -555,3 +560,5 @@ teleport_p4={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_s3tc_bptc=true
+textures/vram_compression/import_etc2_astc=true

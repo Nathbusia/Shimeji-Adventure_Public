@@ -41,6 +41,12 @@ func _ready():
 		DiscordRPC.refresh()
 		ModeManager.isin_settings = true
 	
+	if AltBgmManager.enabled:
+		$MenuMusic.stream = load("res://bgm/menu/bgm_settings_ytsafe.ogg")
+		$MenuMusic.play()
+	else:
+		pass
+	
 	var video_settings = SettingsManager.load_video_settings()
 	check_button.button_pressed = video_settings.full_screen
 	vsync_button.button_pressed = video_settings.vsync
@@ -66,6 +72,7 @@ func _ready():
 			$Volume_Resolution/VolumeSetting/VoicesTestButton/Text.text = "Prueba Voces"
 			$Volume_Resolution/Resolution/ResolutionText.text = "Resolución"
 			$Volume_Resolution/Resolution/CheckButton.text = "Pantalla completa"
+			$Volume_Resolution/Resolution/YouTubeButton.text = "Modo seguro de YouTube"
 			$Controls/Control_Player1/Text.text = "Jugador 1"
 			$Controls/Control_Player2/Text.text = "Jugador 2"
 			$Controls/Control_Player3/Text.text = "Jugador 3"
@@ -88,6 +95,7 @@ func _ready():
 			$Volume_Resolution/VolumeSetting/VoicesTestButton/Text.text = "Voix de test"
 			$Volume_Resolution/Resolution/ResolutionText.text = "Résolution"
 			$Volume_Resolution/Resolution/CheckButton.text = "Plein écran"
+			$Volume_Resolution/Resolution/YouTubeButton.text = "Mode sans échec de YouTube"
 			$Controls/Control_Player1/Text.text = "Joueur 1"
 			$Controls/Control_Player2/Text.text = "Joueur 2"
 			$Controls/Control_Player3/Text.text = "Joueur 3"
@@ -110,6 +118,7 @@ func _ready():
 			$Volume_Resolution/VolumeSetting/VoicesTestButton/Text.text = "Prova Voci"
 			$Volume_Resolution/Resolution/ResolutionText.text = "Risoluzione"
 			$Volume_Resolution/Resolution/CheckButton.text = "Schermo intero"
+			$Volume_Resolution/Resolution/YouTubeButton.text = "Modalità sicura di Youtube"
 			$Controls/Control_Player1/Text.text = "Giocatore 1"
 			$Controls/Control_Player2/Text.text = "Giocatore 2"
 			$Controls/Control_Player3/Text.text = "Giocatore 3"
@@ -132,6 +141,7 @@ func _ready():
 			$Volume_Resolution/VolumeSetting/VoicesTestButton/Text.text = "Test Stimmen"
 			$Volume_Resolution/Resolution/ResolutionText.text = "Auflösung"
 			$Volume_Resolution/Resolution/CheckButton.text = "Vollbild"
+			$Volume_Resolution/Resolution/YouTubeButton.text = "YouTube-Sicherheitsmodus"
 			$Controls/Control_Player1/Text.text = "Spieler 1"
 			$Controls/Control_Player2/Text.text = "Spieler 2"
 			$Controls/Control_Player3/Text.text = "Spieler 3"
@@ -156,6 +166,7 @@ func _ready():
 			$Volume_Resolution/Resolution/ResolutionText.text = "解決"
 			$Volume_Resolution/Resolution/CheckButton.text = "全画面表示"
 			$Volume_Resolution/Resolution/VsyncButton.text = "垂直同期"
+			$Volume_Resolution/Resolution/YouTubeButton.text = "Youtubeセーフモード"
 			$Controls/Control_Player1/Text.text = "1 Player"
 			$Controls/Control_Player2/Text.text = "2 Player"
 			$Controls/Control_Player3/Text.text = "3 Player"
@@ -326,3 +337,16 @@ func _on_control_player_4_pressed() -> void:
 func _on_language_button_pressed() -> void:
 	select.play()
 	LoadManager.load_scene("res://scenes/menu/language_select.tscn")
+
+
+func _on_you_tube_button_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		toggled_on_sfx.play()
+		AltBgmManager.enabled = true
+		$MenuMusic.stream = load("res://bgm/menu/bgm_settings_ytsafe.ogg")
+		$MenuMusic.play()
+	else:
+		toggled_off_sfx.play()
+		AltBgmManager.enabled = false
+		$MenuMusic.stream = load("res://bgm/menu/bgm_settingsmenu.ogg")
+		$MenuMusic.play()

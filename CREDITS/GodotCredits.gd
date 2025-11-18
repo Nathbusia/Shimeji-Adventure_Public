@@ -45,7 +45,12 @@ var credits = [
 		"Ded Good Music",
 		"Sonoton Recorded Music Library",
 		"Juice Music",
-		
+	],[
+		"Music Credits (Youtube-Safe Mode)",
+		"Peritune",
+		"SHUNTA (Huge props for them)",
+		"Fukagawa Music",
+		"NEKOZOU",
 	],[
 		"Sound Effects Sources",
 		"Cymatics - Video Game Vol. 1",
@@ -91,6 +96,10 @@ func _ready():
 	DiscordRPC.state = "Viewing the Credits"
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
+	
+	if AltBgmManager.enabled:
+		$CreditsTheme.stream = load("res://bgm/menu/bgm_credits_settings_ytsafe.ogg")
+		$CreditsTheme.play()
 	
 	colorrect.color = bg_color
 	videoplayer.set_stream(Video)

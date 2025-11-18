@@ -82,19 +82,23 @@ func _physics_process(delta: float) -> void:
 			self.position = carry_position_left_p4.global_position + Vector2(-65,-30)
 	
 	if shimeji_character_playable.is_damaged or shimeji_character_playable.is_dead and picked == true:
+		linear_velocity =  Vector2()
 		picked = false
 		shimeji_character_playable.can_carry = true
 	if ModeManager.is_multiplayer:
 		if ModeManager.multi_2players || ModeManager.multi_3players || ModeManager.multi_4players:
 			if shimeji_character_playable_player_2.is_damaged or shimeji_character_playable_player_2.is_dead and picked_p2 == true:
+				linear_velocity =  Vector2()
 				picked_p2 = false
 				shimeji_character_playable_player_2.can_carry = true
 		if ModeManager.multi_3players || ModeManager.multi_4players:
 			if shimeji_character_playable_player_3.is_damaged or shimeji_character_playable_player_3.is_dead and picked_p3 == true:
+				linear_velocity =  Vector2()
 				picked_p3 = false
 				shimeji_character_playable_player_3.can_carry = true
 		if ModeManager.multi_4players:
 			if shimeji_character_playable_player_4.is_damaged or shimeji_character_playable_player_4.is_dead and picked_p4 == true:
+				linear_velocity =  Vector2()
 				picked_p4 = false
 				shimeji_character_playable_player_4.can_carry = true
 

@@ -232,6 +232,7 @@ func _on_english_button_pressed() -> void:
 	italian_button.disabled = false
 	german_button.disabled = false
 	japanese_button.disabled = false
+	$YouTubeButton.text = "Youtube-Safe Mode"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
 
@@ -246,6 +247,7 @@ func _on_spanish_button_pressed() -> void:
 	italian_button.disabled = false
 	german_button.disabled = false
 	japanese_button.disabled = false
+	$YouTubeButton.text = "Modo seguro de YouTube"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
 
@@ -260,6 +262,7 @@ func _on_french_button_pressed() -> void:
 	italian_button.disabled = false
 	german_button.disabled = false
 	japanese_button.disabled = false
+	$YouTubeButton.text = "Mode sans échec de YouTube"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
 
@@ -274,6 +277,7 @@ func _on_italian_button_pressed() -> void:
 	italian_button.disabled = true
 	german_button.disabled = false
 	japanese_button.disabled = false
+	$YouTubeButton.text = "Modalità sicura di Youtube"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
 
@@ -288,6 +292,7 @@ func _on_german_button_pressed() -> void:
 	italian_button.disabled = false
 	german_button.disabled = true
 	japanese_button.disabled = false
+	$YouTubeButton.text = "YouTube-Sicherheitsmodus"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
 
@@ -302,5 +307,15 @@ func _on_japanese_button_pressed() -> void:
 	italian_button.disabled = false
 	german_button.disabled = false
 	japanese_button.disabled = true
+	$YouTubeButton.text = "Youtubeセーフモード"
 	if !ModeManager.isin_settings:
 		$LanguageSelect/GO_Button.show()
+
+
+func _on_you_tube_button_toggled(toggled_on: bool) -> void:
+	if toggled_on == true:
+		toggled_on_sfx.play()
+		AltBgmManager.enabled = true
+	else:
+		toggled_off_sfx.play()
+		AltBgmManager.enabled = false

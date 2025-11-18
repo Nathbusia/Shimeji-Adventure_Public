@@ -1100,6 +1100,7 @@ func respawn_shimeji():
 			health += 5
 			score_char_health.animation = str(health)
 			score_char_health_dark.animation = str(health)
+			ShimejiCharacter_PlayableMod.stand_shape.disabled = false
 		else:
 			return
 	else:
@@ -1112,6 +1113,7 @@ func respawn_shimeji():
 			health += 5
 			score_char_health.animation = str(health)
 			score_char_health_dark.animation = str(health)
+			ShimejiCharacter_Playable.stand_shape.disabled = false
 		else:
 			return
 
@@ -1126,6 +1128,7 @@ func respawn_shimeji_player2():
 			health_p2 += 5
 			score_char_health_p2.animation = str(health_p2)
 			score_char_health_dark_p2.animation = str(health_p2)
+			ShimejiCharacter_PlayableMod_p2.stand_shape.disabled = false
 		else:
 			return
 	else:
@@ -1138,6 +1141,7 @@ func respawn_shimeji_player2():
 			health_p2 += 5
 			score_char_health_p2.animation = str(health_p2)
 			score_char_health_dark_p2.animation = str(health_p2)
+			ShimejiCharacter_Playable_p2.stand_shape.disabled = false
 		else:
 			return
 		
@@ -1152,6 +1156,7 @@ func respawn_shimeji_player3():
 			health_p3 += 5
 			score_char_health_p3.animation = str(health_p3)
 			score_char_health_dark_p3.animation = str(health_p3)
+			ShimejiCharacter_PlayableMod_p3.stand_shape.disabled = false
 		else:
 			return
 	else:
@@ -1164,6 +1169,7 @@ func respawn_shimeji_player3():
 			health_p3 += 5
 			score_char_health_p3.animation = str(health_p3)
 			score_char_health_dark_p3.animation = str(health_p3)
+			ShimejiCharacter_Playable_p3.stand_shape.disabled = false
 		else:
 			return
 		
@@ -1178,6 +1184,7 @@ func respawn_shimeji_player4():
 			health_p4 += 5
 			score_char_health_p4.animation = str(health_p4)
 			score_char_health_dark_p4.animation = str(health_p4)
+			ShimejiCharacter_PlayableMod_p4.stand_shape.disabled = false
 		else:
 			return
 	else:
@@ -1190,6 +1197,7 @@ func respawn_shimeji_player4():
 			health_p4 += 5
 			score_char_health_p4.animation = str(health_p4)
 			score_char_health_dark_p4.animation = str(health_p4)
+			ShimejiCharacter_Playable_p4.stand_shape.disabled = false
 		else:
 			return
 		

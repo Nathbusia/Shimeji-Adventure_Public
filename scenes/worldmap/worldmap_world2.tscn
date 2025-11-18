@@ -6019,7 +6019,7 @@ offset_bottom = 604.0
 
 [node name="LevelDescription" type="Label" parent="UI/LevelInfo/LevelInfoPanel/ResultsBG/DescriptionThing"]
 layout_mode = 0
-offset_right = 410.0
+offset_right = 406.0
 offset_bottom = 237.0
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("419_cids1")

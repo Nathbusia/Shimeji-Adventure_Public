@@ -48,6 +48,12 @@ func _ready():
 	DiscordRPC.refresh()
 	load_customlevels()
 
+	if AltBgmManager.enabled:
+		$MenuMusic.stream = load("res://bgm/menu/bgm_mainmenu_ytsafe.ogg")
+		$MenuMusic.play()
+	else:
+		pass
+
 	match LanguageManager.language:
 		"spanish":
 			$WorldSelect/WorldSelectionButtons/HBoxContainer/World1/WorldText.text = "Mundo 1"

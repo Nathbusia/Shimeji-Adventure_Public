@@ -226,6 +226,10 @@ func char_fall_p4():
 				ShimejiCharacter_Playable_Player4.show()
 
 func play_cotinuetheme():
+	if AltBgmManager.enabled:
+		continue_bgm.stream = load("res://bgm/gameover/bgm_gameover_continue_ytsafe.ogg")
+	else:
+		pass
 	continue_bgm.play()
 	
 func funny_crash():

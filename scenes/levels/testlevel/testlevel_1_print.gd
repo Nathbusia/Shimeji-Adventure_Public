@@ -15,6 +15,32 @@ extends Node
 
 func _ready() -> void:
 	print_tree_pretty()
+	
+	match LevelsManager.levelname:
+		"testlevel1":
+			if AltBgmManager.enabled:
+				$SceneObjects/Level_BGM.stream = load("res://bgm/levels/testlevels/mus_testlevel_01_ytsafe.ogg")
+				$SceneObjects/Level_BGM.play()
+			else:
+				pass
+
+		"testlevel2":
+			if AltBgmManager.enabled:
+				$SceneObjects/Level_BGM.stream = load("res://bgm/levels/testlevels/mus_testlevel_02_ytsafe.ogg")
+				$SceneObjects/Level_BGM.play()
+			else:
+				pass
+
+		"tutorial":
+			if AltBgmManager.enabled:
+				$SceneObjects/Level_BGM.stream = load("res://bgm/levels/tutorial/bgm_tutorial_ytsafe.ogg")
+				$SceneObjects/Level_BGM.play()
+			else:
+				pass
+
+		_:
+			pass
+	
 	ModeManager.isin_worldmap = false
 	if ModeManager.is_story:
 		if ModeManager.is_savefile1:

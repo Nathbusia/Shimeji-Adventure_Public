@@ -3551,6 +3551,7 @@ libraries = {
 [node name="TriggerColl" type="CollisionShape2D" parent="SceneObjects/WorldMap_LevelSpots/WorldSign/TriggerSpotWorld2"]
 position = Vector2(1120, 391)
 shape = SubResource("RectangleShape2D_1cspg")
+disabled = true
 
 [node name="World_BGM" type="AudioStreamPlayer" parent="SceneObjects"]
 stream = ExtResource("4_cm7dh")
@@ -5816,7 +5817,7 @@ offset_bottom = 604.0
 
 [node name="LevelDescription" type="Label" parent="UI/LevelInfo/LevelInfoPanel/ResultsBG/DescriptionThing"]
 layout_mode = 0
-offset_right = 410.0
+offset_right = 405.0
 offset_bottom = 237.0
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("411_taus7")

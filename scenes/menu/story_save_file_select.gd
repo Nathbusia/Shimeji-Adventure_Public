@@ -47,6 +47,13 @@ func _ready() -> void:
 	DiscordRPC.refresh()
 	SaveGame.load_game()
 	choose_savefile1 = true
+	
+	if AltBgmManager.enabled:
+		$MenuMusic.stream = load("res://bgm/menu/bgm_mainmenu_ytsafe.ogg")
+		$MenuMusic.play()
+	else:
+		pass
+	
 	match LanguageManager.language:
 		"spanish":
 			$Information/ProgressText.text = "Progreso:"

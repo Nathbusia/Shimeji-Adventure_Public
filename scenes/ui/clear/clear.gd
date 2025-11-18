@@ -20,5 +20,9 @@ func level_cleared():
 	clear_text_anim.play("textdrop")
 	clear_sfx.play()
 	if LevelsManager.is_bossbattle:
+		if AltBgmManager.enabled:
+			boss_clear_bgm.stream = load("res://bgm/levels/general/bgm_bossclear_ytsafe.ogg")
+		else:
+			pass
 		boss_clear_bgm.play()
 	pause.levelcomplete()

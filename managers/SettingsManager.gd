@@ -29,6 +29,7 @@ func _ready():
 
 		config.set_value("video", "full_screen", false)
 		config.set_value("video", "vsync", true)
+		config.set_value("video", "youtubesafe", false)
 		config.set_value("video", "resolution", 3)
 		
 		config.save(SETTINGS_FILE_PATH)

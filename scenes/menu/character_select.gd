@@ -58,6 +58,13 @@ func _ready() -> void:
 	DiscordRPC.state = "Selecting a Character"
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
+	
+	if AltBgmManager.enabled:
+		$CharMenu_BG.stream = load("res://bgm/menu/bgm_charmenu_ytsafe.ogg")
+		$CharMenu_BG.play()
+	else:
+		pass
+	
 	ModeManager.charselect_player1 = true
 	ModeManager.charselect_player2 = false
 	ModeManager.charselect_player3 = false

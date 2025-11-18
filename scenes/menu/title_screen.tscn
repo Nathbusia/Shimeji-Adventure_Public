@@ -418,7 +418,7 @@ offset_bottom = 634.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_jg8bg")
 theme_override_font_sizes/font_size = 18
-text = "Demo v1.1"
+text = "Demo v1.1.1"
 
 [node name="MouseCursor" type="Sprite2D" parent="."]
 position = Vector2(560, 368)

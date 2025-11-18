@@ -52,6 +52,13 @@ var orb_found = 0
 func _ready() -> void:
 	Dialogic.signal_event.connect(DialogicSignal)
 	print_tree_pretty()
+	
+	if AltBgmManager.enabled:
+		$SceneObjects/Level_BGM.stream = load("res://bgm/levels/world2/bgm_world2_level2_ytsafe.ogg")
+		$SceneObjects/Level_BGM.play()
+	else:
+		pass
+	
 	ModeManager.isin_worldmap = false
 	if ModeManager.is_story:
 		if ModeManager.is_savefile1:

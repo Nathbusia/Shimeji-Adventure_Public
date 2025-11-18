@@ -17,7 +17,13 @@ func _ready() -> void:
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 	can_choose = true
-	
+
+	if AltBgmManager.enabled:
+		$MenuMusic.stream = load("res://bgm/menu/bgm_mainmenu_ytsafe.ogg")
+		$MenuMusic.play()
+	else:
+		pass
+
 	match LanguageManager.language:
 		"spanish":
 			$Buttons/Story/Text.text = "Historia"

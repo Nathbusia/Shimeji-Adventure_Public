@@ -28,6 +28,14 @@ var no_email = true
 
 func _ready() -> void:
 	print_tree_pretty()
+	
+	if AltBgmManager.enabled:
+		$SceneObjects/Level_BGM.stream = load("res://bgm/levels/world2/bgm_world2_boss_ytsafe.ogg")
+		$SceneObjects/Level_BossClear.stream = load ("res://bgm/levels/world2/bgm_world2_boss_end_ytsafe.ogg")
+		$SceneObjects/Level_BGM.play()
+	else:
+		pass
+	
 	ModeManager.isin_worldmap = false
 	if ModeManager.is_story:
 		if ModeManager.is_savefile1:

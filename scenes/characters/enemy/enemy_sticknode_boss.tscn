@@ -317,6 +317,7 @@ size = Vector2(66, 11)
 [node name="Enemy_Sticknode" type="RigidBody2D" groups=["Enemies", "sticknode_group"]]
 rotation = -3.1415927
 collision_mask = 5
+freeze = true
 script = ExtResource("1_liwaj")
 
 [node name="SFX" type="Node2D" parent="."]

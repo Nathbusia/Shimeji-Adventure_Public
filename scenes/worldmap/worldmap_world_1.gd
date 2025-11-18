@@ -79,6 +79,13 @@ var level_path = ""
 
 func _ready() -> void:
 	print_tree_pretty()
+	
+	if AltBgmManager.enabled:
+		$SceneObjects/World_BGM.stream = load("res://bgm/worldmap/bgm_world1_worldmap_ytsafe.ogg")
+		$SceneObjects/World_BGM.play()
+	else:
+		pass
+	
 	LevelsManager.worldname = curWorld
 	ModeManager.isin_worldmap = true
 	if ModeManager.is_savefile1:
@@ -118,6 +125,7 @@ func _ready() -> void:
 			world_2_button.disabled = false
 			world_2_text.text = "World 2"
 			world_sign.show()
+			$SceneObjects/WorldMap_LevelSpots/WorldSign/TriggerSpotWorld2/TriggerColl.disabled = false
 		
 			SaveFileManager.currentplayerlives = SaveFileManager.data_dic["currentlives"]
 			SaveFileManager.currentplayerlivest = SaveFileManager.data_dic["currentlivest"]

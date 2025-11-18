@@ -9,7 +9,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if is_collected:
 		return #So you won't collect it again.
 	else:
-		if (body.name == "ShimejiCharacter_Playable") || (body.name == "ShimejiCharacter_Playable_Player2") || (body.name == "ShimejiCharacter_Playable_Player4") || (body.name == "ShimejiCharacter_Playable"):
+		if (body.name == "ShimejiCharacter_Playable") || (body.name == "ShimejiCharacter_Playable_Player2") || (body.name == "ShimejiCharacter_Playable_Player3") || (body.name == "ShimejiCharacter_Playable_Player4"):
 			clear.level_cleared()
 			body.levelcompleted()
 			if ModeManager.is_multiplayer:

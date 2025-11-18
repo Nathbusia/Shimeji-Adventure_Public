@@ -11,6 +11,12 @@ func _ready():
 	DiscordRPC.details = ""
 	DiscordRPC.refresh()
 
+	if AltBgmManager.enabled:
+		$TitleTheme.stream = load("res://bgm/menu/bgm_titlescreen_ytsafe.ogg")
+		$TitleTheme.play()
+	else:
+		pass
+
 	match LanguageManager.language:
 		"spanish":
 			$Start.text = "Pulse el botón ENTER/Inicio"

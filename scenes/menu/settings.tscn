@@ -298,7 +298,7 @@ offset_bottom = 656.0
 texture = ExtResource("3_oqwm7")
 expand_mode = 1
 
-[node name="MenuMusic" type="AudioStreamPlayer2D" parent="."]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s08c2")
 autoplay = true
 bus = &"bgm"
@@ -585,6 +585,15 @@ offset_bottom = 596.0
 theme_override_fonts/font = ExtResource("79_r1a2u")
 button_pressed = true
 text = "VSync"
+
+[node name="YouTubeButton" type="CheckButton" parent="Volume_Resolution/Resolution"]
+layout_mode = 0
+offset_left = 489.0
+offset_top = 601.0
+offset_right = 720.0
+offset_bottom = 633.0
+theme_override_fonts/font = ExtResource("79_r1a2u")
+text = "Youtube-Safe Mode"
 
 [node name="Controls" type="Panel" parent="."]
 visible = false
@@ -1088,6 +1097,7 @@ autowrap_mode = 2
 [connection signal="item_selected" from="Volume_Resolution/Resolution/ResolutonsOption" to="." method="_on_resolutons_option_item_selected"]
 [connection signal="toggled" from="Volume_Resolution/Resolution/CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="toggled" from="Volume_Resolution/Resolution/VsyncButton" to="." method="_on_vsync_button_toggled"]
+[connection signal="toggled" from="Volume_Resolution/Resolution/YouTubeButton" to="." method="_on_you_tube_button_toggled"]
 [connection signal="pressed" from="Controls/Controls_Player1/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player1" method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Controls/Controls_Player2/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player2" method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Controls/Controls_Player3/PanelContainer/MarginContainer/VBoxContainer/ResetButton" to="Controls/Controls_Player3" method="_on_reset_button_pressed"]
